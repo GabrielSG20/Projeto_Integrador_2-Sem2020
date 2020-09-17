@@ -10,7 +10,7 @@ RUN apt-get update \
  && chown -R gitpod:gitpod /etc/mysql /var/run/mysqld /var/log/mysql /var/lib/mysql /var/lib/mysql-files /var/lib/mysql-keyring /var/lib/mysql-upgrade
 
 # Install our own MySQL config
-COPY ./mysql.cnf /etc/mysql/mysql.conf.d/mysqld.cnf
+COPY ./mysql.cnf /etc/mysql/mysql.conf.d/mysql.cnf
 
 # Install default-login for MySQL clients
 COPY ./client.cnf /etc/mysql/mysql.conf.d/client.cnf
