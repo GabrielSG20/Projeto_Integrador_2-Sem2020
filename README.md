@@ -24,17 +24,15 @@ A equipe Trinity foi solicitada pela empresa TecSUS para o desenvolvimento de um
 
 ### :gift: Product Backlog
 1. Cadastro e visualização de contas/água de empresas.<br/>
-Plataforma simples e intuitiva para cadastro/registro de contas não processadas pelo BOT. E visualização dos cadastros já registrados.
+Eu como digitador desejo uma plataforma simples e intuitiva para cadastro de contas de água e energia, além da visualização das contas já registradas, desse modo, proporcionando uma melhor produtividade e agilidade no processo de digitação, prevenindo possíveis erros. 
 2. Seleção dos tipos de conta.<br/>
-Recurso para selecionar a categoria de conta a ser preenchida (água/luz). Abrindo uma aba específica para cada uma, com campos distintos, diminuindo os erros de digitação por meio de um layout intuitivo.
+Eu como digitador desejo um recurso para selecionar a categoria de conta a ser preenchida (água/energia). Abrindo uma aba específica para cada uma, com formulários distintos, contendo campos específicos relacionados a cada tipo de conta, para diminuir os erros de digitação.
 3. Automatização na obtenção de dados (Cliente/Fornecedor).<br/>
-Obter informações de clientes já registrados, automaticamente, através do registro do CPF/CNPJ, assim, obtendo também a informação do fornecedor, uma vez que exista um fornecedor pra cada tipo de conta por cliente.
+Eu como digitador espero obter informações de clientes já registrados, de forma automática, preenchendo os campos do formulário de cadastro de cliente, por meio da busca do CPF ou CNPJ. O mesmo ocorre com os dados do fornecedor, uma vez que exista um fornecedor de água e um de energia por cliente. Com intuito de agilizar o processo de digitação.
 4. Prevenção de erros de registro.<br/>
-Alerta quando ocorrer erros de registros. A exemplo do envio de campos em branco e/ou falta de carácteres necessários.
+Eu como digitador desejo ser alertado quando cometer erros de registros. A exemplo do envio de campos em branco e/ou falta de carácteres necessários. Para evitar possíveis erros no cadastro de contas.
 5. Gerador de relatórios de consumo e custos.<br/>
-Obter acesso aos relatórios de consumo e custo de energia e água agrupados por cliente, disponibilizados em PDF.
-6. Documentação.<br/>
-Obter o manual de guia de utilização do usuário, modelo de dados (transmitidos e armazenados), e o guia de migração para versões do programa.
+Eu como analista de água ou energia desejo obter acesso aos relatórios de consumo e custo de energia e água, agrupados por cliente, disponibilizados em PDF. Para análise dos dados, proporcionando ao cliente uma avaliação sobre gastos e consumos no mês vigente.
 
 ### :airplane: Sprints
 1. Na primeira sprint a equipe realizou a criação do layout das telas de cadastros com os campos de preenchimentos necessarios e finalizou as configurações da plataforma Gitpod com as ferramentas necessárias para iniciar o desenvolvimento do projeto. Além disso foi realizado a criação do Product Backlog.<br/> Duração: 07/09/2020 até 27/09/2020.
@@ -43,8 +41,8 @@ Obter o manual de guia de utilização do usuário, modelo de dados (transmitido
 
 ### :dart: Entregas
 1. Apresentação da Equipe Trinity e da problemática do trabalho. Além da demonstração dos Wireframes (representação das telas do software) e Product Backlog (funcionalidades do sistema). Disponíveis nos seguintes links:
-   * [PowerPoint](https://drive.google.com/file/d/1B34QUefdqB4Dh1cuP_8u5np77Q-RdkcL/view)
-   * [Video(YouTube)](https://www.youtube.com/watch?v=k5cMXUFGKQs&feature=youtu.be)
+   * [PowerPoint](https://www.google.com/)
+   * [Video(YouTube)](https://www.youtube.com)
 
 ### :paperclip: Funcionamento do projeto
 #### A tela inicial apresenta três botões: Novo cliente, Cliente já cadastrado e Relatórios. 
