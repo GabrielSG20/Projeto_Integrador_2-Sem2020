@@ -30,19 +30,19 @@ Eu como digitador desejo um recurso para selecionar a categoria de conta a ser p
 #### 3. Automatização na obtenção de dados (Cliente/Fornecedor).<br/>
 Eu como digitador espero obter informações de clientes já registrados, de forma automática, preenchendo os campos do formulário de cadastro de cliente, por meio da busca do CPF ou CNPJ. O mesmo ocorre com os dados do fornecedor, uma vez que exista um fornecedor de água e um de energia por cliente. Com intuito de agilizar o processo de digitação.
 #### 4. Prevenção de erros de registro.<br/>
-Eu como digitador desejo ser alertado quando cometer erros de registros. A exemplo do envio de campos em branco e/ou falta de carácteres necessários. Para evitar possíveis erros no cadastro de contas.
+Eu como digitador desejo ser alertado quando cometer erros de registros. A exemplo do envio de campos em branco e/ou falta de caracteres necessários. Para evitar possíveis erros no cadastro de contas.
 #### 5. Gerador de relatórios de consumo e custos.<br/>
 Eu como analista de água ou energia desejo obter acesso aos relatórios de consumo e custo de energia e água, agrupados por cliente, disponibilizados em PDF. Para análise dos dados, proporcionando ao cliente uma avaliação sobre gastos e consumos no mês vigente.
 
 ### :airplane: Sprints
-1. Na primeira sprint a equipe realizou a criação do layout das telas de cadastros com os campos de preenchimentos necessarios e finalizou as configurações da plataforma Gitpod com as ferramentas necessárias para iniciar o desenvolvimento do projeto. Além disso foi realizado a criação do Product Backlog.<br/> Duração: 07/09/2020 até 27/09/2020.
+1. Na primeira sprint a equipe realizou a criação do layout das telas de cadastros com os campos de preenchimentos necessários e finalizou as configurações da plataforma Gitpod com as ferramentas necessárias para iniciar o desenvolvimento do projeto. Além disso foi realizado a criação do Product Backlog.<br/> Duração: 07/09/2020 até 27/09/2020.
 
 
 
 ### :dart: Entregas
 1. Apresentação da Equipe Trinity e da problemática do trabalho. Além da demonstração dos Wireframes (representação das telas do software) e Product Backlog (funcionalidades do sistema). Disponíveis nos seguintes links:
-   * [PowerPoint](https://www.google.com/)
-   * [Video(YouTube)](https://www.youtube.com)
+   * [PowerPoint](https://drive.google.com/file/d/1QBe3fj6P33IbdpLLv37yWxnmgwYGU8Tq/view?usp=sharing)
+   * [Video(YouTube)](https://www.youtube.com/watch?v=k5cMXUFGKQs)
 
 ### :paperclip: Funcionamento do projeto
 #### A tela inicial apresenta três botões: Novo cliente, Cliente já cadastrado e Relatórios. 
