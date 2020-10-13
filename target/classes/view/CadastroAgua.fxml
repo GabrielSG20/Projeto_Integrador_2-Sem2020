@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane cacheShape="false" centerShape="false" prefHeight="850.0" prefWidth="1000.0" scaleShape="false" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroAgua">
+<AnchorPane cacheShape="false" centerShape="false" prefHeight="1000.0" prefWidth="1100.0" scaleShape="false" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroAgua">
    <children>
-      <ImageView fitHeight="850.0" fitWidth="1000.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="1000.0" fitWidth="1100.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/TECSUS.png" />
+            <Image url="@../Desktop/test.png" />
          </image>
       </ImageView>
       <Label fx:id="lblRGI" layoutX="21.0" layoutY="14.0" prefHeight="17.0" prefWidth="31.0" text="RGI">
