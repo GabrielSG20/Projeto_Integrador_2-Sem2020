@@ -14,19 +14,19 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <Text layoutX="313.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de cliente">
+      <Text layoutX="301.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de cliente">
          <font>
             <Font size="40.0" />
          </font>
       </Text>
       <Text layoutX="548.0" layoutY="354.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Pessoa Física">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
       <Text layoutX="557.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Pessoa Jurídica">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
       <Button fx:id="btn_PF" ellipsisString="" layoutX="165.0" layoutY="221.0" mnemonicParsing="false" onAction="#changeScreenPF">

@@ -1,5 +1,5 @@
 controller/InicialController.class
-controller/TipoCliente.class
 application/Main.class
+controller/TipoCliente.class
 controller/TipoConta.class
 controller/CadastroAgua.class

@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TipoConta">
    <children>
-      <Text layoutX="197.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro">
+      <Text layoutX="189.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro">
          <font>
             <Font size="40.0" />
          </font>
@@ -28,14 +28,14 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text layoutX="697.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de água">
+      <Text layoutX="668.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de água">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="219.0" layoutY="610.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de luz">
+      <Text layoutX="205.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de luz">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
       <Button fx:id="Btn_CDA" ellipsisString="" layoutX="630.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenContaAgua">
