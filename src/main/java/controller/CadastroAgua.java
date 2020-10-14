@@ -31,21 +31,19 @@ public class CadastroAgua implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        Alert alert = new Alert(AlertType.CONFIRMATION);
-        alert.setTitle("Confirmação de Cadastro");
-        alert.setHeaderText(null);
-        alert.setContentText("Deseja adicionar o cadastro?");
-        alert.getDialogPane().setPrefSize(700, 500);
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        confirmacao.setTitle("Confirmação de Cadastro");
+        confirmacao.setHeaderText(null);
+        confirmacao.setContentText("Deseja adicionar o cadastro?");
 
-        Optional<ButtonType> result = alert.showAndWait();
+        Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Main.changeScreen("main");
-            alert.showAndWait();
+
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);
             Alert.setContentText("Cadastro efetuado com sucesso!");
-            Alert.getDialogPane().setPrefSize(700, 500);
             Alert.showAndWait();
         } else {
             // ... user chose CANCEL or closed the dialog

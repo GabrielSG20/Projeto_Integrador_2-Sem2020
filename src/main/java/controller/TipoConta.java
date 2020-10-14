@@ -30,7 +30,7 @@ public class TipoConta implements Initializable {
     }
     
     public void changeScreenRetornar(ActionEvent event){
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("main");
 	}
 
 }
