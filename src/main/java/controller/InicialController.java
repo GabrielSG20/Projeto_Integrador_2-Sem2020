@@ -24,7 +24,7 @@ public class InicialController implements Initializable {
 	}
 	
 	public void changeScreenNovaInst(ActionEvent event){
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("tipocliente");
 	}
 
 }
