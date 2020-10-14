@@ -9,7 +9,7 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TipoConta">
    <children>
-      <Text layoutX="189.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro">
+      <Text layoutX="162.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro">
          <font>
             <Font size="40.0" />
          </font>
@@ -28,12 +28,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text layoutX="668.0" layoutY="612.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de água">
+      <Text layoutX="649.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de água">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="205.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de luz">
+      <Text layoutX="198.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de luz">
          <font>
             <Font size="36.0" />
          </font>
@@ -46,6 +46,11 @@
                </image>
             </ImageView>
          </graphic>
+      </Button>
+      <Button fx:id="btnRetornar" layoutX="70.0" layoutY="776.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="41.0" prefWidth="134.0" text="Retornar" textFill="#4a8af2">
+         <font>
+            <Font size="24.0" />
+         </font>
       </Button>
    </children>
 </AnchorPane>

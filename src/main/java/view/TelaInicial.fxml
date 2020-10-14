@@ -49,17 +49,17 @@
       </Button>
       <Text layoutX="451.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Instalação já cadastrada" textAlignment="CENTER">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
       <Text layoutX="460.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Nova Instalação" textAlignment="CENTER">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
       <Text layoutX="469.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatórios" textAlignment="CENTER">
          <font>
-            <Font size="30.0" />
+            <Font size="36.0" />
          </font>
       </Text>
    </children>
