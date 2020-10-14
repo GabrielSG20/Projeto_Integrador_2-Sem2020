@@ -1,4 +1,14 @@
-controller/InicialController.class
-application/Main.class
+view/CadastroAgua.fxml
+image/Energia.jpeg
+image/Agua.jpeg
 controller/TipoConta.class
+view/TelaInicial.fxml
+application/application.css
+image/TECSUS.png
+application/Main.class
+image/Relatorios.jpeg
+image/VelhaInst.jpeg
+controller/InicialController.class
+image/NovaInst.jpeg
+view/TipoConta.fxml
 controller/CadastroAgua.class
