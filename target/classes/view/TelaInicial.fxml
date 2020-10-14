@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicialController">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1100.0" layoutX="153.0" layoutY="45.0" opacity="0.17" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="/image/TECSUS.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="258.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de cadastro" textAlignment="CENTER" wrappingWidth="587.828125" AnchorPane.leftAnchor="258.0" AnchorPane.rightAnchor="254.171875">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnNovaInst" ellipsisString="" layoutX="193.0" layoutY="424.0" mnemonicParsing="false" onAction="#changeScreenNovaInst" prefHeight="45.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/image/NovaInst.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnVelhaInst" ellipsisString="" layoutX="193.0" layoutY="236.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="52.0">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/image/VelhaInst.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnRelatorios" ellipsisString="" layoutX="191.0" layoutY="604.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="62.0" textAlignment="CENTER">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="/image/Relatorios.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Text layoutX="451.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Instalação já cadastrada" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="460.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Nova Instalação" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text layoutX="469.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatórios" textAlignment="CENTER">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
