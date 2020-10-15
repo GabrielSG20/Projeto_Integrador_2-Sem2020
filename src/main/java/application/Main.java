@@ -1,10 +1,15 @@
 package application;
-	
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TextField;
+
+import java.util.ArrayList;
+
+import classes.Conta_agua;
 
 public class Main extends Application {
 
@@ -19,10 +24,15 @@ public class Main extends Application {
     private static Scene tiporelatorioScene;
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
+    private static ArrayList<Conta_agua> conta_agua;
+    private static int contadorAgua;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+            conta_agua = new ArrayList<Conta_agua>();
+            contadorAgua = 0;
+
             stage = primaryStage;
 
 			Parent fxmlMain = FXMLLoader.load(getClass().getResource("/view/TelaInicial.fxml"));
@@ -95,7 +105,78 @@ public class Main extends Application {
             stage.setScene(relatorioenergiaScene);
         }
     }
-	
+    
+    public static void salvarPJ(String nome_cliente, String cnpj_cliente, String nome_fornecedor,
+            String cnpj_fornecedor, String tipo_fornecedor) {
+        Conta_agua a = new Conta_agua();
+        a.setNome_cliente(nome_cliente);
+        a.setCnpj_cliente(cnpj_cliente);
+        a.setNome_fornecedor(nome_fornecedor);
+        a.setCnpj_fornecedor(cnpj_fornecedor);
+        a.setTipo_fornecedor(tipo_fornecedor);
+
+        conta_agua.add(contadorAgua,a);
+    }
+
+    public static void salvarAgua1(int cep, String endereco, int numero, int rgi_conta, int gr_conta, String mes_referencia_conta, String codigo_cliente, int consumo_conta){
+        Conta_agua a = new Conta_agua();
+        a.setCep(cep);
+        a.setEndereco(endereco);
+        a.setNumero(numero);
+        a.setRgi_conta(rgi_conta);
+        a.setGr_conta(gr_conta);
+        a.setMes_referencia_conta(mes_referencia_conta);
+        a.setConsumo_conta(consumo_conta);
+        
+        conta_agua.add(contadorAgua,a);
+    }
+
+    public static void salvarAgua2(float total_pagar_residencial_conta){
+        Conta_agua a = new Conta_agua();
+        a.setTotal_pagar_residencial_conta(total_pagar_residencial_conta);
+
+        conta_agua.add(contadorAgua,a);
+        contadorAgua = contadorAgua + 1;
+    }
+
+    public static void procurarRelatorioAgua(TextField nome_cliente,TextField cnpj_cliente,TextField nome_fornecedor,TextField cnpj_fornecedor,
+	TextField tipo_fornecedor,
+	TextField cep,
+	TextField endereco,
+	TextField numero,
+	TextField rgi_conta,
+	TextField gr_conta,
+	TextField mes_referencia_conta,
+	TextField codigo_cliente,
+	TextField consumo_conta,
+	TextField total_pagar_residencial_conta){
+        Conta_agua a = new Conta_agua();
+        
+        for(int i = 0; i < conta_agua.size();i++){
+            a = (Conta_agua)conta_agua.get(i);
+			
+			if (a.getRgi_conta() == Integer.valueOf(rgi_conta.getText())) {
+                nome_cliente.setText(a.getNome_cliente());
+                cnpj_cliente.setText(a.getCnpj_cliente());
+                nome_fornecedor.setText(a.getNome_fornecedor());
+                cnpj_fornecedor.setText(a.getCnpj_fornecedor());
+	            tipo_fornecedor.setText(a.getTipo_fornecedor());
+	            cep.setText(String.valueOf(a.getCep()));
+	            endereco.setText(a.getEndereco());
+	            numero.setText(String.valueOf(a.getNumero()));
+	            rgi_conta.setText(String.valueOf(a.getRgi_conta()));
+	            gr_conta.setText(String.valueOf(a.getGr_conta()));
+	            mes_referencia_conta.setText(a.getMes_referencia_conta());
+	            codigo_cliente.setText(a.getCodigo_cliente());
+                consumo_conta.setText(String.valueOf(a.getConsumo_conta()));
+	            total_pagar_residencial_conta.setText(String.valueOf(a.getTotal_pagar_residencial_conta()));
+				break;
+			}
+        }
+
+        conta_agua.add(contadorAgua,a);
+    }
+
 	public static void main(String[] args) {
 		launch(args);
 	}

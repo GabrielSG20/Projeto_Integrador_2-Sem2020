@@ -47,6 +47,8 @@ public class PessoaJuridica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            Main.salvarPJ(txtNomeFantasia.getText(), txtCNPJEmpresa.getText(), txtNomeFornecedor.getText(),
+            txtCNPJFornecedor.getText(), txtTipoFornecedor.getText());
             Main.changeScreen("tipoconta");
         } else {
             

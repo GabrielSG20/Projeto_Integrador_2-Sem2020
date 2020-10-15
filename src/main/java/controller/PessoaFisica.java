@@ -14,27 +14,21 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
-public class CadastroAgua1 implements Initializable {
+public class PessoaFisica implements Initializable {
     @FXML
-    private TextField txtRGI;
+    private TextField txtNomeCompleto;
     @FXML
-    private TextField txtGR;
+    private TextField txtCPF;
     @FXML
-    private TextField txtMesReferencia;
+    private TextField txtNomeFornecedor;
     @FXML
-    private TextField txtEndereco;
+    private TextField txtCNPJFornecedor;
     @FXML
-    private TextField txtCEP;
+    private TextField txtTipoFornecedor;
     @FXML
-    private TextField txtConsumo;
+    private Button btnRetornarPF;
     @FXML
-    private TextField txtNumero;
-    @FXML
-    private TextField txtCodigoCliente;
-    @FXML
-    private Button btnRetornarAgua1;
-    @FXML
-    private Button btnSalvarContinuar;
+    private Button btnProsseguirPF;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -42,10 +36,10 @@ public class CadastroAgua1 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("main");
     }
 
-    public void changeScreenContinuar(ActionEvent event) {
+    public void changeScreenProsseguir(ActionEvent event) {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
@@ -53,10 +47,7 @@ public class CadastroAgua1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarAgua1(Integer.valueOf(txtCEP.getText()), txtEndereco.getText(), Integer.valueOf(txtNumero.getText()), 
-            Integer.valueOf(txtRGI.getText()), Integer.valueOf(txtGR.getText()), txtMesReferencia.getText(), txtCodigoCliente.getText(), 
-            Integer.valueOf(txtConsumo.getText()));
-            Main.changeScreen("agua2");
+            Main.changeScreen("tipoconta");
         } else {
             
         }
