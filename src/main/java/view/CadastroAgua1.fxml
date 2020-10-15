@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" layoutY="3.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/TECSUS.png" />
+            <Image url="@../Desktop/test.png" />
          </image>
       </ImageView>
       <Label fx:id="lblRGI" layoutX="19.0" layoutY="37.0" prefHeight="21.0" prefWidth="64.0" text="RGI">
@@ -38,11 +38,11 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField layoutX="452.0" layoutY="35.0" opacity="0.8" prefHeight="32.0" prefWidth="94.0">
+      <TextField fx:id="txtGR" layoutX="452.0" layoutY="35.0" opacity="0.8" prefHeight="32.0" prefWidth="94.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField layoutX="290.0" layoutY="234.0" opacity="0.8" prefHeight="25.0" prefWidth="149.0">
+      <TextField fx:id="txtMesReferencia" layoutX="290.0" layoutY="234.0" opacity="0.8" prefHeight="25.0" prefWidth="149.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -98,7 +98,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtCidade" layoutX="301.0" layoutY="98.0" opacity="0.8" prefHeight="37.0" prefWidth="306.0">
+      <TextField fx:id="txtCodigoCliente" layoutX="301.0" layoutY="98.0" opacity="0.8" prefHeight="37.0" prefWidth="306.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -130,7 +130,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtTipoDe" layoutX="137.0" layoutY="566.0" opacity="0.8" prefHeight="32.0" prefWidth="289.0">
+      <TextField fx:id="txtCidade" layoutX="137.0" layoutY="566.0" opacity="0.8" prefHeight="32.0" prefWidth="289.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -138,7 +138,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtHidrometro" layoutX="137.0" layoutY="628.0" opacity="0.8" prefHeight="32.0" prefWidth="158.0">
+      <TextField fx:id="txtCEP" layoutX="137.0" layoutY="628.0" opacity="0.8" prefHeight="32.0" prefWidth="158.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -167,7 +167,7 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUf1" layoutX="704.0" layoutY="698.0" opacity="0.8" prefHeight="32.0" prefWidth="78.0">
+      <TextField fx:id="txtNumero" layoutX="704.0" layoutY="698.0" opacity="0.8" prefHeight="32.0" prefWidth="78.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
