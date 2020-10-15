@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Desktop/test.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Label layoutX="330.0" layoutY="29.0" text="CÁLCULO DO VALOR DA CONTA POR ECONOMIA">
