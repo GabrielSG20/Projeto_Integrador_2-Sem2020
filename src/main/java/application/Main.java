@@ -17,6 +17,7 @@ public class Main extends Application {
     private static Scene mainScene;
     private static Scene tipoclienteScene;
     private static Scene PJScene;
+    private static Scene PFScene;
     private static Scene tipocontaScene;
     private static Scene agua1Scene;
     private static Scene agua2Scene;
@@ -43,6 +44,9 @@ public class Main extends Application {
 
             Parent fxmlPJ= FXMLLoader.load(getClass().getResource("/view/PessoaJuridica.fxml"));
             PJScene = new Scene(fxmlPJ);
+
+            Parent fxmlPF= FXMLLoader.load(getClass().getResource("/view/PessoaFisica.fxml"));
+            PFScene = new Scene(fxmlPF);
 
             Parent fxmlTipoConta = FXMLLoader.load(getClass().getResource("/view/TipoConta.fxml"));
             tipocontaScene = new Scene(fxmlTipoConta);
@@ -82,6 +86,9 @@ public class Main extends Application {
         }
         if (tela == "pj"){
             stage.setScene(PJScene);
+        }
+        if (tela == "pf"){
+            stage.setScene(PFScene);
         }
         if (tela == "tipoconta"){
             stage.setScene(tipocontaScene);
