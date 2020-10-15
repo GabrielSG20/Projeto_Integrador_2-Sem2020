@@ -22,7 +22,7 @@ public class TipoConta implements Initializable {
 	}
 	
 	public void changeScreenContaAgua(ActionEvent event){
-        Main.changeScreen("agua");
+        Main.changeScreen("agua1");
     }
     
     public void changeScreenContaLuz(ActionEvent event){
@@ -30,7 +30,7 @@ public class TipoConta implements Initializable {
     }
     
     public void changeScreenRetornar(ActionEvent event){
-        Main.changeScreen("main");
+        Main.changeScreen("pj");
 	}
 
 }

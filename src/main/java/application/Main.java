@@ -14,6 +14,7 @@ public class Main extends Application {
     private static Scene agua2Scene;
     private static Scene tipocontaScene;
     private static Scene tipoclienteScene;
+    private static Scene PJScene;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -34,6 +35,9 @@ public class Main extends Application {
 
             Parent fxmlTipoCliente = FXMLLoader.load(getClass().getResource("/view/TipoCliente.fxml"));
             tipoclienteScene = new Scene(fxmlTipoCliente);
+
+            Parent fxmlPJ= FXMLLoader.load(getClass().getResource("/view/PessoaJuridica.fxml"));
+            PJScene = new Scene(fxmlPJ);
 
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
@@ -58,6 +62,9 @@ public class Main extends Application {
         }
         if (tela == "tipocliente"){
             stage.setScene(tipoclienteScene);
+        }
+        if (tela == "pj"){
+            stage.setScene(PJScene);
         }
     }
 	

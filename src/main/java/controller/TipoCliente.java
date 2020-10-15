@@ -22,11 +22,11 @@ public class TipoCliente implements Initializable {
 	}
 	
 	public void changeScreenPF(ActionEvent event){
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("");
     }
     
     public void changeScreenPJ(ActionEvent event){
-        Main.changeScreen("PJ");
+        Main.changeScreen("pj");
 	}
 
 }
