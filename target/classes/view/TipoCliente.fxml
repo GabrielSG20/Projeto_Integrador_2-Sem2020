@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" layoutX="108.0" layoutY="3.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Downloads/logo.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Text layoutX="301.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de cliente">
@@ -33,7 +33,7 @@
          <graphic>
             <ImageView fitHeight="300.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Imagens/PessoaFisica.png" />
+                  <Image url="/image/PessoaFisica.png" />
                </image>
             </ImageView>
          </graphic>
@@ -42,7 +42,7 @@
          <graphic>
             <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@Imagens/PessoaJuridica.png" />
+                  <Image url="/image/PessoaJuridica.png" />
                </image>
             </ImageView>
          </graphic>

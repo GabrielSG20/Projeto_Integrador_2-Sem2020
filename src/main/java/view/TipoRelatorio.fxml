@@ -28,12 +28,12 @@
             </ImageView>
          </graphic>
       </Button>
-      <Text layoutX="645.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água">
+      <Text layoutX="635.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água">
          <font>
             <Font size="36.0" />
          </font>
       </Text>
-      <Text layoutX="180.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de luz">
+      <Text layoutX="165.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de luz">
          <font>
             <Font size="36.0" />
          </font>

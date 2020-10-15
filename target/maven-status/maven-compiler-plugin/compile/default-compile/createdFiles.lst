@@ -2,6 +2,10 @@ controller/InicialController.class
 controller/TipoCliente.class
 controller/TipoConta.class
 controller/CadastroAgua2.class
+controller/TipoRelatorio.class
+controller/RelatorioAgua.class
 controller/CadastroAgua1.class
 controller/PessoaJuridica.class
 application/Main.class
+controller/RelatorioEnergia.class
+controller/CadastroEnergia.class

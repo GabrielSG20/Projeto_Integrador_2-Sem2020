@@ -58,7 +58,7 @@
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtTipoFornecedor" layoutX="490.0" layoutY="640.0" prefHeight="49.0" prefWidth="530.0">
+      <TextField fx:id="txtTipoFornecedor" layoutX="530.0" layoutY="640.0" prefHeight="49.0" prefWidth="490.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
