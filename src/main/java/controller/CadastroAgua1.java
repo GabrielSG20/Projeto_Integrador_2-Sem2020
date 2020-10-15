@@ -10,14 +10,31 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
 public class CadastroAgua1 implements Initializable {
     @FXML
-    private Button btnRetornar;
+    private TextField txtRGI;
     @FXML
-    private Button btnSalvar;
+    private TextField txtGR;
+    @FXML
+    private TextField txtMesReferencia;
+    @FXML
+    private TextField txtEndereco;
+    @FXML
+    private TextField txtCEP;
+    @FXML
+    private TextField txtConsumo;
+    @FXML
+    private TextField txtNumero;
+    @FXML
+    private TextField txtCodigoCliente;
+    @FXML
+    private Button btnRetornarAgua1;
+    @FXML
+    private Button btnSalvarContinuar;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {

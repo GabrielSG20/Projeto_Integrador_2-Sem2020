@@ -47,7 +47,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnRetornar" layoutX="70.0" layoutY="776.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="51.0" prefWidth="164.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarTipoConta" layoutX="70.0" layoutY="776.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="51.0" prefWidth="164.0" text="Retornar" textFill="#4a8af2">
          <font>
             <Font size="24.0" />
          </font>

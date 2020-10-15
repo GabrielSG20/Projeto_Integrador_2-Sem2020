@@ -10,14 +10,25 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
 public class PessoaJuridica implements Initializable {
     @FXML
-    private Button btnRetornar;
+    private TextField txtNomeFantasia;
     @FXML
-    private Button btnSalvar;
+    private TextField txtCNPJEmpresa;
+    @FXML
+    private TextField txtNomeFornecedor;
+    @FXML
+    private TextField txtCNPJFornecedor;
+    @FXML
+    private TextField txtTipoFornecedor;
+    @FXML
+    private Button btnRetornarPJ;
+    @FXML
+    private Button btnProsseguirPJ;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -28,7 +39,7 @@ public class PessoaJuridica implements Initializable {
         Main.changeScreen("main");
     }
 
-    public void changeScreenVoltarProsseguir(ActionEvent event) {
+    public void changeScreenProsseguir(ActionEvent event) {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);

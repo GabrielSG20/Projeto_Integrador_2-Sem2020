@@ -10,29 +10,29 @@ import javafx.scene.control.Button;
 
 import application.Main;
 
-public class TipoConta implements Initializable {
+public class TipoRelatorio implements Initializable {
 	   @FXML
-	   private Button Btn_CDA;
+	   private Button btnRelatorioLuz;
 	   @FXML
-       private Button Btn_CDL;
+       private Button btnRelatorioAgua;
        @FXML
-	   private Button btnRetornarTipoConta;
+	   private Button btnRetornarTipoR;
 	   
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
 	}
 	
-	public void changeScreenContaAgua(ActionEvent event){
-        Main.changeScreen("agua1");
+	public void changeScreenRelatorioAgua(ActionEvent event){
+        Main.changeScreen("relatorioagua");
     }
     
-    public void changeScreenContaLuz(ActionEvent event){
-        Main.changeScreen("energia");
+    public void changeScreenRelatorioLuz(ActionEvent event){
+        Main.changeScreen("relatorioenergia");
     }
     
     public void changeScreenRetornar(ActionEvent event){
-        Main.changeScreen("tipocliente");
+        Main.changeScreen("main");
 	}
 
 }

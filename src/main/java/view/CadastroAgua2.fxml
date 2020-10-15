@@ -22,7 +22,7 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblFaixaConsumo" layoutX="19.0" layoutY="83.0" text="FAIXA DE CONSUMO">
+      <Label fx:id="lblFaixaConsumo" layoutX="19.0" layoutY="83.0" text="FAIXA DE CONSUMO" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="83.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -30,7 +30,7 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblConsumoM3" layoutX="249.0" layoutY="83.0" text="CONSUMO (M3)">
+      <Label fx:id="lblConsumoM3" layoutX="249.0" layoutY="83.0" text="CONSUMO (M3)" AnchorPane.topAnchor="83.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -38,23 +38,23 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblAte10" layoutX="20.0" layoutY="149.0" text="ATE 10">
+      <Label fx:id="lblAte10" layoutX="20.0" layoutY="149.0" text="ATE 10" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lbl11a20" layoutX="19.0" layoutY="231.0" text="11 A 20">
+      <Label fx:id="lbl11a20" layoutX="19.0" layoutY="231.0" text="11 A 20" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lbl21a31" layoutX="19.0" layoutY="303.0" text="21 A 31">
+      <Label fx:id="lbl21a31" layoutX="19.0" layoutY="303.0" text="21 A 31" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lbl31a50" layoutX="19.0" layoutY="383.0" text="31 A 50">
+      <Label fx:id="lbl31a50" layoutX="19.0" layoutY="383.0" text="31 A 50" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblAcima50" layoutX="17.0" layoutY="451.0" text="ACIMA DE 50">
+      <Label fx:id="lblAcima50" layoutX="17.0" layoutY="451.0" text="ACIMA DE 50" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -66,7 +66,7 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblAgua" layoutX="524.0" layoutY="83.0" text="ÁGUA">
+      <Label fx:id="lblAgua" layoutX="524.0" layoutY="83.0" text="ÁGUA" AnchorPane.topAnchor="83.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -106,7 +106,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <Label fx:id="lblEsgoto" layoutX="823.0" layoutY="83.0" text="ESGOTO">
+      <Label fx:id="lblEsgoto" layoutX="823.0" layoutY="83.0" text="ESGOTO" AnchorPane.topAnchor="83.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -150,7 +150,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <Label fx:id="lblTotalPagar" layoutX="19.0" layoutY="541.0" text="TOTAL A PAGAR">
+      <Label fx:id="lblTotalPagar" layoutX="19.0" layoutY="541.0" text="TOTAL A PAGAR" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -158,7 +158,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <Label fx:id="lblVencimento" layoutX="22.0" layoutY="602.0" text="VENCIMENTO">
+      <Label fx:id="lblVencimento" layoutX="22.0" layoutY="602.0" text="VENCIMENTO" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -166,7 +166,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <Button fx:id="btnRetornar" layoutX="20.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="184.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarAgua2" layoutX="20.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="184.0" text="Retornar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
@@ -174,15 +174,15 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <Label fx:id="lblViAgua" layoutX="13.0" layoutY="676.0" text="VI ÁGUA(ÁGUA*FT DE AJUSTE* ECON)">
+      <Label fx:id="lblViAgua" layoutX="13.0" layoutY="676.0" text="VI ÁGUA(ÁGUA*FT DE AJUSTE* ECON)" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblViEsgoto" layoutX="12.0" layoutY="734.0" text="VI ESGOTO(ESGOTO*FT DE AJUSTE*ECON)">
+      <Label fx:id="lblViEsgoto" layoutX="12.0" layoutY="734.0" text="VI ESGOTO(ESGOTO*FT DE AJUSTE*ECON)" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblTotalResidencia" layoutX="14.0" layoutY="788.0" text="TOTAL RESIDÊNCIAL(VI ÁGUA + VI ESGOTO)">
+      <Label fx:id="lblTotalResidencia" layoutX="14.0" layoutY="788.0" text="TOTAL RESIDÊNCIAL(VI ÁGUA + VI ESGOTO)" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -230,7 +230,7 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Button fx:id="btnSalvar" layoutX="652.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="43.0" prefWidth="419.0" text=" Salvar e voltar à tela inicial" textFill="#4a8af2">
+      <Button fx:id="btnSalvarVoltarTelaInicial" layoutX="652.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="43.0" prefWidth="419.0" text=" Salvar e voltar à tela inicial" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>

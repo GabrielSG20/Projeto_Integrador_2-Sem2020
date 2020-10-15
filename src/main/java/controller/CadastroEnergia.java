@@ -14,13 +14,29 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
-public class CadastroAgua2 implements Initializable {
+public class CadastroEnergia implements Initializable {
+    @FXML
+    private TextField txtNumeroInstalacao;
+    @FXML
+    private TextField txtCEPEnergia;
+    @FXML
+    private TextField txtMesReferenciaEnergia;
     @FXML
     private TextField txtTotalResidencial;
     @FXML
-    private Button btnSalvarVoltarTelaInicial;
+    private TextField txtDataVencimento;
     @FXML
-    private Button btnRetornarAgua2;
+    private TextField txtConsumo;
+    @FXML
+    private TextField txtValorTotal;
+    @FXML
+    private TextField txtEnderecoEnergia;
+    @FXML
+    private TextField txtNumeroEnergia;
+    @FXML
+    private Button btnVoltarTelaIncial;
+    @FXML
+    private Button btnRetornarEnergia;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -28,7 +44,7 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("agua1");
+        Main.changeScreen("tipoconta");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {

@@ -17,7 +17,7 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <Label fx:id="lblRGI" layoutX="19.0" layoutY="37.0" prefHeight="21.0" prefWidth="64.0" text="RGI">
+      <Label fx:id="lblRGI" layoutX="19.0" layoutY="37.0" prefHeight="21.0" prefWidth="64.0" text="RGI" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
@@ -26,11 +26,11 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblbNumConta" layoutX="14.0" layoutY="162.0" text="N° DA CONTA">
+      <Label fx:id="lblbNumConta" layoutX="14.0" layoutY="162.0" text="N° DA CONTA" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtNumConta" layoutX="206.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField layoutX="206.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -46,15 +46,15 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblMesReferencia" layoutX="18.0" layoutY="236.0" text="MÊS DE REFERÊNCIA">
+      <Label fx:id="lblMesReferencia" layoutX="18.0" layoutY="236.0" text="MÊS DE REFERÊNCIA" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <Label fx:id="lblApresentacao" layoutX="14.0" layoutY="373.0" text="APRESENTAÇÃO">
+      <Label fx:id="lblApresentacao" layoutX="14.0" layoutY="373.0" text="APRESENTAÇÃO" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <Label fx:id="lblLeituraAtual" layoutX="16.0" layoutY="487.0" text="LEITURA ATUAL">
+      <Label fx:id="lblLeituraAtual" layoutX="16.0" layoutY="487.0" text="LEITURA ATUAL" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
@@ -66,7 +66,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <Label fx:id="lblLeituraAnterior" layoutX="16.0" layoutY="429.0" text="LEITURA ANTERIOR">
+      <Label fx:id="lblLeituraAnterior" layoutX="16.0" layoutY="429.0" text="LEITURA ANTERIOR" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
@@ -86,7 +86,7 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblEndereco" layoutX="20.0" layoutY="700.0" text="ENDEREÇO">
+      <Label fx:id="lblEndereco" layoutX="20.0" layoutY="700.0" text="ENDEREÇO" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
@@ -94,7 +94,7 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblCidade" layoutX="16.0" layoutY="571.0" text="CIDADE">
+      <Label fx:id="lblCidade" layoutX="16.0" layoutY="571.0" text="CIDADE" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
@@ -110,19 +110,19 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblCEP" layoutX="19.0" layoutY="630.0" text="CEP">
+      <Label fx:id="lblCEP" layoutX="19.0" layoutY="630.0" text="CEP" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtCep" layoutX="779.0" layoutY="230.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField layoutX="779.0" layoutY="230.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblCodCliente" layoutX="12.0" layoutY="103.0" text="CÓDIGO DO CLIENTE">
+      <Label fx:id="lblCodCliente" layoutX="12.0" layoutY="103.0" text="CÓDIGO DO CLIENTE" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtCodCliente" layoutX="779.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField layoutX="779.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -130,7 +130,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtCidade" layoutX="137.0" layoutY="566.0" opacity="0.8" prefHeight="32.0" prefWidth="289.0">
+      <TextField layoutX="137.0" layoutY="566.0" opacity="0.8" prefHeight="32.0" prefWidth="289.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -150,15 +150,15 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtMb" layoutX="954.0" layoutY="382.0" opacity="0.8" prefHeight="32.0" prefWidth="86.0">
+      <TextField fx:id="txtConsumo" layoutX="954.0" layoutY="382.0" opacity="0.8" prefHeight="32.0" prefWidth="86.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Button fx:id="btnRetornar" layoutX="31.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenContinuar" opacity="0.96" prefHeight="43.0" prefWidth="229.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarAgua1" layoutX="31.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="229.0" text="Retornar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
-      <Button fx:id="btnSalvar" layoutX="666.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenContinuar" prefHeight="43.0" prefWidth="397.0" text="Salvar e continuar" textFill="#4a8af2">
+      <Button fx:id="btnSalvarContinuar" layoutX="666.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenContinuar" prefHeight="43.0" prefWidth="397.0" text="Salvar e continuar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>

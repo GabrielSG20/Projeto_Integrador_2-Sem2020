@@ -38,7 +38,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnRelatorios" ellipsisString="" layoutX="191.0" layoutY="604.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="62.0" textAlignment="CENTER">
+      <Button fx:id="btnRelatorios" ellipsisString="" layoutX="191.0" layoutY="604.0" mnemonicParsing="false" onAction="#changeScreenTipoRelatorio" prefHeight="43.0" prefWidth="62.0" textAlignment="CENTER">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
