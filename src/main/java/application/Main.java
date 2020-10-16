@@ -26,13 +26,12 @@ public class Main extends Application {
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
     private static ArrayList<Conta_agua> conta_agua;
-    private static int contadorAgua;
+    private static Conta_agua a;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
             conta_agua = new ArrayList<Conta_agua>();
-            contadorAgua = 0;
 
             stage = primaryStage;
 
@@ -115,18 +114,15 @@ public class Main extends Application {
     
     public static void salvarPJ(String nome_cliente, String cnpj_cliente, String nome_fornecedor,
             String cnpj_fornecedor, String tipo_fornecedor) {
-        Conta_agua a = new Conta_agua();
+        a = new Conta_agua();
         a.setNome_cliente(nome_cliente);
         a.setCnpj_cliente(cnpj_cliente);
         a.setNome_fornecedor(nome_fornecedor);
         a.setCnpj_fornecedor(cnpj_fornecedor);
         a.setTipo_fornecedor(tipo_fornecedor);
-
-        conta_agua.add(contadorAgua,a);
     }
 
     public static void salvarAgua1(int cep, String endereco, int numero, int rgi_conta, int gr_conta, String mes_referencia_conta, String codigo_cliente, int consumo_conta){
-        Conta_agua a = new Conta_agua();
         a.setCep(cep);
         a.setEndereco(endereco);
         a.setNumero(numero);
@@ -134,16 +130,13 @@ public class Main extends Application {
         a.setGr_conta(gr_conta);
         a.setMes_referencia_conta(mes_referencia_conta);
         a.setConsumo_conta(consumo_conta);
-        
-        conta_agua.add(contadorAgua,a);
     }
 
     public static void salvarAgua2(float total_pagar_residencial_conta){
         Conta_agua a = new Conta_agua();
         a.setTotal_pagar_residencial_conta(total_pagar_residencial_conta);
 
-        conta_agua.add(contadorAgua,a);
-        contadorAgua = contadorAgua + 1;
+        conta_agua.add(a);
     }
 
     public static void procurarRelatorioAgua(TextField nome_cliente,TextField cnpj_cliente,TextField nome_fornecedor,TextField cnpj_fornecedor,
@@ -157,12 +150,12 @@ public class Main extends Application {
 	TextField codigo_cliente,
 	TextField consumo_conta,
 	TextField total_pagar_residencial_conta){
-        Conta_agua a = new Conta_agua();
+        Conta_agua b = new Conta_agua();
         
         for(int i = 0; i < conta_agua.size();i++){
-            a = (Conta_agua)conta_agua.get(i);
+            b = (Conta_agua)conta_agua.get(i);
 			
-			if (a.getRgi_conta() == Integer.valueOf(rgi_conta.getText())) {
+			if (b.getRgi_conta() == Integer.valueOf(rgi_conta.getText())) {
                 nome_cliente.setText(a.getNome_cliente());
                 cnpj_cliente.setText(a.getCnpj_cliente());
                 nome_fornecedor.setText(a.getNome_fornecedor());
@@ -180,8 +173,6 @@ public class Main extends Application {
 				break;
 			}
         }
-
-        conta_agua.add(contadorAgua,a);
     }
 
 	public static void main(String[] args) {

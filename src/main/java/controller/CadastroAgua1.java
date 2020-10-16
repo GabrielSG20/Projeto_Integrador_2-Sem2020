@@ -56,6 +56,16 @@ public class CadastroAgua1 implements Initializable {
             Main.salvarAgua1(Integer.valueOf(txtCEP.getText()), txtEndereco.getText(), Integer.valueOf(txtNumero.getText()), 
             Integer.valueOf(txtRGI.getText()), Integer.valueOf(txtGR.getText()), txtMesReferencia.getText(), txtCodigoCliente.getText(), 
             Integer.valueOf(txtConsumo.getText()));
+
+            txtRGI.setText("");
+            txtGR.setText("");
+            txtMesReferencia.setText("");
+            txtEndereco.setText("");
+            txtCEP.setText("");
+            txtConsumo.setText("");
+            txtNumero.setText("");
+            txtCodigoCliente.setText("");
+
             Main.changeScreen("agua2");
         } else {
             

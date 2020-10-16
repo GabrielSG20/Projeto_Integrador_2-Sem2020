@@ -50,6 +50,22 @@ public class RelatorioAgua implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
+        RGI.setText("");
+        NomeCliente.setText("");
+        CNPJCliente.setText("");
+        NomeFornecedor.setText("");
+        CNPJFornecedor.setText("");
+        TipoFornecedor.setText("");
+        CEP.setText("");
+        Endereco.setText("");
+        Numero.setText("");
+        MesReferencia.setText("");
+        GR.setText("");
+        CodigoCliente.setText("");
+        Consumo.setText("");
+        TotalPagar.setText("");
+
+
         Main.changeScreen("main");
     }
 

@@ -24,7 +24,7 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="100.0" layoutY="207.0" text="CNPJ DO CLIENTE" AnchorPane.leftAnchor="100.0">
+      <Label layoutX="100.0" layoutY="207.0" text="DOCUMENTO" AnchorPane.leftAnchor="100.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
