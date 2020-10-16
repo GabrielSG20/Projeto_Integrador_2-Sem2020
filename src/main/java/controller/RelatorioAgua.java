@@ -32,8 +32,6 @@ public class RelatorioAgua implements Initializable {
     @FXML
     private TextField MesReferencia;
     @FXML
-    private TextField CodigoCliente;
-    @FXML
     private TextField Consumo;
     @FXML
     private TextField TotalPagar;
@@ -61,7 +59,6 @@ public class RelatorioAgua implements Initializable {
         Numero.setText("");
         MesReferencia.setText("");
         GR.setText("");
-        CodigoCliente.setText("");
         Consumo.setText("");
         TotalPagar.setText("");
 
@@ -71,6 +68,6 @@ public class RelatorioAgua implements Initializable {
 
     public void procurarRGI(ActionEvent event) {
           Main.procurarRelatorioAgua(NomeCliente, CNPJCliente, NomeFornecedor, CNPJFornecedor, TipoFornecedor, 
-          CEP, Endereco, Numero, RGI, GR, MesReferencia, CodigoCliente, Consumo, TotalPagar);
+          CEP, Endereco, Numero, RGI, GR, MesReferencia, Consumo, TotalPagar);
     }
 }

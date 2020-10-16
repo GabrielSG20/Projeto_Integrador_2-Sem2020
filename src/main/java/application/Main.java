@@ -146,7 +146,6 @@ public class Main extends Application {
 	TextField rgi_conta,
 	TextField gr_conta,
 	TextField mes_referencia_conta,
-	TextField codigo_cliente,
 	TextField consumo_conta,
 	TextField total_pagar_residencial_conta){
         Conta_agua b = new Conta_agua();
@@ -166,7 +165,6 @@ public class Main extends Application {
 	            rgi_conta.setText(String.valueOf(a.getRgi_conta()));
 	            gr_conta.setText(String.valueOf(a.getGr_conta()));
 	            mes_referencia_conta.setText(a.getMes_referencia_conta());
-	            codigo_cliente.setText(a.getCodigo_cliente());
                 consumo_conta.setText(String.valueOf(a.getConsumo_conta()));
 	            total_pagar_residencial_conta.setText(String.valueOf(a.getTotal_pagar_residencial_conta()));
 				break;
