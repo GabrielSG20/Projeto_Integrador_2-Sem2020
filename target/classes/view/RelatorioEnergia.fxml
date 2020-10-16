@@ -7,14 +7,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioAgua">
+<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioEnergia">
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <Label layoutX="276.0" layoutY="24.0" prefHeight="55.0" prefWidth="531.0" text="RELATÓRIO DE ÁGUA">
+      <Label layoutX="242.0" layoutY="24.0" prefHeight="55.0" prefWidth="615.0" text="RELATÓRIO DE ENERGIA">
          <font>
             <Font name="Arial Bold" size="48.0" />
          </font>
@@ -64,12 +64,12 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="105.0" layoutY="570.0" text="GR CONTA" AnchorPane.leftAnchor="100.0">
+      <Label layoutX="91.0" layoutY="575.0" text="MÊS REFERÊNCIA" AnchorPane.leftAnchor="100.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="91.0" layoutY="620.0" text="MÊS REFERÊNCIA" AnchorPane.leftAnchor="100.0">
+      <Label layoutX="91.0" layoutY="625.0" text="DATA DE VENCIMENTO" AnchorPane.leftAnchor="100.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
@@ -79,7 +79,7 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="95.0" layoutY="740.0" text="TOTAL A PAGAR" AnchorPane.leftAnchor="100.0">
+      <Label layoutX="95.0" layoutY="729.0" text="TOTAL A PAGAR" AnchorPane.leftAnchor="100.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
@@ -124,12 +124,12 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="GR" layoutX="426.0" layoutY="565.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="MesReferencia" layoutX="426.0" layoutY="565.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="MesReferencia" layoutX="426.0" layoutY="615.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="DataVencimento" layoutX="426.0" layoutY="615.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -139,7 +139,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="TotalPagar" layoutX="426.0" layoutY="730.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="TotalPagar" layoutX="426.0" layoutY="719.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -148,16 +148,16 @@
          <font>
             <Font name="Arial" size="18.0" />
          </font></Button>
-      <Button fx:id="btnBuscar" layoutX="948.0" layoutY="102.0" mnemonicParsing="false" onAction="#procurarRGI" prefHeight="30.0" prefWidth="126.0" text="Buscar">
+      <Button fx:id="btnBuscar" layoutX="948.0" layoutY="102.0" mnemonicParsing="false" onAction="#procurarNumeroInstalacao" prefHeight="30.0" prefWidth="126.0" text="Buscar">
          <font>
             <Font name="Arial" size="18.0" />
          </font></Button>
-      <Label layoutX="102.0" layoutY="107.0" text="RGI" AnchorPane.leftAnchor="100.0">
+      <Label layoutX="102.0" layoutY="107.0" text="NÚMERO INSTALAÇÃO" AnchorPane.leftAnchor="100.0">
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="RGI" layoutX="426.0" layoutY="102.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="NumeroInstalacao" layoutX="426.0" layoutY="102.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

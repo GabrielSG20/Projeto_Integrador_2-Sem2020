@@ -26,14 +26,12 @@ public class Main extends Application {
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
     private static ArrayList<Conta_agua> conta_agua;
-    private static int contadorAgua;
     private static Conta_agua a;
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
             conta_agua = new ArrayList<Conta_agua>();
-            contadorAgua = 0;
 
             stage = primaryStage;
 

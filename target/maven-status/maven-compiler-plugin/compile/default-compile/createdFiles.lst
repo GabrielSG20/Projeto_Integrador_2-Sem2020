@@ -1,6 +1,6 @@
 classes/Conta_luz.class
-controller/CadastroAgua2.class
 controller/TipoConta.class
+controller/CadastroAgua2.class
 controller/RelatorioAgua.class
 classes/Conta_agua.class
 controller/CadastroAgua1.class
