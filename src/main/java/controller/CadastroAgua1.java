@@ -32,6 +32,24 @@ public class CadastroAgua1 implements Initializable {
     @FXML
     private TextField txtCodigoCliente;
     @FXML
+    private TextField txtNumeroConta;
+    @FXML
+    private TextField txtLeituraAntData;
+    @FXML
+    private TextField txtLeituraAtualData;
+    @FXML
+    private TextField txtLeituraAntNumero;
+    @FXML
+    private TextField txtLeituraAtualNumero;
+    @FXML
+    private TextField txtUf;
+    @FXML
+    private TextField txtHidrometro;
+    @FXML
+    private TextField txtTipoLigacao;
+    @FXML
+    private TextField txtCidade;
+    @FXML
     private Button btnRetornarAgua1;
     @FXML
     private Button btnSalvarContinuar;
@@ -65,6 +83,15 @@ public class CadastroAgua1 implements Initializable {
             txtConsumo.setText("");
             txtNumero.setText("");
             txtCodigoCliente.setText("");
+            txtNumeroConta.setText("");
+            txtLeituraAntData.setText("");
+            txtLeituraAntNumero.setText("");
+            txtLeituraAtualData.setText("");
+            txtLeituraAtualNumero.setText("");
+            txtUf.setText("");
+            txtHidrometro.setText("");
+            txtTipoLigacao.setText("");
+            txtCidade.setText("");
 
             Main.changeScreen("agua2");
         } else {

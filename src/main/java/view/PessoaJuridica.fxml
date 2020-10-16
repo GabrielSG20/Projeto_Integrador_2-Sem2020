@@ -33,7 +33,7 @@
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField layoutX="370.0" layoutY="290.0" prefHeight="30.0" prefWidth="650.0">
+      <TextField fx:id="txtEmail" layoutX="370.0" layoutY="290.0" prefHeight="30.0" prefWidth="650.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>

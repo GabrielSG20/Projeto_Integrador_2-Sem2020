@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/TECSUS.png" />
+            <Image url="@test.png" />
          </image>
       </ImageView>
       <Label layoutX="242.0" layoutY="24.0" prefHeight="55.0" prefWidth="615.0" text="RELATÓRIO DE ENERGIA">
@@ -84,62 +84,62 @@
             <Font name="Arial Bold" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="NomeCliente" layoutX="426.0" layoutY="151.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="NomeCliente" disable="true" layoutX="426.0" layoutY="151.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="CNPJCliente" layoutX="426.0" layoutY="202.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="CNPJCliente" disable="true" layoutX="426.0" layoutY="202.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="NomeFornecedor" layoutX="426.0" layoutY="255.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="NomeFornecedor" disable="true" layoutX="426.0" layoutY="255.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="CNPJFornecedor" layoutX="426.0" layoutY="303.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="CNPJFornecedor" disable="true" layoutX="426.0" layoutY="303.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="TipoFornecedor" layoutX="426.0" layoutY="354.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="TipoFornecedor" disable="true" layoutX="426.0" layoutY="354.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="CEP" layoutX="426.0" layoutY="403.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="CEP" disable="true" layoutX="426.0" layoutY="403.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="Endereco" layoutX="426.0" layoutY="457.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="Endereco" disable="true" layoutX="426.0" layoutY="457.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="Numero" layoutX="426.0" layoutY="509.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="Numero" disable="true" layoutX="426.0" layoutY="509.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="MesReferencia" layoutX="426.0" layoutY="565.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="MesReferencia" disable="true" layoutX="426.0" layoutY="565.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="DataVencimento" layoutX="426.0" layoutY="615.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="DataVencimento" disable="true" layoutX="426.0" layoutY="615.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="Consumo" layoutX="426.0" layoutY="670.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="Consumo" disable="true" layoutX="426.0" layoutY="670.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="TotalPagar" layoutX="426.0" layoutY="719.0" prefHeight="30.0" prefWidth="500.0">
+      <TextField fx:id="TotalPagar" disable="true" layoutX="426.0" layoutY="719.0" prefHeight="30.0" prefWidth="500.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

@@ -26,6 +26,8 @@ public class PessoaFisica implements Initializable {
     @FXML
     private TextField txtTipoFornecedor;
     @FXML
+    private TextField txtEmail;
+    @FXML
     private Button btnRetornarPF;
     @FXML
     private Button btnProsseguirPF;

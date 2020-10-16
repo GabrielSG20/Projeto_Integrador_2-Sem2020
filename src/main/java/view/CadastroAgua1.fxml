@@ -30,7 +30,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField layoutX="206.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField fx:id="txtNumeroConta" layoutX="206.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -70,19 +70,19 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField fx:id="txtLeituraAtualData" layoutX="281.0" layoutY="426.0" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAntData" layoutX="281.0" layoutY="426.0" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAnteriorData" layoutX="281.0" layoutY="484.0" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAtualData" layoutX="281.0" layoutY="484.0" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="lblLeituraAtualLeitura" layoutX="451.0" layoutY="426.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAntNumero" layoutX="451.0" layoutY="426.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="lblLeituraAnteriorLeitura" layoutX="451.0" layoutY="484.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAtualNumero" layoutX="451.0" layoutY="484.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -114,7 +114,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField layoutX="779.0" layoutY="230.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField fx:id="txtHidrometro" layoutX="779.0" layoutY="230.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -122,7 +122,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField layoutX="779.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField fx:id="txtTipoLigacao" layoutX="779.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -130,7 +130,7 @@
          <font>
             <Font name="Arial Bold" size="24.0" />
          </font></Label>
-      <TextField layoutX="137.0" layoutY="566.0" opacity="0.8" prefHeight="32.0" prefWidth="289.0">
+      <TextField fx:id="txtCidade" layoutX="137.0" layoutY="566.0" opacity="0.8" prefHeight="32.0" prefWidth="289.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>

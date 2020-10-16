@@ -26,6 +26,8 @@ public class PessoaJuridica implements Initializable {
     @FXML
     private TextField txtTipoFornecedor;
     @FXML
+    private TextField txtEmail;
+    @FXML
     private Button btnRetornarPJ;
     @FXML
     private Button btnProsseguirPJ;
@@ -52,6 +54,7 @@ public class PessoaJuridica implements Initializable {
 
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
+            txtEmail.setText("");
             txtNomeFornecedor.setText("");
             txtCNPJFornecedor.setText("");
             txtTipoFornecedor.setText("");
