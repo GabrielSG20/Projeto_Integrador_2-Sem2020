@@ -35,7 +35,8 @@ Eu como digitador desejo ser alertado quando cometer erros de registros. A exemp
 Eu como analista de água ou energia desejo obter acesso aos relatórios de consumo e custo de energia e água, agrupados por cliente, disponibilizados em PDF. Para análise dos dados, proporcionando ao cliente uma avaliação sobre gastos e consumos no mês vigente.
 
 ### :airplane: Sprints
-1. Na primeira sprint a equipe realizou a criação do layout das telas de cadastros com os campos de preenchimentos necessários e finalizou as configurações da plataforma Gitpod com as ferramentas necessárias para iniciar o desenvolvimento do projeto. Além disso foi realizado a criação do Product Backlog.<br/> Duração: 07/09/2020 até 27/09/2020.
+1. Na primeira sprint, a equipe realizou a criação do layout das telas de cadastros com os campos de preenchimentos necessários e finalizou as configurações da plataforma Gitpod com as ferramentas necessárias para iniciar o desenvolvimento do projeto. Além disso foi realizado a criação do Product Backlog.<br/> Duração: 07/09/2020 até 27/09/2020.
+2. Na segunda sprint, a equipe realizou o desenvolvimento das telas para o fluxo de cadastro de contas de uma nova instalação, com JavaFX para parte visual (front-end) e Java para lógica entre as telas (back-end). Além de elaborar a modelagem do Banco de Dados que será implementado em futuras sprints.<br/> Duração: 28/09/2020 até 18/10/2020.
 
 
 
@@ -43,15 +44,19 @@ Eu como analista de água ou energia desejo obter acesso aos relatórios de cons
 1. Apresentação da Equipe Trinity e da problemática do trabalho. Além da demonstração dos Wireframes (representação das telas do software) e Product Backlog (funcionalidades do sistema). Disponíveis nos seguintes links:
    * [PowerPoint](https://drive.google.com/file/d/1QBe3fj6P33IbdpLLv37yWxnmgwYGU8Tq/view?usp=sharing)
    * [Video(YouTube)](https://www.youtube.com/watch?v=k5cMXUFGKQs)
+   
+2. Apresentação do desenvolvimento realizado durante a segunda sprint, elaboração das telas para um primeiro cadastro e mudança no fluxo de funcionamento. Disponíveis nos seguintes links:
+   * [PowerPoint](https://drive.google.com/file/d/1WFf6pF68s_2zgYqzR50OJI3VAGwB6fFH/view?usp=sharing)
+   * [Video(YouTube)](https://www.youtube.com/watch?v=Kt16ICw9lSM&feature=youtu.be)
 
 ### :paperclip: Funcionamento do projeto
-#### A tela inicial apresenta três botões: Novo cliente, Cliente já cadastrado e Relatórios. 
+#### A tela inicial apresenta três botões: Nova Instalação, Instalação já cadastrada e Relatórios. 
 
-* Novo Cliente: Ao clicar nesse botão, o usuário será redirecionado para uma tela onde escolherá o tipo de cliente (Físico ou Jurídico) e cadastrará os dados da empresa. Após isso, escolherá entre conta de água ou luz e seguirá para cadastrar o fornecedor dependendo do tipo de conta. Então, irá para outra página para preencher os dados da fatura, tendo uma opção para salvar os dados e outra para voltar a tela inicial. Todos as informações registradas pelo funcionário serão reutilizadas no programa.
+* Nova Instalação: Ao clicar nesse botão, o usuário será redirecionado para uma tela onde escolherá o tipo de cliente (Físico ou Jurídico) e cadastrará os dados da empresa e do fornecedor do serviço. Após isso, escolherá entre conta de água ou luz. Então, irá para outra página para preencher os dados da fatura, tendo uma opção para salvar os dados e voltar a tela inicial. Sendo que todos os passos apresentam uma confirmação de dados ao trocar de tela. Todos as informações registradas pelo funcionário serão reutilizadas no programa.
 
-* Cliente já cadastrado: Ao clicar nesse botão, o usuário será redirecionado para uma tela onde vai colocar o CPF ou CPNJ de uma empresa que já foi cadastrada, assim será encaminhado para a página de cadastro de clientes com os dados já preenchidos, podendo modificar se necessário. Após isso, escolherá entre conta de água ou luz e seguirá para cadastrar o fornecedor, no qual já é preenchido automaticamente, como aconteceu com as informações da empresa, isso considerando que cada cliente apresenta apenas um fornecedor para cada serviço. E seguirá com o cadastro da conta escolhida, podendo salvá-la e retornar a tela inicial.
+* Instalação já cadastrada: Ao clicar nesse botão, o usuário será redirecionado para uma tela onde vai colocar o RGI ou Número de Instalação de uma instalação que já foi cadastrada, assim será encaminhado para a página de escolha entre conta de água ou luz, e seguirá com o cadastro da conta escolhida, podendo salvá-la e retornar a tela inicial. O sistema reconhece as informações que se repetem de uma instalação já cadastrada e apenas requere campos que se modificam com novas contas, armazenando todos as informações necessárias.
 
-* Relatórios: Ao clicar nesse botão, o usuário irá para uma página onde visualizará relatórios de consumo e custos das contas, agrupados por clientes.
+* Relatórios: Ao clicar nesse botão, o usuário irá para uma página onde visualizará relatórios de consumo e custos das contas, agrupados por clientes. Podendo editar os dados presentes nessa seção.
 
 ###  :computer: Tecnologias utilizadas
 * [Java](https://www.java.com/pt_BR/)
