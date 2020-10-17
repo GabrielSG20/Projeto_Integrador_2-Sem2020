@@ -16,7 +16,7 @@ import application.Main;
 
 public class CadastroAgua2 implements Initializable {
     @FXML
-    private TextField txtTotalResidencial;
+    private TextField txtTotalPagar;
     @FXML
     private Button btnSalvarVoltarTelaInicial;
     @FXML
@@ -39,9 +39,9 @@ public class CadastroAgua2 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarAgua2(Float.valueOf(txtTotalResidencial.getText()));
+            Main.salvarAgua2(Float.valueOf(txtTotalPagar.getText()));
 
-            txtTotalResidencial.setText("");
+            txtTotalPagar.setText("");
 
             Main.changeScreen("main");
 

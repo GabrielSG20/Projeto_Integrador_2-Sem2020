@@ -15,7 +15,7 @@ public class Conta_agua {
 	private String mes_referencia_conta;
 	private String codigo_cliente;
 	private int consumo_conta;
-	private float total_pagar_residencial_conta;
+	private float total_pagar;
 	
 	public Conta_agua(int rgi_conta) {
 		this.setRgi_conta(rgi_conta);
@@ -91,11 +91,11 @@ public class Conta_agua {
 	public void setConsumo_conta(int consumo_conta) {
 		this.consumo_conta = consumo_conta;
 	}
-	public float getTotal_pagar_residencial_conta() {
-		return total_pagar_residencial_conta;
+	public float getTotal_pagar() {
+		return total_pagar;
 	}
-	public void setTotal_pagar_residencial_conta(float total_pagar_residencial_conta) {
-		this.total_pagar_residencial_conta = total_pagar_residencial_conta;
+	public void setTotal_pagar(float total_pagar_residencial_conta) {
+		this.total_pagar = total_pagar_residencial_conta;
 	}
 
 	public int getCep() {

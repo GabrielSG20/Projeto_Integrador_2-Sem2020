@@ -62,7 +62,7 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label layoutX="277.0" layoutY="170.0" text="8">
+      <Label layoutX="277.0" layoutY="170.0" text="3">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -82,7 +82,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField layoutX="573.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField layoutX="419.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -98,11 +98,11 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField layoutX="573.0" layoutY="375.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField layoutX="419.0" layoutY="375.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField layoutX="573.0" layoutY="445.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField layoutX="573.0" layoutY="500.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -138,15 +138,15 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField layoutX="911.0" layoutY="445.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField layoutX="911.0" layoutY="500.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField layoutX="911.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField layoutX="726.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField layoutX="911.0" layoutY="378.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField layoutX="726.0" layoutY="378.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -154,7 +154,7 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <TextField layoutX="201.0" layoutY="536.0" opacity="0.8" prefHeight="25.0" prefWidth="96.0">
+      <TextField fx:id="txtTotalPagar" layoutX="201.0" layoutY="536.0" opacity="0.8" prefHeight="25.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -234,5 +234,15 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
+      <Label fx:id="lblAliquota1" layoutX="800.0" layoutY="785.0" text="MULTA">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField layoutX="973.0" layoutY="780.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font>
+      </TextField>
    </children>
 </AnchorPane>

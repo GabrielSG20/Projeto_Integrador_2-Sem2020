@@ -132,8 +132,8 @@ public class Main extends Application {
         a.setConsumo_conta(consumo_conta);
     }
 
-    public static void salvarAgua2(float total_pagar_residencial_conta){
-        a.setTotal_pagar_residencial_conta(total_pagar_residencial_conta);
+    public static void salvarAgua2(float total_pagar){
+        a.setTotal_pagar(total_pagar);
 
         conta_agua.add(a);
     }
@@ -147,7 +147,7 @@ public class Main extends Application {
 	TextField gr_conta,
 	TextField mes_referencia_conta,
 	TextField consumo_conta,
-	TextField total_pagar_residencial_conta){
+	TextField total_pagar){
         Conta_agua b = new Conta_agua();
         
         for(int i = 0; i < conta_agua.size();i++){
@@ -166,7 +166,7 @@ public class Main extends Application {
 	            gr_conta.setText(String.valueOf(a.getGr_conta()));
 	            mes_referencia_conta.setText(a.getMes_referencia_conta());
                 consumo_conta.setText(String.valueOf(a.getConsumo_conta()));
-	            total_pagar_residencial_conta.setText(String.valueOf(a.getTotal_pagar_residencial_conta()));
+	            total_pagar.setText(String.valueOf(a.getTotal_pagar()));
 				break;
 			}
         }
