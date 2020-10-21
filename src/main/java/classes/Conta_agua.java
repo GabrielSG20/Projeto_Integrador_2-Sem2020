@@ -10,18 +10,18 @@ public class Conta_agua {
 	private String nome_fornecedor;
 	private String cnpj_fornecedor;
 	private String tipo_fornecedor;
-	private int cep;
+	private String cep;
 	private String endereco;
 	private int numero;
-	private int rgi_conta;
-	private int numero_conta;
+	private String rgi_conta;
+	private String numero_conta;
 	private int gr_conta;
 	private String mes_referencia_conta;
 	private String codigo_cliente;
 	private int consumo_conta;
 	private float total_pagar;
 	
-	public Conta_agua(int rgi_conta) {
+	public Conta_agua(String rgi_conta) {
 		this.setRgi_conta(rgi_conta);
 	}
 
@@ -59,16 +59,16 @@ public class Conta_agua {
 	public void setTipo_fornecedor(String tipo_fornecedor) {
 		this.tipo_fornecedor = tipo_fornecedor;
 	}
-	public int getRgi_conta() {
+	public String getRgi_conta() {
 		return rgi_conta;
 	}
-	public void setRgi_conta(int rgi_conta) {
+	public void setRgi_conta(String rgi_conta) {
 		this.rgi_conta = rgi_conta;
 	}
-	public int getNumero_conta() {
+	public String getNumero_conta() {
 		return numero_conta;
 	}
-	public void setNumero_conta(int numero_conta) {
+	public void setNumero_conta(String numero_conta) {
 		this.numero_conta = numero_conta;
 	}
 	public int getGr_conta() {
@@ -102,11 +102,11 @@ public class Conta_agua {
 		this.total_pagar = total_pagar_residencial_conta;
 	}
 
-	public int getCep() {
+	public String getCep() {
 		return cep;
 	}
 
-	public void setCep(int cep) {
+	public void setCep(String cep) {
 		this.cep = cep;
 	}
 
@@ -130,7 +130,7 @@ public class Conta_agua {
     public String salvarCliente() {
 
         try {
-            FileWriter arq = new FileWriter("RelatorioAgua.txt");
+            FileWriter arq = new FileWriter("RelatorioAgua-Cliente_" + this.nome_cliente + ".txt");
             PrintWriter gravarArq = new PrintWriter(arq);
             gravarArq.println("Informações do Cliente e do Fornecedor do Serviço: ");
             gravarArq.println("\nNome do Cliente: " + this.nome_cliente);
@@ -152,7 +152,7 @@ public class Conta_agua {
     public String salvarAgua1() {
 
         try {
-            FileWriter arq = new FileWriter("RelatorioAgua.txt", true);
+            FileWriter arq = new FileWriter("RelatorioAgua-Cliente_" + this.nome_cliente + ".txt", true);
             PrintWriter gravarArq = new PrintWriter(arq);
             gravarArq.println("\nInformações da Conta de Água: ");
             gravarArq.println("\nCEP: " + this.cep);
@@ -177,7 +177,7 @@ public class Conta_agua {
     public String salvarAgua2() {
 
         try {
-            FileWriter arq = new FileWriter("RelatorioAgua.txt", true);
+            FileWriter arq = new FileWriter("RelatorioAgua-Cliente_" + this.nome_cliente + ".txt", true);
             PrintWriter gravarArq = new PrintWriter(arq);
             gravarArq.println("Total a pagar: " + this.total_pagar);
             gravarArq.flush();

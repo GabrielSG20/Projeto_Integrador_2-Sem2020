@@ -71,8 +71,8 @@ public class CadastroAgua1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarAgua1(Integer.valueOf(txtCEP.getText()), txtEndereco.getText(), Integer.valueOf(txtNumero.getText()), 
-            Integer.valueOf(txtRGI.getText()), Integer.valueOf(txtGR.getText()), txtMesReferencia.getText(), txtCodigoCliente.getText(), 
+            Main.salvarAgua1(txtCEP.getText(), txtEndereco.getText(), Integer.valueOf(txtNumero.getText()), 
+            txtRGI.getText(), Integer.valueOf(txtGR.getText()), txtMesReferencia.getText(), txtCodigoCliente.getText(), 
             Integer.valueOf(txtConsumo.getText()));
 
             txtRGI.setText("");

@@ -124,7 +124,7 @@ public class Main extends Application {
         a.salvarCliente();
     }
 
-    public static void salvarAgua1(int cep, String endereco, int numero, int rgi_conta, int gr_conta, String mes_referencia_conta, String codigo_cliente, int consumo_conta){
+    public static void salvarAgua1(String cep, String endereco, int numero, String rgi_conta, int gr_conta, String mes_referencia_conta, String codigo_cliente, int consumo_conta){
         a.setCep(cep);
         a.setEndereco(endereco);
         a.setNumero(numero);
@@ -158,7 +158,7 @@ public class Main extends Application {
         for(int i = 0; i < conta_agua.size();i++){
             b = (Conta_agua)conta_agua.get(i);
 			
-			if (b.getRgi_conta() == Integer.valueOf(rgi_conta.getText())) {
+			if (b.getRgi_conta() == rgi_conta.getText()) {
                 nome_cliente.setText(a.getNome_cliente());
                 cnpj_cliente.setText(a.getCnpj_cliente());
                 nome_fornecedor.setText(a.getNome_fornecedor());
@@ -167,7 +167,7 @@ public class Main extends Application {
 	            cep.setText(String.valueOf(a.getCep()));
 	            endereco.setText(a.getEndereco());
 	            numero.setText(String.valueOf(a.getNumero()));
-	            rgi_conta.setText(String.valueOf(a.getRgi_conta()));
+	            rgi_conta.setText(a.getRgi_conta());
 	            gr_conta.setText(String.valueOf(a.getGr_conta()));
 	            mes_referencia_conta.setText(a.getMes_referencia_conta());
                 consumo_conta.setText(String.valueOf(a.getConsumo_conta()));
