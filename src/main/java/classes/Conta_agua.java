@@ -158,7 +158,6 @@ public class Conta_agua {
             gravarArq.println("\nCEP: " + this.cep);
             gravarArq.println("Endereço: " + this.endereco);
             gravarArq.println("Número (endereço): " + this.numero);
-            gravarArq.println("Nome do Cliente: " + this.nome_cliente);
             gravarArq.println("RGI: " + this.rgi_conta);
             gravarArq.println("GR: " + this.gr_conta);
             gravarArq.println("Mês Referência: " + this.mes_referencia_conta);
