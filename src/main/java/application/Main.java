@@ -120,6 +120,8 @@ public class Main extends Application {
         a.setNome_fornecedor(nome_fornecedor);
         a.setCnpj_fornecedor(cnpj_fornecedor);
         a.setTipo_fornecedor(tipo_fornecedor);
+
+        a.salvarCliente();
     }
 
     public static void salvarAgua1(int cep, String endereco, int numero, int rgi_conta, int gr_conta, String mes_referencia_conta, String codigo_cliente, int consumo_conta){
@@ -130,11 +132,14 @@ public class Main extends Application {
         a.setGr_conta(gr_conta);
         a.setMes_referencia_conta(mes_referencia_conta);
         a.setConsumo_conta(consumo_conta);
+
+        a.salvarAgua1();
     }
 
     public static void salvarAgua2(float total_pagar){
         a.setTotal_pagar(total_pagar);
 
+        a.salvarAgua2();
         conta_agua.add(a);
     }
 
