@@ -1,0 +1,19 @@
+Informações do Cliente e do Fornecedor do Serviço: 
+
+Nome do Cliente: Trinity
+Documento do Cliente: 11111111111111
+Nome do Fornecedor: Sabesp
+CNPJ Fornecedor: 43776517000150
+Tipo Fornecedor: Agua
+
+Informações da Conta de Água: 
+
+CEP: 12209220
+Endereço: Rua Doutor Aleixo Mascarenhas
+Número (endereço): 25
+Nome do Cliente: Trinity
+RGI: 1234567890
+GR: 11
+Mês Referência: julho/20
+Consumo: 13
+Total a pagar: 68.83

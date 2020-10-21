@@ -158,7 +158,7 @@ public class Main extends Application {
         for(int i = 0; i < conta_agua.size();i++){
             b = (Conta_agua)conta_agua.get(i);
 			
-			if (b.getRgi_conta() == rgi_conta.getText()) {
+			if (b.getRgi_conta().equals(rgi_conta.getText())) {
                 nome_cliente.setText(a.getNome_cliente());
                 cnpj_cliente.setText(a.getCnpj_cliente());
                 nome_fornecedor.setText(a.getNome_fornecedor());
