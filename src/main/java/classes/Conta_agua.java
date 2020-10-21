@@ -155,11 +155,11 @@ public class Conta_agua {
             FileWriter arq = new FileWriter("RelatorioAgua.txt", true);
             PrintWriter gravarArq = new PrintWriter(arq);
             gravarArq.println("\nInformações da Conta de Água: ");
-            gravarArq.println("CEP: " + this.cep);
+            gravarArq.println("\nCEP: " + this.cep);
             gravarArq.println("Endereço: " + this.endereco);
             gravarArq.println("Número (endereço): " + this.numero);
             gravarArq.println("Nome do Cliente: " + this.nome_cliente);
-            gravarArq.println("\nRGI: " + this.rgi_conta);
+            gravarArq.println("RGI: " + this.rgi_conta);
             gravarArq.println("GR: " + this.gr_conta);
             gravarArq.println("Mês Referência: " + this.mes_referencia_conta);
             gravarArq.println("Consumo: " + this.consumo_conta);
