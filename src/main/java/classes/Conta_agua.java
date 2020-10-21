@@ -1,5 +1,9 @@
 package classes;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 public class Conta_agua {
 	private String nome_cliente;
 	private String cnpj_cliente;
@@ -120,5 +124,70 @@ public class Conta_agua {
 
 	public void setNumero(int numero) {
 		this.numero = numero;
-	}
+    }
+    
+    // Métodos
+    public String salvarCliente() {
+
+        try {
+            FileWriter arq = new FileWriter("RelatorioAgua.txt");
+            PrintWriter gravarArq = new PrintWriter(arq);
+            gravarArq.println("Informações do Cliente e do Fornecedor do Serviço: ");
+            gravarArq.println("\nNome do Cliente: " + this.nome_cliente);
+            gravarArq.println("Documento do Cliente: " + this.cnpj_cliente);
+            gravarArq.println("Nome do Fornecedor: " + this.nome_fornecedor);
+            gravarArq.println("CNPJ Fornecedor: " + this.cnpj_fornecedor);
+            gravarArq.println("Tipo Fornecedor: " + this.tipo_fornecedor);
+            gravarArq.flush();
+            gravarArq.close();
+            arq.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public String salvarAgua1() {
+
+        try {
+            FileWriter arq = new FileWriter("RelatorioAgua.txt", true);
+            PrintWriter gravarArq = new PrintWriter(arq);
+            gravarArq.println("\nInformações da Conta de Água: ");
+            gravarArq.println("CEP: " + this.cep);
+            gravarArq.println("Endereço: " + this.endereco);
+            gravarArq.println("Número (endereço): " + this.numero);
+            gravarArq.println("Nome do Cliente: " + this.nome_cliente);
+            gravarArq.println("\nRGI: " + this.rgi_conta);
+            gravarArq.println("GR: " + this.gr_conta);
+            gravarArq.println("Mês Referência: " + this.mes_referencia_conta);
+            gravarArq.println("Consumo: " + this.consumo_conta);
+            gravarArq.flush();
+            gravarArq.close();
+            arq.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    public String salvarAgua2() {
+
+        try {
+            FileWriter arq = new FileWriter("RelatorioAgua.txt", true);
+            PrintWriter gravarArq = new PrintWriter(arq);
+            gravarArq.println("Total a pagar: " + this.total_pagar);
+            gravarArq.flush();
+            gravarArq.close();
+            arq.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
 }
