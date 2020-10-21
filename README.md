@@ -27,10 +27,10 @@ A equipe Trinity foi solicitada pela empresa TecSUS para o desenvolvimento de um
 Eu como digitador desejo uma plataforma simples e intuitiva para cadastro de contas de água e energia, além da visualização das contas já registradas, desse modo, proporcionando uma melhor produtividade e agilidade no processo de digitação, prevenindo possíveis erros. 
 #### 2. Seleção dos tipos de conta.<br/>
 Eu como digitador desejo um recurso para selecionar a categoria de conta a ser preenchida (água/energia). Abrindo uma aba específica para cada uma, com formulários distintos, contendo campos específicos relacionados a cada tipo de conta, para diminuir os erros de digitação.
-#### 3. Automatização na obtenção de dados (Cliente/Fornecedor).<br/>
-Eu como digitador espero obter informações de clientes já registrados, de forma automática, preenchendo os campos do formulário de cadastro de cliente, por meio da busca do CPF ou CNPJ. O mesmo ocorre com os dados do fornecedor, uma vez que exista um fornecedor de água e um de energia por cliente. Com intuito de agilizar o processo de digitação.
-#### 4. Prevenção de erros de registro.<br/>
+#### 3. Prevenção de erros de registro.<br/>
 Eu como digitador desejo ser alertado quando cometer erros de registros. A exemplo do envio de campos em branco e/ou falta de caracteres necessários. Para evitar possíveis erros no cadastro de contas.
+#### 4. Automatização na obtenção de dados (Cliente/Fornecedor).<br/>
+Eu como digitador espero obter informações de clientes já registrados, de forma automática, preenchendo os campos do formulário de cadastro de cliente, por meio da busca do CPF ou CNPJ. O mesmo ocorre com os dados do fornecedor, uma vez que exista um fornecedor de água e um de energia por cliente. Com intuito de agilizar o processo de digitação.
 #### 5. Gerador de relatórios de consumo e custos.<br/>
 Eu como analista de água ou energia desejo obter acesso aos relatórios de consumo e custo de energia e água, agrupados por cliente, disponibilizados em PDF. Para análise dos dados, proporcionando ao cliente uma avaliação sobre gastos e consumos no mês vigente.
 
