@@ -47,7 +47,7 @@ Eu como analista de água ou energia desejo obter acesso aos relatórios de cons
    
 2. Apresentação do desenvolvimento realizado durante a segunda sprint, elaboração das telas para um primeiro cadastro e mudança no fluxo de funcionamento. Disponíveis nos seguintes links:
    * [PowerPoint](https://drive.google.com/file/d/1WFf6pF68s_2zgYqzR50OJI3VAGwB6fFH/view?usp=sharing)
-   * [Video(YouTube)](https://www.youtube.com/watch?v=Kt16ICw9lSM&feature=youtu.be)
+   * [Video(YouTube)](https://www.youtube.com/watch?v=t8BieTIL9Lc&feature=youtu.be)
 
 ### :paperclip: Funcionamento do projeto
 #### A tela inicial apresenta três botões: Nova Instalação, Instalação já cadastrada e Relatórios. 
