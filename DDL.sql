@@ -6,22 +6,11 @@ create table cli_cliente (
 
     cli_documento bigint primary key,
     cli_nome varchar(100) not null,
-    cli_email varchar(150) unique
-);
-
-create table int_instalacao (
-
-    int_numero_instalacao bigint primary key,
-    cli_documento bigint not null,
-    for_fornecedor_id bigint not null,
-    end_cep bigint not null,
-    end_numero bigint not null
+    cli_email varchar(150) unique not null
 );
     
-create table for_fornecedor(
-
-    for_fornecedor_id bigint auto_increment primary key,    
-    for_cnpj bigint not null unique,
+create table for_fornecedor(   
+    for_cnpj bigint primary key,
     for_nome varchar(100) not null,
     for_tipo varchar(10) not null
 );
@@ -40,7 +29,7 @@ create table int_instalacao (
 
     int_numero_instalacao bigint primary key,
     cli_documento bigint not null,
-    for_fornecedor_id bigint not null,
+    for_cnpj bigint not null,
     end_cep bigint not null,
     end_numero bigint not null
 );   
@@ -54,6 +43,6 @@ create table cta_conta (
       
 alter table cta_conta add constraint instalacao_conta_fk foreign key (int_numero_instalacao) references int_instalacao(int_numero_instalacao);
 alter table int_instalacao add constraint cliente_instalacao_fk foreign key (cli_documento) references cli_cliente(cli_documento);
-alter table int_instalacao add constraint fornecedor_instalacao_fk foreign key (for_fornecedor_id) references for_fornecedor(for_fornecedor_id);
+alter table int_instalacao add constraint fornecedor_instalacao_fk foreign key (for_cnpj) references for_fornecedor(for_cnpj);
 alter table int_instalacao add constraint endereco_instalacao_fk foreign key (end_cep, end_numero) references end_endereco(end_cep,end_numero);
 
