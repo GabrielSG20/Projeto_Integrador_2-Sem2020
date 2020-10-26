@@ -59,7 +59,8 @@ create table ene_energia (
     ene_data_leitura_anterior date not null,
     ene_data_leitura_atual date not null,
     ene_tipo_bandeira varchar(10) not null,
-    ene_valor_total numeric (10,2) not null
+    ene_valor_total numeric (10,2) not null,
+    constraint ene_energia_pk primary key (int_numero_instalacao,cta_mes_referencia)
 );
 
 alter table cta_conta add constraint instalacao_conta_fk foreign key (int_numero_instalacao) references int_instalacao(int_numero_instalacao);
