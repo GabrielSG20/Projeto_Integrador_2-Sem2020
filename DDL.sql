@@ -63,9 +63,44 @@ create table ene_energia (
     constraint ene_energia_pk primary key (int_numero_instalacao,cta_mes_referencia)
 );
 
+create table agu_agua (
+    int_numero_instalacao bigint,
+    cta_mes_referencia date,
+    agu_gr bigint not null,
+    agu_codigo_cliente bigint not null,
+    agu_numero_conta bigint not null,
+    agu_tipo_ligacao varchar(50),
+    agu_hidrometro varchar(50),
+    agu_data_leitura_anterior date not null,
+    agu_data_leitura_atual date not null,
+    agu_leitura_anterior bigint not null,
+    agu_leitura_atual bigint not null,
+    agu_consumo bigint not null,
+    agu_vencimento date not null,
+    agu_valor_agua numeric(10,2) not null,
+    agu_valor_esgoto numeric(10,2) not null,
+    agu_taxa_regulamentacao numeric(10,2),
+    agu_multa numeric(10,2),
+    agu_tarifa_ate10_agua numeric(10,2),
+    agu_tarifa_ate20_agua numeric(10,2),
+    agu_tarifa_ate30_agua numeric(10,2),
+    agu_tarifa_ate50_agua numeric(10,2),
+    agu_tarifa_acima50_agua numeric(10,2),
+    agu_tarifa_ate10_esgoto numeric(10,2),
+    agu_tarifa_ate20_esgoto numeric(10,2),
+    agu_tarifa_ate30_esgoto numeric(10,2),
+    agu_tarifa_ate50_esgoto numeric(10,2),
+    agu_tarifa_acima50_esgoto numeric(10,2),
+    agu_valor_agua1 numeric(10,2),
+    agu_valor_agua2 numeric(10,2),
+    agu_valor_esgoto1 numeric(10,2),
+    agu_valor_esgoto2 numeric(10,2),
+    constraint agu_agua_pk primary key (int_numero_instalacao,cta_mes_referencia)
+);
+
 alter table cta_conta add constraint instalacao_conta_fk foreign key (int_numero_instalacao) references int_instalacao(int_numero_instalacao);
 alter table int_instalacao add constraint cliente_instalacao_fk foreign key (cli_documento) references cli_cliente(cli_documento);
 alter table int_instalacao add constraint fornecedor_instalacao_fk foreign key (for_cnpj) references for_fornecedor(for_cnpj);
 alter table int_instalacao add constraint endereco_instalacao_fk foreign key (end_cep, end_numero) references end_endereco(end_cep,end_numero);
 alter table ene_energia add constraint conta_conta_energia_fk foreign key (int_numero_instalacao, cta_mes_referencia) references cta_conta(int_numero_instalacao, cta_mes_referencia);
-
+alter table agu_agua add constraint conta_conta_agua_fk foreign key (int_numero_instalacao, cta_mes_referencia) references cta_conta(int_numero_instalacao, cta_mes_referencia);
