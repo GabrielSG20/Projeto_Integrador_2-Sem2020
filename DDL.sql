@@ -42,8 +42,8 @@ create table cta_conta (
 );
 
 create table ene_energia (
-    int_numero_instalacao bigint not null,
-    cta_mes_referencia date not null,
+    int_numero_instalacao bigint,
+    cta_mes_referencia date,
     ene_consumo_conta_mes bigint not null,
     ene_codigo_fiscal bigint not null,
     ene_grupo_subgrupo bigint not null,
