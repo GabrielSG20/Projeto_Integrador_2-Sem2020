@@ -7,49 +7,49 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TipoRelatorio">
+<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TipoRelatorio">
    <children>
-      <ImageView fitHeight="900.0" fitWidth="1100.0" layoutX="116.0" layoutY="-6.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/TECSUS.png" />
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
-      <Text layoutX="275.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de Relatório">
+      <Text layoutX="203.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de Relatório">
          <font>
-            <Font size="40.0" />
+            <Font name="Arial" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="btnRelatorioLuz" ellipsisString="" layoutX="147.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenRelatorioLuz" prefHeight="178.0" prefWidth="174.0">
+      <Button fx:id="btnRelatorioLuz" ellipsisString="" layoutX="147.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenRelatorioLuz" prefHeight="150.0" prefWidth="150.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="150.0">
          <graphic>
-            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnRelarioLuz" fitHeight="150.0" fitWidth="150.0" onDragDetected="#changeScreenRelatorioLuz" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/image/Energia.jpeg" />
+                  <Image url="@../Imagens/Energia.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Text layoutX="635.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água">
+      <Text layoutX="492.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água">
          <font>
-            <Font size="36.0" />
+            <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="165.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de luz">
+      <Text layoutX="120.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de luz">
          <font>
-            <Font size="36.0" />
+            <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="btnRelatorioAgua" ellipsisString="" layoutX="630.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenRelatorioAgua">
+      <Button fx:id="btnRelatorioAgua" ellipsisString="" layoutX="630.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenRelatorioAgua" prefHeight="150.0" prefWidth="150.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="150.0">
          <graphic>
-            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnRelatorioAgua" fitHeight="150.0" fitWidth="150.0" onDragDetected="#changeScreenRelatorioAgua" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/image/Agua.jpeg" />
+                  <Image url="@../Imagens/Agua.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnRetornarTipoR" layoutX="70.0" layoutY="776.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="51.0" prefWidth="164.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarTipoR" layoutX="20.0" layoutY="480.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="164.0" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0">
          <font>
-            <Font size="24.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
    </children>
