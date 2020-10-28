@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
@@ -24,9 +25,9 @@ public class PessoaJuridica implements Initializable {
     @FXML
     private TextField txtCNPJFornecedor;
     @FXML
-    private TextField txtTipoFornecedor;
-    @FXML
     private TextField txtEmail;
+    @FXML
+    private ComboBox comboTipoFornecedor;
     @FXML
     private Button btnRetornarPJ;
     @FXML
@@ -49,15 +50,12 @@ public class PessoaJuridica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarPJ(txtNomeFantasia.getText(), txtCNPJEmpresa.getText(), txtNomeFornecedor.getText(),
-            txtCNPJFornecedor.getText(), txtTipoFornecedor.getText());
 
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
             txtEmail.setText("");
             txtNomeFornecedor.setText("");
             txtCNPJFornecedor.setText("");
-            txtTipoFornecedor.setText("");
 
             Main.changeScreen("tipoconta");
         } else {

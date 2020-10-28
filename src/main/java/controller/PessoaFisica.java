@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
@@ -24,9 +25,9 @@ public class PessoaFisica implements Initializable {
     @FXML
     private TextField txtCNPJFornecedor;
     @FXML
-    private TextField txtTipoFornecedor;
-    @FXML
     private TextField txtEmail;
+    @FXML
+    private ComboBox comboTipoFornecedor;
     @FXML
     private Button btnRetornarPF;
     @FXML

@@ -10,53 +10,40 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
-public class CadastroAgua2 implements Initializable {
+public class CadastroEnergia2 implements Initializable {
     @FXML
-    private TextField txtTarifa10agua;
+    private TextField txtContaMes;
     @FXML
-    private TextField txtTarifa20agua;
+    private TextField txtNumeroInstalacao;
     @FXML
-    private TextField txtTarifa30agua;
+    private TextField txtConsumo;
     @FXML
-    private TextField txtTarifa50agua;
+    private TextField txtDataVencimento;
     @FXML
-    private TextField txtTarifaMais50agua;
+    private TextField txtTotalPagar;
     @FXML
-    private TextField txtValorAgua1;
+    private TextField txtConstMulti;
     @FXML
-    private TextField txtValorAgua2;
+    private TextField txtNRmedidor;
     @FXML
-    private TextField txtTarifa10esgoto;
+    private TextField txtLeituraAnterior;
     @FXML
-    private TextField txtTarifa20esgoto;
+    private TextField txtLeituraAtual;
     @FXML
-    private TextField txtTarifa30esgoto;
+    private TextField txtDataLeituraAnterior;
     @FXML
-    private TextField txtTarifa50esgoto;
+    private TextField txtDataLeituraAtual;
     @FXML
-    private TextField txtTarifaMais50esgoto;
+    private ComboBox comboBandeirasTarifarias;
     @FXML
-    private TextField txtValorEsgoto1;
+    private Button btnRetornarEnergia;
     @FXML
-    private TextField txtValorEsgoto2;
-    @FXML
-    private TextField txtVencimento;
-    @FXML
-    private TextField txtTotalAgua;
-    @FXML
-    private TextField txtTotalEsgoto;
-    @FXML
-    private TextField txtTaxaRegulacao;
-    @FXML
-    private TextField txtMulta;
-    @FXML
-    private Button btnSalvarVoltarTelaInicial;
-    @FXML
-    private Button btnRetornarAgua2;
+    private Button btnVoltarTelaIncial;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -64,7 +51,7 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("agua1");
+        Main.changeScreen("energia1");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {

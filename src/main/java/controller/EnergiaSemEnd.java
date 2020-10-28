@@ -10,53 +10,52 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
-public class CadastroAgua2 implements Initializable {
+public class EnergiaSemEnd implements Initializable {
     @FXML
-    private TextField txtTarifa10agua;
+    private TextField txtContaMes;
     @FXML
-    private TextField txtTarifa20agua;
+    private TextField txtConsumo;
     @FXML
-    private TextField txtTarifa30agua;
+    private TextField txtDataVencimento;
     @FXML
-    private TextField txtTarifa50agua;
+    private TextField txtTotalPagar;
     @FXML
-    private TextField txtTarifaMais50agua;
+    private TextField txtConstMulti;
     @FXML
-    private TextField txtValorAgua1;
+    private TextField txtNRmedidor;
     @FXML
-    private TextField txtValorAgua2;
+    private TextField txtLeituraAnterior;
     @FXML
-    private TextField txtTarifa10esgoto;
+    private TextField txtLeituraAtual;
     @FXML
-    private TextField txtTarifa20esgoto;
+    private TextField txtDataLeituraAnterior;
     @FXML
-    private TextField txtTarifa30esgoto;
+    private TextField txtDataLeituraAtual;
     @FXML
-    private TextField txtTarifa50esgoto;
+    private TextField txtCodigoFiscal;
     @FXML
-    private TextField txtTarifaMais50esgoto;
+    private TextField txtGrupoSubgrupo;
     @FXML
-    private TextField txtValorEsgoto1;
+    private TextField txtFornecimento;
     @FXML
-    private TextField txtValorEsgoto2;
+    private TextField txtClasseSubclasse;
     @FXML
-    private TextField txtVencimento;
+    private TextField txtTarifaria;
     @FXML
-    private TextField txtTotalAgua;
+    private TextField txtRoteiroLeitura;
     @FXML
-    private TextField txtTotalEsgoto;
+    private TextField txtTensaoNominal;
     @FXML
-    private TextField txtTaxaRegulacao;
+    private ComboBox comboBandeirasTarifaria;
     @FXML
-    private TextField txtMulta;
+    private Button btnRetornarEnergia;
     @FXML
-    private Button btnSalvarVoltarTelaInicial;
-    @FXML
-    private Button btnRetornarAgua2;
+    private Button btnVoltarTelaIncial;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -64,7 +63,7 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("agua1");
+        Main.changeScreen("instalacaocadastrada");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {

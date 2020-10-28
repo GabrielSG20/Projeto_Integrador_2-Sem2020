@@ -14,45 +14,31 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 
-public class CadastroAgua1 implements Initializable {
-    @FXML
-    private TextField txtRGI;
+public class CadastroAguaSemEnd implements Initializable {
     @FXML
     private TextField txtGR;
     @FXML
     private TextField txtMesReferencia;
     @FXML
-    private TextField txtEndereco;
-    @FXML
-    private TextField txtCEP;
-    @FXML
     private TextField txtConsumo;
-    @FXML
-    private TextField txtNumero;
     @FXML
     private TextField txtCodigoCliente;
     @FXML
     private TextField txtNumeroConta;
     @FXML
-    private TextField txtLeituraAntData;
+    private TextField txtLeituraAnteriorData;
     @FXML
     private TextField txtLeituraAtualData;
     @FXML
-    private TextField txtLeituraAntNumero;
+    private TextField txtLeituraAnteriorLeitura;
     @FXML
-    private TextField txtLeituraAtualNumero;
-    @FXML
-    private TextField txtUf;
+    private TextField txtLeituraAtualLeitura;
     @FXML
     private TextField txtHidrometro;
     @FXML
     private TextField txtTipoLigacao;
     @FXML
-    private TextField txtCidade;
-    @FXML
-    private TextField txtComplemento;
-    @FXML
-    private Button btnRetornarAgua1;
+    private Button btnRetornarAguaSemEnd;
     @FXML
     private Button btnSalvarContinuar;
 
@@ -62,38 +48,27 @@ public class CadastroAgua1 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("instalacaocadastrada");
     }
 
     public void changeScreenContinuar(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarAgua1(txtCEP.getText(), txtEndereco.getText(), Integer.valueOf(txtNumero.getText()), 
-            txtRGI.getText(), Integer.valueOf(txtGR.getText()), txtMesReferencia.getText(), txtCodigoCliente.getText(), 
-            Integer.valueOf(txtConsumo.getText()));
 
-            txtRGI.setText("");
-            txtGR.setText("");
-            txtMesReferencia.setText("");
-            txtEndereco.setText("");
-            txtCEP.setText("");
             txtConsumo.setText("");
-            txtNumero.setText("");
             txtCodigoCliente.setText("");
             txtNumeroConta.setText("");
-            txtLeituraAntData.setText("");
-            txtLeituraAntNumero.setText("");
+            txtLeituraAnteriorData.setText("");
+            txtLeituraAnteriorLeitura.setText("");
             txtLeituraAtualData.setText("");
-            txtLeituraAtualNumero.setText("");
-            txtUf.setText("");
+            txtLeituraAtualLeitura.setText("");
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
-            txtCidade.setText("");
 
             Main.changeScreen("agua2");
         } else {
