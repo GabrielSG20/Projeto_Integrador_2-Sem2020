@@ -1,5 +1,4 @@
 package controller;
-
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -13,30 +12,34 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
-
-public class CadastroEnergia implements Initializable {
-    @FXML
-    private TextField txtNumeroInstalacao;
-    @FXML
-    private TextField txtCEPEnergia;
+public class CadastroEnergia2 implements Initializable {
     @FXML
     private TextField txtMesReferenciaEnergia;
+    @FXML 
+    private TextField txtNumeroInstalacao;
     @FXML
-    private TextField txtTotalResidencial;
+    private TextField txtContadoMesKWG;
     @FXML
     private TextField txtDataVencimento;
     @FXML
-    private TextField txtConsumo;
-    @FXML
     private TextField txtValorTotal;
     @FXML
-    private TextField txtEnderecoEnergia;
+    private TextField txtConstMulti;
     @FXML
-    private TextField txtNumeroEnergia;
+    private TextField txtNRdoMedidor;
     @FXML
-    private Button btnVoltarTelaIncial;
+    private TextField txtLeituraAnteriorEnergia;
+    @FXML 
+    private TextField txtLeituraAtualEnergia;
+    @FXML 
+    private TextField txtDataLeituraAnterior;
+    @FXML
+    private TextField txtDataLeituraAtual;
+    @FXML
+    private Button btnVoltarTelaInical;
     @FXML
     private Button btnRetornarEnergia;
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -56,7 +59,17 @@ public class CadastroEnergia implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Main.changeScreen("main");
-
+            txtMesReferenciaEnergia.setText("");
+            txtNumeroInstalacao.setText("");
+            txtContadoMesKWG.setText("");
+            txtDataVencimento.setText("");
+            txtValorTotal.setText("");
+            txtConstMulti.setText("");
+            txtNRdoMedidor.setText("");
+            txtLeituraAnteriorEnergia.setText("");
+            txtLeituraAtualEnergia.setText("");
+            txtDataLeituraAnterior.setText("");
+            txtDataLeituraAtual.setText("");
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);

@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroEnergia">
+<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroEnergiaSemEnd">
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -26,7 +26,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtConsumo" layoutX="177.0" layoutY="65.0" prefHeight="30.0" prefWidth="106.0">
+      <TextField fx:id="txtContaKwH" layoutX="177.0" layoutY="65.0" prefHeight="30.0" prefWidth="106.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -36,62 +36,62 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNumeroInstalacao" layoutX="177.0" layoutY="145.0" prefHeight="30.0" prefWidth="106.0">
+      <TextField fx:id="txtValorTotalAPagar" layoutX="177.0" layoutY="145.0" prefHeight="30.0" prefWidth="106.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="538.0" layoutY="35.0" prefHeight="30.0" prefWidth="96.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="538.0" layoutY="35.0" prefHeight="30.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="538.0" layoutY="75.0" prefHeight="30.0" prefWidth="96.0">
+      <TextField fx:id="txtDataLeituraAtual" layoutX="538.0" layoutY="75.0" prefHeight="30.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="138.0" layoutY="239.0" prefHeight="30.0" prefWidth="118.0">
+      <TextField fx:id="txtConstMulti" layoutX="138.0" layoutY="239.0" prefHeight="30.0" prefWidth="118.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="138.0" layoutY="280.0" prefHeight="30.0" prefWidth="118.0">
+      <TextField fx:id="txtNRdoMedidor" layoutX="138.0" layoutY="280.0" prefHeight="30.0" prefWidth="118.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="138.0" layoutY="320.0" prefHeight="30.0" prefWidth="118.0">
+      <TextField fx:id="txtLeituraAnterior" layoutX="138.0" layoutY="320.0" prefHeight="30.0" prefWidth="118.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="138.0" layoutY="360.0" prefHeight="30.0" prefWidth="118.0">
+      <TextField fx:id="txtLeituraAtual" layoutX="138.0" layoutY="360.0" prefHeight="30.0" prefWidth="118.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="439.0" layoutY="239.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
+      <TextField fx:id="txtCodigoFiscal" layoutX="439.0" layoutY="239.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="439.0" layoutY="280.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
+      <TextField fx:id="txtGrupoSubgrupo" layoutX="439.0" layoutY="280.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="439.0" layoutY="320.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
+      <TextField fx:id="txtFornecimento" layoutX="439.0" layoutY="320.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="439.0" layoutY="360.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
+      <TextField fx:id="txtClasseSubclasse" layoutX="439.0" layoutY="360.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="439.0" layoutY="402.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
+      <TextField fx:id="txtTensaoNominal" layoutX="439.0" layoutY="402.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -101,7 +101,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="680.0" layoutY="239.0" prefHeight="30.0" prefWidth="96.0">
+      <TextField fx:id="txtMTarifaria" layoutX="680.0" layoutY="239.0" prefHeight="30.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -181,7 +181,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <ComboBox layoutX="538.0" layoutY="115.0" prefHeight="30.0" prefWidth="161.0" />
+      <ComboBox fx:id="BandeirasTarifarias" layoutX="538.0" layoutY="115.0" prefHeight="30.0" prefWidth="161.0" />
       <Label layoutX="294.0" layoutY="200.0" text="Cliente/Endereço de entrega">
          <font>
             <Font name="Arial Bold" size="18.0" />
@@ -212,7 +212,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="295.0" layoutY="441.0" prefHeight="30.0" prefWidth="140.0" text="Roteiro de leitura" AnchorPane.leftAnchor="295.0">
+      <Label fx:id="txtRoteirodeLeitura" layoutX="295.0" layoutY="441.0" prefHeight="30.0" prefWidth="140.0" text="Roteiro de leitura" AnchorPane.leftAnchor="295.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
