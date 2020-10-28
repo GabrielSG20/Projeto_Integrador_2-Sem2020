@@ -64,6 +64,18 @@ public class CadastroEnergia2 implements Initializable {
         if (result.get() == ButtonType.OK){
             Main.changeScreen("main");
 
+            txtContaMes.setText("");
+            txtNumeroInstalacao.setText("");
+            txtConsumo.setText("");
+            txtDataVencimento.setText("");
+            txtTotalPagar.setText("");
+            txtConstMulti.setText("");
+            txtNRmedidor.setText("");
+            txtLeituraAnterior.setText("");
+            txtLeituraAtual.setText("");
+            txtDataLeituraAnterior.setText("");
+            txtDataLeituraAtual.setText("");
+
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);

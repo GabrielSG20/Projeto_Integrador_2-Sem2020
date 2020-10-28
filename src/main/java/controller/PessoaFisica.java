@@ -50,6 +50,12 @@ public class PessoaFisica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            txtNomeCompleto.setText("");
+            txtCPF.setText("");
+            txtNomeFornecedor.setText("");
+            txtCNPJFornecedor.setText("");
+            txtEmail.setText("");
+
             Main.changeScreen("tipoconta");
         } else {
             

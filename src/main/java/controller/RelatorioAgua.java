@@ -67,7 +67,6 @@ public class RelatorioAgua implements Initializable {
     }
 
     public void procurarRGI(ActionEvent event) {
-          Main.procurarRelatorioAgua(NomeCliente, CNPJCliente, NomeFornecedor, CNPJFornecedor, TipoFornecedor, 
-          CEP, Endereco, Numero, RGI, GR, MesReferencia, Consumo, TotalPagar);
+          
     }
 }

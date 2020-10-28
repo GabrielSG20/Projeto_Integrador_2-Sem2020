@@ -76,6 +76,24 @@ public class EnergiaSemEnd implements Initializable {
         if (result.get() == ButtonType.OK){
             Main.changeScreen("main");
 
+            txtContaMes.setText("");
+            txtConsumo.setText("");
+            txtDataVencimento.setText("");
+            txtTotalPagar.setText("");
+            txtConstMulti.setText("");
+            txtNRmedidor.setText("");
+            txtLeituraAnterior.setText("");
+            txtLeituraAtual.setText("");
+            txtDataLeituraAnterior.setText("");
+            txtDataLeituraAtual.setText("");
+            txtCodigoFiscal.setText("");
+            txtGrupoSubgrupo.setText("");
+            txtFornecimento.setText("");
+            txtClasseSubclasse.setText("");
+            txtTarifaria.setText("");
+            txtRoteiroLeitura.setText("");
+            txtTensaoNominal.setText("");
+
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);

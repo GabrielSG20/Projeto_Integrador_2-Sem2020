@@ -64,6 +64,20 @@ public class CadastroEnergia1 implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Main.changeScreen("energia2");
+
+            txtCidade.setText("");
+            txtCEPEnergia.setText("");
+            txtUf.setText("");
+            txtEnderecoEnergia.setText("");
+            txtNumeroEnergia.setText("");
+            txtComplemento.setText("");
+            txtCodigoFiscal.setText("");
+            txtGrupoSubgrupo.setText("");
+            txtClasseSubclasse.setText("");
+            txtFornecimento.setText("");
+            txtTarifaria.setText("");
+            txtRoteiroLeitura.setText("");
+            txtTensaoNominal.setText("");
         } else {
             
         }

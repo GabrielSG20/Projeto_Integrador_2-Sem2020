@@ -73,9 +73,6 @@ public class CadastroAgua1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarAgua1(txtCEP.getText(), txtEndereco.getText(), Integer.valueOf(txtNumero.getText()), 
-            txtRGI.getText(), Integer.valueOf(txtGR.getText()), txtMesReferencia.getText(), txtCodigoCliente.getText(), 
-            Integer.valueOf(txtConsumo.getText()));
 
             txtRGI.setText("");
             txtGR.setText("");
@@ -94,6 +91,7 @@ public class CadastroAgua1 implements Initializable {
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
             txtCidade.setText("");
+            txtComplemento.setText("");
 
             Main.changeScreen("agua2");
         } else {

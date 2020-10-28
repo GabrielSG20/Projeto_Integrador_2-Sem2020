@@ -60,12 +60,14 @@ public class CadastroAguaSemEnd implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
 
+            txtGR.setText("");
+            txtMesReferencia.setText("");
             txtConsumo.setText("");
             txtCodigoCliente.setText("");
             txtNumeroConta.setText("");
             txtLeituraAnteriorData.setText("");
-            txtLeituraAnteriorLeitura.setText("");
             txtLeituraAtualData.setText("");
+            txtLeituraAnteriorLeitura.setText("");
             txtLeituraAtualLeitura.setText("");
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
