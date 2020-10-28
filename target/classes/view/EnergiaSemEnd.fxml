@@ -14,34 +14,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroEnergia2">
+<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EnergiaSemEnd">
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtContaMes" layoutX="260.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtContaMes" layoutX="240.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNumeroInstalacao" layoutX="260.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtConsumo" layoutX="240.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtConsumo" layoutX="260.0" layoutY="215.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataVencimento" layoutX="240.0" layoutY="215.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataVencimento" layoutX="260.0" layoutY="285.0" prefHeight="37.0" prefWidth="250.0">
+      <TextField fx:id="txtTotalPagar" layoutX="240.0" layoutY="285.0" prefHeight="37.0" prefWidth="106.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtTotalPagar" layoutX="740.0" layoutY="285.0" prefHeight="37.0" prefWidth="118.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -66,18 +71,42 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="425.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtCodigoFiscal" layoutX="780.0" layoutY="415.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="495.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtGrupoSubgrupo" layoutX="780.0" layoutY="475.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="comboBandeirasTarifarias" layoutX="600.0" layoutY="635.0" prefHeight="41.0" prefWidth="234.0" />
-      <Label layoutX="25.0" layoutY="150.0" text="Número da instalação">
+      <TextField fx:id="txtFornecimento" layoutX="780.0" layoutY="535.0" prefHeight="35.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtClasseSubclasse" layoutX="780.0" layoutY="595.0" prefHeight="35.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTarifaria" layoutX="780.0" layoutY="655.0" prefHeight="35.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtRoteiroLeitura" layoutX="780.0" layoutY="715.0" prefHeight="35.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTensaoNominal" layoutX="780.0" layoutY="775.0" prefHeight="35.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="25.0" layoutY="150.0" text="Conta do mês/Kwh">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -87,12 +116,12 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="290.0" text="Data de vencimento">
+      <Label layoutX="25.0" layoutY="290.0" text="Valor total a pagar">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="220.0" text="Conta do mês/kWh">
+      <Label layoutX="25.0" layoutY="220.0" text="Data de vencimento">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -132,29 +161,65 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="550.0" layoutY="290.0" text="Valor total a pagar">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="600.0" layoutY="360.0" text="Período do faturamento">
+      <Label layoutX="600.0" layoutY="40.0" text="Período do faturamento">
          <font>
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="430.0" text="Data leitura anterior">
+      <Label layoutX="600.0" layoutY="80.0" text="Data leitura anterior">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="500.0" text="Data leitura atual">
+      <Label layoutX="600.0" layoutY="150.0" text="Data leitura atual">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="570.0" text="Bandeiras Tarifárias">
+      <Label layoutX="600.0" layoutY="220.0" text="Bandeiras Tarifárias">
          <font>
             <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBandeirasTarifaria" layoutX="600.0" layoutY="285.0" prefHeight="41.0" prefWidth="234.0" />
+      <Label layoutX="600.0" layoutY="360.0" text="Cliente">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="420.0" prefHeight="30.0" prefWidth="220.0" text="Código fiscal ">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="480.0" prefHeight="30.0" prefWidth="304.0" text="Grupo/Subgrupo">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="600.0" prefHeight="30.0" prefWidth="220.0" text="Classe/Subclasse">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="540.0" prefHeight="30.0" prefWidth="304.0" text="Fornecimento">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="660.0" prefHeight="30.0" prefWidth="220.0" text="M. Tarifária">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="720.0" prefHeight="30.0" prefWidth="304.0" text="Roteiro de leitura">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="600.0" layoutY="780.0" prefHeight="30.0" prefWidth="220.0" text="Tensão nominal">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
    </children>
