@@ -159,7 +159,7 @@
          <font>
             <Font name="Arial" size="18.0" />
          </font></Button>
-      <Button fx:id="btnBuscar" layoutX="948.0" layoutY="102.0" mnemonicParsing="false" onAction="#procurarRGI" prefHeight="30.0" prefWidth="126.0" text="Buscar">
+      <Button fx:id="btnBuscar" layoutX="948.0" layoutY="102.0" mnemonicParsing="false" onAction="#procurarNumeroInstalacao" prefHeight="30.0" prefWidth="126.0" text="Buscar">
          <font>
             <Font name="Arial" size="18.0" />
          </font></Button>
