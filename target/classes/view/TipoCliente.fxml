@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Text layoutX="232.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de cliente">
@@ -33,7 +33,7 @@
          <graphic>
             <ImageView fx:id="btnPessoaFisica" fitHeight="150.0" fitWidth="100.0" onDragDetected="#changeScreenPessoaFisica" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagens/PessoaFisica.png" />
+                  <Image url="/image/PessoaFisica.png" />
                </image>
             </ImageView>
          </graphic>
@@ -42,7 +42,7 @@
          <graphic>
             <ImageView fx:id="btnPessoaJuridica" fitHeight="150.0" fitWidth="100.0" onDragDetected="#changeScreenPessoaJuridica" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagens/PessoaJuridica.png" />
+                  <Image url="/image/PessoaJuridica.png" />
                </image>
             </ImageView>
          </graphic>
