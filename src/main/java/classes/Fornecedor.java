@@ -1,4 +1,4 @@
-package classespi;
+package classes;
 
 public class Fornecedor {
 

@@ -1,4 +1,4 @@
-package classespi;
+package classes;
 
 import java.util.Date;
 
