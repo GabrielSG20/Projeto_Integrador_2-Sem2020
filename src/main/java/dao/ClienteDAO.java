@@ -22,7 +22,7 @@ public class ClienteDAO {
         //Inserindo dados na tabela atraves do metodo INSERT
         try {
             stmt = con.prepareStatement("INSERT INTO cli_cliente (cli_documento,cli_nome,cli_email) VALUES(?,?,?)");
-            stmt.setInt(1, c.getCli_documento());
+            stmt.setLong(1, c.getCli_documento());
             stmt.setString(2, c.getCli_nome());
             stmt.setString(3, c.getCli_email());
             stmt.executeUpdate();

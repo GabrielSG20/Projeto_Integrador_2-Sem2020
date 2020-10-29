@@ -1,15 +1,17 @@
-package classes;
+package classespi;
+
+import java.math.BigInteger;
 
 public class Cliente {
 	
-	private int cli_documento;
+	private BigInteger cli_documento;
 	private String cli_nome;
-	private String cli_email;
+	private String email;
 	
-	public int getCli_documento() {
+	public BigInteger getCli_documento() {
 		return cli_documento;
 	}
-	public void setCli_documento(int cli_documento) {
+	public void setCli_documento(BigInteger cli_documento) {
 		this.cli_documento = cli_documento;
 	}
 	public String getCli_nome() {
@@ -18,10 +20,10 @@ public class Cliente {
 	public void setCli_nome(String cli_nome) {
 		this.cli_nome = cli_nome;
 	}
-	public String getCli_email() {
+	public String getEmail() {
 		return email;
 	}
-	public void setCli_email(String email) {
+	public void setEmail(String email) {
 		this.email = email;
 	}
 	

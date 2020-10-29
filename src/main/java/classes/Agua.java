@@ -1,22 +1,23 @@
-package classes;
+package classespi;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Date;
 
 public class Agua {
 	
-	private int int_numero_instalacao;
+	private BigInteger int_numero_instalacao;
 	private Date cta_mes_referencia;
-	private int agu_gr;
-	private int agu_codigo_cliente;
-	private int agu_numero_conta;
+	private BigInteger agu_gr;
+	private BigInteger agu_codigo_cliente;
+	private BigInteger agu_numero_conta;
 	private String agu_tipo_ligacao;
 	private String agu_hidrometro;
 	private Date agu_data_leitura_anterior;
 	private Date agu_data_leitura_atual;
-	private int agu_leitura_anterior;
-	private int agu_leitura_atual;
-	private int agu_consumo;
+	private BigInteger agu_leitura_anterior;
+	private BigInteger agu_leitura_atual;
+	private BigInteger agu_consumo;
 	private Date agu_vencimento;
 	private BigDecimal agu_valor_agua;
 	private BigDecimal agu_valor_esgoto;
@@ -37,10 +38,10 @@ public class Agua {
 	private BigDecimal agu_valor_esgoto1;
 	private BigDecimal agu_valor_esgoto2;
 	
-	public int getInt_numero_instalacao() {
+	public BigInteger getInt_numero_instalacao() {
 		return int_numero_instalacao;
 	}
-	public void setInt_numero_instalacao(int int_numero_instalacao) {
+	public void setInt_numero_instalacao(BigInteger int_numero_instalacao) {
 		this.int_numero_instalacao = int_numero_instalacao;
 	}
 	public Date getCta_mes_referencia() {
@@ -49,22 +50,22 @@ public class Agua {
 	public void setCta_mes_referencia(Date cta_mes_referencia) {
 		this.cta_mes_referencia = cta_mes_referencia;
 	}
-	public int getAgu_gr() {
+	public BigInteger getAgu_gr() {
 		return agu_gr;
 	}
-	public void setAgu_gr(int agu_gr) {
+	public void setAgu_gr(BigInteger agu_gr) {
 		this.agu_gr = agu_gr;
 	}
-	public int getAgu_codigo_cliente() {
+	public BigInteger getAgu_codigo_cliente() {
 		return agu_codigo_cliente;
 	}
-	public void setAgu_codigo_cliente(int agu_codigo_cliente) {
+	public void setAgu_codigo_cliente(BigInteger agu_codigo_cliente) {
 		this.agu_codigo_cliente = agu_codigo_cliente;
 	}
-	public int getAgu_numero_conta() {
+	public BigInteger getAgu_numero_conta() {
 		return agu_numero_conta;
 	}
-	public void setAgu_numero_conta(int agu_numero_conta) {
+	public void setAgu_numero_conta(BigInteger agu_numero_conta) {
 		this.agu_numero_conta = agu_numero_conta;
 	}
 	public String getAgu_tipo_ligacao() {
@@ -91,22 +92,22 @@ public class Agua {
 	public void setAgu_data_leitura_atual(Date agu_data_leitura_atual) {
 		this.agu_data_leitura_atual = agu_data_leitura_atual;
 	}
-	public int getAgu_leitura_anterior() {
+	public BigInteger getAgu_leitura_anterior() {
 		return agu_leitura_anterior;
 	}
-	public void setAgu_leitura_anterior(int agu_leitura_anterior) {
+	public void setAgu_leitura_anterior(BigInteger agu_leitura_anterior) {
 		this.agu_leitura_anterior = agu_leitura_anterior;
 	}
-	public int getAgu_leitura_atual() {
+	public BigInteger getAgu_leitura_atual() {
 		return agu_leitura_atual;
 	}
-	public void setAgu_leitura_atual(int agu_leitura_atual) {
+	public void setAgu_leitura_atual(BigInteger agu_leitura_atual) {
 		this.agu_leitura_atual = agu_leitura_atual;
 	}
-	public int getAgu_consumo() {
+	public BigInteger getAgu_consumo() {
 		return agu_consumo;
 	}
-	public void setAgu_consumo(int agu_consumo) {
+	public void setAgu_consumo(BigInteger agu_consumo) {
 		this.agu_consumo = agu_consumo;
 	}
 	public Date getAgu_vencimento() {
@@ -223,18 +224,5 @@ public class Agua {
 	public void setAgu_valor_esgoto2(BigDecimal agu_valor_esgoto2) {
 		this.agu_valor_esgoto2 = agu_valor_esgoto2;
 	}
-	
-
-
-
-
-
-
-
-
-
-
-
-	
 
 }

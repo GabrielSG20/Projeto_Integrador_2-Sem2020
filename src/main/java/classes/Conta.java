@@ -1,17 +1,18 @@
-package classes;
+package classespi;
 
+import java.math.BigInteger;
 import java.util.Date;
 
 public class Conta {
 
-	private int int_numero_instalacao;
+	private BigInteger int_numero_instalacao;
 	private Date cta_mes_referencia;
 	private Date cta_vencimento;
 	
-	public int getInt_numero_instalacao() {
+	public BigInteger getInt_numero_instalacao() {
 		return int_numero_instalacao;
 	}
-	public void setInt_numero_instalacao(int int_numero_instalacao) {
+	public void setInt_numero_instalacao(BigInteger int_numero_instalacao) {
 		this.int_numero_instalacao = int_numero_instalacao;
 	}
 	public Date getCta_mes_referencia() {
@@ -26,5 +27,7 @@ public class Conta {
 	public void setCta_vencimento(Date cta_vencimento) {
 		this.cta_vencimento = cta_vencimento;
 	}
+	
+	
 	
 }

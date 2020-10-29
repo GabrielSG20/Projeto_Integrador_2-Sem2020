@@ -1,14 +1,15 @@
-package classes;
+package classespi;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.util.Date;
 
 public class Energia {
-	private int int_numero_instalacao;
+	private BigInteger int_numero_instalacao;
 	private Date cta_mes_referencia;
-	private int ene_consumo_conta_mes;
-	private int ene_codigo_fiscal;
-	private int ene_grupo_subgrupo;
+	private BigInteger ene_consumo_conta_mes;
+	private BigInteger ene_codigo_fiscal;
+	private BigInteger ene_grupo_subgrupo;
 	private String ene_tipo_fornecimento;
 	private String ene_classe_subclasse;
 	private String ene_roteiro_leitura;
@@ -23,10 +24,10 @@ public class Energia {
 	private String ene_tipo_bandeira;
 	private BigDecimal ene_valor_total;
 	
-	public int getInt_numero_instalacao() {
+	public BigInteger getInt_numero_instalacao() {
 		return int_numero_instalacao;
 	}
-	public void setInt_numero_instalacao(int int_numero_instalacao) {
+	public void setInt_numero_instalacao(BigInteger int_numero_instalacao) {
 		this.int_numero_instalacao = int_numero_instalacao;
 	}
 	public Date getCta_mes_referencia() {
@@ -35,22 +36,22 @@ public class Energia {
 	public void setCta_mes_referencia(Date cta_mes_referencia) {
 		this.cta_mes_referencia = cta_mes_referencia;
 	}
-	public int getEne_consumo_conta_mes() {
+	public BigInteger getEne_consumo_conta_mes() {
 		return ene_consumo_conta_mes;
 	}
-	public void setEne_consumo_conta_mes(int ene_consumo_conta_mes) {
+	public void setEne_consumo_conta_mes(BigInteger ene_consumo_conta_mes) {
 		this.ene_consumo_conta_mes = ene_consumo_conta_mes;
 	}
-	public int getEne_codigo_fiscal() {
+	public BigInteger getEne_codigo_fiscal() {
 		return ene_codigo_fiscal;
 	}
-	public void setEne_codigo_fiscal(int ene_codigo_fiscal) {
+	public void setEne_codigo_fiscal(BigInteger ene_codigo_fiscal) {
 		this.ene_codigo_fiscal = ene_codigo_fiscal;
 	}
-	public int getEne_grupo_subgrupo() {
+	public BigInteger getEne_grupo_subgrupo() {
 		return ene_grupo_subgrupo;
 	}
-	public void setEne_grupo_subgrupo(int ene_grupo_subgrupo) {
+	public void setEne_grupo_subgrupo(BigInteger ene_grupo_subgrupo) {
 		this.ene_grupo_subgrupo = ene_grupo_subgrupo;
 	}
 	public String getEne_tipo_fornecimento() {
@@ -131,4 +132,6 @@ public class Energia {
 	public void setEne_valor_total(BigDecimal ene_valor_total) {
 		this.ene_valor_total = ene_valor_total;
 	}
+	
+	
 }
