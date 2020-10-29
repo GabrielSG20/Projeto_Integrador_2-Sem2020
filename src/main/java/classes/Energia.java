@@ -1,4 +1,4 @@
-package classespi;
+package classes;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

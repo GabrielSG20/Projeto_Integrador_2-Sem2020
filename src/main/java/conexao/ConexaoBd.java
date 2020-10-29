@@ -69,7 +69,4 @@ public class ConexaoBd {
             Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    
-    
-    
 }
