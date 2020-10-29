@@ -49,7 +49,7 @@ public class PessoaFisica implements Initializable {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
-        confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
+        confirmacao.setContentText("DESEJA ADICIONAR UM NOVO CLIENTE?");
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
