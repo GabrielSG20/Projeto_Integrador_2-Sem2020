@@ -1,4 +1,5 @@
 package conexao;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -9,7 +10,6 @@ import java.util.logging.Logger;
 
 public class ConexaoBd {
 
-    //
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/cadastro_contas";
     private static final String USER = "root";
