@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class ConexaoBd {
 
     private static final String DRIVER = "com.mysql.jdbc.Driver";
-    private static final String URL = "jdbc:mysql://localhost:3306/cadastro_contas";
+    private static final String URL = "jdbc:mysql://localhost:3306/cadastro_contas?useTimezone=true&serverTimezone=UTC";
     private static final String USER = "root";
     private static final String PASS = "";
     
