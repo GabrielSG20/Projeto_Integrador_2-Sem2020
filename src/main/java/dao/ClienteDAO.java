@@ -28,7 +28,7 @@ public class ClienteDAO {
             stmt.executeUpdate();
 
         } catch (SQLException ex) {
-            System.out.println(ex);
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
 
         // Finally usado para fechar a conexao e statement se der ou não erro
         } finally {
