@@ -1,5 +1,6 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -14,6 +15,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
+import classes.Cliente;
+import dao.ClienteDAO;
 
 public class PessoaJuridica implements Initializable {
     @FXML
@@ -50,6 +53,13 @@ public class PessoaJuridica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            Cliente c = new Cliente();
+            ClienteDAO dao = new ClienteDAO();
+            c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCNPJEmpresa.getText())));
+            c.setCli_nome(txtNomeFantasia.getText());
+            c.setEmail(txtEmail.getText());
+
+            dao.create(c);
 
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
