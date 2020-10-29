@@ -37,7 +37,7 @@ Eu como analista de água ou energia desejo obter acesso aos relatórios de cons
 ### :airplane: Sprints
 1. Na primeira sprint, a equipe realizou a criação do layout das telas de cadastros com os campos de preenchimentos necessários e finalizou as configurações da plataforma Gitpod com as ferramentas necessárias para iniciar o desenvolvimento do projeto. Além disso foi realizado a criação do Product Backlog.<br/> Duração: 07/09/2020 até 27/09/2020.
 2. Na segunda sprint, a equipe realizou o desenvolvimento das telas para o fluxo de cadastro de contas de uma nova instalação, com JavaFX para parte visual (front-end) e Java para lógica entre as telas (back-end). Além de elaborar a modelagem do Banco de Dados que será implementado em futuras sprints.<br/> Duração: 28/09/2020 até 18/10/2020.
-3. Na terceira sprint, a equipe desenvolveu os Users Stories 2 e 3 do Product Backlog, implementou o banco de dados em MySQL, realizou ajustes necessários nas telas de cadastro, além de dar inicio ao desenvolvimento da documentação (Aplicativo executável e especificações mínimas necessárias da máquina) do projeto.
+3. Na terceira sprint, a equipe desenvolveu os Users Stories 2 e 3 do Product Backlog, implementou o banco de dados em MySQL, realizou ajustes necessários nas telas de cadastro, além de dar inicio ao desenvolvimento da documentação (Aplicativo executável e especificações mínimas necessárias da máquina) do projeto.<br/>
 Duração: 19/10/2020 até 08/11/2020.
 
 ### :dart: Entregas
