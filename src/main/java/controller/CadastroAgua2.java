@@ -39,8 +39,6 @@ public class CadastroAgua2 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.salvarAgua2(Float.valueOf(txtTotalPagar.getText()));
-
             txtTotalPagar.setText("");
 
             Main.changeScreen("main");
