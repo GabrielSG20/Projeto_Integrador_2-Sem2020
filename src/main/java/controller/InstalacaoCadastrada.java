@@ -26,9 +26,9 @@ public class InstalacaoCadastrada implements Initializable{
 		// TODO Auto-generated method stub
     }
     public void changeScreenBuscar(ActionEvent event){
-
+        
     }
     public void changeScreenRetornar(ActionEvent event){
-
+        Main.changeScreen("main");
     }
 }
