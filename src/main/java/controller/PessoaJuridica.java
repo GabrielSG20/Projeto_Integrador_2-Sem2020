@@ -41,6 +41,9 @@ public class PessoaJuridica implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboTipoFornecedor.getItems().add("Água");
+        comboTipoFornecedor.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {

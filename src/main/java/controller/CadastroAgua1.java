@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
@@ -45,7 +46,7 @@ public class CadastroAgua1 implements Initializable {
     @FXML
     private TextField txtLeituraAtualNumero;
     @FXML
-    private TextField txtUf;
+    private ComboBox comboUF;
     @FXML
     private TextField txtHidrometro;
     @FXML
@@ -62,6 +63,34 @@ public class CadastroAgua1 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboUF.getItems().add("AC");
+        comboUF.getItems().add("AL");
+        comboUF.getItems().add("AP");
+        comboUF.getItems().add("AM");
+        comboUF.getItems().add("BA");
+        comboUF.getItems().add("CE");
+        comboUF.getItems().add("ES");
+        comboUF.getItems().add("GO");
+        comboUF.getItems().add("MA");
+        comboUF.getItems().add("MT");
+        comboUF.getItems().add("MS");
+        comboUF.getItems().add("MG");
+        comboUF.getItems().add("PA");
+        comboUF.getItems().add("PB");
+        comboUF.getItems().add("PR");
+        comboUF.getItems().add("PE");
+        comboUF.getItems().add("PI");
+        comboUF.getItems().add("RJ");
+        comboUF.getItems().add("RN");
+        comboUF.getItems().add("RS");
+        comboUF.getItems().add("RO");
+        comboUF.getItems().add("RR");
+        comboUF.getItems().add("SC");
+        comboUF.getItems().add("SP");
+        comboUF.getItems().add("SE");
+        comboUF.getItems().add("TO");
+        comboUF.getItems().add("DF");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
@@ -81,7 +110,7 @@ public class CadastroAgua1 implements Initializable {
             e.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP.getText())));
             e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
             e.setEnd_rua(txtEndereco.getText());
-            e.setEnd_estado(txtUf.getText());
+            e.setEnd_estado(String.valueOf(comboUF.getValue()));
             e.setEnd_cidade(txtCidade.getText());
             e.setEnd_complemento(txtComplemento.getText());
 
@@ -100,7 +129,6 @@ public class CadastroAgua1 implements Initializable {
             txtLeituraAntNumero.setText("");
             txtLeituraAtualData.setText("");
             txtLeituraAtualNumero.setText("");
-            txtUf.setText("");
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
             txtCidade.setText("");

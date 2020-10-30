@@ -23,7 +23,7 @@ public class FornecedorDAO {
             stmt = con.prepareStatement("INSERT INTO for_fornecedor (for_cnpj,for_nome,for_tipo) VALUES(?,?,?)");
             stmt.setObject(1, f.getFor_cnpj());
             stmt.setString(2, f.getFor_nome());
-            stmt.setString(3, f.getFor_tipo());
+            stmt.setObject(3, f.getFor_tipo());
             stmt.executeUpdate();
 
         } catch (SQLException ex) {

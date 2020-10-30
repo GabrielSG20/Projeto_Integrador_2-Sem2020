@@ -24,7 +24,7 @@ public class EnderecoDAO {
             stmt.setObject(1, e.getEnd_cep());
             stmt.setObject(2, e.getEnd_numero());
             stmt.setString(3, e.getEnd_rua());
-            stmt.setString(4, e.getEnd_estado());
+            stmt.setObject(4, e.getEnd_estado());
             stmt.setString(5, e.getEnd_cidade());
             stmt.setString(6, e.getEnd_complemento());
             stmt.executeUpdate();

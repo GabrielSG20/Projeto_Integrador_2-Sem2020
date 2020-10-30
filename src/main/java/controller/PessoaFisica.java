@@ -42,6 +42,9 @@ public class PessoaFisica implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboTipoFornecedor.getItems().add("Água");
+        comboTipoFornecedor.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
@@ -68,7 +71,7 @@ public class PessoaFisica implements Initializable {
             FornecedorDAO daofor = new FornecedorDAO();
             f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
             f.setFor_nome(txtNomeFornecedor.getText());
-            f.setFor_tipo(comboTipoFornecedor.getPromptText());
+            f.setFor_tipo(String.valueOf(comboTipoFornecedor.getValue()));
 
             daofor.create(f);
 
