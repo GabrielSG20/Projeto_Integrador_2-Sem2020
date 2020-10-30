@@ -137,7 +137,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTotalAgua" layoutX="400.0" layoutY="720.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+      <TextField fx:id="txtTotalAgua" layoutX="450.0" layoutY="720.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -149,7 +149,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtMulta" layoutX="800.0" layoutY="775.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtMulta" layoutX="930.0" layoutY="775.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -185,11 +185,11 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblPagarAgua" layoutX="310.0" layoutY="729.0" text="Água(R$)">
+      <Label fx:id="lblPagarAgua" layoutX="325.0" layoutY="729.0" text="Água(R$)">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblPagarEsgoto" layoutX="345.0" layoutY="780.0" text="Esgoto(R$)">
+      <Label fx:id="lblPagarEsgoto" layoutX="347.0" layoutY="780.0" text="Esgoto(R$)">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -205,7 +205,7 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
-      <Label fx:id="lblAliquota1" layoutX="708.0" layoutY="780.0" text="Multa">
+      <Label fx:id="lblAliquota1" layoutX="800.0" layoutY="780.0" text="Multa">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
