@@ -16,7 +16,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 import classes.Cliente;
+import classes.Fornecedor;
 import dao.ClienteDAO;
+import dao.FornecedorDAO;
 
 public class PessoaJuridica implements Initializable {
     @FXML
@@ -61,6 +63,14 @@ public class PessoaJuridica implements Initializable {
 
             dao.create(c);
 
+            Fornecedor f = new Fornecedor();
+            FornecedorDAO daofor = new FornecedorDAO();
+            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
+            f.setFor_nome(txtNomeFornecedor.getText());
+            f.setFor_tipo(comboTipoFornecedor.getPromptText());
+
+            daofor.create(f);
+            
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
             txtEmail.setText("");

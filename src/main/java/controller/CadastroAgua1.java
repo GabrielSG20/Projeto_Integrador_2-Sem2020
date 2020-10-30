@@ -1,5 +1,6 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -13,6 +14,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
+import classes.Endereco;
+import dao.EnderecoDAO;
 
 public class CadastroAgua1 implements Initializable {
     @FXML
@@ -73,6 +76,16 @@ public class CadastroAgua1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            Endereco e = new Endereco();
+            EnderecoDAO dao = new EnderecoDAO();
+            e.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP.getText())));
+            e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
+            e.setEnd_rua(txtEndereco.getText());
+            e.setEnd_estado(txtUf.getText());
+            e.setEnd_cidade(txtCidade.getText());
+            e.setEnd_complemento(txtComplemento.getText());
+
+            dao.create(e);
 
             txtRGI.setText("");
             txtGR.setText("");
