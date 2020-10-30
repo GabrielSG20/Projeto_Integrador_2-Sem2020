@@ -1,9 +1,10 @@
 controller/RelatorioAgua.class
 controller/CadastroAgua1.class
+dao/FornecedorDAO.class
 controller/PessoaJuridica.class
 application/Main.class
-controller/CadastroEnergia2.class
 controller/PessoaFisica.class
+controller/CadastroEnergia2.class
 classes/Conta.class
 controller/TipoCliente.class
 classes/Endereco.class
@@ -11,8 +12,8 @@ controller/RelatorioEnergia.class
 controller/InstalacaoCadastrada.class
 conexao/ConexaoBd.class
 classes/Agua.class
-controller/CadastroAgua2.class
 controller/TipoConta.class
+controller/CadastroAgua2.class
 dao/ClienteDAO.class
 classes/Energia.class
 classes/Cliente.class

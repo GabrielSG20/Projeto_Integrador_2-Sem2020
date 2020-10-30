@@ -16,7 +16,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 import classes.Cliente;
+import classes.Fornecedor;
 import dao.ClienteDAO;
+import dao.FornecedorDAO;
 
 public class PessoaFisica implements Initializable {
     @FXML
@@ -54,19 +56,27 @@ public class PessoaFisica implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Cliente c = new Cliente();
-            ClienteDAO dao = new ClienteDAO();
+            ClienteDAO daocli = new ClienteDAO();
             c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCPF.getText())));
             c.setCli_nome(txtNomeCompleto.getText());
             c.setEmail(txtEmail.getText());
 
-            dao.create(c);
+            daocli.create(c);
+
+            Fornecedor f = new Fornecedor();
+            FornecedorDAO daofor = new FornecedorDAO();
+            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
+            f.setFor_nome(txtNomeFornecedor.getText());
+            f.setFor_tipo(comboTipoFornecedor.getPromptText());
+
+            daofor.create(f);
 
             txtNomeCompleto.setText("");
             txtCPF.setText("");
             txtNomeFornecedor.setText("");
             txtCNPJFornecedor.setText("");
             txtEmail.setText("");
-
+            
             Main.changeScreen("tipoconta");
         } else {
             
