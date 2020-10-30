@@ -17,7 +17,7 @@
       </ImageView>
       <Button fx:id="btnVelhaInst" ellipsisString="" layoutX="207.0" layoutY="101.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="52.0">
          <graphic>
-            <ImageView fx:id="btnInstalacaoCadastrada" fitHeight="150.0" fitWidth="100.0" onDragDetected="#changeScreenInstalacaoCadastrada" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="btnInstalacaoCadastrada" fitHeight="150.0" fitWidth="100.0" onDragDetected="#changeScreenVelhaInst" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/image/VelhaInst.jpeg" />
                </image>
