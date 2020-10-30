@@ -38,6 +38,7 @@ public class PessoaFisica implements Initializable {
     @FXML
     private Button btnProsseguirPF;
 
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
@@ -56,12 +57,12 @@ public class PessoaFisica implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Cliente c = new Cliente();
-            ClienteDAO daocli = new ClienteDAO();
+            ClienteDAO dao = new ClienteDAO();
             c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCPF.getText())));
             c.setCli_nome(txtNomeCompleto.getText());
             c.setEmail(txtEmail.getText());
 
-            daocli.create(c);
+            dao.create(c);
 
             Fornecedor f = new Fornecedor();
             FornecedorDAO daofor = new FornecedorDAO();

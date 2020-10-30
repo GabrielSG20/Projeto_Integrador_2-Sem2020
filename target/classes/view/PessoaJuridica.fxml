@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane cacheShape="false" centerShape="false" prefHeight="900.0" prefWidth="1100.0" scaleShape="false" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PessoaFisica">
+<AnchorPane cacheShape="false" centerShape="false" prefHeight="900.0" prefWidth="1100.0" scaleShape="false" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PessoaJuridica">
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -23,12 +23,12 @@
             <Font name="Arial Bold" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNomeCompleto" layoutX="330.0" layoutY="110.0" prefHeight="30.0" prefWidth="690.0">
+      <TextField fx:id="txtNomeFantasia" layoutX="330.0" layoutY="110.0" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCPF" layoutX="330.0" layoutY="200.0" prefHeight="30.0" prefWidth="690.0">
+      <TextField fx:id="txtCNPJEmpresa" layoutX="330.0" layoutY="200.0" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
@@ -38,12 +38,12 @@
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <Button fx:id="btnProsseguirPF" layoutX="777.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenProsseguir" prefHeight="43.0" prefWidth="299.0" text="Salvar e prosseguir" textFill="#4a8af2">
+      <Button fx:id="btnProsseguirPJ" layoutX="777.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenProsseguir" prefHeight="43.0" prefWidth="299.0" text="Salvar e prosseguir" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Button>
-      <Button fx:id="btnRetornarPF" layoutX="31.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="189.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarPJ" layoutX="31.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="189.0" text="Retornar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
@@ -68,12 +68,12 @@
             <Font name="Arial Black" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="113.0" text="Nome Completo*">
+      <Label layoutX="64.0" layoutY="113.0" text="Nome fantasia*">
          <font>
             <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="200.0" text="CPF*">
+      <Label layoutX="64.0" layoutY="200.0" text="CNPJ*">
          <font>
             <Font name="Arial Bold" size="30.0" />
          </font>
@@ -98,7 +98,6 @@
             <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <ComboBox fx:id="comboTipoFornecedor" layoutX="330.0" layoutY="639.0" prefHeight="41.0" prefWidth="200.0"
-      />
+      <ComboBox fx:id="comboTipoFornecedor" layoutX="330.0" layoutY="639.0" prefHeight="41.0" prefWidth="200.0" />
    </children>
 </AnchorPane>
