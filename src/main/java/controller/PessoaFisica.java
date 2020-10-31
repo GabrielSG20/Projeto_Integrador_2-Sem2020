@@ -42,7 +42,19 @@ public class PessoaFisica implements Initializable {
         Main.changeScreen("main");
     }
 
+    
+
     public void changeScreenProsseguir(ActionEvent event) {
+        if(txtNomeCompleto.getText().equals("") || txtNomeFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
@@ -58,6 +70,8 @@ public class PessoaFisica implements Initializable {
 
             Main.changeScreen("tipoconta");
         } else {
+            
+        }
             
         }
     }
