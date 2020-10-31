@@ -42,8 +42,19 @@ public class PessoaJuridica implements Initializable {
         Main.changeScreen("main");
     }
 
+    
     public void changeScreenProsseguir(ActionEvent event) {
-            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        if(txtNomeFantasia.getText().equals("") || txtCNPJFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
+                  Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
@@ -61,5 +72,7 @@ public class PessoaJuridica implements Initializable {
         } else {
             
         }
+            
+
     }
 }

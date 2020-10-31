@@ -45,7 +45,7 @@ public class PessoaFisica implements Initializable {
     
 
     public void changeScreenProsseguir(ActionEvent event) {
-        if(txtNomeCompleto.getText().equals("") || txtNomeFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("")) {
+        if(txtNomeCompleto.getText().equals("") || txtNomeFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("") || txtCPF.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
