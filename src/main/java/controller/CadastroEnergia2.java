@@ -48,6 +48,10 @@ public class CadastroEnergia2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboBandeirasTarifarias.getItems().add("Verde");
+        comboBandeirasTarifarias.getItems().add("Amarela");
+        comboBandeirasTarifarias.getItems().add("Vermelha");
     }
 
     public void changeScreenRetornar(ActionEvent event) {

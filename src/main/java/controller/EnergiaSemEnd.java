@@ -60,6 +60,10 @@ public class EnergiaSemEnd implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboBandeirasTarifaria.getItems().add("Verde");
+        comboBandeirasTarifaria.getItems().add("Amarela");
+        comboBandeirasTarifaria.getItems().add("Vermelha");
     }
 
     public void changeScreenRetornar(ActionEvent event) {

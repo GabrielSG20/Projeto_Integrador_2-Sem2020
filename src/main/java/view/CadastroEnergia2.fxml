@@ -77,22 +77,22 @@
          </font>
       </TextField>
       <ComboBox fx:id="comboBandeirasTarifarias" layoutX="600.0" layoutY="635.0" prefHeight="41.0" prefWidth="234.0" />
-      <Label layoutX="25.0" layoutY="150.0" text="Número da instalação">
+      <Label layoutX="25.0" layoutY="150.0" text="Número da instalação*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="80.0" text="Conta do mês">
+      <Label layoutX="25.0" layoutY="80.0" text="Conta do mês*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="290.0" text="Data de vencimento">
+      <Label layoutX="25.0" layoutY="290.0" text="Data de vencimento*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="220.0" text="Conta do mês/kWh">
+      <Label layoutX="25.0" layoutY="220.0" text="Conta do mês/kWh*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -102,7 +102,7 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="570.0" text="Leitura anterior">
+      <Label layoutX="25.0" layoutY="570.0" text="Leitura anterior*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -112,12 +112,12 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="640.0" text="Leitura atual">
+      <Label layoutX="25.0" layoutY="640.0" text="Leitura atual*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="500.0" text="NR do medidor">
+      <Label layoutX="25.0" layoutY="500.0" text="NR do medidor*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -132,7 +132,7 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Button>
-      <Label layoutX="550.0" layoutY="290.0" text="Valor total a pagar">
+      <Label layoutX="550.0" layoutY="290.0" text="Valor total a pagar*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -142,19 +142,24 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="430.0" text="Data leitura anterior">
+      <Label layoutX="600.0" layoutY="430.0" text="Data leitura anterior*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="500.0" text="Data leitura atual">
+      <Label layoutX="600.0" layoutY="500.0" text="Data leitura atual*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="570.0" text="Bandeiras Tarifárias">
+      <Label layoutX="600.0" layoutY="570.0" text="Bandeiras Tarifárias*">
          <font>
             <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+         <font>
+            <Font name="Arial Black" size="20.0" />
          </font>
       </Label>
    </children>

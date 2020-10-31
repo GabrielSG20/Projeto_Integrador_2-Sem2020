@@ -41,12 +41,12 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="810.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataLeituraAtual" layoutX="810.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -106,22 +106,22 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="25.0" layoutY="150.0" text="Conta do mês/Kwh">
+      <Label layoutX="25.0" layoutY="150.0" text="Conta do mês/kWh*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="80.0" text="Conta do mês">
+      <Label layoutX="25.0" layoutY="80.0" text="Conta do mês*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="290.0" text="Valor total a pagar">
+      <Label layoutX="25.0" layoutY="290.0" text="Valor total a pagar*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="220.0" text="Data de vencimento">
+      <Label layoutX="25.0" layoutY="220.0" text="Data de vencimento*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -131,7 +131,7 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="570.0" text="Leitura anterior">
+      <Label layoutX="25.0" layoutY="570.0" text="Leitura anterior*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -141,12 +141,12 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="640.0" text="Leitura atual">
+      <Label layoutX="25.0" layoutY="640.0" text="Leitura atual*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="25.0" layoutY="500.0" text="NR do medidor">
+      <Label layoutX="25.0" layoutY="500.0" text="NR do medidor*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -166,17 +166,17 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="80.0" text="Data leitura anterior">
+      <Label layoutX="600.0" layoutY="80.0" text="Data leitura anterior*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="150.0" text="Data leitura atual">
+      <Label layoutX="600.0" layoutY="150.0" text="Data leitura atual*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="220.0" text="Bandeiras Tarifárias">
+      <Label layoutX="600.0" layoutY="220.0" text="Bandeiras Tarifárias*">
          <font>
             <Font name="Arial Bold" size="25.0" />
          </font>
@@ -187,17 +187,17 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="420.0" prefHeight="30.0" prefWidth="220.0" text="Código fiscal ">
+      <Label layoutX="600.0" layoutY="420.0" prefHeight="30.0" prefWidth="220.0" text="Código fiscal*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="480.0" prefHeight="30.0" prefWidth="304.0" text="Grupo/Subgrupo">
+      <Label layoutX="600.0" layoutY="480.0" prefHeight="30.0" prefWidth="304.0" text="Grupo/Subgrupo*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="600.0" prefHeight="30.0" prefWidth="220.0" text="Classe/Subclasse">
+      <Label layoutX="600.0" layoutY="600.0" prefHeight="30.0" prefWidth="220.0" text="Classe/Subclasse*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -207,7 +207,7 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="600.0" layoutY="660.0" prefHeight="30.0" prefWidth="220.0" text="M. Tarifária">
+      <Label layoutX="600.0" layoutY="660.0" prefHeight="30.0" prefWidth="220.0" text="M. Tarifária*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -220,6 +220,11 @@
       <Label layoutX="600.0" layoutY="780.0" prefHeight="30.0" prefWidth="220.0" text="Tensão nominal">
          <font>
             <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="341.0" layoutY="850.0" text="Campos com * são obrigatórios">
+         <font>
+            <Font name="Arial Black" size="20.0" />
          </font>
       </Label>
    </children>

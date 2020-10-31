@@ -76,7 +76,6 @@ create table agu_agua (
     agu_leitura_anterior bigint not null,
     agu_leitura_atual bigint not null,
     agu_consumo bigint not null,
-    agu_vencimento date not null,
     agu_valor_agua numeric(10,2) default 0 not null,
     agu_valor_esgoto numeric(10,2) default 0 not null,
     agu_taxa_regulamentacao numeric(10,2) default 0 not null,

@@ -25,36 +25,36 @@
             <Point3D x="1.0" z="1.0" />
          </rotationAxis>
       </ImageView>
-      <Label fx:id="lblRGI" layoutX="64.0" layoutY="80.0" prefHeight="21.0" prefWidth="64.0" text="GR">
+      <Label fx:id="lblRGI" layoutX="64.0" layoutY="80.0" prefHeight="21.0" prefWidth="64.0" text="GR*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="lblbNumConta" layoutX="64.0" layoutY="260.0" text="N° DA CONTA">
+      <Label fx:id="lblbNumConta" layoutX="64.0" layoutY="260.0" text="N° da conta*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblMesReferencia" layoutX="64.0" layoutY="350.0" text="MÊS DE REFERÊNCIA">
+      <Label fx:id="lblMesReferencia" layoutX="64.0" layoutY="350.0" text="Mês referência*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblApresentacao" layoutX="64.0" layoutY="480.0" text="APRESENTAÇÃO">
+      <Label fx:id="lblApresentacao" layoutX="64.0" layoutY="480.0" text="Apresentação">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblLeituraAtual" layoutX="64.0" layoutY="600.0" text="LEITURA ATUAL">
+      <Label fx:id="lblLeituraAtual" layoutX="64.0" layoutY="600.0" text="Leitura atual*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblData" layoutX="330.0" layoutY="480.0" text="DATA">
+      <Label fx:id="lblData" layoutX="335.0" layoutY="480.0" text="Data">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblLeitrura" layoutX="455.0" layoutY="480.0" text="LEITURA">
+      <Label fx:id="lblLeitrura" layoutX="465.0" layoutY="480.0" text="Leitura">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblLeituraAnterior" layoutX="64.0" layoutY="540.0" text="LEITURA ANTERIOR">
+      <Label fx:id="lblLeituraAnterior" layoutX="64.0" layoutY="540.0" text="Leitura anterior*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
@@ -102,19 +102,19 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <Label fx:id="lblCodCliente" layoutX="64.0" layoutY="170.0" text="CÓDIGO DO CLIENTE">
+      <Label fx:id="lblCodCliente" layoutX="64.0" layoutY="170.0" text="Código do Cliente*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblTipoDe" layoutX="680.0" layoutY="170.0" text="TIPO DE LIGAÇÃO">
+      <Label fx:id="lblTipoDe" layoutX="680.0" layoutY="170.0" text="Tipo de ligação">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblHidrometro" layoutX="680.0" layoutY="260.0" text="HIDRÔMETRO">
+      <Label fx:id="lblHidrometro" layoutX="680.0" layoutY="260.0" text="Hidrômetro">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <Label fx:id="lblConsumo" layoutX="750.0" layoutY="480.0" text="CONSUMO">
+      <Label fx:id="lblConsumo" layoutX="750.0" layoutY="480.0" text="Consumo*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
@@ -130,5 +130,10 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

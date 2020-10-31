@@ -52,7 +52,7 @@ public class PessoaFisica implements Initializable {
     }
 
     public void changeScreenProsseguir(ActionEvent event) {
-            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("DESEJA ADICIONAR UM NOVO CLIENTE?");
