@@ -1,9 +1,9 @@
 package controller;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,6 +14,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
+import classes.Energia;
+import dao.EnergiaDAO;
 
 public class CadastroEnergia2 implements Initializable {
     @FXML
@@ -67,7 +69,14 @@ public class CadastroEnergia2 implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Main.changeScreen("main");
-
+            
+            Energia n = new Energia();
+            EnergiaDAO dao_ene = new EnergiaDAO();
+            //FAZER
+            
+          
+            dao_ene.create(n);
+            
             txtContaMes.setText("");
             txtNumeroInstalacao.setText("");
             txtConsumo.setText("");
