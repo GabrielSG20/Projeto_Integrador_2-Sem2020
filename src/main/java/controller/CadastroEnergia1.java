@@ -4,7 +4,6 @@ import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -16,7 +15,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
 import classes.Endereco;
+import classes.Energia;
 import dao.EnderecoDAO;
+import dao.EnergiaDAO;
 
 public class CadastroEnergia1 implements Initializable {
     @FXML
@@ -106,6 +107,18 @@ public class CadastroEnergia1 implements Initializable {
             e.setEnd_complemento(txtComplemento.getText());
 
             dao.create(e);
+
+            Energia n = new Energia();
+            EnergiaDAO dao_ene = new EnergiaDAO();
+            n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
+            n.setEne_grupo_subgrupo(BigInteger.valueOf(Long.parseLong(txtGrupoSubgrupo.getText())));
+            n.setEne_classe_subclasse(txtClasseSubclasse.getText());
+            n.setEne_tipo_fornecimento(txtFornecimento.getText());
+            n.setEne_modalidade_tarifaria(txtTarifaria.getText());
+            n.setEne_roteiro_leitura(txtRoteiroLeitura.getText());
+            n.setEne_tensao_nominal(txtTensaoNominal.getText());
+
+            dao_ene.create(n);
 
             txtCidade.setText("");
             txtCEPEnergia.setText("");
