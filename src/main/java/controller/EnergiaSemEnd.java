@@ -1,9 +1,10 @@
 package controller;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -14,6 +15,8 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
+import classes.Energia;
+import dao.EnergiaDAO;
 
 public class EnergiaSemEnd implements Initializable {
     @FXML
@@ -79,6 +82,28 @@ public class EnergiaSemEnd implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Main.changeScreen("main");
+
+            Energia n = new Energia();
+            EnergiaDAO dao_ene = new EnergiaDAO();
+            n.setCta_mes_referencia(txtContaMes.getText());
+            n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+            n.setEne_valor_total(BigDecimal.valueOf(Long.parseLong(txtTotalPagar.getText())));
+            n.setEne_const_multi(BigDecimal.valueOf(Long.parseLong(txtConstMulti.getText())));
+            n.setEne_numero_medidor(Integer.parseInt(txtNRmedidor.getText()));
+            n.setEne_leitura_anterior_cod(Integer.parseInt(txtLeituraAnterior.getText()));
+            n.setEne_leitura_atual_cod(Integer.parseInt(txtLeituraAtual.getText()));
+            n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
+            n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
+            n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifaria.getValue()));
+            n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
+            n.setEne_grupo_subgrupo(BigInteger.valueOf(Long.parseLong(txtGrupoSubgrupo.getText())));
+            n.setEne_classe_subclasse(txtClasseSubclasse.getText());
+            n.setEne_tipo_fornecimento(txtFornecimento.getText());
+            n.setEne_modalidade_tarifaria(txtTarifaria.getText());
+            n.setEne_roteiro_leitura(txtRoteiroLeitura.getText());
+            n.setEne_tensao_nominal(txtTensaoNominal.getText());
+
+            dao_ene.create(n);
 
             txtContaMes.setText("");
             txtConsumo.setText("");
