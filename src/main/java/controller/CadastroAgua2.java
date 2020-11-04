@@ -18,6 +18,44 @@ public class CadastroAgua2 implements Initializable {
     @FXML
     private TextField txtTotalPagar;
     @FXML
+    private TextField txtTarifaAguaAte10;
+    @FXML 
+    private TextField txtTarifaAgua11a20;
+    @FXML
+    private TextField txtTarifaAgua21a30;
+    @FXML
+    private TextField txtTarifaAgua31a50;
+    @FXML
+    private TextField txtTarifaAcima50;
+    @FXML
+    private TextField txtValorAguaAte10;
+    @FXML
+    private TextField txtValorAgua11a20;
+    @FXML
+    private TextField txtTarifaEsgotoAte10;
+    @FXML
+    private TextField txtTarifaEsgoto11a20;
+    @FXML
+    private TextField txtTarifaEsgoto21a30;
+    @FXML
+    private TextField txtTarifaEsgoto31a50;
+    @FXML
+    private TextField txtTarifaEsgotoAcima50;
+    @FXML
+    private TextField txtValorEsgotoAte10;
+    @FXML
+    private TextField txtValorEsgoto11a20;
+    @FXML
+    private TextField txtVencimento;
+    @FXML
+    private TextField txtVIAgua;
+    @FXML
+    private TextField txtVIEsgoto;
+    @FXML
+    private TextField txtTaxaRegulacao;
+    @FXML
+    private TextField txtMulta;
+    @FXML
     private Button btnSalvarVoltarTelaInicial;
     @FXML
     private Button btnRetornarAgua2;

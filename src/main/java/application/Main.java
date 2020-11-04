@@ -5,11 +5,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
+//import javafx.scene.control.TextField;
 
-import java.util.ArrayList;
 
-import classes.Conta_agua;
+
+//import classes.Conta_agua;
 
 public class Main extends Application {
 
