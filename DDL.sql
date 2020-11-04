@@ -36,14 +36,14 @@ create table int_instalacao (
 
 create table cta_conta (
     int_numero_instalacao bigint,
-    cta_mes_referencia date,
-    cta_vencimento date not null,
+    cta_mes_referencia varchar(50),
+    cta_vencimento varchar(50) not null,
     constraint cta_conta_pk primary key (int_numero_instalacao,cta_mes_referencia)
 );
 
 create table ene_energia (
     int_numero_instalacao bigint,
-    cta_mes_referencia date,
+    cta_mes_referencia varchar(50),
     ene_consumo_conta_mes bigint not null,
     ene_codigo_fiscal bigint not null,
     ene_grupo_subgrupo varchar(50) not null,
@@ -56,8 +56,8 @@ create table ene_energia (
     ene_const_multi numeric(10,2) not null,
     ene_leitura_anterior_cod bigint not null,
     ene_leitura_atual_cod bigint not null,
-    ene_data_leitura_anterior date not null,
-    ene_data_leitura_atual date not null,
+    ene_data_leitura_anterior varchar(50) not null,
+    ene_data_leitura_atual varchar(50) not null,
     ene_tipo_bandeira varchar(10) not null,
     ene_valor_total numeric (10,2) not null,
     constraint ene_energia_pk primary key (int_numero_instalacao,cta_mes_referencia)
@@ -65,14 +65,14 @@ create table ene_energia (
 
 create table agu_agua (
     int_numero_instalacao bigint,
-    cta_mes_referencia date,
+    cta_mes_referencia varchar(50),
     agu_gr bigint not null,
     agu_codigo_cliente bigint not null,
     agu_numero_conta bigint not null,
     agu_tipo_ligacao varchar(50) not null,
     agu_hidrometro varchar(50),
-    agu_data_leitura_anterior date not null,
-    agu_data_leitura_atual date not null,
+    agu_data_leitura_anterior varchar(50) not null,
+    agu_data_leitura_atual varchar(50) not null,
     agu_leitura_anterior bigint not null,
     agu_leitura_atual bigint not null,
     agu_consumo bigint not null,

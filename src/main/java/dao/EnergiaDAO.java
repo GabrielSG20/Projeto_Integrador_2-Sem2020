@@ -38,8 +38,8 @@ public class EnergiaDAO {
             stmt.setObject(12, n.getEne_const_multi());
             stmt.setObject(13, n.getEne_leitura_anterior_cod());
             stmt.setObject(14, n.getEne_leitura_atual_cod());
-            stmt.setObject(15, n.getEne_data_leitura_anterior());
-            stmt.setObject(16, n.getEne_data_leitura_atual());
+            stmt.setString(15, n.getEne_data_leitura_anterior());
+            stmt.setString(16, n.getEne_data_leitura_atual());
             stmt.setString(17, n.getEne_tipo_bandeira());
             stmt.setObject(18, n.getEne_valor_total());
             stmt.executeUpdate();

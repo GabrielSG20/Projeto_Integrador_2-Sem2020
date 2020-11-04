@@ -35,8 +35,8 @@ public class AguaDAO {
             stmt.setObject(5, a.getAgu_numero_conta());
             stmt.setObject(6, a.getAgu_tipo_ligacao());
             stmt.setObject(7, a.getAgu_hidrometro());
-            stmt.setObject(8, a.getAgu_data_leitura_anterior());
-            stmt.setObject(9, a.getAgu_data_leitura_atual());
+            stmt.setString(8, a.getAgu_data_leitura_anterior());
+            stmt.setString(9, a.getAgu_data_leitura_atual());
             stmt.setObject(10, a.getAgu_leitura_anterior());
             stmt.setObject(11, a.getAgu_leitura_atual());
             stmt.setObject(12, a.getAgu_consumo());

@@ -70,11 +70,10 @@ public class CadastroEnergia2 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            Main.salvarIntalacaoNumero(txtNumeroInstalacao);
             Main.salvarConta1(txtNumeroInstalacao, txtContaMes);
             Main.salvarConta2(txtDataVencimento);
             Main.salvarEnergia2(txtContaMes, txtNumeroInstalacao, txtConsumo, txtTotalPagar, txtConstMulti, txtNRmedidor, txtLeituraAnterior, txtLeituraAtual, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
-
-            Main.salvarIntalacaoNumero(txtNumeroInstalacao);
 
             Main.changeScreen("main");
             

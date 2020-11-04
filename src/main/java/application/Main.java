@@ -200,8 +200,8 @@ public class Main extends Application {
             n.setCta_mes_referencia(txtContaMes.getText());
             n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
             n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
-            n.setEne_valor_total(BigDecimal.valueOf(Long.parseLong(txtTotalPagar.getText())));
-            n.setEne_const_multi(BigDecimal.valueOf(Long.parseLong(txtConstMulti.getText())));
+            n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
+            n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(txtConstMulti.getText())));
             n.setEne_numero_medidor(Integer.parseInt(txtNRmedidor.getText()));
             n.setEne_leitura_anterior_cod(Integer.parseInt(txtLeituraAnterior.getText()));
             n.setEne_leitura_atual_cod(Integer.parseInt(txtLeituraAtual.getText()));
