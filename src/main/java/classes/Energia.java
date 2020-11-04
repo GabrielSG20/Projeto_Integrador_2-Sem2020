@@ -8,7 +8,7 @@ public class Energia {
 	private String cta_mes_referencia;
 	private BigInteger ene_consumo_conta_mes;
 	private BigInteger ene_codigo_fiscal;
-	private BigInteger ene_grupo_subgrupo;
+	private String ene_grupo_subgrupo;
 	private String ene_tipo_fornecimento;
 	private String ene_classe_subclasse;
 	private String ene_roteiro_leitura;
@@ -47,10 +47,10 @@ public class Energia {
 	public void setEne_codigo_fiscal(BigInteger ene_codigo_fiscal) {
 		this.ene_codigo_fiscal = ene_codigo_fiscal;
 	}
-	public BigInteger getEne_grupo_subgrupo() {
+	public String getEne_grupo_subgrupo() {
 		return ene_grupo_subgrupo;
 	}
-	public void setEne_grupo_subgrupo(BigInteger ene_grupo_subgrupo) {
+	public void setEne_grupo_subgrupo(String ene_grupo_subgrupo) {
 		this.ene_grupo_subgrupo = ene_grupo_subgrupo;
 	}
 	public String getEne_tipo_fornecimento() {

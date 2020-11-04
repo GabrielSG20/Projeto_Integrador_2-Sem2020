@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane cacheShape="false" centerShape="false" prefHeight="900.0" prefWidth="1100.0" scaleShape="false" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroAgua2">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/image/TECSUS.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="400.0" layoutY="29.0" text="Cálculo do Valor por Economia">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblFaixaConsumo" layoutX="19.0" layoutY="83.0" text="Faixa de consumo" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="83.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblFaixaConsumoM3" layoutX="75.0" layoutY="104.0" text="(M3)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblConsumoM3" layoutX="249.0" layoutY="83.0" text="Consumo (M3)" AnchorPane.topAnchor="83.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblConsumoM3PorEcono" layoutX="250.0" layoutY="104.0" text="por economia">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblAte10" layoutX="20.0" layoutY="149.0" text="Ate 10" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl11a20" layoutX="19.0" layoutY="231.0" text="11 a 20" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl21a31" layoutX="19.0" layoutY="303.0" text="21 a 30" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lbl31a50" layoutX="19.0" layoutY="383.0" text="31 a 50" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblAcima50" layoutX="17.0" layoutY="451.0" text="Acima de 50" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="249.0" layoutY="149.0" text="Mínimo">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label layoutX="277.0" layoutY="170.0" text="3">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblAgua" layoutX="524.0" layoutY="83.0" text="Água" AnchorPane.topAnchor="83.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblTarifaAgua" layoutX="414.0" layoutY="104.0" text="Tarifa(R$)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <TextField fx:id="txtTarifa10agua" layoutX="419.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa20agua" layoutX="419.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa30agua" layoutX="419.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa50agua" layoutX="419.0" layoutY="375.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifaMais50agua" layoutX="419.0" layoutY="446.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtValorAgua1" layoutX="573.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtValorAgua2" layoutX="573.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa10esgoto" layoutX="726.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa20esgoto" layoutX="726.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa30esgoto" layoutX="726.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifa50esgoto" layoutX="726.0" layoutY="378.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTarifaMais50esgoto" layoutX="727.0" layoutY="444.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtValorEsgoto1" layoutX="911.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtValorEsgoto2" layoutX="911.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtVencimento" layoutX="160.0" layoutY="615.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTotalAgua" layoutX="460.0" layoutY="670.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTotalEsgoto" layoutX="460.0" layoutY="725.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTaxaRegulacao" layoutX="930.0" layoutY="670.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtMulta" layoutX="930.0" layoutY="725.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <Label fx:id="lblValorAgua" layoutX="577.0" layoutY="104.0" text="Valor(R$)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblEsgoto" layoutX="823.0" layoutY="83.0" text="Esgoto" AnchorPane.topAnchor="83.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblTarifaEsgoto" layoutX="722.0" layoutY="104.0" text="Tarifa(R$)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblValorEsgoto" layoutX="907.0" layoutY="104.0" text="Valor(R$)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblVencimento" layoutX="22.0" layoutY="623.0" text="Vencimento*" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="btnRetornarAgua2" layoutX="20.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="184.0" text="Retornar" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font></Button>
+      <Label fx:id="lblViAgua" layoutX="13.0" layoutY="679.0" text="VI água(água*FT de ajuste* econ)" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblViEsgoto" layoutX="12.0" layoutY="730.0" text="VI esgoto(esgoto*FT de ajuste* econ)" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblPagarAgua" layoutX="325.0" layoutY="680.0" text="Água(R$)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblPagarEsgoto" layoutX="347.0" layoutY="730.0" text="Esgoto(R$)">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblDiscriFaturamento" layoutX="708.0" layoutY="623.0" text="DIscriminação do Faturamento">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Label fx:id="lblTaxaRegulacao" layoutX="708.0" layoutY="679.0" text="Taxa de regulção- TRCF">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font></Label>
+      <Button fx:id="btnSalvarVoltarTelaInicial" layoutX="652.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="43.0" prefWidth="419.0" text=" Salvar e voltar à tela inicial" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font></Button>
+      <Label fx:id="lblAliquota1" layoutX="800.0" layoutY="730.0" text="Multa">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

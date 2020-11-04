@@ -46,7 +46,7 @@ create table ene_energia (
     cta_mes_referencia date,
     ene_consumo_conta_mes bigint not null,
     ene_codigo_fiscal bigint not null,
-    ene_grupo_subgrupo bigint not null,
+    ene_grupo_subgrupo varchar(50) not null,
     ene_tipo_fornecimento varchar(50) not null,
     ene_classe_subclasse varchar(50) not null,
     ene_roteiro_leitura varchar(50) not null,

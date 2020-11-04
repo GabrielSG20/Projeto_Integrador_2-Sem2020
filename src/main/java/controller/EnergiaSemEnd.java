@@ -95,7 +95,7 @@ public class EnergiaSemEnd implements Initializable {
             n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
             n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifaria.getValue()));
             n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
-            n.setEne_grupo_subgrupo(BigInteger.valueOf(Long.parseLong(txtGrupoSubgrupo.getText())));
+            n.setEne_grupo_subgrupo(txtGrupoSubgrupo.getText());
             n.setEne_classe_subclasse(txtClasseSubclasse.getText());
             n.setEne_tipo_fornecimento(txtFornecimento.getText());
             n.setEne_modalidade_tarifaria(txtTarifaria.getText());

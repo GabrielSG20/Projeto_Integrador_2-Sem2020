@@ -28,7 +28,7 @@ public class EnergiaDAO {
             stmt.setObject(2, n.getCta_mes_referencia());
             stmt.setObject(3, n.getEne_consumo_conta_mes());
             stmt.setObject(4, n.getEne_codigo_fiscal());
-            stmt.setObject(5, n.getEne_grupo_subgrupo());
+            stmt.setString(5, n.getEne_grupo_subgrupo());
             stmt.setString(6, n.getEne_tipo_fornecimento());
             stmt.setString(7, n.getEne_classe_subclasse());
             stmt.setString(8, n.getEne_roteiro_leitura());

@@ -188,7 +188,7 @@ public class Main extends Application {
             n = new Energia();
             dao_ene = new EnergiaDAO();
             n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
-            n.setEne_grupo_subgrupo(BigInteger.valueOf(Long.parseLong(txtGrupoSubgrupo.getText())));
+            n.setEne_grupo_subgrupo(txtGrupoSubgrupo.getText());
             n.setEne_classe_subclasse(txtClasseSubclasse.getText());
             n.setEne_tipo_fornecimento(txtFornecimento.getText());
             n.setEne_modalidade_tarifaria(txtTarifaria.getText());
