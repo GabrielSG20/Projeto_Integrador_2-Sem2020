@@ -14,10 +14,10 @@ public class Energia {
 	private String ene_roteiro_leitura;
 	private String ene_modalidade_tarifaria;
 	private String ene_tensao_nominal;
-	private int ene_numero_medidor;
+	private BigInteger ene_numero_medidor;
 	private BigDecimal ene_const_multi;
-	private int ene_leitura_anterior_cod;
-	private int ene_leitura_atual_cod;
+	private BigInteger ene_leitura_anterior_cod;
+	private BigInteger ene_leitura_atual_cod;
 	private String ene_data_leitura_anterior;
 	private String ene_data_leitura_atual;
 	private String ene_tipo_bandeira;
@@ -83,10 +83,10 @@ public class Energia {
 	public void setEne_tensao_nominal(String ene_tensao_nominal) {
 		this.ene_tensao_nominal = ene_tensao_nominal;
 	}
-	public int getEne_numero_medidor() {
+	public BigInteger getEne_numero_medidor() {
 		return ene_numero_medidor;
 	}
-	public void setEne_numero_medidor(int ene_numero_medidor) {
+	public void setEne_numero_medidor(BigInteger ene_numero_medidor) {
 		this.ene_numero_medidor = ene_numero_medidor;
 	}
 	public BigDecimal getEne_const_multi() {
@@ -95,16 +95,16 @@ public class Energia {
 	public void setEne_const_multi(BigDecimal ene_const_multi) {
 		this.ene_const_multi = ene_const_multi;
 	}
-	public int getEne_leitura_anterior_cod() {
+	public BigInteger getEne_leitura_anterior_cod() {
 		return ene_leitura_anterior_cod;
 	}
-	public void setEne_leitura_anterior_cod(int ene_leitura_anterior_cod) {
+	public void setEne_leitura_anterior_cod(BigInteger ene_leitura_anterior_cod) {
 		this.ene_leitura_anterior_cod = ene_leitura_anterior_cod;
 	}
-	public int getEne_leitura_atual_cod() {
+	public BigInteger getEne_leitura_atual_cod() {
 		return ene_leitura_atual_cod;
 	}
-	public void setEne_leitura_atual_cod(int ene_leitura_atual_cod) {
+	public void setEne_leitura_atual_cod(BigInteger ene_leitura_atual_cod) {
 		this.ene_leitura_atual_cod = ene_leitura_atual_cod;
 	}
 	public String getEne_data_leitura_anterior() {

@@ -88,9 +88,9 @@ public class EnergiaSemEnd implements Initializable {
             n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
             n.setEne_valor_total(BigDecimal.valueOf(Long.parseLong(txtTotalPagar.getText())));
             n.setEne_const_multi(BigDecimal.valueOf(Long.parseLong(txtConstMulti.getText())));
-            n.setEne_numero_medidor(Integer.parseInt(txtNRmedidor.getText()));
-            n.setEne_leitura_anterior_cod(Integer.parseInt(txtLeituraAnterior.getText()));
-            n.setEne_leitura_atual_cod(Integer.parseInt(txtLeituraAtual.getText()));
+            n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
+            n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
+            n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
             n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
             n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
             n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifaria.getValue()));

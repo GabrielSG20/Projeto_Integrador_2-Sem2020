@@ -3,6 +3,7 @@ package dao;
 import conexao.ConexaoBd;
 import classes.Instalacao;
 
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -36,6 +37,41 @@ public class InstalacaoDAO {
         } finally {
             ConexaoBd.closeConnection(con, stmt);
         }
+    }
+    
+        public List<Instalacao> read() {
+
+        Connection con = ConexaoBd.getConnection();
+        
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        List<Instalacao> instalacoes = new ArrayList<>();
+
+        try {
+            stmt = con.prepareStatement("SELECT * FROM int_instalacao");
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                Instalacao instalacao = new Instalacao();
+
+                instalacao.setInt_numero_instalacao(BigInteger.valueOf(rs.getLong("int_numero_instalacao")));
+                instalacao.setCli_documento(BigInteger.valueOf(rs.getLong("cli_documento")));
+                instalacao.setFor_cnpj(BigInteger.valueOf(rs.getLong("for_cnpj")));
+                instalacao.setEnd_cep(BigInteger.valueOf(rs.getLong("end_cep")));
+                instalacao.setEnd_numero(BigInteger.valueOf(rs.getLong("end_numero")));
+
+                instalacoes.add(instalacao);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(InstalacaoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            ConexaoBd.closeConnection(con, stmt, rs);
+        }
+
+        return instalacoes;
 
     }
 }
