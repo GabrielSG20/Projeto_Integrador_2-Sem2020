@@ -118,8 +118,9 @@ public class CadastroAgua1 implements Initializable {
             Main.salvarIntalacaoEndereco(txtCEP, txtNumero);
             Main.salvarIntalacaoNumero(txtRGI);
             Main.salvarConta1(txtRGI, txtMesReferencia);
-            Main.salvarAgua1(txtRGI, txtGR, txtMesReferencia, txtCodigoCliente, txtNumeroConta, txtLeituraAntData, 
-            txtLeituraAtualData, txtLeituraAntNumero, txtLeituraAtualNumero, txtHidrometro, txtTipoLigacao);
+            Main.salvarAgua1(txtRGI, txtGR, txtMesReferencia, txtConsumo, txtCodigoCliente, txtNumeroConta, 
+            txtLeituraAntData, txtLeituraAtualData, txtLeituraAntNumero, txtLeituraAtualNumero, txtHidrometro, 
+            txtTipoLigacao);
 
             txtRGI.setText("");
             txtGR.setText("");

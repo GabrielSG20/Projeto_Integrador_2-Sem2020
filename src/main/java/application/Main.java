@@ -217,14 +217,15 @@ public class Main extends Application {
     }
 
     // Métodos Agua
-    public static void salvarAgua1(TextField txtRGI, TextField txtGR, TextField txtMesReferencia, TextField txtCodigoCliente,
-    TextField txtNumeroConta, TextField txtLeituraAntData, TextField txtLeituraAtualData, TextField txtLeituraAntNumero,
-    TextField txtLeituraAtualNumero, TextField txtHidrometro, TextField txtTipoLigacao) {
+    public static void salvarAgua1(TextField txtRGI, TextField txtGR, TextField txtMesReferencia, TextField txtConsumo,
+    TextField txtCodigoCliente,TextField txtNumeroConta, TextField txtLeituraAntData, TextField txtLeituraAtualData, 
+    TextField txtLeituraAntNumero, TextField txtLeituraAtualNumero, TextField txtHidrometro, TextField txtTipoLigacao) {
             a = new Agua();
             agua_dao = new AguaDAO();
             a.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtRGI.getText())));
             a.setAgu_gr(BigInteger.valueOf(Long.parseLong(txtGR.getText())));
             a.setCta_mes_referencia(txtMesReferencia.getText());
+            a.setAgu_consumo(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
             a.setAgu_codigo_cliente(BigInteger.valueOf(Long.parseLong(txtCodigoCliente.getText())));
             a.setAgu_numero_conta(BigInteger.valueOf(Long.parseLong(txtNumeroConta.getText())));
             a.setAgu_data_leitura_anterior(txtLeituraAntData.getText());
