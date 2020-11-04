@@ -81,7 +81,6 @@ public class EnergiaSemEnd implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.changeScreen("main");
 
             Energia n = new Energia();
             EnergiaDAO dao_ene = new EnergiaDAO();
@@ -104,6 +103,8 @@ public class EnergiaSemEnd implements Initializable {
             n.setEne_tensao_nominal(txtTensaoNominal.getText());
 
             dao_ene.create(n);
+
+            Main.changeScreen("main");
 
             txtContaMes.setText("");
             txtConsumo.setText("");

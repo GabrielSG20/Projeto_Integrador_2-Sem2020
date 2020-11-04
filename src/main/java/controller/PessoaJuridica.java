@@ -51,7 +51,7 @@ public class PessoaJuridica implements Initializable {
     }
 
     public void changeScreenProsseguir(ActionEvent event) {
-            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("DESEJA ADICIONAR UM NOVO CLIENTE?");
@@ -70,9 +70,11 @@ public class PessoaJuridica implements Initializable {
             FornecedorDAO daofor = new FornecedorDAO();
             f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
             f.setFor_nome(txtNomeFornecedor.getText());
-            f.setFor_tipo(comboTipoFornecedor.getPromptText());
+            f.setFor_tipo(String.valueOf(comboTipoFornecedor.getValue()));
 
             daofor.create(f);
+
+            Main.salvarIntalacaoCliente(txtCNPJEmpresa, txtCNPJFornecedor);
             
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");

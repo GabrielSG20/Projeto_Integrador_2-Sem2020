@@ -70,23 +70,13 @@ public class CadastroEnergia2 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.changeScreen("main");
-            
-            Energia n = new Energia();
-            EnergiaDAO dao_ene = new EnergiaDAO();
-            n.setCta_mes_referencia(txtContaMes.getText());
-            n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
-            n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
-            n.setEne_valor_total(BigDecimal.valueOf(Long.parseLong(txtTotalPagar.getText())));
-            n.setEne_const_multi(BigDecimal.valueOf(Long.parseLong(txtConstMulti.getText())));
-            n.setEne_numero_medidor(Integer.parseInt(txtNRmedidor.getText()));
-            n.setEne_leitura_anterior_cod(Integer.parseInt(txtLeituraAnterior.getText()));
-            n.setEne_leitura_atual_cod(Integer.parseInt(txtLeituraAtual.getText()));
-            n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
-            n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
-            n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+            Main.salvarConta1(txtNumeroInstalacao, txtContaMes);
+            Main.salvarConta2(txtDataVencimento);
+            Main.salvarEnergia2(txtContaMes, txtNumeroInstalacao, txtConsumo, txtTotalPagar, txtConstMulti, txtNRmedidor, txtLeituraAnterior, txtLeituraAtual, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
 
-            dao_ene.create(n);
+            Main.salvarIntalacaoNumero(txtNumeroInstalacao);
+
+            Main.changeScreen("main");
             
             txtContaMes.setText("");
             txtNumeroInstalacao.setText("");

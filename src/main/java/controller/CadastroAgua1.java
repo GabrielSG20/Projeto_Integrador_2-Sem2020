@@ -115,6 +115,11 @@ public class CadastroAgua1 implements Initializable {
 
             dao.create(e);
 
+            Main.salvarConta1(txtRGI, txtMesReferencia);
+            
+            Main.salvarIntalacaoEndereco(txtCEP, txtNumero);
+            Main.salvarIntalacaoNumero(txtRGI);
+
             txtRGI.setText("");
             txtGR.setText("");
             txtMesReferencia.setText("");

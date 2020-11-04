@@ -96,7 +96,6 @@ public class CadastroEnergia1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            Main.changeScreen("energia2");
             Endereco e = new Endereco();
             EnderecoDAO dao = new EnderecoDAO();
             e.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEPEnergia.getText())));
@@ -108,18 +107,12 @@ public class CadastroEnergia1 implements Initializable {
 
             dao.create(e);
 
-            Energia n = new Energia();
-            EnergiaDAO dao_ene = new EnergiaDAO();
-            n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
-            n.setEne_grupo_subgrupo(BigInteger.valueOf(Long.parseLong(txtGrupoSubgrupo.getText())));
-            n.setEne_classe_subclasse(txtClasseSubclasse.getText());
-            n.setEne_tipo_fornecimento(txtFornecimento.getText());
-            n.setEne_modalidade_tarifaria(txtTarifaria.getText());
-            n.setEne_roteiro_leitura(txtRoteiroLeitura.getText());
-            n.setEne_tensao_nominal(txtTensaoNominal.getText());
+            Main.salvarEnergia1(txtCodigoFiscal, txtGrupoSubgrupo, txtClasseSubclasse, txtFornecimento, txtTarifaria, txtRoteiroLeitura, txtTensaoNominal);
 
-            dao_ene.create(n);
+            Main.salvarIntalacaoEndereco(txtCEPEnergia, txtNumeroEnergia);
 
+            Main.changeScreen("energia2");
+            
             txtCidade.setText("");
             txtCEPEnergia.setText("");
             txtEnderecoEnergia.setText("");

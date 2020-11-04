@@ -1,5 +1,6 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -13,6 +14,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
+import classes.Conta;
+import dao.ContaDAO;
 
 public class CadastroAguaSemEnd implements Initializable {
     @FXML
@@ -59,6 +62,13 @@ public class CadastroAguaSemEnd implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            Conta cta = new Conta();
+            ContaDAO conta_dao = new ContaDAO();
+            cta.setCta_mes_referencia(txtMesReferencia.getText());
+
+            conta_dao.create(cta);
+
+            Main.changeScreen("agua2");
 
             txtGR.setText("");
             txtMesReferencia.setText("");
@@ -71,8 +81,6 @@ public class CadastroAguaSemEnd implements Initializable {
             txtLeituraAtualLeitura.setText("");
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
-
-            Main.changeScreen("agua2");
         } else {
             
         }

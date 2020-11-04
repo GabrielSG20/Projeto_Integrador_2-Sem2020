@@ -23,8 +23,8 @@ public class ContaDAO {
         try {
             stmt = con.prepareStatement("INSERT INTO cta_conta (int_numero_instalacao, cta_mes_referencia, cta_vencimento) VALUES(?,?,?)");
             stmt.setObject(1, cta.getInt_numero_instalacao());
-            stmt.setObject(2, cta.getCta_mes_referencia());
-            stmt.setObject(3, cta.getCta_vencimento());
+            stmt.setString(2, cta.getCta_mes_referencia());
+            stmt.setString(3, cta.getCta_vencimento());
             stmt.executeUpdate();
 
         } catch (SQLException ex) {

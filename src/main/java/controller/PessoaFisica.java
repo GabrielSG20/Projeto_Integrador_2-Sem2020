@@ -75,6 +75,8 @@ public class PessoaFisica implements Initializable {
 
             daofor.create(f);
 
+            Main.salvarIntalacaoCliente(txtCPF, txtCNPJFornecedor);
+
             txtNomeCompleto.setText("");
             txtCPF.setText("");
             txtNomeFornecedor.setText("");
