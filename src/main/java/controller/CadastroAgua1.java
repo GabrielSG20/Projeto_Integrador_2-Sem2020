@@ -54,6 +54,11 @@ public class CadastroAgua1 implements Initializable {
     @FXML
     private Button btnSalvarContinuar;
 
+    /*MaskFormatter formatter = new MaskFormatter(textfield);
+    formatter.setMask(int maskType);
+    MaskFormatter formatter = new MaskFormatter(txtCEP);
+    formatter.setMask(MaskFormatter.TEL_8DIG);*/
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
