@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicialController">
+<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InstalacaoCadastrada">
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/TECSUS.png" />
+            <Image url="@../../../Faculdade/Banco/Projeto%20integrador/test.png" />
          </image></ImageView>
       <Text layoutX="252.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="RGI:" textAlignment="CENTER">
          <font>
@@ -36,12 +36,12 @@
       </TextField>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="73.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/RGIAgua.png" />
+            <Image url="@RGIAgua.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="73.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/InstalacaoLuz.png" />
+            <Image url="@InstalacaoLuz.png" />
          </image>
       </ImageView>
       <Button fx:id="txtBotaoBuscarRGI" layoutX="626.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" text="Buscar">
