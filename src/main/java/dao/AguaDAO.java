@@ -29,7 +29,7 @@ public class AguaDAO {
             "agu_tarifa_ate30_esgoto,agu_tarifa_ate50_esgoto,agu_tarifa_acima50_esgoto,agu_valor_agua1,agu_valor_agua2," +
             "agu_valor_esgoto1,agu_valor_esgoto2) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             stmt.setObject(1, a.getInt_numero_instalacao());
-            stmt.setObject(2, a.getCta_mes_referencia());
+            stmt.setString(2, a.getCta_mes_referencia());
             stmt.setObject(3, a.getAgu_gr());
             stmt.setObject(4, a.getAgu_codigo_cliente());
             stmt.setObject(5, a.getAgu_numero_conta());

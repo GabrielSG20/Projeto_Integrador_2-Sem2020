@@ -3,9 +3,11 @@ package application;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 
+import classes.Agua;
 import classes.Conta;
 import classes.Energia;
 import classes.Instalacao;
+import dao.AguaDAO;
 import dao.ContaDAO;
 import dao.EnergiaDAO;
 import dao.InstalacaoDAO;
@@ -41,6 +43,8 @@ public class Main extends Application {
     private static ContaDAO conta_dao;
     private static Instalacao i;
     private static InstalacaoDAO instalacao_dao;
+    private static Agua a;
+    private static AguaDAO agua_dao;
 
     @Override
     public void start(Stage primaryStage) {
@@ -210,6 +214,52 @@ public class Main extends Application {
             n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
 
             dao_ene.create(n);
+    }
+
+    // Métodos Agua
+    public static void salvarAgua1(TextField txtRGI, TextField txtGR, TextField txtMesReferencia, TextField txtCodigoCliente,
+    TextField txtNumeroConta, TextField txtLeituraAntData, TextField txtLeituraAtualData, TextField txtLeituraAntNumero,
+    TextField txtLeituraAtualNumero, TextField txtHidrometro, TextField txtTipoLigacao) {
+            a = new Agua();
+            agua_dao = new AguaDAO();
+            a.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtRGI.getText())));
+            a.setAgu_gr(BigInteger.valueOf(Long.parseLong(txtGR.getText())));
+            a.setCta_mes_referencia(txtMesReferencia.getText());
+            a.setAgu_codigo_cliente(BigInteger.valueOf(Long.parseLong(txtCodigoCliente.getText())));
+            a.setAgu_numero_conta(BigInteger.valueOf(Long.parseLong(txtNumeroConta.getText())));
+            a.setAgu_data_leitura_anterior(txtLeituraAntData.getText());
+            a.setAgu_data_leitura_atual(txtLeituraAtualData.getText());
+            a.setAgu_leitura_anterior(BigInteger.valueOf(Long.parseLong(txtLeituraAntNumero.getText())));
+            a.setAgu_leitura_atual(BigInteger.valueOf(Long.parseLong(txtLeituraAtualNumero.getText())));
+            a.setAgu_hidrometro(txtHidrometro.getText());
+            a.setAgu_tipo_ligacao(txtTipoLigacao.getText());
+    }
+
+    public static void salvarAgua2(TextField txtTarifa10agua, TextField txtTarifa20agua, TextField txtTarifa30agua,
+    TextField txtTarifa50agua, TextField txtTarifaMais50agua,TextField txtValorAgua1, TextField txtValorAgua2, 
+    TextField txtTarifa10esgoto, TextField txtTarifa20esgoto, TextField txtTarifa30esgoto, TextField txtTarifa50esgoto, 
+    TextField txtTarifaMais50esgoto, TextField txtValorEsgoto1, TextField txtValorEsgoto2,TextField txtTotalAgua,
+    TextField txtTotalEsgoto, TextField txtTaxaRegulacao, TextField txtMulta){
+            a.setAgu_tarifa_ate10_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa10agua.getText())));
+            a.setAgu_tarifa_ate20_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa20agua.getText())));
+            a.setAgu_tarifa_ate30_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa30agua.getText())));
+            a.setAgu_tarifa_ate50_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa50agua.getText())));
+            a.setAgu_tarifa_acima50_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifaMais50agua.getText())));
+            a.setAgu_valor_agua1(BigDecimal.valueOf(Double.parseDouble(txtValorAgua1.getText())));
+            a.setAgu_valor_agua2(BigDecimal.valueOf(Double.parseDouble(txtValorAgua2.getText())));
+            a.setAgu_tarifa_ate10_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa10esgoto.getText())));
+            a.setAgu_tarifa_ate20_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa20esgoto.getText())));
+            a.setAgu_tarifa_ate30_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa30esgoto.getText())));
+            a.setAgu_tarifa_ate50_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa50esgoto.getText())));
+            a.setAgu_tarifa_acima50_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifaMais50esgoto.getText())));
+            a.setAgu_valor_esgoto1(BigDecimal.valueOf(Double.parseDouble(txtValorEsgoto1.getText())));
+            a.setAgu_valor_esgoto2(BigDecimal.valueOf(Double.parseDouble(txtValorEsgoto2.getText())));
+            a.setAgu_valor_agua(BigDecimal.valueOf(Double.parseDouble(txtTotalAgua.getText())));
+            a.setAgu_valor_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTotalEsgoto.getText())));
+            a.setAgu_taxa_regulamentacao(BigDecimal.valueOf(Double.parseDouble(txtTaxaRegulacao.getText())));
+            a.setAgu_multa(BigDecimal.valueOf(Double.parseDouble(txtMulta.getText())));
+            
+            agua_dao.create(a);
     }
 
 	public static void main(String[] args) {
