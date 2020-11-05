@@ -81,5 +81,17 @@ public class CadastroEnergia1 implements Initializable {
         } else {
             
         }
+        public void changeScreenProsseguir(ActionEvent event) {
+        if(txtUf.getText().equals("") || txtNumeroEnergia.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtCidade.getText().equals("") || txtCEP.getText().equals("") || txtEndereco.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
+
     }
 }
