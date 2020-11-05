@@ -21,7 +21,6 @@ public class Main extends Application {
     private static Scene tipocontaScene;
     private static Scene agua1Scene;
     private static Scene agua2Scene;
-    private static Scene energiaScene;
     private static Scene tiporelatorioScene;
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
@@ -29,12 +28,16 @@ public class Main extends Application {
     private static Scene energia1Scene;
     private static Scene energia2Scene;
     private static Scene energiaSemendScene;
+    private static Scene instalacaoCadastradaScene;
 
 
 	@Override
 	public void start(Stage primaryStage) {
 		try {
             stage = primaryStage;
+            Parent fxmlInstalacaoCadastrada = FXMLLoader.load(getClass().getResource("/view/InstalacaoCadastrada.fxml"));
+            instalacaoCadastradaScene = new Scene(fxmlInstalacaoCadastrada);
+
             Parent fxmlCadastroAgua1semEnd = FXMLLoader.load(getClass().getResource("/view/CadastroAgua1semEnd.fxml"));
             aguasemendScene = new Scene(fxmlCadastroAgua1semEnd);
 
@@ -68,9 +71,6 @@ public class Main extends Application {
             Parent fxmlAgua2 = FXMLLoader.load(getClass().getResource("/view/CadastroAgua2.fxml"));
             agua2Scene = new Scene(fxmlAgua2);
 
-            Parent fxmlEnergia = FXMLLoader.load(getClass().getResource("/view/CadastroEnergia.fxml"));
-            energiaScene = new Scene(fxmlEnergia);
-
             Parent fxmlTipoRelatorio = FXMLLoader.load(getClass().getResource("/view/TipoRelatorio.fxml"));
             tiporelatorioScene = new Scene(fxmlTipoRelatorio);
 
@@ -79,6 +79,8 @@ public class Main extends Application {
 
             Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
             relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
+
+           
 
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
@@ -92,6 +94,10 @@ public class Main extends Application {
         if (tela == "main"){
             stage.setScene(mainScene);
         }
+        if (tela == "instalacaoCadastradaScene"){
+            stage.setScene(instalacaoCadastradaScene);
+        }
+        
         if (tela == "aguasemend"){
             stage.setScene(aguasemendScene);
         }
@@ -121,9 +127,6 @@ public class Main extends Application {
         }
         if (tela == "agua2"){
             stage.setScene(agua2Scene);
-        }
-        if (tela == "energia"){
-            stage.setScene(energiaScene);
         }
         if (tela == "tiporelatorio"){
             stage.setScene(tiporelatorioScene);

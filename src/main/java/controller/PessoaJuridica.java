@@ -31,6 +31,7 @@ public class PessoaJuridica implements Initializable {
     private Button btnRetornarPJ;
     @FXML
     private Button btnProsseguirPJ;
+   
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -40,6 +41,7 @@ public class PessoaJuridica implements Initializable {
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
     }
+
 
     public void changeScreenProsseguir(ActionEvent event) {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);

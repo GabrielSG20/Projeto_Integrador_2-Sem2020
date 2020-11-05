@@ -48,7 +48,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="txtTipo" layoutX="331.0" layoutY="382.0" onAction="#changeScreenTipo" prefHeight="30.0" prefWidth="174.0" />
+      <ComboBox fx:id="ComboTipo" layoutX="331.0" layoutY="382.0"  prefHeight="30.0" prefWidth="174.0" />
       <Button fx:id="btnProsseguirPJ" layoutX="546.0" layoutY="471.0" mnemonicParsing="false" onAction="#changeScreenProsseguir" prefHeight="33.0" prefWidth="216.0" text="Salvar e prosseguir" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="20.0" />
