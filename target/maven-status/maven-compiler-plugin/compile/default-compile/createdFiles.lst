@@ -3,8 +3,8 @@ controller/CadastroAgua1.class
 dao/FornecedorDAO.class
 controller/PessoaJuridica.class
 application/Main.class
-controller/PessoaFisica.class
 controller/CadastroEnergia2.class
+controller/PessoaFisica.class
 classes/Conta.class
 controller/TipoCliente.class
 classes/Endereco.class
