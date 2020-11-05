@@ -12,30 +12,28 @@ import java.math.BigInteger;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import classes.Energia;
+import dao.InstalacaoDAO;
 import classes.Instalacao;
 import conexao.ConexaoBd;
-import dao.EnergiaDAO;
 
 public class RelatorioEnergia implements Initializable {
     @FXML
-    private TableView TabelaInstalacao;
+    private TableView <Instalacao> TabelaInstalacao;
     @FXML
-    private TableColumn <Energia, BigInteger> NumInstalacao;
+    private TableColumn <Instalacao, BigInteger> clmNumInstalacao;
     @FXML
-    private TableColumn <Energia, BigInteger> DocCliente;
+    private TableColumn <Instalacao, BigInteger> clmDocCliente;
     @FXML
-    private TableColumn <Energia, BigInteger> CNPJFornecedor;
+    private TableColumn <Instalacao, BigInteger> clmCNPJFornecedor;
     @FXML
-    private TableColumn <Energia, BigInteger> CEP;
+    private TableColumn <Instalacao, BigInteger> clmCEP;
     @FXML
-    private TableColumn <Energia, BigInteger> NResidencia;
-    
-    private List<Instalacao> instalacoesList;
+    private TableColumn <Instalacao, BigInteger> clmNResidencia;
+
+    private List<Instalacao> listInstalacao;
     private ObservableList<Instalacao> observableListInstalacao;
-
-    private final InstalacaoDAO instalacaoDAO = new InstalacaoDAO();
-
+   
+    
     @Override
     public void initialize(URL url, ResourceBundle resources) {
         
@@ -43,16 +41,18 @@ public class RelatorioEnergia implements Initializable {
     }
 
     public void carregarTableViewInstalacao(){
-        NumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
-        DocCliente.setCellValueFactory(new PropertyValueFactory<>("cli_documento"));
-        CNPJFornecedor.setCellValueFactory(new PropertyValueFactory<>("for_cnpj"));
-        CEP.setCellValueFactory(new PropertyValueFactory<>("end_cep"));
-        NResidencia.setCellValueFactory(new PropertyValueFactory<>("end_numero"));
+        clmNumInstalacao.setCellValueFactory(new PropertyValueFactory("int_numero_instalacao"));
+        clmDocCliente.setCellValueFactory(new PropertyValueFactory("cli_documento"));
+        clmCNPJFornecedor.setCellValueFactory(new PropertyValueFactory("for_cnpj"));
+        clmCEP.setCellValueFactory(new PropertyValueFactory("end_cep"));
+        clmNResidencia.setCellValueFactory(new PropertyValueFactory("end_numero"));
 
-        instalacoesList = InstalacaoDAO.read();
-        observableListInstalacao = FXCollections.observableArrayList(instalacoesList);
+        listInstalacao =  InstalacaoDAO.read();
+        observableListInstalacao = FXCollections.observableArrayList(listInstalacao);
         TabelaInstalacao.setItems(observableListInstalacao);
     }
+
+    
 
     
 
