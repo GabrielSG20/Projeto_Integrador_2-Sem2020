@@ -47,7 +47,7 @@ public class CadastroEnergia2 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("energia1Scene");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {

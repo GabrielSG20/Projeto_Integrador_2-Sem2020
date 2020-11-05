@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="image/TECSUS.png" />
          </image>
       </ImageView>
       <Text layoutX="157.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0">
@@ -23,7 +23,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagens/Energia.jpeg" />
+                  <Image url="image/Energia.jpeg" />
                </image>
             </ImageView>
          </graphic>
@@ -42,7 +42,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Imagens/Agua.jpeg" />
+                  <Image url="image/Agua.jpeg" />
                </image>
             </ImageView>
          </graphic>

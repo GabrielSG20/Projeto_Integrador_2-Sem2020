@@ -60,7 +60,7 @@ public class CadastroEnergiaSemEnd implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("instalacaoCadastradaScene");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
@@ -88,7 +88,7 @@ public class CadastroEnergiaSemEnd implements Initializable {
             txtTensaoNominal.setText("");
             txtMTarifaria.setText("");
             txtRoteiroLeitura.setText("");
-            Main.changeScreen("agua2");
+            Main.changeScreen("main");
         } else {
             
         }

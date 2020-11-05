@@ -78,7 +78,7 @@ public class CadastroEnergia1 implements Initializable {
             txtMTarifaEnergia.setText("");
             txtRoteiroLeituraEnergia.setText("");
             txtTensaoNominalEnergia.setText("");
-            Main.changeScreen("main");
+            Main.changeScreen("energia2Scene");
 
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");

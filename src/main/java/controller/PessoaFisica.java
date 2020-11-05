@@ -46,7 +46,8 @@ public class PessoaFisica implements Initializable {
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
-
+        Main.changeScreen("tipoconta");
+        
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             Main.changeScreen("tipoconta");
