@@ -84,5 +84,16 @@ public class CadastroEnergia2 implements Initializable {
         } else {
             
         }
+        public void changeScreenProsseguir(ActionEvent event) {
+        if(txtContaMes.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtDataVencimento.getText().equals("") || txtTotalPagar.getText().equals("") || txtConstMulti.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
     }
 }
