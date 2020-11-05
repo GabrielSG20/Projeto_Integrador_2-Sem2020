@@ -66,7 +66,7 @@ public class CadastroAgua1 implements Initializable {
     }
 
      public void changeScreenProsseguir(ActionEvent event) {
-        if(txtRGI.getText().equals("") || txtGR.getText().equals("") || txtCodigoCliente.getText().equals("") || txtUf.getText().equals("") || txtNumero.getText().equals("") ||) {
+        if(txtRGI.getText().equals("") || txtGR.getText().equals("") || txtCodigoCliente.getText().equals("") || txtUf.getText().equals("") || txtNumero.getText().equals("") || txtNumeroConta.getText().equals("") || txtMesReferencia.getText().equals("") || txtLeituraAntData.getText().equals("") || txtLeituraAntNumero.getText().equals("") || txtLeituraAtualData.getText().equals("") || txtLeituraAtualNumero.getText().equals("") || txtCidade.getText().equals("") || txtCEP.getText().equals("") || txtEndereco.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");

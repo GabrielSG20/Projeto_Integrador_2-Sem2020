@@ -103,6 +103,18 @@ public class CadastroAgua2 implements Initializable {
             Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
             Alert.showAndWait();
         } else {
+         
+        public void changeScreenProsseguir(ActionEvent event) {
+        if(txtVencimento.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
             
         }
     }

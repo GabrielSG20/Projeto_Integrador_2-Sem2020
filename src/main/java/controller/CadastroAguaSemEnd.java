@@ -76,5 +76,19 @@ public class CadastroAguaSemEnd implements Initializable {
         } else {
             
         }
+        
+        public void changeScreenProsseguir(ActionEvent event) {
+        if(txtCodigoCliente.getText().equals("") || txtGR.getText().equals("") || txtMesReferencia.getText().equals("") || txtNumeroConta.getText().equals("") || txtLeituraAnteriorData.getText().equals("") || txtLeituraAnteriorLeitura.getText().equals("") || txtLeituraAtualData.getText().equals("") || txtLeituraAtualLeitura.getText().equals("") || txtConsumo.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
+
+
     }
 }
