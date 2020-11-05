@@ -39,7 +39,7 @@ public class InstalacaoDAO {
         }
     }
     
-        public List<Instalacao> read() {
+        public static List<Instalacao> read() {
 
         Connection con = ConexaoBd.getConnection();
         
@@ -70,7 +70,6 @@ public class InstalacaoDAO {
         } finally {
             ConexaoBd.closeConnection(con, stmt, rs);
         }
-
         return instalacoes;
 
     }
