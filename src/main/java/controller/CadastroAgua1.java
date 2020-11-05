@@ -65,7 +65,17 @@ public class CadastroAgua1 implements Initializable {
         Main.changeScreen("tipoconta");
     }
 
-    public void changeScreenContinuar(ActionEvent event) {
+     public void changeScreenProsseguir(ActionEvent event) {
+        if(txtRGI.getText().equals("") || txtGR.getText().equals("") || txtCodigoCliente.getText().equals("") || txtUf.getText().equals("") || txtNumero.getText().equals("") ||) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
@@ -97,5 +107,6 @@ public class CadastroAgua1 implements Initializable {
         } else {
             
         }
+        
     }
 }
