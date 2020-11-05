@@ -70,7 +70,7 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        Main.changeScreen("main");
+        
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Cadastro");
         confirmacao.setHeaderText(null);

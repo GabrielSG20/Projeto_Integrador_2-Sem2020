@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
@@ -28,6 +29,8 @@ public class PessoaJuridica implements Initializable {
     @FXML
     private TextField txtEmail;
     @FXML
+    private ComboBox ComboTipo;
+    @FXML
     private Button btnRetornarPJ;
     @FXML
     private Button btnProsseguirPJ;
@@ -36,6 +39,9 @@ public class PessoaJuridica implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        ComboTipo.getItems().add("Água");
+        ComboTipo.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
@@ -51,7 +57,7 @@ public class PessoaJuridica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-
+            Main.changeScreen("tipoconta");
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
             txtEmail.setText("");
@@ -59,7 +65,7 @@ public class PessoaJuridica implements Initializable {
             txtCNPJFornecedor.setText("");
             txtTipoFornecedor.setText("");
 
-            Main.changeScreen("tipoconta");
+            
         } else {
             
         }

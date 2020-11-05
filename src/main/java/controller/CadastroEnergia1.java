@@ -80,11 +80,7 @@ public class CadastroEnergia1 implements Initializable {
             txtTensaoNominalEnergia.setText("");
             Main.changeScreen("energia2Scene");
 
-            Alert Alert = new Alert(AlertType.INFORMATION);
-            Alert.setTitle("Confirmação de Cadastro");
-            Alert.setHeaderText(null);
-            Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
-            Alert.showAndWait();
+            
         } else {
             
         }

@@ -10,6 +10,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
@@ -28,6 +29,8 @@ public class PessoaFisica implements Initializable {
     @FXML
     private TextField txtEmail;
     @FXML
+    private ComboBox txtTipo;
+    @FXML
     private Button btnRetornarPF;
     @FXML
     private Button btnProsseguirPF;
@@ -35,6 +38,8 @@ public class PessoaFisica implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+        txtTipo.getItems().add("Água");
+        txtTipo.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
@@ -46,7 +51,7 @@ public class PessoaFisica implements Initializable {
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
-        Main.changeScreen("tipoconta");
+        
         
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){

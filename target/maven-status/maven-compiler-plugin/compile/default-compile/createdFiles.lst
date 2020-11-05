@@ -6,8 +6,8 @@ controller/CadastroAgua1.class
 classes/Conta_agua.class
 controller/PessoaJuridica.class
 application/Main.class
-controller/CadastroEnergia2.class
 controller/PessoaFisica.class
+controller/CadastroEnergia2.class
 controller/InicialController.class
 controller/CadastroEnergia1.class
 controller/TipoCliente.class

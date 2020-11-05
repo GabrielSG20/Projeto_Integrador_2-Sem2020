@@ -48,6 +48,7 @@ public class RelatorioAgua implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
+         Main.changeScreen("main");
         RGI.setText("");
         NomeCliente.setText("");
         CNPJCliente.setText("");
@@ -61,9 +62,7 @@ public class RelatorioAgua implements Initializable {
         GR.setText("");
         Consumo.setText("");
         TotalPagar.setText("");
-
-
-        Main.changeScreen("main");
+       
     }
 
     public void procurarRGI(ActionEvent event) {
