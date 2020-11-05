@@ -103,7 +103,10 @@ public class CadastroAgua2 implements Initializable {
             Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
             Alert.showAndWait();
         } else {
-         
+            
+        }
+
+
         public void changeScreenProsseguir(ActionEvent event) {
         if(txtVencimento.getText().equals("")) {
             
