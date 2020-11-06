@@ -56,30 +56,41 @@ public class CadastroEnergia1 implements Initializable {
     }
 
     public void changeScreenSalvarContinuar(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Informações");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Main.changeScreen("energia2");
-
-            txtCidade.setText("");
-            txtCEPEnergia.setText("");
-            txtUf.setText("");
-            txtEnderecoEnergia.setText("");
-            txtNumeroEnergia.setText("");
-            txtComplemento.setText("");
-            txtCodigoFiscal.setText("");
-            txtGrupoSubgrupo.setText("");
-            txtClasseSubclasse.setText("");
-            txtFornecimento.setText("");
-            txtTarifaria.setText("");
-            txtRoteiroLeitura.setText("");
-            txtTensaoNominal.setText("");
-        } else {
+        if(txtUf.getText().equals("") || txtNumeroEnergia.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtCidade.getText().equals("") || txtCEPEnergia.getText().equals("") || txtEnderecoEnergia.getText().equals("")) {
             
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
+
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                Main.changeScreen("energia2");
+
+                txtCidade.setText("");
+                txtCEPEnergia.setText("");
+                txtUf.setText("");
+                txtEnderecoEnergia.setText("");
+                txtNumeroEnergia.setText("");
+                txtComplemento.setText("");
+                txtCodigoFiscal.setText("");
+                txtGrupoSubgrupo.setText("");
+                txtClasseSubclasse.setText("");
+                txtFornecimento.setText("");
+                txtTarifaria.setText("");
+                txtRoteiroLeitura.setText("");
+                txtTensaoNominal.setText("");
+                } else {
+            
+                }
         }
     }
 }

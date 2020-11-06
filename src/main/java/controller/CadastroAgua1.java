@@ -65,37 +65,49 @@ public class CadastroAgua1 implements Initializable {
         Main.changeScreen("tipoconta");
     }
 
-    public void changeScreenContinuar(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Informações");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
+     public void changeScreenProsseguir(ActionEvent event) {
+        if(txtRGI.getText().equals("") || txtGR.getText().equals("") || txtCodigoCliente.getText().equals("") || txtUf.getText().equals("") || txtNumero.getText().equals("") || txtNumeroConta.getText().equals("") || txtMesReferencia.getText().equals("") || txtLeituraAntData.getText().equals("") || txtLeituraAntNumero.getText().equals("") || txtLeituraAtualData.getText().equals("") || txtLeituraAtualNumero.getText().equals("") || txtCidade.getText().equals("") || txtCEP.getText().equals("") || txtEndereco.getText().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
 
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
+        }
+        else {
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
 
-            txtRGI.setText("");
-            txtGR.setText("");
-            txtMesReferencia.setText("");
-            txtEndereco.setText("");
-            txtCEP.setText("");
-            txtConsumo.setText("");
-            txtNumero.setText("");
-            txtCodigoCliente.setText("");
-            txtNumeroConta.setText("");
-            txtLeituraAntData.setText("");
-            txtLeituraAntNumero.setText("");
-            txtLeituraAtualData.setText("");
-            txtLeituraAtualNumero.setText("");
-            txtUf.setText("");
-            txtHidrometro.setText("");
-            txtTipoLigacao.setText("");
-            txtCidade.setText("");
-            txtComplemento.setText("");
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
 
-            Main.changeScreen("agua2");
-        } else {
+                txtRGI.setText("");
+                txtGR.setText("");
+                txtMesReferencia.setText("");
+                txtEndereco.setText("");
+                txtCEP.setText("");
+                txtConsumo.setText("");
+                txtNumero.setText("");
+                txtCodigoCliente.setText("");
+                txtNumeroConta.setText("");
+                txtLeituraAntData.setText("");
+                txtLeituraAntNumero.setText("");
+                txtLeituraAtualData.setText("");
+                txtLeituraAtualNumero.setText("");
+                txtUf.setText("");
+                txtHidrometro.setText("");
+                txtTipoLigacao.setText("");
+                txtCidade.setText("");
+                txtComplemento.setText("");
+
+                Main.changeScreen("agua2");
+            } else {
             
         }
+        
     }
+}
 }

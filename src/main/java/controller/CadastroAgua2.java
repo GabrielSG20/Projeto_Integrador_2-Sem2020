@@ -68,42 +68,52 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Cadastro");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Main.changeScreen("main");
-
-            txtTarifa10agua.setText("");
-            txtTarifa20agua.setText("");
-            txtTarifa30agua.setText("");
-            txtTarifa50agua.setText("");
-            txtTarifaMais50agua.setText("");
-            txtValorAgua1.setText("");
-            txtValorAgua2.setText("");
-            txtTarifa10esgoto.setText("");
-            txtTarifa20esgoto.setText("");
-            txtTarifa30esgoto.setText("");
-            txtTarifa50esgoto.setText("");
-            txtTarifaMais50esgoto.setText("");
-            txtValorEsgoto1.setText("");
-            txtValorEsgoto2.setText("");
-            txtVencimento.setText("");
-            txtTotalAgua.setText("");
-            txtTotalEsgoto.setText("");
-            txtTaxaRegulacao.setText("");
-            txtMulta.setText("");
-
-            Alert Alert = new Alert(AlertType.INFORMATION);
-            Alert.setTitle("Confirmação de Cadastro");
-            Alert.setHeaderText(null);
-            Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
-            Alert.showAndWait();
-        } else {
+        if(txtVencimento.getText().equals("")) {
             
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        } else {
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Cadastro");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
+
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                Main.changeScreen("main");
+
+                txtTarifa10agua.setText("");
+                txtTarifa20agua.setText("");
+                txtTarifa30agua.setText("");
+                txtTarifa50agua.setText("");
+                txtTarifaMais50agua.setText("");
+                txtValorAgua1.setText("");
+                txtValorAgua2.setText("");
+                txtTarifa10esgoto.setText("");
+                txtTarifa20esgoto.setText("");
+                txtTarifa30esgoto.setText("");
+                txtTarifa50esgoto.setText("");
+                txtTarifaMais50esgoto.setText("");
+                txtValorEsgoto1.setText("");
+                txtValorEsgoto2.setText("");
+                txtVencimento.setText("");
+                txtTotalAgua.setText("");
+                txtTotalEsgoto.setText("");
+                txtTaxaRegulacao.setText("");
+                txtMulta.setText("");
+
+                Alert Alert = new Alert(AlertType.INFORMATION);
+                Alert.setTitle("Confirmação de Cadastro");
+                Alert.setHeaderText(null);
+                Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
+                Alert.showAndWait();
+            } else {
+            
+            }
         }
     }
 }

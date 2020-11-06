@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 controller/RelatorioAgua.class
 controller/CadastroAgua1.class
 controller/PessoaJuridica.class
@@ -23,3 +24,5 @@ classes/Fornecedor.class
 controller/TipoRelatorio.class
 classes/Instalacao.class
 controller/CadastroAguaSemEnd.class
+=======
+>>>>>>> feature/FRONT
