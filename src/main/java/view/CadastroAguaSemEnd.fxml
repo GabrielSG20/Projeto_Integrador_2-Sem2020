@@ -58,15 +58,15 @@
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
-      <TextField fx:id="txtGR" layoutX="115.0" layoutY="75.0" onKeyReleased="#mascaraGR" opacity="0.8" prefHeight="37.0" prefWidth="57.0">
+      <TextField fx:id="txtGR" layoutX="115.0" layoutY="75.0" opacity="0.8" prefHeight="37.0" prefWidth="57.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtCodigoCliente" layoutX="320.0" layoutY="165.0" onKeyReleased="#mascaraCodigoCliente" opacity="0.8" prefHeight="37.0" prefWidth="305.0">
+      <TextField fx:id="txtCodigoCliente" layoutX="320.0" layoutY="165.0" opacity="0.8" prefHeight="37.0" prefWidth="305.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtNumeroConta" layoutX="320.0" layoutY="255.0" onKeyReleased="#mascaraNumeroConta" opacity="0.8" prefHeight="37.0" prefWidth="305.0">
+      <TextField fx:id="txtNumeroConta" layoutX="320.0" layoutY="255.0" opacity="0.8" prefHeight="37.0" prefWidth="305.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -86,7 +86,7 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAnteriorLeitura" layoutX="451.0" layoutY="540.0" onKeyReleased="#mascaraLeituraAnt" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAnteriorLeitura" layoutX="451.0" layoutY="540.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -94,11 +94,11 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualLeitura" layoutX="451.0" layoutY="600.0" onKeyReleased="#mascaraLeituraAtual" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAtualLeitura" layoutX="451.0" layoutY="600.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtConsumo" layoutX="760.0" layoutY="581.0" onKeyReleased="#mascaraConsumo" opacity="0.8" prefHeight="32.0" prefWidth="86.0">
+      <TextField fx:id="txtConsumo" layoutX="760.0" layoutY="581.0" opacity="0.8" prefHeight="32.0" prefWidth="86.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>

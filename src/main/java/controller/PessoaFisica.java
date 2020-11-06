@@ -60,9 +60,11 @@ public class PessoaFisica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            String CPF = txtCPF.getText().replace("-","");
+            String CPF1 = txtCPF.getText().replace("-","");
+            String CPF = CPF1.replace(".","");
             String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
-            String CNPJFornecedorFinal = CNPJFornecedor.replace("/","");
+            String CNPJFornecedor2 = CNPJFornecedor.replace("/","");
+            String CNPJFornecedorFinal = CNPJFornecedor2.replace(".","");
 
             Cliente c = new Cliente();
             ClienteDAO dao = new ClienteDAO();
@@ -80,7 +82,7 @@ public class PessoaFisica implements Initializable {
 
             daofor.create(f);
 
-            Main.salvarIntalacaoCliente(txtCPF, txtCNPJFornecedor);
+            Main.salvarIntalacaoCliente(CPF, CNPJFornecedorFinal);
 
             txtNomeCompleto.setText("");
             txtCPF.setText("");

@@ -110,7 +110,7 @@ public class CadastroEnergia1 implements Initializable {
 
             Main.salvarEnergia1(txtCodigoFiscal, txtGrupoSubgrupo, txtClasseSubclasse, txtFornecimento, txtTarifaria, txtRoteiroLeitura, txtTensaoNominal);
 
-            Main.salvarIntalacaoEndereco(txtCEPEnergia, txtNumeroEnergia);
+            Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
             Main.changeScreen("energia2");
             
@@ -138,22 +138,6 @@ public class CadastroEnergia1 implements Initializable {
         tff.setMask("#####-###");
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtCEPEnergia);
-        tff.formatter();
-    }
-
-    @FXML
-    private void mascaraNumero(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtNumeroEnergia);
-        tff.formatter();
-    }
-
-    @FXML
-    private void mascaraCodigoFiscal(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtCodigoFiscal);
         tff.formatter();
     }
 }

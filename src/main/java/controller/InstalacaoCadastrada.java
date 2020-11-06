@@ -60,13 +60,6 @@ public class InstalacaoCadastrada implements Initializable {
 
     // Mascaras
     @FXML
-    private void mascaraNumeroInstalacao(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtNumeroInstalacao);
-        tff.formatter();
-    }
-    @FXML
     private void mascaraRGI(){
         TextFieldFormatter tff = new TextFieldFormatter();
         tff.setMask("########/##");

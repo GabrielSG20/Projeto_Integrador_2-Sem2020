@@ -137,47 +137,11 @@ public class EnergiaSemEnd implements Initializable {
 
     // Mascaras
     @FXML
-    private void mascaraConsumo(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtConsumo);
-        tff.formatter();
-    }
-    @FXML
     private void mascaraVencimento(){
         TextFieldFormatter tff = new TextFieldFormatter();
         tff.setMask("##/##/####");
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtDataVencimento);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraValorTotal(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtTotalPagar);
-        tff.formatter();
- 
-    }
-    @FXML
-    private void mascaraNRmedidor(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtNRmedidor);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraLeituraAnt(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtLeituraAnterior);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraLeituraAtual(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtLeituraAtual);
         tff.formatter();
     }
     @FXML
@@ -194,13 +158,6 @@ public class EnergiaSemEnd implements Initializable {
         tff.setMask("##/##/####");
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtDataLeituraAtual);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraCodigoFiscal(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtCodigoFiscal);
         tff.formatter();
     }
 }

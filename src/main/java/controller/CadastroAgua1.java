@@ -119,7 +119,7 @@ public class CadastroAgua1 implements Initializable {
 
             dao.create(e);
 
-            Main.salvarIntalacaoEndereco(txtCEP, txtNumero);
+            Main.salvarIntalacaoEndereco(CEP, txtNumero);
             Main.salvarIntalacaoNumero(RGI);
             Main.salvarConta1(RGI, txtMesReferencia);
             Main.salvarAgua1(RGI, txtGR, txtMesReferencia, txtConsumo, txtCodigoCliente, txtNumeroConta, 
@@ -160,34 +160,6 @@ public class CadastroAgua1 implements Initializable {
         tff.formatter();
     }
     @FXML
-    private void mascaraGR(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtGR);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraCodigoCliente(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtCodigoCliente);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraNumeroConta(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtNumeroConta);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraConsumo(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtConsumo);
-        tff.formatter();
-    }
-    @FXML
     private void mascaraDataAnt(){
         TextFieldFormatter tff = new TextFieldFormatter();
         tff.setMask("##/##/##");
@@ -204,32 +176,11 @@ public class CadastroAgua1 implements Initializable {
         tff.formatter();
     }
     @FXML
-    private void mascaraLeituraAnt(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtLeituraAntNumero);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraLeituraAtual(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtLeituraAtualNumero);
-        tff.formatter();
-    }
-    @FXML
     private void mascaraCEP(){
         TextFieldFormatter tff = new TextFieldFormatter();
         tff.setMask("#####-###");
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtCEP);
-        tff.formatter();
-    }
-    @FXML
-    private void mascaraNumero(){
-        TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtNumero);
         tff.formatter();
     }
 }

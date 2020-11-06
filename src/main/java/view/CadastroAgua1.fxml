@@ -61,15 +61,15 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtGR" layoutX="452.0" layoutY="35.0" onKeyReleased="#mascaraGR" opacity="0.8" prefHeight="32.0" prefWidth="94.0">
+      <TextField fx:id="txtGR" layoutX="452.0" layoutY="35.0" opacity="0.8" prefHeight="32.0" prefWidth="94.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtCodigoCliente" layoutX="301.0" layoutY="98.0" onKeyReleased="#mascaraCodigoCliente" opacity="0.8" prefHeight="37.0" prefWidth="306.0">
+      <TextField fx:id="txtCodigoCliente" layoutX="301.0" layoutY="98.0" opacity="0.8" prefHeight="37.0" prefWidth="306.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtNumeroConta" layoutX="206.0" layoutY="157.0" onKeyReleased="#mascaraNumeroConta" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
+      <TextField fx:id="txtNumeroConta" layoutX="206.0" layoutY="157.0" opacity="0.8" prefHeight="32.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -89,7 +89,7 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAntNumero" layoutX="451.0" layoutY="426.0" onKeyReleased="#mascaraLeituraAnt" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAntNumero" layoutX="451.0" layoutY="426.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -97,7 +97,7 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualNumero" layoutX="451.0" layoutY="484.0" onKeyReleased="#mascaraLeituraAtual" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtLeituraAtualNumero" layoutX="451.0" layoutY="484.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -113,7 +113,7 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
-      <TextField fx:id="txtNumero" layoutX="690.0" layoutY="695.0" onKeyReleased="#mascaraNumero" opacity="0.8" prefHeight="32.0" prefWidth="78.0">
+      <TextField fx:id="txtNumero" layoutX="690.0" layoutY="695.0" opacity="0.8" prefHeight="32.0" prefWidth="78.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -123,7 +123,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtConsumo" layoutX="850.0" layoutY="380.0" onKeyReleased="#mascaraConsumo" opacity="0.8" prefHeight="32.0" prefWidth="86.0">
+      <TextField fx:id="txtConsumo" layoutX="850.0" layoutY="380.0" opacity="0.8" prefHeight="32.0" prefWidth="86.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>

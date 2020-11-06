@@ -60,9 +60,11 @@ public class PessoaJuridica implements Initializable {
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
             String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
-            String CNPJClienteFinal = CNPJCliente.replace("/","");
+            String CNPJCliente2 = CNPJCliente.replace(".","");
+            String CNPJClienteFinal = CNPJCliente2.replace("/","");
             String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
-            String CNPJFornecedorFinal = CNPJFornecedor.replace("/","");
+            String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
+            String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
 
             Cliente c = new Cliente();
             ClienteDAO dao = new ClienteDAO();
@@ -80,7 +82,7 @@ public class PessoaJuridica implements Initializable {
 
             daofor.create(f);
 
-            Main.salvarIntalacaoCliente(txtCNPJEmpresa, txtCNPJFornecedor);
+            Main.salvarIntalacaoCliente(CNPJClienteFinal, CNPJFornecedorFinal);
             
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");

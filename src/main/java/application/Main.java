@@ -168,15 +168,15 @@ public class Main extends Application {
     }
 
     // Métodos Instalacao
-    public static void salvarIntalacaoCliente(TextField txtDocumento, TextField txtCNPJFornecedor) {
+    public static void salvarIntalacaoCliente(String txtDocumento, String txtCNPJFornecedor) {
             i = new Instalacao();
             instalacao_dao = new InstalacaoDAO();
-            i.setCli_documento(BigInteger.valueOf(Long.parseLong(txtDocumento.getText())));
-            i.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
+            i.setCli_documento(BigInteger.valueOf(Long.parseLong(txtDocumento)));
+            i.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor)));
     }
 
-    public static void salvarIntalacaoEndereco(TextField txtCEP, TextField txtNumero) {
-            i.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP.getText())));
+    public static void salvarIntalacaoEndereco(String txtCEP, TextField txtNumero) {
+            i.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP)));
             i.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
     }
     
