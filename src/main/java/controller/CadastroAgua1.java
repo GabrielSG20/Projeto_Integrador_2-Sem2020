@@ -105,9 +105,12 @@ public class CadastroAgua1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            String CEP = txtCEP.getText().replace("-","");
+            String RGI = txtRGI.getText().replace("/","");
+
             Endereco e = new Endereco();
             EnderecoDAO dao = new EnderecoDAO();
-            e.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP.getText())));
+            e.setEnd_cep(BigInteger.valueOf(Long.parseLong(CEP)));
             e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
             e.setEnd_rua(txtEndereco.getText());
             e.setEnd_estado(String.valueOf(comboUF.getValue()));
@@ -117,9 +120,9 @@ public class CadastroAgua1 implements Initializable {
             dao.create(e);
 
             Main.salvarIntalacaoEndereco(txtCEP, txtNumero);
-            Main.salvarIntalacaoNumero(txtRGI);
-            Main.salvarConta1(txtRGI, txtMesReferencia);
-            Main.salvarAgua1(txtRGI, txtGR, txtMesReferencia, txtConsumo, txtCodigoCliente, txtNumeroConta, 
+            Main.salvarIntalacaoNumero(RGI);
+            Main.salvarConta1(RGI, txtMesReferencia);
+            Main.salvarAgua1(RGI, txtGR, txtMesReferencia, txtConsumo, txtCodigoCliente, txtNumeroConta, 
             txtLeituraAntData, txtLeituraAtualData, txtLeituraAntNumero, txtLeituraAtualNumero, txtHidrometro, 
             txtTipoLigacao);
 

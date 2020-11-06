@@ -21,6 +21,7 @@ classes/Conta.class
 controller/TipoCliente.class
 classes/Endereco.class
 dao/EnderecoDAO.class
+util/TextFieldFormatter.class
 controller/InstalacaoCadastrada.class
 classes/Agua.class
 classes/Energia.class

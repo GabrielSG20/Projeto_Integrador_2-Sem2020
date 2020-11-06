@@ -95,9 +95,11 @@ public class CadastroEnergia1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            String CEP = txtCEPEnergia.getText().replace("-","");
+
             Endereco e = new Endereco();
             EnderecoDAO dao = new EnderecoDAO();
-            e.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEPEnergia.getText())));
+            e.setEnd_cep(BigInteger.valueOf(Long.parseLong(CEP)));
             e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumeroEnergia.getText())));
             e.setEnd_rua(txtEnderecoEnergia.getText());
             e.setEnd_estado(String.valueOf(comboUF.getValue()));

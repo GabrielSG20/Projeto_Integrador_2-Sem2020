@@ -60,9 +60,13 @@ public class PessoaFisica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            String CPF = txtCPF.getText().replace("-","");
+            String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+            String CNPJFornecedorFinal = CNPJFornecedor.replace("/","");
+
             Cliente c = new Cliente();
             ClienteDAO dao = new ClienteDAO();
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCPF.getText())));
+            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF)));
             c.setCli_nome(txtNomeCompleto.getText());
             c.setEmail(txtEmail.getText());
 
@@ -70,7 +74,7 @@ public class PessoaFisica implements Initializable {
 
             Fornecedor f = new Fornecedor();
             FornecedorDAO daofor = new FornecedorDAO();
-            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
+            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
             f.setFor_nome(txtNomeFornecedor.getText());
             f.setFor_tipo(String.valueOf(comboTipoFornecedor.getValue()));
 

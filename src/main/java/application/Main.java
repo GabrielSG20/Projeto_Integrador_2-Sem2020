@@ -154,10 +154,10 @@ public class Main extends Application {
     }
 
     // Métodos Conta
-    public static void salvarConta1(TextField txtRGI, TextField txtMesReferencia) {
+    public static void salvarConta1(String RGI, TextField txtMesReferencia) {
             cta = new Conta();
             conta_dao = new ContaDAO();
-            cta.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtRGI.getText())));
+            cta.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
             cta.setCta_mes_referencia(txtMesReferencia.getText());
     }
 
@@ -180,8 +180,8 @@ public class Main extends Application {
             i.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
     }
     
-    public static void salvarIntalacaoNumero(TextField txtRGI) {
-            i.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtRGI.getText())));
+    public static void salvarIntalacaoNumero(String RGI) {
+            i.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
             instalacao_dao.create(i);
     }
 
@@ -217,12 +217,12 @@ public class Main extends Application {
     }
 
     // Métodos Agua
-    public static void salvarAgua1(TextField txtRGI, TextField txtGR, TextField txtMesReferencia, TextField txtConsumo,
+    public static void salvarAgua1(String RGI, TextField txtGR, TextField txtMesReferencia, TextField txtConsumo,
     TextField txtCodigoCliente,TextField txtNumeroConta, TextField txtLeituraAntData, TextField txtLeituraAtualData, 
     TextField txtLeituraAntNumero, TextField txtLeituraAtualNumero, TextField txtHidrometro, TextField txtTipoLigacao) {
             a = new Agua();
             agua_dao = new AguaDAO();
-            a.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtRGI.getText())));
+            a.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
             a.setAgu_gr(BigInteger.valueOf(Long.parseLong(txtGR.getText())));
             a.setCta_mes_referencia(txtMesReferencia.getText());
             a.setAgu_consumo(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
