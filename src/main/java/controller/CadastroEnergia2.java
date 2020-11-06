@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
@@ -36,6 +37,8 @@ public class CadastroEnergia2 implements Initializable {
     @FXML
     private TextField txtDataLeituraAtual;
     @FXML
+    private ComboBox txtBandeirasTarifarias;
+    @FXML
     private Button btnVoltarTelaInical;
     @FXML
     private Button btnRetornarEnergia;
@@ -44,6 +47,10 @@ public class CadastroEnergia2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        txtBandeirasTarifarias.getItems().add("Verd");
+        txtBandeirasTarifarias.getItems().add("Amarela");
+        txtBandeirasTarifarias.getItems().add("Vermelha");
     }
 
     public void changeScreenRetornar(ActionEvent event) {

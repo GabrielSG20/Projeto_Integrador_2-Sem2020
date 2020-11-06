@@ -78,10 +78,8 @@ public class CadastroAgua2 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
-            txtTotalPagar.setText("");
-
             Main.changeScreen("main");
-
+            txtTotalPagar.setText("");          
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);
