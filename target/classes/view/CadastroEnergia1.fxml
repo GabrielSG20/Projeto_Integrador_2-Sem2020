@@ -35,7 +35,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCEPEnergia" layoutX="125.0" layoutY="145.0" prefHeight="37.0" prefWidth="209.0">
+      <TextField fx:id="txtCEPEnergia" layoutX="125.0" layoutY="145.0" onKeyReleased="#mascaraCEP" prefHeight="37.0" prefWidth="209.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -45,7 +45,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNumeroEnergia" layoutX="600.0" layoutY="215.0" prefHeight="37.0" prefWidth="64.0">
+      <TextField fx:id="txtNumeroEnergia" layoutX="600.0" layoutY="215.0" onKeyReleased="#mascaraNumero" prefHeight="37.0" prefWidth="64.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -55,7 +55,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCodigoFiscal" layoutX="210.0" layoutY="395.0" prefHeight="37.0" prefWidth="220.0">
+      <TextField fx:id="txtCodigoFiscal" layoutX="210.0" layoutY="395.0" onKeyReleased="#mascaraCodigoFiscal" prefHeight="37.0" prefWidth="220.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

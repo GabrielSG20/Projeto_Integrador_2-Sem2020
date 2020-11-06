@@ -14,6 +14,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 import classes.Cliente;
 import classes.Fornecedor;
@@ -87,5 +88,24 @@ public class PessoaFisica implements Initializable {
         } else {
             
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraCPF(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("###.###.###-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCPF);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraCNPJ(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##.###.###/####-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCNPJFornecedor);
+        tff.formatter();
     }
 }

@@ -13,6 +13,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 import classes.Endereco;
 import dao.EnderecoDAO;
@@ -144,5 +145,88 @@ public class CadastroAgua1 implements Initializable {
         } else {
             
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraRGI(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("########/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtRGI);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraGR(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtGR);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraCodigoCliente(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCodigoCliente);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraNumeroConta(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtNumeroConta);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraConsumo(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtConsumo);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAntData);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAtualData);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraLeituraAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAntNumero);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraLeituraAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAtualNumero);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraCEP(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("#####-###");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCEP);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraNumero(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtNumero);
+        tff.formatter();
     }
 }

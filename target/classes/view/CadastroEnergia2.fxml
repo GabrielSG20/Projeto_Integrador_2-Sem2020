@@ -26,22 +26,22 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNumeroInstalacao" layoutX="270.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtNumeroInstalacao" layoutX="270.0" layoutY="145.0" onKeyReleased="#mascaraNumeroInstalacao" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtConsumo" layoutX="270.0" layoutY="215.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtConsumo" layoutX="270.0" layoutY="215.0" onKeyReleased="#mascaraConsumo" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataVencimento" layoutX="270.0" layoutY="285.0" prefHeight="37.0" prefWidth="250.0">
+      <TextField fx:id="txtDataVencimento" layoutX="270.0" layoutY="285.0" onKeyReleased="#mascaraVencimento" prefHeight="37.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtTotalPagar" layoutX="740.0" layoutY="285.0" prefHeight="37.0" prefWidth="118.0">
+      <TextField fx:id="txtTotalPagar" layoutX="740.0" layoutY="285.0" onKeyReleased="#mascaraValorTotal" prefHeight="37.0" prefWidth="118.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -51,27 +51,27 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNRmedidor" layoutX="190.0" layoutY="495.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtNRmedidor" layoutX="190.0" layoutY="495.0" onKeyReleased="#mascaraNRmedidor" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtLeituraAnterior" layoutX="190.0" layoutY="565.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtLeituraAnterior" layoutX="190.0" layoutY="565.0" onKeyReleased="#mascaraLeituraAnt" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtLeituraAtual" layoutX="190.0" layoutY="635.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtLeituraAtual" layoutX="190.0" layoutY="635.0" onKeyReleased="#mascaraLeituraAtual" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="425.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="425.0" onKeyReleased="#mascaraDataAnt" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="495.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="495.0" onKeyReleased="#mascaraDataAtual" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

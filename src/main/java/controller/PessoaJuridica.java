@@ -14,6 +14,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 import classes.Cliente;
 import classes.Fornecedor;
@@ -86,5 +87,24 @@ public class PessoaJuridica implements Initializable {
         } else {
             
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraCNPJCliente(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##.###.###/####-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCNPJEmpresa);
+        tff.formatter();
+    }   
+
+    @FXML
+    private void mascaraCNPJFornecedor(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##.###.###/####-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCNPJFornecedor);
+        tff.formatter();
     }
 }

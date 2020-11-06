@@ -13,11 +13,10 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 import classes.Endereco;
-import classes.Energia;
 import dao.EnderecoDAO;
-import dao.EnergiaDAO;
 
 public class CadastroEnergia1 implements Initializable {
     @FXML
@@ -128,5 +127,31 @@ public class CadastroEnergia1 implements Initializable {
         } else {
             
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraCEP(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("#####-###");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCEPEnergia);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraNumero(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtNumeroEnergia);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraCodigoFiscal(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCodigoFiscal);
+        tff.formatter();
     }
 }

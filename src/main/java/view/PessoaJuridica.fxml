@@ -28,7 +28,7 @@
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCNPJEmpresa" layoutX="330.0" layoutY="200.0" prefHeight="30.0" prefWidth="690.0">
+      <TextField fx:id="txtCNPJEmpresa" layoutX="330.0" layoutY="200.0" onKeyReleased="#mascaraCNPJCliente" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
@@ -58,7 +58,7 @@
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCNPJFornecedor" layoutX="330.0" layoutY="550.0" prefHeight="30.0" prefWidth="690.0">
+      <TextField fx:id="txtCNPJFornecedor" layoutX="330.0" layoutY="550.0" onKeyReleased="#mascaraCNPJFornecedor" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>

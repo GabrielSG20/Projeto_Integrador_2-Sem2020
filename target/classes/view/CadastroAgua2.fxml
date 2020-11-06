@@ -77,79 +77,79 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <TextField fx:id="txtTarifa10agua" layoutX="419.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa10agua" layoutX="419.0" layoutY="144.0" onKeyReleased="#mascaraTarifa10agua" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa20agua" layoutX="419.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa20agua" layoutX="419.0" layoutY="226.0" onKeyReleased="#mascaraTarifa20Agua" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa30agua" layoutX="419.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa30agua" layoutX="419.0" layoutY="298.0" onKeyReleased="#mascaraTarifa30Agua" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa50agua" layoutX="419.0" layoutY="375.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa50agua" layoutX="419.0" layoutY="375.0" onKeyReleased="#mascaraTarifa50Agua" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifaMais50agua" layoutX="419.0" layoutY="446.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifaMais50agua" layoutX="419.0" layoutY="446.0" onKeyReleased="#mascaraTarifa50Acima" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtValorAgua1" layoutX="573.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtValorAgua1" layoutX="573.0" layoutY="144.0" onKeyReleased="#mascaraValorAgua1" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtValorAgua2" layoutX="573.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtValorAgua2" layoutX="573.0" layoutY="226.0" onKeyReleased="#mascaraValorAgua2" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa10esgoto" layoutX="726.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa10esgoto" layoutX="726.0" layoutY="144.0" onKeyReleased="#mascaraTarifa10esgoto" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa20esgoto" layoutX="726.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa20esgoto" layoutX="726.0" layoutY="226.0" onKeyReleased="#mascaraTarifa20Esgoto" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa30esgoto" layoutX="726.0" layoutY="298.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa30esgoto" layoutX="726.0" layoutY="298.0" onKeyReleased="#mascaraTarifa30Esgoto" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifa50esgoto" layoutX="726.0" layoutY="378.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifa50esgoto" layoutX="726.0" layoutY="378.0" onKeyReleased="#mascaraTarifa50Esgoto" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifaMais50esgoto" layoutX="727.0" layoutY="444.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtTarifaMais50esgoto" layoutX="727.0" layoutY="444.0" onKeyReleased="#mascaraTarifaEsgoto50Acima" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtValorEsgoto1" layoutX="911.0" layoutY="144.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtValorEsgoto1" layoutX="911.0" layoutY="144.0" onKeyReleased="#mascaraValorEsgoto1" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtValorEsgoto2" layoutX="911.0" layoutY="226.0" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
+      <TextField fx:id="txtValorEsgoto2" layoutX="911.0" layoutY="226.0" onKeyReleased="#mascaraValorEsgoto2" opacity="0.8" prefHeight="32.0" prefWidth="101.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtVencimento" layoutX="160.0" layoutY="615.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+      <TextField fx:id="txtVencimento" layoutX="160.0" layoutY="615.0" onKeyReleased="#mascaraVencimento" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTotalAgua" layoutX="460.0" layoutY="670.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+      <TextField fx:id="txtTotalAgua" layoutX="460.0" layoutY="670.0" onKeyReleased="#mascaraTotalAgua" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTotalEsgoto" layoutX="460.0" layoutY="725.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+      <TextField fx:id="txtTotalEsgoto" layoutX="460.0" layoutY="725.0" onKeyReleased="#mascaraTotalEsgoto" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
          <font>
             <Font size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtTaxaRegulacao" layoutX="930.0" layoutY="670.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtTaxaRegulacao" layoutX="930.0" layoutY="670.0" onKeyReleased="#mascaraTaxaRegulamentacao" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
-      <TextField fx:id="txtMulta" layoutX="930.0" layoutY="725.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+      <TextField fx:id="txtMulta" layoutX="930.0" layoutY="725.0" onKeyReleased="#mascaraMulta" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>

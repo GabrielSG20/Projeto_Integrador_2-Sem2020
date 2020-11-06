@@ -14,6 +14,7 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 import classes.Energia;
 import dao.EnergiaDAO;
@@ -132,5 +133,74 @@ public class EnergiaSemEnd implements Initializable {
         } else {
             
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraConsumo(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtConsumo);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraVencimento(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataVencimento);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraValorTotal(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtTotalPagar);
+        tff.formatter();
+ 
+    }
+    @FXML
+    private void mascaraNRmedidor(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtNRmedidor);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraLeituraAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAnterior);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraLeituraAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAtual);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAnterior);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAtual);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraCodigoFiscal(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCodigoFiscal);
+        tff.formatter();
     }
 }
