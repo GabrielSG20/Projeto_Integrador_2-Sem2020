@@ -12,9 +12,7 @@ import java.math.BigInteger;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-import dao.InstalacaoDAO;
 import classes.Instalacao;
-import conexao.ConexaoBd;
 
 public class RelatorioEnergia implements Initializable {
     @FXML
@@ -41,11 +39,11 @@ public class RelatorioEnergia implements Initializable {
     }
 
     public void carregarTableViewInstalacao(){
-        clmNumInstalacao.setCellValueFactory(new PropertyValueFactory("int_numero_instalacao"));
-        clmDocCliente.setCellValueFactory(new PropertyValueFactory("cli_documento"));
-        clmCNPJFornecedor.setCellValueFactory(new PropertyValueFactory("for_cnpj"));
-        clmCEP.setCellValueFactory(new PropertyValueFactory("end_cep"));
-        clmNResidencia.setCellValueFactory(new PropertyValueFactory("end_numero"));
+        clmNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
+        clmDocCliente.setCellValueFactory(new PropertyValueFactory<>("cli_documento"));
+        clmCNPJFornecedor.setCellValueFactory(new PropertyValueFactory<>("for_cnpj"));
+        clmCEP.setCellValueFactory(new PropertyValueFactory<>("end_cep"));
+        clmNResidencia.setCellValueFactory(new PropertyValueFactory<>("end_numero"));
 
         listInstalacao =  InstalacaoDAO.read();
         observableListInstalacao = FXCollections.observableArrayList(listInstalacao);

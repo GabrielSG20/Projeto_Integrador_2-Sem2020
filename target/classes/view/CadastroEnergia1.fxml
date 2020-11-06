@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroEnergia1">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/image/TECSUS.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="25.0" layoutY="80.0" text="Cidade*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="150.0" prefHeight="30.0" prefWidth="57.0" text="CEP*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCidade" layoutX="125.0" layoutY="75.0" prefHeight="37.0" prefWidth="419.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCEPEnergia" layoutX="125.0" layoutY="145.0" prefHeight="37.0" prefWidth="209.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtEnderecoEnergia" layoutX="140.0" layoutY="215.0" prefHeight="37.0" prefWidth="384.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNumeroEnergia" layoutX="600.0" layoutY="215.0" prefHeight="37.0" prefWidth="64.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtComplemento" layoutX="170.0" layoutY="285.0" prefHeight="37.0" prefWidth="250.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCodigoFiscal" layoutX="210.0" layoutY="395.0" prefHeight="37.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtGrupoSubgrupo" layoutX="210.0" layoutY="465.0" prefHeight="35.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtClasseSubclasse" layoutX="210.0" layoutY="535.0" prefHeight="37.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtFornecimento" layoutX="210.0" layoutY="605.0" prefHeight="35.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTarifaria" layoutX="740.0" layoutY="395.0" prefHeight="37.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtRoteiroLeitura" layoutX="740.0" layoutY="465.0" prefHeight="35.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtTensaoNominal" layoutX="740.0" layoutY="535.0" prefHeight="35.0" prefWidth="220.0">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </TextField>
+      <Label layoutX="350.0" layoutY="150.0" prefHeight="30.0" prefWidth="57.0" text="UF*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="220.0" prefHeight="30.0" prefWidth="110.0" text="Endereço*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="560.0" layoutY="220.0" prefHeight="30.0" prefWidth="38.0" text="Nº*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="400.0" prefHeight="30.0" prefWidth="220.0" text="Código fiscal*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="540.0" prefHeight="30.0" prefWidth="220.0" text="Classe/Subclasse*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="400.0" prefHeight="30.0" prefWidth="220.0" text="M. Tarifária*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="540.0" prefHeight="30.0" prefWidth="220.0" text="Tensão nominal">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="470.0" prefHeight="30.0" prefWidth="304.0" text="Grupo/Subgrupo*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="610.0" prefHeight="30.0" prefWidth="304.0" text="Fornecimento">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="470.0" prefHeight="30.0" prefWidth="304.0" text="Roteiro de leitura">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRetornarEnergia" layoutX="31.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="43.0" prefWidth="213.0" text="Retornar" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSalvarContinuar" layoutX="711.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenSalvarContinuar" prefHeight="43.0" prefWidth="381.0" text="Salvar e continuar" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Button>
+      <Label layoutX="25.0" layoutY="290.0" prefHeight="30.0" prefWidth="304.0" text="Complemento">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="30.0" text="Cliente/Endereço de entrega">
+         <font>
+            <Font name="Arial Bold" size="25.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboUF" layoutX="405.0" layoutY="141.0" prefHeight="45.0" prefWidth="100.0" />
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+         <font>
+            <Font name="Arial Black" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
