@@ -76,35 +76,35 @@ public class CadastroAgua1 implements Initializable {
 
         }
         else {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Informações");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
 
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
 
-            txtRGI.setText("");
-            txtGR.setText("");
-            txtMesReferencia.setText("");
-            txtEndereco.setText("");
-            txtCEP.setText("");
-            txtConsumo.setText("");
-            txtNumero.setText("");
-            txtCodigoCliente.setText("");
-            txtNumeroConta.setText("");
-            txtLeituraAntData.setText("");
-            txtLeituraAntNumero.setText("");
-            txtLeituraAtualData.setText("");
-            txtLeituraAtualNumero.setText("");
-            txtUf.setText("");
-            txtHidrometro.setText("");
-            txtTipoLigacao.setText("");
-            txtCidade.setText("");
-            txtComplemento.setText("");
+                txtRGI.setText("");
+                txtGR.setText("");
+                txtMesReferencia.setText("");
+                txtEndereco.setText("");
+                txtCEP.setText("");
+                txtConsumo.setText("");
+                txtNumero.setText("");
+                txtCodigoCliente.setText("");
+                txtNumeroConta.setText("");
+                txtLeituraAntData.setText("");
+                txtLeituraAntNumero.setText("");
+                txtLeituraAtualData.setText("");
+                txtLeituraAtualNumero.setText("");
+                txtUf.setText("");
+                txtHidrometro.setText("");
+                txtTipoLigacao.setText("");
+                txtCidade.setText("");
+                txtComplemento.setText("");
 
-            Main.changeScreen("agua2");
-        } else {
+                Main.changeScreen("agua2");
+            } else {
             
         }
         

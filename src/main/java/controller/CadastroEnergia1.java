@@ -56,33 +56,7 @@ public class CadastroEnergia1 implements Initializable {
     }
 
     public void changeScreenSalvarContinuar(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Informações");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Main.changeScreen("energia2");
-
-            txtCidade.setText("");
-            txtCEPEnergia.setText("");
-            txtUf.setText("");
-            txtEnderecoEnergia.setText("");
-            txtNumeroEnergia.setText("");
-            txtComplemento.setText("");
-            txtCodigoFiscal.setText("");
-            txtGrupoSubgrupo.setText("");
-            txtClasseSubclasse.setText("");
-            txtFornecimento.setText("");
-            txtTarifaria.setText("");
-            txtRoteiroLeitura.setText("");
-            txtTensaoNominal.setText("");
-        } else {
-            
-        }
-        public void changeScreenProsseguir(ActionEvent event) {
-        if(txtUf.getText().equals("") || txtNumeroEnergia.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtCidade.getText().equals("") || txtCEP.getText().equals("") || txtEndereco.getText().equals("")) {
+        if(txtUf.getText().equals("") || txtNumeroEnergia.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtCidade.getText().equals("") || txtCEPEnergia.getText().equals("") || txtEnderecoEnergia.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
@@ -92,6 +66,31 @@ public class CadastroEnergia1 implements Initializable {
 
         }
         else {
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
 
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                Main.changeScreen("energia2");
+
+                txtCidade.setText("");
+                txtCEPEnergia.setText("");
+                txtUf.setText("");
+                txtEnderecoEnergia.setText("");
+                txtNumeroEnergia.setText("");
+                txtComplemento.setText("");
+                txtCodigoFiscal.setText("");
+                txtGrupoSubgrupo.setText("");
+                txtClasseSubclasse.setText("");
+                txtFornecimento.setText("");
+                txtTarifaria.setText("");
+                txtRoteiroLeitura.setText("");
+                txtTensaoNominal.setText("");
+                } else {
+            
+                }
+        }
     }
 }
