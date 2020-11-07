@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
@@ -15,157 +18,40 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../Pictures/unknown.png" />
-         </image>
-      </ImageView>
-      <Label layoutX="25.0" layoutY="24.0" prefHeight="55.0" prefWidth="531.0" text="RELATÓRIO DE ENERGIA">
+      <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" />
+      <TableView fx:id="TableAgua" layoutX="150.0" layoutY="87.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
+        <columns>
+          <TableColumn fx:id="ClnNumInstalacao" prefWidth="135.0" text="Número de instalação" />
+          <TableColumn fx:id="ClnMesReferencia" prefWidth="114.0" text="Mês referência" />
+            <TableColumn fx:id="ClnConsumo" prefWidth="76.0" text="Consumo" />
+            <TableColumn fx:id="ClnNMedidor" prefWidth="112.0" text="N° Medidor" />
+            <TableColumn fx:id="ClnCodigoFiscal" prefWidth="100.0" text="Código fiscal " />
+            <TableColumn fx:id="ClnBandeira" prefWidth="78.0" text="Bandeira" />
+            <TableColumn fx:id="ClnTensaoNominal" prefWidth="103.0" text="Tensão Nominal" />
+            <TableColumn fx:id="ClnValorTotal" text="Valor Total" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtBusca" layoutX="508.0" layoutY="45.0" prefHeight="30.0" prefWidth="300.0" />
+      <Button fx:id="btnBuscar" layoutX="850.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Buscar" />
+      <Button fx:id="btnVoltar" layoutX="30.0" layoutY="845.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="150.0" text="Voltar">
          <font>
-            <Font name="Arial Bold" size="25.0" />
+            <Font size="16.0" />
          </font>
-      </Label>
-      <Label layoutX="102.0" layoutY="156.0" text="Nome do cliente" AnchorPane.leftAnchor="25.0">
+      </Button>
+      <Button fx:id="btnEditar" layoutX="708.0" layoutY="845.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Editar">
          <font>
-            <Font name="Arial Bold" size="20.0" />
+            <Font size="16.0" />
          </font>
-      </Label>
-      <Label layoutX="100.0" layoutY="207.0" text="Documento" AnchorPane.leftAnchor="25.0">
+      </Button>
+      <Button fx:id="btnDeletar" layoutX="893.0" layoutY="845.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Deletar">
          <font>
-            <Font name="Arial Bold" size="20.0" />
+            <Font size="16.0" />
          </font>
-      </Label>
-      <Label layoutX="95.0" layoutY="260.0" text="Nome fornecedor" AnchorPane.leftAnchor="25.0">
+      </Button>
+      <Label layoutX="150.0" layoutY="108.0" text="Relatório contas de energia">
          <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="78.0" layoutY="308.0" text="CNPJ Fornecedor" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="71.0" layoutY="359.0" text="Tipo de fornecedor" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="95.0" layoutY="408.0" text="CEP" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="101.0" layoutY="462.0" text="Endereço" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="100.0" layoutY="514.0" text="Número" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="72.0" layoutY="462.0" AnchorPane.leftAnchor="100.0">
-         <font>
-            <Font name="Arial Bold" size="24.0" />
-         </font>
-      </Label>
-      <Label layoutX="105.0" layoutY="570.0" text="Mês de referência" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="91.0" layoutY="620.0" text="Data de vencimento" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="94.0" layoutY="680.0" text="Consumo" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="95.0" layoutY="740.0" text="Total a pagar" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
-         </font>
-      </Label>
-      <TextField fx:id="RGI" layoutX="250.0" layoutY="102.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="NomeCliente" disable="true" layoutX="250.0" layoutY="151.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="CNPJCliente" disable="true" layoutX="250.0" layoutY="202.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="NomeFornecedor" disable="true" layoutX="250.0" layoutY="255.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="CNPJFornecedor" disable="true" layoutX="250.0" layoutY="303.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="TipoFornecedor" disable="true" layoutX="250.0" layoutY="354.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="CEP" disable="true" layoutX="250.0" layoutY="403.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="Endereco" disable="true" layoutX="250.0" layoutY="457.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="Numero" disable="true" layoutX="250.0" layoutY="509.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="GR" disable="true" layoutX="250.0" layoutY="565.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="MesReferencia" disable="true" layoutX="250.0" layoutY="615.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="Consumo" disable="true" layoutX="250.0" layoutY="670.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="TotalPagar" disable="true" layoutX="250.0" layoutY="730.0" prefHeight="30.0" prefWidth="500.0">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </TextField>
-      <Button fx:id="btnRetornarInicio" layoutX="873.0" layoutY="846.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="33.0" prefWidth="180.0" text="Retornar" textFill="#075ffa">
-         <font>
-            <Font name="Arial" size="18.0" />
-         </font></Button>
-      <Button fx:id="btnBuscar" layoutX="948.0" layoutY="102.0" mnemonicParsing="false" onAction="#procurarRGI" prefHeight="30.0" prefWidth="126.0" text="Buscar">
-         <font>
-            <Font name="Arial" size="18.0" />
-         </font></Button>
-      <Label layoutX="102.0" layoutY="107.0" text="Número de instalação" AnchorPane.leftAnchor="25.0">
-         <font>
-            <Font name="Arial Bold" size="20.0" />
+            <Font size="25.0" />
+>>>>>>> feature/BD
          </font>
       </Label>
    </children>
