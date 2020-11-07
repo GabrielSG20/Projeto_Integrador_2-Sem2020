@@ -8,6 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioAgua">
    <children>
+      <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" />
       <TableView layoutX="87.0" layoutY="150.0" prefHeight="600.0" prefWidth="948.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="67.5" AnchorPane.rightAnchor="67.5" AnchorPane.topAnchor="150.0">
         <columns>
           <TableColumn fx:id="ClnNInstalacao" prefWidth="122.0" text="Número instalação" />
