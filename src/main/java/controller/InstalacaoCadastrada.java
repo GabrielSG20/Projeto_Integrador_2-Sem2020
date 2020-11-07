@@ -2,7 +2,7 @@ package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import util.TextFieldFormatter;
 import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -31,5 +31,15 @@ public class InstalacaoCadastrada implements Initializable{
     }
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
+    }
+}
+// Mascaras
+    @FXML
+    private void mascaraRGI(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("########/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtRGI);
+        tff.formatter();
     }
 }

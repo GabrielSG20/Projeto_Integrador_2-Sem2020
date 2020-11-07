@@ -3,7 +3,7 @@ package controller;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
+import util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -74,5 +74,24 @@ public class CadastroAgua1semEnd implements Initializable  {
         } else {
             
         }
+    }
+
+ // Mascaras
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAntData);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf( txtLeituraAtualData);
+        tff.formatter();
     }
 }

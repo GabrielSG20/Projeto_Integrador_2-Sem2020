@@ -3,7 +3,7 @@ package controller;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
+import util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -69,5 +69,23 @@ public class PessoaJuridica implements Initializable {
         } else {
             
         }
+    }
+  // Mascaras
+    @FXML
+    private void mascaraCNPJCliente(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##.###.###/####-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCNPJEmpresa);
+        tff.formatter();
+    }   
+
+    @FXML
+    private void mascaraCNPJFornecedor(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##.###.###/####-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCNPJFornecedor);
+        tff.formatter();
     }
 }

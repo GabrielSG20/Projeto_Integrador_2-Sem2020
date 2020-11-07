@@ -22,15 +22,15 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtRGI" layoutX="61.0" layoutY="23.0" opacity="0.8" prefHeight="25.0" prefWidth="202.0">
+      <TextField fx:id="txtRGI" layoutX="61.0" layoutY="23.0" onKeyReleased="#mascaraRGI" opacity="0.8" prefHeight="25.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtGR" layoutX="377.0" layoutY="22.0" opacity="0.8" prefHeight="25.0" prefWidth="78.0">
+      <TextField fx:id="txtGR" layoutX="377.0" layoutY="22.0"  opacity="0.8" prefHeight="25.0" prefWidth="78.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtCodigoCliente" layoutX="175.0" layoutY="71.0" opacity="0.8" prefHeight="26.0" prefWidth="177.0">
+      <TextField fx:id="txtCodigoCliente" layoutX="175.0" layoutY="71.0"  opacity="0.8" prefHeight="26.0" prefWidth="177.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -38,11 +38,11 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <Label fx:id="lblbNumConta" layoutX="15.0" layoutY="113.0" text="N° da conta*" AnchorPane.leftAnchor="15.0">
+      <Label fx:id="lblbNumConta" layoutX="15.0" layoutY="113.0"  text="N° da conta*" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtNumeroConta" layoutX="176.0" layoutY="111.0" opacity="0.8" prefHeight="26.0" prefWidth="177.0">
+      <TextField fx:id="txtNumeroConta" layoutX="176.0" layoutY="111.0"  opacity="0.8" prefHeight="26.0" prefWidth="177.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -82,23 +82,23 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtLeituraAntData" layoutX="229.0" layoutY="259.0" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
+      <TextField fx:id="txtLeituraAntData" layoutX="229.0" layoutY="259.0" onKeyReleased="#mascaraDataAnt" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAntNumero" layoutX="353.0" layoutY="259.0" opacity="0.8" prefHeight="26.0" prefWidth="89.0">
+      <TextField fx:id="txtLeituraAntNumero" layoutX="353.0" layoutY="259.0" onKeyReleased="#mascaraLeituraAnt" opacity="0.8" prefHeight="26.0" prefWidth="89.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualData" layoutX="227.0" layoutY="302.0" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
+      <TextField fx:id="txtLeituraAtualData" layoutX="227.0" layoutY="302.0" onKeyReleased="#mascaraDataAtual" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualNumero" layoutX="353.0" layoutY="300.0" opacity="0.8" prefHeight="26.0" prefWidth="87.0">
+      <TextField fx:id="txtLeituraAtualNumero" layoutX="353.0" layoutY="300.0" onKeyReleased="#mascaraLeituraAtual" opacity="0.8" prefHeight="26.0" prefWidth="87.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtConsumo" layoutX="654.0" layoutY="258.0" opacity="0.8" prefHeight="25.0" prefWidth="100.0">
+      <TextField fx:id="txtConsumo" layoutX="654.0" layoutY="258.0"  opacity="0.8" prefHeight="25.0" prefWidth="100.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -106,7 +106,7 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtCEP" layoutX="118.0" layoutY="344.0" opacity="0.8" prefHeight="26.0" prefWidth="110.0">
+      <TextField fx:id="txtCEP" layoutX="118.0" layoutY="344.0" onKeyReleased="#mascaraCEP" opacity="0.8" prefHeight="26.0" prefWidth="110.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -122,7 +122,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtNumero" layoutX="584.0" layoutY="423.0" opacity="0.8" prefHeight="25.0" prefWidth="70.0">
+      <TextField fx:id="txtNumero" layoutX="584.0" layoutY="423.0"  opacity="0.8" prefHeight="25.0" prefWidth="70.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

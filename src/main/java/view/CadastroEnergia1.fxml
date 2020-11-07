@@ -20,7 +20,7 @@
             <Image url="image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtCEPEnergia" layoutX="133.0" layoutY="52.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="52.0">
+      <TextField fx:id="txtCEPEnergia" layoutX="133.0" layoutY="52.0" onKeyReleased="#mascaraCEP" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="52.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

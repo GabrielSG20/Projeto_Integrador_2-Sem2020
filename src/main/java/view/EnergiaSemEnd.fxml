@@ -31,7 +31,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataVencimento" layoutX="194.0" layoutY="105.0" prefHeight="30.0" prefWidth="106.0">
+      <TextField fx:id="txtDataVencimento" layoutX="194.0" layoutY="105.0" onKeyReleased="#mascaraVencimento" prefHeight="30.0" prefWidth="106.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -41,12 +41,12 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAnterior" layoutX="538.0" layoutY="35.0" prefHeight="30.0" prefWidth="96.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="538.0" layoutY="35.0" onKeyReleased="#mascaraDataAnt" prefHeight="30.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAtual" layoutX="538.0" layoutY="75.0" prefHeight="30.0" prefWidth="96.0">
+      <TextField fx:id="txtDataLeituraAtual" layoutX="538.0" layoutY="75.0" onKeyReleased="#mascaraDataAtual" prefHeight="30.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

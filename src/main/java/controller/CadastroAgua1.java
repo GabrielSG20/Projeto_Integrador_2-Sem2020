@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 
 public class CadastroAgua1 implements Initializable {
@@ -99,5 +100,39 @@ public class CadastroAgua1 implements Initializable {
         } else {
             
         }
+    }
+
+// Mascaras
+    @FXML
+    private void mascaraRGI(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("########/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtRGI);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAntData);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAtualData);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraCEP(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("#####-###");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCEP);
+        tff.formatter();
     }
 }

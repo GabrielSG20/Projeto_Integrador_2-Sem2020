@@ -2,7 +2,7 @@ package controller;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
+import util.TextFieldFormatter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -85,5 +85,30 @@ public class CadastroEnergia2 implements Initializable {
         } else {
             
         }
+    }
+ // Mascaras
+    @FXML
+    private void mascaraVencimento(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataVencimento);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAnterior);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAtual);
+        tff.formatter();
     }
 }

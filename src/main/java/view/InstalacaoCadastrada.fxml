@@ -29,7 +29,7 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtRGI" layoutX="252.0" layoutY="346.0" prefHeight="20.0" prefWidth="350.0">
+      <TextField fx:id="txtRGI" layoutX="252.0" layoutY="346.0" onKeyReleased="#mascaraRGI" prefHeight="20.0" prefWidth="350.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

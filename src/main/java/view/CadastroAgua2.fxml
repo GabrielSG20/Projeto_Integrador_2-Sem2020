@@ -130,7 +130,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtVencimento" layoutX="151.0" layoutY="290.0" opacity="0.8" prefHeight="25.0" prefWidth="96.0" promptText="Mês/Ano">
+      <TextField fx:id="txtVencimento" layoutX="151.0" layoutY="290.0" onKeyReleased="#mascaraVencimento" opacity="0.8" prefHeight="25.0" prefWidth="96.0" promptText="Mês/Ano">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
