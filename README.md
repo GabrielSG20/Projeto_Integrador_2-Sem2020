@@ -49,6 +49,9 @@ Duração: 19/10/2020 até 08/11/2020.
 2. Apresentação do desenvolvimento realizado durante a segunda sprint, elaboração das telas para um primeiro cadastro e mudança no fluxo de funcionamento. Disponíveis nos seguintes links:
    * [PowerPoint](https://drive.google.com/file/d/1WFf6pF68s_2zgYqzR50OJI3VAGwB6fFH/view?usp=sharing)
    * [Video(YouTube)](https://www.youtube.com/watch?v=t8BieTIL9Lc&feature=youtu.be)
+   
+3. Apresentação do desenvolvimento realizado durante a terceira sprint, elaboração do Banco de Dados e da Documentação do Projeto. Disponível no seguinte link:
+   * [Video(YouTube)](https://www.youtube.com/watch?v=HR_M4Nk9Ujk&feature=youtu.be)
 
 ### :paperclip: Funcionamento do projeto
 #### A tela inicial apresenta três botões: Nova Instalação, Instalação já cadastrada e Relatórios. 
