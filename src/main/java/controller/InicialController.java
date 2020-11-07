@@ -28,7 +28,7 @@ public class InicialController implements Initializable {
     }
     
     public void changeScreenVelhaInst(ActionEvent event){
-
+        Main.changeScreen("instalacaocadastrada");
     }
     
     public void changeScreenTipoRelatorio(ActionEvent event){

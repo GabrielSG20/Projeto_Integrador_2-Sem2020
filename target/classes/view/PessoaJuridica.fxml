@@ -20,20 +20,20 @@
       </ImageView>
       <Label layoutX="64.0" layoutY="20.0" prefHeight="81.0" prefWidth="512.0" text="Informações Pessoais:">
          <font>
-            <Font name="Arial Bold" size="40.0" />
+            <Font name="Arial Bold" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNomeFantasia" layoutX="370.0" layoutY="110.0" prefHeight="30.0" prefWidth="650.0">
+      <TextField fx:id="txtNomeFantasia" layoutX="330.0" layoutY="110.0" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCNPJEmpresa" layoutX="370.0" layoutY="200.0" prefHeight="30.0" prefWidth="650.0">
+      <TextField fx:id="txtCNPJEmpresa" layoutX="330.0" layoutY="200.0" onKeyReleased="#mascaraCNPJCliente" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtEmail" layoutX="370.0" layoutY="290.0" prefHeight="30.0" prefWidth="650.0">
+      <TextField fx:id="txtEmail" layoutX="330.0" layoutY="290.0" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
@@ -50,20 +50,15 @@
       </Button>
       <Label layoutX="64.0" layoutY="370.0" text="Informações do fornecedor:">
          <font>
-            <Font name="Arial Bold" size="40.0" />
+            <Font name="Arial Bold" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="txtNomeFornecedor" layoutX="370.0" layoutY="460.0" prefHeight="30.0" prefWidth="650.0">
+      <TextField fx:id="txtNomeFornecedor" layoutX="330.0" layoutY="460.0" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtTipoFornecedor" layoutX="530.0" layoutY="640.0" prefHeight="49.0" prefWidth="490.0">
-         <font>
-            <Font name="Arial" size="26.0" />
-         </font>
-      </TextField>
-      <TextField fx:id="txtCNPJFornecedor" layoutX="370.0" layoutY="550.0" prefHeight="30.0" prefWidth="650.0">
+      <TextField fx:id="txtCNPJFornecedor" layoutX="330.0" layoutY="550.0" onKeyReleased="#mascaraCNPJFornecedor" prefHeight="30.0" prefWidth="690.0">
          <font>
             <Font name="Arial" size="26.0" />
          </font>
@@ -75,33 +70,34 @@
       </Label>
       <Label layoutX="64.0" layoutY="113.0" text="Nome fantasia*">
          <font>
-            <Font name="Arial Bold" size="36.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="200.0" text="CNPJ">
+      <Label layoutX="64.0" layoutY="200.0" text="CNPJ*">
          <font>
-            <Font name="Arial Bold" size="36.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
       <Label layoutX="64.0" layoutY="290.0" text="E-mail">
          <font>
-            <Font name="Arial Bold" size="36.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
       <Label layoutX="64.0" layoutY="460.0" text="Nome*">
          <font>
-            <Font name="Arial Bold" size="36.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
       <Label layoutX="64.0" layoutY="550.0" text="CNPJ*">
          <font>
-            <Font name="Arial Bold" size="36.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <Label layoutX="64.0" layoutY="640.0" text="Tipo (Água ou Energia)*">
+      <Label layoutX="64.0" layoutY="640.0" text="Tipo*">
          <font>
-            <Font name="Arial Bold" size="36.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
+      <ComboBox fx:id="comboTipoFornecedor" layoutX="330.0" layoutY="639.0" prefHeight="50.0" prefWidth="200.0" />
    </children>
 </AnchorPane>

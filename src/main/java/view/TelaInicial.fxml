@@ -29,7 +29,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnVelhaInst" ellipsisString="" layoutX="193.0" layoutY="236.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="52.0">
+      <Button fx:id="btnVelhaInst" ellipsisString="" layoutX="193.0" layoutY="236.0" mnemonicParsing="false" onAction="#changeScreenVelhaInst" prefHeight="43.0" prefWidth="52.0">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                <image>

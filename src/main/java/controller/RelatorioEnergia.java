@@ -1,57 +1,60 @@
 package controller;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import javafx.event.ActionEvent;
+import dao.EnergiaDAO;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import application.Main;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+import classes.Energia;
 
 public class RelatorioEnergia implements Initializable {
     @FXML
-    private TextField NomeCliente;
+    private TableView <Energia> TableAgua;
     @FXML
-    private TextField CNPJCliente;
+    private TableColumn <Energia, BigInteger> ClnNumInstalacao;
     @FXML
-    private TextField NomeFornecedor;
+    private TableColumn <Energia, String> ClnMesReferencia;
     @FXML
-    private TextField CNPJFornecedor;
+    private TableColumn <Energia, BigInteger> ClnConsumo;
     @FXML
-    private TextField TipoFornecedor;
+    private TableColumn <Energia, BigInteger> ClnNMedidor;
     @FXML
-    private TextField CEP;
+    private TableColumn <Energia, String> ClnBandeira;
     @FXML
-    private TextField Endereco;
+    private TableColumn <Energia, String> ClnTensaoNominal;
     @FXML
-    private TextField Numero;
-    @FXML
-    private TextField MesReferencia;
-    @FXML
-    private TextField DataVencimento;
-    @FXML
-    private TextField Consumo;
-    @FXML
-    private TextField TotalPagar;
-    @FXML
-    private TextField NumeroInstalacao;
-    @FXML
-    private Button btnBuscar;
-    @FXML
-    private Button btnRetornarInicio;
+    private TableColumn <Energia, BigDecimal> ClnValorTotal;
 
+
+    private List<Energia> listEnergia;
+    private ObservableList<Energia> observableListEnergia;
+   
+    
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
+    public void initialize(URL url, ResourceBundle resources) {
+        
+        carregarTableViewEnergia();
     }
 
-    public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("main");
+    public void carregarTableViewEnergia(){
+        ClnNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
+        ClnMesReferencia.setCellValueFactory(new PropertyValueFactory<>("cta_mes_referencia"));
+        ClnConsumo.setCellValueFactory(new PropertyValueFactory<>("ene_consumo_conta_mes"));
+        ClnTensaoNominal.setCellValueFactory(new PropertyValueFactory<>("ene_tensao_nominal"));
+        ClnNMedidor.setCellValueFactory(new PropertyValueFactory<>("ene_numero_medidor"));
+        ClnBandeira.setCellValueFactory(new PropertyValueFactory<>("ene_tipo_bandeira"));
+        ClnValorTotal.setCellValueFactory(new PropertyValueFactory<>("ene_valor_total"));
+
+        listEnergia =  EnergiaDAO.read();
+        observableListEnergia = FXCollections.observableArrayList(listEnergia);
+        TableAgua.setItems(observableListEnergia);
     }
 
-    public void procurarNumeroInstalacao(ActionEvent event) {
-          
-    }
 }

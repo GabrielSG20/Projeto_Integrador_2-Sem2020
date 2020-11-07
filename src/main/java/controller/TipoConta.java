@@ -28,7 +28,7 @@ public class TipoConta implements Initializable {
     }
     
     public void changeScreenContaLuz(ActionEvent event){
-        Main.changeScreen("energia");
+        Main.changeScreen("energia1");
     }
     
     public void changeScreenRetornar(ActionEvent event){

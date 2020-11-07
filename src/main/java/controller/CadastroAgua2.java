@@ -12,11 +12,48 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 
 public class CadastroAgua2 implements Initializable {
     @FXML
-    private TextField txtTotalPagar;
+    private TextField txtTarifa10agua;
+    @FXML
+    private TextField txtTarifa20agua;
+    @FXML
+    private TextField txtTarifa30agua;
+    @FXML
+    private TextField txtTarifa50agua;
+    @FXML
+    private TextField txtTarifaMais50agua;
+    @FXML
+    private TextField txtValorAgua1;
+    @FXML
+    private TextField txtValorAgua2;
+    @FXML
+    private TextField txtTarifa10esgoto;
+    @FXML
+    private TextField txtTarifa20esgoto;
+    @FXML
+    private TextField txtTarifa30esgoto;
+    @FXML
+    private TextField txtTarifa50esgoto;
+    @FXML
+    private TextField txtTarifaMais50esgoto;
+    @FXML
+    private TextField txtValorEsgoto1;
+    @FXML
+    private TextField txtValorEsgoto2;
+    @FXML
+    private TextField txtVencimento;
+    @FXML
+    private TextField txtTotalAgua;
+    @FXML
+    private TextField txtTotalEsgoto;
+    @FXML
+    private TextField txtTaxaRegulacao;
+    @FXML
+    private TextField txtMulta;
     @FXML
     private Button btnSalvarVoltarTelaInicial;
     @FXML
@@ -32,26 +69,66 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Cadastro");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Main.salvarAgua2(Float.valueOf(txtTotalPagar.getText()));
-
-            txtTotalPagar.setText("");
-
-            Main.changeScreen("main");
-
+        if(txtVencimento.getText().equals("")) {
             Alert Alert = new Alert(AlertType.INFORMATION);
-            Alert.setTitle("Confirmação de Cadastro");
+            Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
-            Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
-            Alert.showAndWait();
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
         } else {
-            
-        }
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Cadastro");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
+
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                Main.salvarConta2(txtVencimento);
+                Main.salvarAgua2(txtTarifa10agua, txtTarifa20agua, txtTarifa30agua, txtTarifa50agua, txtTarifaMais50agua, 
+                txtValorAgua1, txtValorAgua2, txtTarifa10esgoto, txtTarifa20esgoto, txtTarifa30esgoto, txtTarifa50esgoto, 
+                txtTarifaMais50esgoto, txtValorEsgoto1, txtValorEsgoto2, txtTotalAgua, txtTotalEsgoto, txtTaxaRegulacao, 
+                txtMulta);
+
+                Main.changeScreen("main");
+
+                txtTarifa10agua.setText("");
+                txtTarifa20agua.setText("");
+                txtTarifa30agua.setText("");
+                txtTarifa50agua.setText("");
+                txtTarifaMais50agua.setText("");
+                txtValorAgua1.setText("");
+                txtValorAgua2.setText("");
+                txtTarifa10esgoto.setText("");
+                txtTarifa20esgoto.setText("");
+                txtTarifa30esgoto.setText("");
+                txtTarifa50esgoto.setText("");
+                txtTarifaMais50esgoto.setText("");
+                txtValorEsgoto1.setText("");
+                txtValorEsgoto2.setText("");
+                txtVencimento.setText("");
+                txtTotalAgua.setText("");
+                txtTotalEsgoto.setText("");
+                txtTaxaRegulacao.setText("");
+                txtMulta.setText("");
+
+                Alert Alert = new Alert(AlertType.INFORMATION);
+                Alert.setTitle("Confirmação de Cadastro");
+                Alert.setHeaderText(null);
+                Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
+                Alert.showAndWait();
+            } else {
+                
+        }   }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraVencimento(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtVencimento);
+        tff.formatter();
     }
 }
