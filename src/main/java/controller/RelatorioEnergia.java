@@ -1,5 +1,4 @@
 package controller;
-
 import dao.EnergiaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

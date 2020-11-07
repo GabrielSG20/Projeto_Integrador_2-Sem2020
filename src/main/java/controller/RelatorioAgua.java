@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 import classes.Agua;
 
 
+
 public class RelatorioAgua implements Initializable {
     @FXML
     private TableView <Agua> TableAgua;
@@ -36,9 +37,6 @@ public class RelatorioAgua implements Initializable {
     private TableColumn <Agua, BigDecimal> ClnTaxaRegulamentacao;
     @FXML
     private TableColumn <Agua, BigDecimal> ClnMulta;
-  
-  
-  
   
     private List<Agua> listAgua;
     private ObservableList<Agua> observableListAgua;
@@ -68,6 +66,6 @@ public class RelatorioAgua implements Initializable {
 
     
 
-    
+ 
 
 }

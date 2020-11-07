@@ -14,7 +14,6 @@
         <columns>
             <TableColumn fx:id="ClnNInstalacao" prefWidth="122.0" text="Número instalação" />
             <TableColumn fx:id="ClnMesReferencia" prefWidth="113.0" text="Mês Referência" />
-            <TableColumn minWidth="0.0" prefWidth="0.0" text="C1" />
             <TableColumn fx:id="ClnTipoLigacao" prefWidth="100.0" text="Tipo ligação" />
             <TableColumn fx:id="ClnHidrometro" prefWidth="92.0" text="Hidrômetro" />
             <TableColumn fx:id="ClnConsumo" prefWidth="87.0" text="Consumo" />
