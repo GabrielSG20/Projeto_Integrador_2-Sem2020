@@ -78,7 +78,7 @@ public class CadastroEnergia2 implements Initializable {
             Main.salvarConta2(txtDataVencimento);
             Main.salvarEnergia2(txtContaMes, txtNumeroInstalacao, txtConsumo, txtTotalPagar, txtConstMulti, txtNRmedidor, txtLeituraAnterior, txtLeituraAtual, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
 
-            Main.changeScreen("main");
+            
             
             txtContaMes.setText("");
             txtNumeroInstalacao.setText("");
@@ -95,6 +95,7 @@ public class CadastroEnergia2 implements Initializable {
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);
+            Main.changeScreen("main");
             Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
             Alert.showAndWait();
         } else {

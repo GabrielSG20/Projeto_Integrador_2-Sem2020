@@ -47,9 +47,9 @@ public class RelatorioEnergia implements Initializable {
         ClnNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
         ClnMesReferencia.setCellValueFactory(new PropertyValueFactory<>("cta_mes_referencia"));
         ClnConsumo.setCellValueFactory(new PropertyValueFactory<>("ene_consumo_conta_mes"));
+        ClnTensaoNominal.setCellValueFactory(new PropertyValueFactory<>("ene_tensao_nominal"));
         ClnNMedidor.setCellValueFactory(new PropertyValueFactory<>("ene_numero_medidor"));
         ClnBandeira.setCellValueFactory(new PropertyValueFactory<>("ene_tipo_bandeira"));
-        ClnTensaoNominal.setCellValueFactory(new PropertyValueFactory<>("ene_tensao_nominal"));
         ClnValorTotal.setCellValueFactory(new PropertyValueFactory<>("ene_valor_total"));
 
         listEnergia =  EnergiaDAO.read();

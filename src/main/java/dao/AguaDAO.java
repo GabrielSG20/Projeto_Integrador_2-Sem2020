@@ -97,8 +97,7 @@ public class AguaDAO {
                 agua.setAgu_valor_esgoto(BigDecimal.valueOf(rs.getDouble("agu_valor_esgoto")));
                 agua.setAgu_taxa_regulamentacao(BigDecimal.valueOf(rs.getDouble("agu_taxa_regulamentacao")));
                 agua.setAgu_multa(BigDecimal.valueOf(rs.getDouble("agu_multa")));
-
-
+                
                 contas_agua.add(agua);
             }
 
