@@ -54,8 +54,7 @@ public class Main extends Application {
             Parent fxmlMain = FXMLLoader.load(getClass().getResource("/view/TelaInicial.fxml"));
             mainScene = new Scene(fxmlMain);
 
-            Parent fxmlInstalacaoCadastrada = FXMLLoader
-                    .load(getClass().getResource("/view/InstalacaoCadastrada.fxml"));
+            Parent fxmlInstalacaoCadastrada = FXMLLoader.load(getClass().getResource("/view/InstalacaoCadastrada.fxml"));
             instalacaocadastradaScene = new Scene(fxmlInstalacaoCadastrada);
 
             Parent fxmlTipoCliente = FXMLLoader.load(getClass().getResource("/view/TipoCliente.fxml"));
