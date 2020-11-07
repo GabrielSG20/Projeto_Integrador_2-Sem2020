@@ -77,14 +77,35 @@ public class CadastroAgua2 implements Initializable {
         confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
 
         Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
+        if (result.get() == ButtonType.OK){      
             Main.changeScreen("main");
-            txtTotalPagar.setText("");          
+            
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Confirmação de Cadastro");
             Alert.setHeaderText(null);
             Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
             Alert.showAndWait();
+
+            txtTotalPagar.setText("");
+            txtTarifaAguaAte10.setText("");
+            txtTarifaAgua11a20.setText("");
+            txtTarifaAgua21a30.setText("");
+            txtTarifaAgua31a50.setText("");
+            txtTarifaAcima50.setText("");
+            txtValorAguaAte10.setText("");
+            txtValorAgua11a20.setText("");
+            txtTarifaEsgotoAte10.setText("");
+            txtTarifaEsgoto11a20.setText("");
+            txtTarifaEsgoto21a30.setText("");
+            txtTarifaEsgoto31a50.setText("");
+            txtTarifaEsgotoAcima50.setText("");
+            txtValorEsgotoAte10.setText("");
+            txtValorEsgoto11a20.setText("");
+            txtVencimento.setText("");
+            txtVIAgua.setText("");
+            txtVIEsgoto.setText("");
+            txtTaxaRegulacao.setText("");
+            txtMulta.setText("");
         } else {
             
         }

@@ -79,8 +79,6 @@ public class CadastroEnergia1 implements Initializable {
             txtRoteiroLeituraEnergia.setText("");
             txtTensaoNominalEnergia.setText("");
             Main.changeScreen("energia2Scene");
-
-            
         } else {
             
         }

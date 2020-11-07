@@ -55,11 +55,6 @@ public class CadastroAgua1 implements Initializable {
     @FXML
     private Button btnSalvarContinuar;
 
-    /*MaskFormatter formatter = new MaskFormatter(textfield);
-    formatter.setMask(int maskType);
-    MaskFormatter formatter = new MaskFormatter(txtCEP);
-    formatter.setMask(MaskFormatter.TEL_8DIG);*/
-
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
@@ -77,6 +72,7 @@ public class CadastroAgua1 implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+            Main.changeScreen("agua2");
             
             txtRGI.setText("");
             txtGR.setText("");
@@ -95,8 +91,6 @@ public class CadastroAgua1 implements Initializable {
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
             txtCidade.setText("");
-
-            Main.changeScreen("agua2");
         } else {
             
         }

@@ -1,15 +1,15 @@
 package application;
 
+import java.util.ArrayList;
+
+import classes.Conta_agua;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-
-
-
-
-//import classes.Conta_agua;
+import javafx.scene.control.ComboBox;
 
 public class Main extends Application {
 
@@ -29,6 +29,8 @@ public class Main extends Application {
     private static Scene energia2Scene;
     private static Scene energiaSemendScene;
     private static Scene instalacaoCadastradaScene;
+    private static ArrayList<Conta_agua> conta_agua;
+    private static Conta_agua a;
 
 
 	@Override

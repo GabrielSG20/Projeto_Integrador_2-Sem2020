@@ -57,15 +57,15 @@ public class PessoaJuridica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
         if (result.get() == ButtonType.OK){
+
             Main.changeScreen("tipoconta");
+
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
             txtEmail.setText("");
             txtNomeFornecedor.setText("");
             txtCNPJFornecedor.setText("");
             txtTipoFornecedor.setText("");
-
-            
         } else {
             
         }

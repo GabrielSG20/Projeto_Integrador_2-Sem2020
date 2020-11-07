@@ -66,6 +66,5 @@ public class RelatorioAgua implements Initializable {
     }
 
     public void procurarRGI(ActionEvent event) {
-          
     }
 }
