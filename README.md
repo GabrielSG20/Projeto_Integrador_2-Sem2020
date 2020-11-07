@@ -10,6 +10,7 @@ A equipe Trinity foi solicitada pela empresa TecSUS para o desenvolvimento de um
 * [Sprints](#airplane-sprints)
 * [Entregas](#dart-entregas)
 * [Funcionamento do projeto](#paperclip-funcionamento-do-projeto)
+* [Documentação](#cloud-Documentação)
 * [Tecnologias utilizadas](#computer-tecnologias-utilizadas)
 
 
@@ -58,6 +59,10 @@ Duração: 19/10/2020 até 08/11/2020.
 
 * Relatórios: Ao clicar nesse botão, o usuário irá para uma página onde visualizará relatórios de consumo e custos das contas, agrupados por clientes. Podendo editar os dados presentes nessa seção.
 
+### :cloud: Documentação
+
+* [Repositório GitHUB](https://github.com/Hugowsgs/ART-Trinity)
+
 ###  :computer: Tecnologias utilizadas
 * [Java](https://www.java.com/pt_BR/)
 * [MySQL](https://www.mysql.com/)
@@ -67,3 +72,6 @@ Duração: 19/10/2020 até 08/11/2020.
 * [Trello](https://trello.com/pt-BR)
 * [StackEdit](https://stackedit.io/)
 * [BrModelo2](http://www.sis4.com/brModelo/antigo.html)
+
+
+
