@@ -70,7 +70,6 @@ public class CadastroAgua2 implements Initializable {
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
         if(txtVencimento.getText().equals("")) {
-            
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);

@@ -2,25 +2,24 @@ package classes;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Date;
 
 public class Energia {
 	private BigInteger int_numero_instalacao;
-	private Date cta_mes_referencia;
+	private String cta_mes_referencia;
 	private BigInteger ene_consumo_conta_mes;
 	private BigInteger ene_codigo_fiscal;
-	private BigInteger ene_grupo_subgrupo;
+	private String ene_grupo_subgrupo;
 	private String ene_tipo_fornecimento;
 	private String ene_classe_subclasse;
 	private String ene_roteiro_leitura;
 	private String ene_modalidade_tarifaria;
 	private String ene_tensao_nominal;
-	private int ene_numero_medidor;
+	private BigInteger ene_numero_medidor;
 	private BigDecimal ene_const_multi;
-	private int ene_leitura_anterior_cod;
-	private int ene_leitura_atual_cod;
-	private Date ene_data_leitura_anterior;
-	private Date ene_data_leitura_atual;
+	private BigInteger ene_leitura_anterior_cod;
+	private BigInteger ene_leitura_atual_cod;
+	private String ene_data_leitura_anterior;
+	private String ene_data_leitura_atual;
 	private String ene_tipo_bandeira;
 	private BigDecimal ene_valor_total;
 	
@@ -30,10 +29,10 @@ public class Energia {
 	public void setInt_numero_instalacao(BigInteger int_numero_instalacao) {
 		this.int_numero_instalacao = int_numero_instalacao;
 	}
-	public Date getCta_mes_referencia() {
+	public String getCta_mes_referencia() {
 		return cta_mes_referencia;
 	}
-	public void setCta_mes_referencia(Date cta_mes_referencia) {
+	public void setCta_mes_referencia(String cta_mes_referencia) {
 		this.cta_mes_referencia = cta_mes_referencia;
 	}
 	public BigInteger getEne_consumo_conta_mes() {
@@ -48,10 +47,10 @@ public class Energia {
 	public void setEne_codigo_fiscal(BigInteger ene_codigo_fiscal) {
 		this.ene_codigo_fiscal = ene_codigo_fiscal;
 	}
-	public BigInteger getEne_grupo_subgrupo() {
+	public String getEne_grupo_subgrupo() {
 		return ene_grupo_subgrupo;
 	}
-	public void setEne_grupo_subgrupo(BigInteger ene_grupo_subgrupo) {
+	public void setEne_grupo_subgrupo(String ene_grupo_subgrupo) {
 		this.ene_grupo_subgrupo = ene_grupo_subgrupo;
 	}
 	public String getEne_tipo_fornecimento() {
@@ -84,10 +83,10 @@ public class Energia {
 	public void setEne_tensao_nominal(String ene_tensao_nominal) {
 		this.ene_tensao_nominal = ene_tensao_nominal;
 	}
-	public int getEne_numero_medidor() {
+	public BigInteger getEne_numero_medidor() {
 		return ene_numero_medidor;
 	}
-	public void setEne_numero_medidor(int ene_numero_medidor) {
+	public void setEne_numero_medidor(BigInteger ene_numero_medidor) {
 		this.ene_numero_medidor = ene_numero_medidor;
 	}
 	public BigDecimal getEne_const_multi() {
@@ -96,28 +95,28 @@ public class Energia {
 	public void setEne_const_multi(BigDecimal ene_const_multi) {
 		this.ene_const_multi = ene_const_multi;
 	}
-	public int getEne_leitura_anterior_cod() {
+	public BigInteger getEne_leitura_anterior_cod() {
 		return ene_leitura_anterior_cod;
 	}
-	public void setEne_leitura_anterior_cod(int ene_leitura_anterior_cod) {
+	public void setEne_leitura_anterior_cod(BigInteger ene_leitura_anterior_cod) {
 		this.ene_leitura_anterior_cod = ene_leitura_anterior_cod;
 	}
-	public int getEne_leitura_atual_cod() {
+	public BigInteger getEne_leitura_atual_cod() {
 		return ene_leitura_atual_cod;
 	}
-	public void setEne_leitura_atual_cod(int ene_leitura_atual_cod) {
+	public void setEne_leitura_atual_cod(BigInteger ene_leitura_atual_cod) {
 		this.ene_leitura_atual_cod = ene_leitura_atual_cod;
 	}
-	public Date getEne_data_leitura_anterior() {
+	public String getEne_data_leitura_anterior() {
 		return ene_data_leitura_anterior;
 	}
-	public void setEne_data_leitura_anterior(Date ene_data_leitura_anterior) {
+	public void setEne_data_leitura_anterior(String ene_data_leitura_anterior) {
 		this.ene_data_leitura_anterior = ene_data_leitura_anterior;
 	}
-	public Date getEne_data_leitura_atual() {
+	public String getEne_data_leitura_atual() {
 		return ene_data_leitura_atual;
 	}
-	public void setEne_data_leitura_atual(Date ene_data_leitura_atual) {
+	public void setEne_data_leitura_atual(String ene_data_leitura_atual) {
 		this.ene_data_leitura_atual = ene_data_leitura_atual;
 	}
 	public String getEne_tipo_bandeira() {

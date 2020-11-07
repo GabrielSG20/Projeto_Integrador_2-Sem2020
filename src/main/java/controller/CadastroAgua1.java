@@ -104,8 +104,7 @@ public class CadastroAgua1 implements Initializable {
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
             Alert.setContentText("PREENCHA OS CAMPOS COM *");
-            Alert.showAndWait(); 
-
+            Alert.showAndWait();
         }
         else {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);

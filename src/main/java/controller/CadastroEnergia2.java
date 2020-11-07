@@ -71,7 +71,6 @@ public class CadastroEnergia2 implements Initializable {
             Alert.setHeaderText(null);
             Alert.setContentText("PREENCHA OS CAMPOS COM *");
             Alert.showAndWait(); 
-
         }
         else {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);

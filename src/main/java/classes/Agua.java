@@ -2,23 +2,21 @@ package classes;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.util.Date;
 
 public class Agua {
 	
 	private BigInteger int_numero_instalacao;
-	private Date cta_mes_referencia;
+	private String cta_mes_referencia;
 	private BigInteger agu_gr;
 	private BigInteger agu_codigo_cliente;
 	private BigInteger agu_numero_conta;
 	private String agu_tipo_ligacao;
 	private String agu_hidrometro;
-	private Date agu_data_leitura_anterior;
-	private Date agu_data_leitura_atual;
+	private String agu_data_leitura_anterior;
+	private String agu_data_leitura_atual;
 	private BigInteger agu_leitura_anterior;
 	private BigInteger agu_leitura_atual;
 	private BigInteger agu_consumo;
-	private Date agu_vencimento;
 	private BigDecimal agu_valor_agua;
 	private BigDecimal agu_valor_esgoto;
 	private BigDecimal agu_taxa_regulamentacao;
@@ -44,10 +42,10 @@ public class Agua {
 	public void setInt_numero_instalacao(BigInteger int_numero_instalacao) {
 		this.int_numero_instalacao = int_numero_instalacao;
 	}
-	public Date getCta_mes_referencia() {
+	public String getCta_mes_referencia() {
 		return cta_mes_referencia;
 	}
-	public void setCta_mes_referencia(Date cta_mes_referencia) {
+	public void setCta_mes_referencia(String cta_mes_referencia) {
 		this.cta_mes_referencia = cta_mes_referencia;
 	}
 	public BigInteger getAgu_gr() {
@@ -80,16 +78,16 @@ public class Agua {
 	public void setAgu_hidrometro(String agu_hidrometro) {
 		this.agu_hidrometro = agu_hidrometro;
 	}
-	public Date getAgu_data_leitura_anterior() {
+	public String getAgu_data_leitura_anterior() {
 		return agu_data_leitura_anterior;
 	}
-	public void setAgu_data_leitura_anterior(Date agu_data_leitura_anterior) {
+	public void setAgu_data_leitura_anterior(String agu_data_leitura_anterior) {
 		this.agu_data_leitura_anterior = agu_data_leitura_anterior;
 	}
-	public Date getAgu_data_leitura_atual() {
+	public String getAgu_data_leitura_atual() {
 		return agu_data_leitura_atual;
 	}
-	public void setAgu_data_leitura_atual(Date agu_data_leitura_atual) {
+	public void setAgu_data_leitura_atual(String agu_data_leitura_atual) {
 		this.agu_data_leitura_atual = agu_data_leitura_atual;
 	}
 	public BigInteger getAgu_leitura_anterior() {
@@ -109,12 +107,6 @@ public class Agua {
 	}
 	public void setAgu_consumo(BigInteger agu_consumo) {
 		this.agu_consumo = agu_consumo;
-	}
-	public Date getAgu_vencimento() {
-		return agu_vencimento;
-	}
-	public void setAgu_vencimento(Date agu_vencimento) {
-		this.agu_vencimento = agu_vencimento;
 	}
 	public BigDecimal getAgu_valor_agua() {
 		return agu_valor_agua;

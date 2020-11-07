@@ -128,6 +128,7 @@
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
+<<<<<<< HEAD
       <TextField layoutX="160.0" layoutY="665.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
          <font>
             <Font name="Arial" size="16.0" />
@@ -145,6 +146,25 @@
             <Font name="Arial" size="16.0" />
          </font></TextField>
       <TextField layoutX="800.0" layoutY="775.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+=======
+      <TextField fx:id="txtVencimento" layoutX="160.0" layoutY="615.0" onKeyReleased="#mascaraVencimento" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTotalAgua" layoutX="460.0" layoutY="670.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTotalEsgoto" layoutX="460.0" layoutY="725.0" opacity="0.8" prefHeight="37.0" prefWidth="113.0">
+         <font>
+            <Font size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtTaxaRegulacao" layoutX="930.0" layoutY="670.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+         <font>
+            <Font name="Arial" size="16.0" />
+         </font></TextField>
+      <TextField fx:id="txtMulta" layoutX="930.0" layoutY="725.0" opacity="0.8" prefHeight="32.0" prefWidth="113.0">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial" size="16.0" />
          </font></TextField>
@@ -164,7 +184,11 @@
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
+<<<<<<< HEAD
       <Label fx:id="lblVencimento" layoutX="22.0" layoutY="673.0" text="Vencimento*" AnchorPane.leftAnchor="25.0">
+=======
+      <Label fx:id="lblVencimento" layoutX="22.0" layoutY="623.0" text="Vencimento*" AnchorPane.leftAnchor="25.0">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -172,27 +196,27 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
-      <Label fx:id="lblViAgua" layoutX="13.0" layoutY="729.0" text="VI água(água*FT de ajuste* econ)" AnchorPane.leftAnchor="25.0">
+      <Label fx:id="lblViAgua" layoutX="13.0" layoutY="679.0" text="VI água(água*FT de ajuste* econ)" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblViEsgoto" layoutX="12.0" layoutY="780.0" text="VI esgoto(esgoto*FT de ajuste* econ)" AnchorPane.leftAnchor="25.0">
+      <Label fx:id="lblViEsgoto" layoutX="12.0" layoutY="730.0" text="VI esgoto(esgoto*FT de ajuste* econ)" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblPagarAgua" layoutX="310.0" layoutY="729.0" text="Água(R$)">
+      <Label fx:id="lblPagarAgua" layoutX="325.0" layoutY="680.0" text="Água(R$)">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblPagarEsgoto" layoutX="345.0" layoutY="780.0" text="Esgoto(R$)">
+      <Label fx:id="lblPagarEsgoto" layoutX="347.0" layoutY="730.0" text="Esgoto(R$)">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblDiscriFaturamento" layoutX="708.0" layoutY="673.0" text="DIscriminação do Faturamento">
+      <Label fx:id="lblDiscriFaturamento" layoutX="708.0" layoutY="623.0" text="DIscriminação do Faturamento">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
-      <Label fx:id="lblTaxaRegulacao" layoutX="708.0" layoutY="729.0" text="Taxa de regulção- TRCF">
+      <Label fx:id="lblTaxaRegulacao" layoutX="708.0" layoutY="679.0" text="Taxa de regulção- TRCF">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font></Label>
@@ -200,12 +224,16 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
-      <Label fx:id="lblAliquota1" layoutX="708.0" layoutY="780.0" text="Multa">
+      <Label fx:id="lblAliquota1" layoutX="800.0" layoutY="730.0" text="Multa">
          <font>
             <Font name="Arial Bold" size="18.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="652.0" layoutY="810.0" prefHeight="29.0" prefWidth="360.0" text="Campos com * são obrigatórios">
+=======
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>

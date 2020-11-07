@@ -30,19 +30,19 @@
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtRGI" layoutX="430.0" layoutY="550.0" prefHeight="20.0" prefWidth="350.0">
+      <TextField fx:id="txtRGI" layoutX="430.0" layoutY="550.0" onKeyReleased="#mascaraRGI" prefHeight="20.0" prefWidth="350.0">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="243.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/RGIAgua.png" />
+            <Image url="@RGIAgua.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="248.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/InstalacaoLuz.png" />
+            <Image url="@InstalacaoLuz.png" />
          </image>
       </ImageView>
       <Button fx:id="btnBuscarAgua" layoutX="826.0" layoutY="548.0" mnemonicParsing="false" onAction="#buscarAgua" prefHeight="50.0" prefWidth="120.0" text="Buscar">

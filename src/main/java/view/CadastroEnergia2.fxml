@@ -16,22 +16,22 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtContaMes" layoutX="260.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtContaMes" layoutX="270.0" layoutY="75.0" prefHeight="35.0" prefWidth="250.0" promptText="mês/ano">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNumeroInstalacao" layoutX="260.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtNumeroInstalacao" layoutX="270.0" layoutY="145.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtConsumo" layoutX="260.0" layoutY="215.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtConsumo" layoutX="270.0" layoutY="215.0" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataVencimento" layoutX="260.0" layoutY="285.0" prefHeight="37.0" prefWidth="250.0">
+      <TextField fx:id="txtDataVencimento" layoutX="270.0" layoutY="285.0" onKeyReleased="#mascaraVencimento" prefHeight="37.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -61,12 +61,12 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="425.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="800.0" layoutY="425.0" onKeyReleased="#mascaraDataAnt" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="495.0" prefHeight="35.0" prefWidth="250.0">
+      <TextField fx:id="txtDataLeituraAtual" layoutX="800.0" layoutY="495.0" onKeyReleased="#mascaraDataAtual" prefHeight="35.0" prefWidth="250.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -87,7 +87,11 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="25.0" layoutY="220.0" text="Conta do mês/kWh*">
+=======
+      <Label layoutX="25.0" layoutY="220.0" text="Consumo do mês/kWh*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -137,12 +141,20 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="600.0" layoutY="430.0" text="Data leitura anterior*">
+=======
+      <Label layoutX="565.0" layoutY="430.0" text="Data leitura anterior*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="600.0" layoutY="500.0" text="Data leitura atual*">
+=======
+      <Label layoutX="565.0" layoutY="500.0" text="Data leitura atual*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -152,7 +164,11 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="711.0" layoutY="800.0" prefHeight="29.0" prefWidth="360.0" text="Campos com * são obrigatórios">
+=======
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>

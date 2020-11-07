@@ -31,17 +31,25 @@
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCEPEnergia" layoutX="125.0" layoutY="145.0" prefHeight="37.0" prefWidth="209.0">
+      <TextField fx:id="txtCEPEnergia" layoutX="125.0" layoutY="145.0" onKeyReleased="#mascaraCEP" prefHeight="37.0" prefWidth="209.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
+<<<<<<< HEAD
       <TextField fx:id="txtEnderecoEnergia" layoutX="125.0" layoutY="215.0" prefHeight="37.0" prefWidth="296.0">
+=======
+      <TextField fx:id="txtEnderecoEnergia" layoutX="140.0" layoutY="215.0" prefHeight="37.0" prefWidth="384.0">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </TextField>
+<<<<<<< HEAD
       <TextField fx:id="txtNumeroEnergia" layoutX="470.0" layoutY="215.0" prefHeight="37.0" prefWidth="64.0">
+=======
+      <TextField fx:id="txtNumeroEnergia" layoutX="600.0" layoutY="215.0" prefHeight="37.0" prefWidth="64.0">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial" size="20.0" />
          </font>
@@ -91,12 +99,20 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="25.0" layoutY="220.0" prefHeight="30.0" prefWidth="152.0" text="Endereço*">
+=======
+      <Label layoutX="25.0" layoutY="220.0" prefHeight="30.0" prefWidth="110.0" text="Endereço*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label layoutX="440.0" layoutY="220.0" prefHeight="30.0" prefWidth="152.0" text="Nº*">
+=======
+      <Label layoutX="560.0" layoutY="220.0" prefHeight="30.0" prefWidth="38.0" text="Nº*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
@@ -156,8 +172,13 @@
             <Font name="Arial Bold" size="25.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <ComboBox layoutX="395.0" layoutY="145.0" prefHeight="37.0" prefWidth="88.0" />
       <Label layoutX="711.0" layoutY="800.0" prefHeight="29.0" prefWidth="360.0" text="Campos com * são obrigatórios">
+=======
+      <ComboBox fx:id="comboUF" layoutX="405.0" layoutY="141.0" prefHeight="45.0" prefWidth="100.0" />
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>

@@ -9,7 +9,7 @@ public class Endereco {
 	private String end_rua;
 	private String end_estado;
 	private String end_cidade;
-	
+	private String end_complemento;
 	public BigInteger getEnd_cep() {
 		return end_cep;
 	}
@@ -39,6 +39,12 @@ public class Endereco {
 	}
 	public void setEnd_cidade(String end_cidade) {
 		this.end_cidade = end_cidade;
+    }
+    public String getEnd_complemento() {
+		return end_complemento;
+	}
+	public void setEnd_complemento(String end_complemento) {
+		this.end_complemento = end_complemento;
 	}
 	
 	

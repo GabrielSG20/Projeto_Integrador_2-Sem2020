@@ -24,11 +24,19 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
+<<<<<<< HEAD
       <Label fx:id="lblbNumConta" layoutX="64.0" layoutY="260.0" text="N° da Conta*">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
       <Label fx:id="lblMesReferencia" layoutX="64.0" layoutY="350.0" text="Mês de Referência*">
+=======
+      <Label fx:id="lblbNumConta" layoutX="64.0" layoutY="260.0" text="N° da conta*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="lblMesReferencia" layoutX="64.0" layoutY="350.0" text="Mês referência*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
@@ -36,6 +44,7 @@
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
+<<<<<<< HEAD
       <Label fx:id="lblLeituraAtual" layoutX="64.0" layoutY="600.0" text="Leitura Atual*">
          <font>
             <Font name="Arial Bold" size="20.0" />
@@ -49,6 +58,21 @@
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
       <Label fx:id="lblLeituraAnterior" layoutX="64.0" layoutY="540.0" text="Leitura Anterior*">
+=======
+      <Label fx:id="lblLeituraAtual" layoutX="64.0" layoutY="600.0" text="Leitura atual*">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="lblData" layoutX="335.0" layoutY="480.0" text="Data">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="lblLeitrura" layoutX="465.0" layoutY="480.0" text="Leitura">
+         <font>
+            <Font name="Arial Bold" size="20.0" />
+         </font></Label>
+      <Label fx:id="lblLeituraAnterior" layoutX="64.0" layoutY="540.0" text="Leitura anterior*">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
@@ -64,7 +88,11 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
+<<<<<<< HEAD
       <TextField layoutX="320.0" layoutY="345.0" opacity="0.8" prefHeight="37.0" prefWidth="305.0">
+=======
+      <TextField fx:id="txtMesReferencia" layoutX="320.0" layoutY="345.0" opacity="0.8" prefHeight="37.0" prefWidth="305.0" promptText="mês/ano">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -76,7 +104,11 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
+<<<<<<< HEAD
       <TextField fx:id="txtLeituraAtualData" layoutX="310.0" layoutY="540.0" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
+=======
+      <TextField fx:id="txtLeituraAnteriorData" layoutX="310.0" layoutY="540.0" onKeyReleased="#mascaraDataAnt" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -84,7 +116,11 @@
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
+<<<<<<< HEAD
       <TextField fx:id="txtLeituraAnteriorData" layoutX="310.0" layoutY="600.0" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
+=======
+      <TextField fx:id="txtLeituraAtualData" layoutX="310.0" layoutY="600.0" onKeyReleased="#mascaraDataAtual" opacity="0.8" prefHeight="25.0" prefWidth="113.0">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial" size="20.0" />
          </font></TextField>
@@ -100,7 +136,11 @@
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
+<<<<<<< HEAD
       <Label fx:id="lblTipoDe" layoutX="680.0" layoutY="170.0" text="Tipo de Ligação">
+=======
+      <Label fx:id="lblTipoDe" layoutX="680.0" layoutY="170.0" text="Tipo de ligação">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font></Label>
@@ -124,7 +164,11 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
+<<<<<<< HEAD
       <Label layoutX="666.0" layoutY="800.0" prefHeight="29.0" prefWidth="360.0" text="Campos com * são obrigatórios">
+=======
+      <Label layoutX="690.0" layoutY="800.0" text="Campos com * são obrigatórios">
+>>>>>>> feature/BD
          <font>
             <Font name="Arial Black" size="20.0" />
          </font>
