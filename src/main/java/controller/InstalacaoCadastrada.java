@@ -32,7 +32,7 @@ public class InstalacaoCadastrada implements Initializable{
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
     }
-}
+
 // Mascaras
     @FXML
     private void mascaraRGI(){
