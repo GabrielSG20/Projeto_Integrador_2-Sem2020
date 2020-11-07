@@ -10,6 +10,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 
 public class InstalacaoCadastrada implements Initializable {
@@ -55,5 +56,15 @@ public class InstalacaoCadastrada implements Initializable {
         // Colocar opção de erro
 
         Main.changeScreen("aguasemend");
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraRGI(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("########/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtRGI);
+        tff.formatter();
     }
 }

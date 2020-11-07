@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 
 public class CadastroAgua2 implements Initializable {
@@ -84,6 +85,12 @@ public class CadastroAgua2 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                Main.salvarConta2(txtVencimento);
+                Main.salvarAgua2(txtTarifa10agua, txtTarifa20agua, txtTarifa30agua, txtTarifa50agua, txtTarifaMais50agua, 
+                txtValorAgua1, txtValorAgua2, txtTarifa10esgoto, txtTarifa20esgoto, txtTarifa30esgoto, txtTarifa50esgoto, 
+                txtTarifaMais50esgoto, txtValorEsgoto1, txtValorEsgoto2, txtTotalAgua, txtTotalEsgoto, txtTaxaRegulacao, 
+                txtMulta);
+
                 Main.changeScreen("main");
 
                 txtTarifa10agua.setText("");
@@ -112,8 +119,17 @@ public class CadastroAgua2 implements Initializable {
                 Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
                 Alert.showAndWait();
             } else {
-            
             }
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraVencimento(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtVencimento);
+        tff.formatter();
     }
 }

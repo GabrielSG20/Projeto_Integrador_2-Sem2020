@@ -1,5 +1,6 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -12,7 +13,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
+import classes.Conta;
+import dao.ContaDAO;
 
 public class CadastroAguaSemEnd implements Initializable {
     @FXML
@@ -69,6 +73,13 @@ public class CadastroAguaSemEnd implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                Conta cta = new Conta();
+                ContaDAO conta_dao = new ContaDAO();
+                cta.setCta_mes_referencia(txtMesReferencia.getText());
+
+                conta_dao.create(cta);
+
+                Main.changeScreen("agua2");
 
                 txtGR.setText("");
                 txtMesReferencia.setText("");
@@ -81,11 +92,27 @@ public class CadastroAguaSemEnd implements Initializable {
                 txtLeituraAtualLeitura.setText("");
                 txtHidrometro.setText("");
                 txtTipoLigacao.setText("");
-
-                Main.changeScreen("agua2");
             } else {
-            
             }
         }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAnteriorData);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtLeituraAtualData);
+        tff.formatter();
     }
 }

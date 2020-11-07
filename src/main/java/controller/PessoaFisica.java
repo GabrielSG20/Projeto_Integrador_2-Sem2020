@@ -14,9 +14,12 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
 import classes.Cliente;
+import classes.Fornecedor;
 import dao.ClienteDAO;
+import dao.FornecedorDAO;
 
 public class PessoaFisica implements Initializable {
     @FXML
@@ -36,16 +39,18 @@ public class PessoaFisica implements Initializable {
     @FXML
     private Button btnProsseguirPF;
 
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboTipoFornecedor.getItems().add("Água");
+        comboTipoFornecedor.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
     }
-
-    
 
     public void changeScreenProsseguir(ActionEvent event) {
         if(txtNomeCompleto.getText().equals("") || txtNomeFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("") || txtCPF.getText().equals("") || comboTipoFornecedor.getValue().equals("")) {
@@ -59,31 +64,64 @@ public class PessoaFisica implements Initializable {
         }
         else {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Informações");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("DESEJA ADICIONAR UM NOVO CLIENTE?");
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA ADICIONAR UM NOVO CLIENTE?");
 
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Cliente c = new Cliente();
-            ClienteDAO dao = new ClienteDAO();
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCPF.getText())));
-            c.setCli_nome(txtNomeCompleto.getText());
-            c.setEmail(txtEmail.getText());
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                String CPF1 = txtCPF.getText().replace("-","");
+                String CPF = CPF1.replace(".","");
+                String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+                String CNPJFornecedor2 = CNPJFornecedor.replace("/","");
+                String CNPJFornecedorFinal = CNPJFornecedor2.replace(".","");
 
-            dao.create(c);
+                Cliente c = new Cliente();
+                ClienteDAO dao = new ClienteDAO();
+                c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF)));
+                c.setCli_nome(txtNomeCompleto.getText());
+                c.setEmail(txtEmail.getText());
 
-            txtNomeCompleto.setText("");
-            txtCPF.setText("");
-            txtNomeFornecedor.setText("");
-            txtCNPJFornecedor.setText("");
-            txtEmail.setText("");
+                dao.create(c);
 
-            Main.changeScreen("tipoconta");
-        } else {
+                Fornecedor f = new Fornecedor();
+                FornecedorDAO daofor = new FornecedorDAO();
+                f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
+                f.setFor_nome(txtNomeFornecedor.getText());
+                f.setFor_tipo(String.valueOf(comboTipoFornecedor.getValue()));
+
+                daofor.create(f);
+
+                Main.salvarIntalacaoCliente(CPF, CNPJFornecedorFinal);
+
+                txtNomeCompleto.setText("");
+                txtCPF.setText("");
+                txtNomeFornecedor.setText("");
+                txtCNPJFornecedor.setText("");
+                txtEmail.setText("");
             
+                Main.changeScreen("tipoconta");
+            } else {
+            }
         }
-            
-        }
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraCPF(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("###.###.###-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCPF);
+        tff.formatter();
+    }
+
+    @FXML
+    private void mascaraCNPJ(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##.###.###/####-##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtCNPJFornecedor);
+        tff.formatter();
     }
 }

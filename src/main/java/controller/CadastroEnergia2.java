@@ -1,9 +1,11 @@
 package controller;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.net.URL;
+import java.util.Date;
 import java.util.Optional;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,7 +15,10 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
+import classes.Energia;
+import dao.EnergiaDAO;
 
 public class CadastroEnergia2 implements Initializable {
     @FXML
@@ -48,6 +53,10 @@ public class CadastroEnergia2 implements Initializable {
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+
+        comboBandeirasTarifarias.getItems().add("Verde");
+        comboBandeirasTarifarias.getItems().add("Amarela");
+        comboBandeirasTarifarias.getItems().add("Vermelha");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
@@ -72,8 +81,15 @@ public class CadastroEnergia2 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-                Main.changeScreen("main");
+                String NumeroInstalacao = txtNumeroInstalacao.getText();
 
+                Main.salvarIntalacaoNumero(NumeroInstalacao);
+                Main.salvarConta1(NumeroInstalacao, txtContaMes);
+                Main.salvarConta2(txtDataVencimento);
+                Main.salvarEnergia2(txtContaMes, txtNumeroInstalacao, txtConsumo, txtTotalPagar, txtConstMulti, txtNRmedidor, txtLeituraAnterior, txtLeituraAtual, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
+
+                Main.changeScreen("main");
+            
                 txtContaMes.setText("");
                 txtNumeroInstalacao.setText("");
                 txtConsumo.setText("");
@@ -92,8 +108,33 @@ public class CadastroEnergia2 implements Initializable {
                 Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
                 Alert.showAndWait();
             } else {
-            
             }
         }
-    } 
+    }
+
+    // Mascaras
+    @FXML
+    private void mascaraVencimento(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataVencimento);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAnterior);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAtual);
+        tff.formatter();
+    }
 }
