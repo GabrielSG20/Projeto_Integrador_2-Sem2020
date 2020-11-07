@@ -35,7 +35,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button fx:id="btnVoltar" layoutX="45.0" layoutY="853.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="30.0" prefWidth="151.0" text="Voltar">
+      <Button fx:id="btnVoltar" layoutX="45.0" layoutY="853.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="151.0" text="Voltar">
          <font>
             <Font size="18.0" />
          </font>
