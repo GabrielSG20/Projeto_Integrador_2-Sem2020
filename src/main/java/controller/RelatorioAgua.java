@@ -1,5 +1,4 @@
 package controller;
-
 import dao.AguaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,8 +12,9 @@ import java.math.BigInteger;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-
 import classes.Agua;
+
+
 
 public class RelatorioAgua implements Initializable {
     @FXML
@@ -63,4 +63,9 @@ public class RelatorioAgua implements Initializable {
         observableListAgua = FXCollections.observableArrayList(listAgua);
         TableAgua.setItems(observableListAgua);
     }
+
+    
+
+ 
+
 }

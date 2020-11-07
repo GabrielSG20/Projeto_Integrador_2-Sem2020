@@ -93,7 +93,7 @@ public class PessoaJuridica implements Initializable {
                 daofor.create(f);
 
                 Main.salvarIntalacaoCliente(CNPJClienteFinal, CNPJFornecedorFinal);
-            
+                
                 txtNomeFantasia.setText("");
                 txtCNPJEmpresa.setText("");
                 txtEmail.setText("");
@@ -102,8 +102,8 @@ public class PessoaJuridica implements Initializable {
 
                 Main.changeScreen("tipoconta");
             } else {
-            }
-        }
+            }    
+        }    
     }
 
     // Mascaras

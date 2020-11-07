@@ -93,8 +93,8 @@ public class CadastroAguaSemEnd implements Initializable {
                 txtHidrometro.setText("");
                 txtTipoLigacao.setText("");
             } else {
-            }
-        }
+            }    
+        }   
     }
 
     // Mascaras

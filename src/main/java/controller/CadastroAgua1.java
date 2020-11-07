@@ -155,8 +155,8 @@ public class CadastroAgua1 implements Initializable {
 
                 Main.changeScreen("agua2");
             } else {
-            }
-        }
+                
+        }   }
     }
 
     // Mascaras

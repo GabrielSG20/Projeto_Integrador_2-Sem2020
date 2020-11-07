@@ -140,7 +140,7 @@ public class EnergiaSemEnd implements Initializable {
                 Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
                 Alert.showAndWait();
             } else {
-            }
+            }        
         }
     }
 

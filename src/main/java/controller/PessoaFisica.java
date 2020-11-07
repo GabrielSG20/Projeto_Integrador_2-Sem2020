@@ -99,11 +99,11 @@ public class PessoaFisica implements Initializable {
                 txtNomeFornecedor.setText("");
                 txtCNPJFornecedor.setText("");
                 txtEmail.setText("");
-            
+                
                 Main.changeScreen("tipoconta");
             } else {
-            }
-        }
+            }    
+        }    
     }
 
     // Mascaras

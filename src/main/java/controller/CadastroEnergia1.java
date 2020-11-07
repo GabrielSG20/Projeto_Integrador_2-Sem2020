@@ -123,7 +123,7 @@ public class CadastroEnergia1 implements Initializable {
                 Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
                 Main.changeScreen("energia2");
-            
+                
                 txtCidade.setText("");
                 txtCEPEnergia.setText("");
                 txtEnderecoEnergia.setText("");
@@ -137,7 +137,7 @@ public class CadastroEnergia1 implements Initializable {
                 txtRoteiroLeitura.setText("");
                 txtTensaoNominal.setText("");
             } else {
-            }
+            }    
         }
     }
 

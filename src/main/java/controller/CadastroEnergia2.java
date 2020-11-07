@@ -64,7 +64,7 @@ public class CadastroEnergia2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        if(txtContaMes.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtDataVencimento.getText().equals("") || txtTotalPagar.getText().equals("") || txtConstMulti.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("")) {
+         if(txtContaMes.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtDataVencimento.getText().equals("") || txtTotalPagar.getText().equals("") || txtConstMulti.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
@@ -86,7 +86,9 @@ public class CadastroEnergia2 implements Initializable {
                 Main.salvarConta1(NumeroInstalacao, txtContaMes);
                 Main.salvarConta2(txtDataVencimento);
                 Main.salvarEnergia2(txtContaMes, txtNumeroInstalacao, txtConsumo, txtTotalPagar, txtConstMulti, txtNRmedidor, txtLeituraAnterior, txtLeituraAtual, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
-            
+
+                
+                
                 txtContaMes.setText("");
                 txtNumeroInstalacao.setText("");
                 txtConsumo.setText("");
@@ -102,14 +104,13 @@ public class CadastroEnergia2 implements Initializable {
                 Alert Alert = new Alert(AlertType.INFORMATION);
                 Alert.setTitle("Confirmação de Cadastro");
                 Alert.setHeaderText(null);
+                Main.changeScreen("main");
                 Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
                 Alert.showAndWait();
-
-                Main.changeScreen("main");
-        } else {
+            } else {
+            }    
         }
     }
-}
 
     // Mascaras
     @FXML
