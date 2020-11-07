@@ -3,13 +3,10 @@ package controller;
 import dao.AguaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -17,7 +14,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import application.Main;
 import classes.Agua;
 
 public class RelatorioAgua implements Initializable {
@@ -41,17 +37,6 @@ public class RelatorioAgua implements Initializable {
     private TableColumn <Agua, BigDecimal> ClnTaxaRegulamentacao;
     @FXML
     private TableColumn <Agua, BigDecimal> ClnMulta;
-    @FXML
-    private Button btnBuscar;
-    @FXML
-    private Button btnVoltar;
-    @FXML
-    private Button btnEditar;
-    @FXML
-    private Button btnDeletar;
-    @FXML
-    private TextField txtBusca;
-    
   
     private List<Agua> listAgua;
     private ObservableList<Agua> observableListAgua;
@@ -77,9 +62,5 @@ public class RelatorioAgua implements Initializable {
         listAgua =  AguaDAO.read();
         observableListAgua = FXCollections.observableArrayList(listAgua);
         TableAgua.setItems(observableListAgua);
-    }
-
-    public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("main");
     }
 }

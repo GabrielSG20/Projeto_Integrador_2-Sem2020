@@ -3,13 +3,10 @@ package controller;
 import dao.EnergiaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -17,7 +14,6 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import application.Main;
 import classes.Energia;
 
 public class RelatorioEnergia implements Initializable {
@@ -37,17 +33,6 @@ public class RelatorioEnergia implements Initializable {
     private TableColumn <Energia, String> ClnTensaoNominal;
     @FXML
     private TableColumn <Energia, BigDecimal> ClnValorTotal;
-    @FXML
-    private Button btnBuscar;
-    @FXML
-    private Button btnVoltar;
-    @FXML
-    private Button btnEditar;
-    @FXML
-    private Button btnDeletar;
-    @FXML
-    private TextField txtBusca;
-
 
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
@@ -63,17 +48,13 @@ public class RelatorioEnergia implements Initializable {
         ClnNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
         ClnMesReferencia.setCellValueFactory(new PropertyValueFactory<>("cta_mes_referencia"));
         ClnConsumo.setCellValueFactory(new PropertyValueFactory<>("ene_consumo_conta_mes"));
+        ClnTensaoNominal.setCellValueFactory(new PropertyValueFactory<>("ene_tensao_nominal"));
         ClnNMedidor.setCellValueFactory(new PropertyValueFactory<>("ene_numero_medidor"));
         ClnBandeira.setCellValueFactory(new PropertyValueFactory<>("ene_tipo_bandeira"));
-        ClnTensaoNominal.setCellValueFactory(new PropertyValueFactory<>("ene_tensao_nominal"));
         ClnValorTotal.setCellValueFactory(new PropertyValueFactory<>("ene_valor_total"));
 
         listEnergia =  EnergiaDAO.read();
         observableListEnergia = FXCollections.observableArrayList(listEnergia);
         TableAgua.setItems(observableListEnergia);
-    }
-
-    public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("main");
     }
 }

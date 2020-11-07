@@ -65,7 +65,7 @@ public class EnergiaDAO {
         List<Energia> contas_energia = new ArrayList<>();
 
         try {
-            stmt = con.prepareStatement("SELECT int_numero_instalacao,cta_mes_referencia,ene_consumo_conta_mes,ene_numero_medidor,ene_codigo_fiscal,ene_tipo_bandeira,ene_tensao_nominal,ene_valor_total FROM ene_energia");
+            stmt = con.prepareStatement("SELECT int_numero_instalacao,cta_mes_referencia,ene_consumo_conta_mes,ene_tensao_nominal,ene_numero_medidor,ene_tipo_bandeira,ene_valor_total FROM ene_energia");
             rs = stmt.executeQuery();
 
             while (rs.next()) {
@@ -75,11 +75,9 @@ public class EnergiaDAO {
                 energia.setInt_numero_instalacao(BigInteger.valueOf(rs.getLong("int_numero_instalacao")));
                 energia.setCta_mes_referencia(rs.getString("cta_mes_referencia"));
                 energia.setEne_consumo_conta_mes(BigInteger.valueOf(rs.getLong("ene_consumo_conta_mes")));
+                energia.setEne_tensao_nominal(rs.getString("ene_tensao_nominal")); 
                 energia.setEne_numero_medidor(BigInteger.valueOf(rs.getLong("ene_numero_medidor")));
-                energia.setEne_codigo_fiscal(BigInteger.valueOf(rs.getLong("ene_codigo_fiscal")));
-                energia.setEne_tipo_bandeira(rs.getString("ene_tipo_bandeira"));
-                energia.setEne_tensao_nominal(rs.getString("ene_tensao_nominal"));    
-                energia.setEne_tipo_bandeira(rs.getString("ene_tipo_bandeira"));
+                energia.setEne_tipo_bandeira(rs.getString("ene_tipo_bandeira"));   
                 energia.setEne_valor_total(BigDecimal.valueOf(rs.getDouble("ene_valor_total")));
 
                 contas_energia.add(energia);
