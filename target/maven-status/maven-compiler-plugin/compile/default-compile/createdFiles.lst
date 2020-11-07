@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 image/Energia.jpeg
 view/TelaInicial.fxml
 view/CadastroAgua1.fxml
@@ -8,47 +9,44 @@ view/TipoCliente.fxml
 image/PessoaFisica.png
 image/NovaInst.jpeg
 view/CadastroAgua2.fxml
+=======
+controller/RelatorioAgua.class
+dao/FornecedorDAO.class
+controller/PessoaFisica.class
+controller/RelatorioEnergia.class
+>>>>>>> feature/BD
 conexao/ConexaoBd.class
-controller/TipoConta.class
 controller/CadastroAgua2.class
+controller/TipoConta.class
 dao/ClienteDAO.class
-view/TipoRelatorio.fxml
 classes/Cliente.class
 dao/AguaDAO.class
-image/VelhaInst.jpeg
 controller/EnergiaSemEnd.class
 classes/Fornecedor.class
-controller/CadastroAguaSemEnd.class
-view/TipoConta.fxml
-image/PessoaJuridica.png
 classes/Instalacao.class
+controller/CadastroAguaSemEnd.class
 dao/ContaDAO.class
+<<<<<<< HEAD
 view/CadastroAguaSemEnd.fxml
 view/PessoaJuridica.fxml
 view/CadastroEnergia1.fxml
 application/application.css
+=======
+>>>>>>> feature/BD
 controller/CadastroAgua1.class
 controller/PessoaJuridica.class
 application/Main.class
 controller/CadastroEnergia2.class
-view/InstalacaoCadastrada.fxml
 classes/Conta.class
 controller/TipoCliente.class
 classes/Endereco.class
 dao/EnderecoDAO.class
 util/TextFieldFormatter.class
 controller/InstalacaoCadastrada.class
-view/PessoaFisica.fxml
-image/Agua.jpeg
 classes/Agua.class
 classes/Energia.class
 dao/InstalacaoDAO.class
-view/EnergiaSemEnd.fxml
-image/Relatorios.jpeg
 controller/InicialController.class
 controller/CadastroEnergia1.class
 controller/TipoRelatorio.class
-image/RGIAgua.png
-view/CadastroEnergia2.fxml
-image/InstalacaoLuz.png
 dao/EnergiaDAO.class
