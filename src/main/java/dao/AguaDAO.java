@@ -3,6 +3,8 @@ package dao;
 import conexao.ConexaoBd;
 import classes.Agua;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -67,6 +69,45 @@ public class AguaDAO {
         } finally {
             ConexaoBd.closeConnection(con, stmt);
         }
+    }
+
+        public static List<Agua> read() {
+
+        Connection con = ConexaoBd.getConnection();
+        
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+
+        List<Agua> contas_agua = new ArrayList<>();
+
+        try {
+            stmt = con.prepareStatement("SELECT int_numero_instalacao,cta_mes_referencia,agu_tipo_ligacao,agu_hidrometro,agu_consumo,agu_valor_agua,agu_valor_esgoto,agu_taxa_regulamentacao,agu_multa FROM agu_agua");
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                Agua agua = new Agua();
+
+                agua.setInt_numero_instalacao(BigInteger.valueOf(rs.getLong("int_numero_instalacao")));
+                agua.setCta_mes_referencia(rs.getString("cta_mes_referencia"));
+                agua.setAgu_tipo_ligacao(rs.getString("agu_tipo_ligacao"));
+                agua.setAgu_hidrometro(rs.getString("agu_hidrometro"));
+                agua.setAgu_consumo(BigInteger.valueOf(rs.getLong("agu_consumo")));
+                agua.setAgu_valor_agua(BigDecimal.valueOf(rs.getDouble("agu_valor_agua")));
+                agua.setAgu_valor_esgoto(BigDecimal.valueOf(rs.getDouble("agu_valor_esgoto")));
+                agua.setAgu_taxa_regulamentacao(BigDecimal.valueOf(rs.getDouble("agu_taxa_regulamentacao")));
+                agua.setAgu_multa(BigDecimal.valueOf(rs.getDouble("agu_multa")));
+
+
+                contas_agua.add(agua);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(InstalacaoDAO.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            ConexaoBd.closeConnection(con, stmt, rs);
+        }
+        return contas_agua;
 
     }
 }
