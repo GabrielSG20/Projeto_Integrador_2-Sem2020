@@ -72,6 +72,3 @@ Duração: 19/10/2020 até 08/11/2020.
 * [Trello](https://trello.com/pt-BR)
 * [StackEdit](https://stackedit.io/)
 * [BrModelo2](http://www.sis4.com/brModelo/antigo.html)
-
-
-
