@@ -1,23 +1,10 @@
-<<<<<<< HEAD
-image/Energia.jpeg
-view/TelaInicial.fxml
-view/CadastroAgua1.fxml
-image/TECSUS.png
-dao/FornecedorDAO.class
-controller/PessoaFisica.class
-view/TipoCliente.fxml
-image/PessoaFisica.png
-image/NovaInst.jpeg
-view/CadastroAgua2.fxml
-=======
 controller/RelatorioAgua.class
 dao/FornecedorDAO.class
 controller/PessoaFisica.class
 controller/RelatorioEnergia.class
->>>>>>> feature/BD
 conexao/ConexaoBd.class
-controller/CadastroAgua2.class
 controller/TipoConta.class
+controller/CadastroAgua2.class
 dao/ClienteDAO.class
 classes/Cliente.class
 dao/AguaDAO.class
@@ -26,13 +13,6 @@ classes/Fornecedor.class
 classes/Instalacao.class
 controller/CadastroAguaSemEnd.class
 dao/ContaDAO.class
-<<<<<<< HEAD
-view/CadastroAguaSemEnd.fxml
-view/PessoaJuridica.fxml
-view/CadastroEnergia1.fxml
-application/application.css
-=======
->>>>>>> feature/BD
 controller/CadastroAgua1.class
 controller/PessoaJuridica.class
 application/Main.class
