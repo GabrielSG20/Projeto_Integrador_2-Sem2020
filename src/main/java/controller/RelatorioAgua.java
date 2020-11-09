@@ -1,70 +1,66 @@
 package controller;
-
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import javafx.event.ActionEvent;
+import dao.AguaDAO;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import application.Main;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.net.URL;
+import java.util.List;
+import java.util.ResourceBundle;
+import classes.Agua;
+
+
 
 public class RelatorioAgua implements Initializable {
     @FXML
-    private TextField NomeCliente;
+    private TableView <Agua> TableAgua;
     @FXML
-    private TextField CNPJCliente;
+    private TableColumn <Agua, BigInteger> ClnNInstalacao;
     @FXML
-    private TextField NomeFornecedor;
+    private TableColumn <Agua, String> ClnMesReferencia;
     @FXML
-    private TextField CNPJFornecedor;
+    private TableColumn <Agua, String> ClnTipoLigacao;
     @FXML
-    private TextField TipoFornecedor;
+    private TableColumn <Agua, String> ClnHidrometro;
     @FXML
-    private TextField CEP;
+    private TableColumn <Agua, BigInteger> ClnConsumo;
     @FXML
-    private TextField Endereco;
+    private TableColumn <Agua, BigDecimal> ClnValorAgua;
     @FXML
-    private TextField Numero;
+    private TableColumn <Agua, BigDecimal> ClnValorEsgoto;
     @FXML
-    private TextField GR;
+    private TableColumn <Agua, BigDecimal> ClnTaxaRegulamentacao;
     @FXML
-    private TextField MesReferencia;
-    @FXML
-    private TextField Consumo;
-    @FXML
-    private TextField TotalPagar;
-    @FXML
-    private TextField RGI;
-    @FXML
-    private Button btnBuscar;
-    @FXML
-    private Button btnRetornarInicio;
-
+    private TableColumn <Agua, BigDecimal> ClnMulta;
+  
+    private List<Agua> listAgua;
+    private ObservableList<Agua> observableListAgua;
+   
+    
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
+    public void initialize(URL url, ResourceBundle resources) {
+        
+        carregarTableViewAgua();
     }
 
-    public void changeScreenRetornar(ActionEvent event) {
-         Main.changeScreen("main");
-        RGI.setText("");
-        NomeCliente.setText("");
-        CNPJCliente.setText("");
-        NomeFornecedor.setText("");
-        CNPJFornecedor.setText("");
-        TipoFornecedor.setText("");
-        CEP.setText("");
-        Endereco.setText("");
-        Numero.setText("");
-        MesReferencia.setText("");
-        GR.setText("");
-        Consumo.setText("");
-        TotalPagar.setText("");
-       
-    }
+    public void carregarTableViewAgua(){
+        ClnNInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
+        ClnMesReferencia.setCellValueFactory(new PropertyValueFactory<>("cta_mes_referencia"));
+        ClnTipoLigacao.setCellValueFactory(new PropertyValueFactory<>("agu_tipo_ligacao"));
+        ClnHidrometro.setCellValueFactory(new PropertyValueFactory<>("agu_hidrometro"));
+        ClnConsumo.setCellValueFactory(new PropertyValueFactory<>("agu_consumo"));
+        ClnValorAgua.setCellValueFactory(new PropertyValueFactory<>("agu_valor_agua"));
+        ClnValorEsgoto.setCellValueFactory(new PropertyValueFactory<>("agu_valor_esgoto"));
+        ClnTaxaRegulamentacao.setCellValueFactory(new PropertyValueFactory<>("agu_taxa_regulamentacao"));
+        ClnMulta.setCellValueFactory(new PropertyValueFactory<>("agu_multa"));
 
-    public void procurarRGI(ActionEvent event) {
+        listAgua =  AguaDAO.read();
+        observableListAgua = FXCollections.observableArrayList(listAgua);
+        TableAgua.setItems(observableListAgua);
     }
 }
