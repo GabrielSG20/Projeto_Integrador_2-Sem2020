@@ -13,7 +13,7 @@
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" layoutY="3.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../Pictures/unknown.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Label fx:id="lblRGI" layoutX="22.0" layoutY="37.0" prefHeight="21.0" prefWidth="64.0" text="RGI*" AnchorPane.leftAnchor="25.0">
@@ -154,7 +154,7 @@
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
-      <Button fx:id="btnSalvarContinuar" layoutX="666.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenContinuar" prefHeight="43.0" prefWidth="397.0" text="Salvar e continuar" textFill="#4a8af2">
+      <Button fx:id="btnSalvarContinuar" layoutX="666.0" layoutY="843.0" mnemonicParsing="false" onAction="#changeScreenProsseguir" prefHeight="43.0" prefWidth="397.0" text="Salvar e continuar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="24.0" />
          </font></Button>
