@@ -130,7 +130,11 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
+<<<<<<< HEAD
       <TextField fx:id="txtVencimento" layoutX="151.0" layoutY="290.0" opacity="0.8" prefHeight="25.0" prefWidth="96.0">
+=======
+      <TextField fx:id="txtVencimento" layoutX="151.0" layoutY="290.0" onKeyReleased="#mascaraVencimento" opacity="0.8" prefHeight="25.0" prefWidth="96.0">
+>>>>>>> ad8d77ccd0d9a88f6533dd0638debbb8875562ac
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>

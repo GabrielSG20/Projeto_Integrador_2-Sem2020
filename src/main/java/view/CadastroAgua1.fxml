@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
       <Label fx:id="lblRGI" layoutX="18.0" layoutY="25.0" prefHeight="21.0" prefWidth="64.0" text="RGI*" AnchorPane.leftAnchor="15.0">
@@ -22,7 +22,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtRGI" layoutX="61.0" layoutY="23.0" opacity="0.8" prefHeight="25.0" prefWidth="202.0">
+      <TextField fx:id="txtRGI" layoutX="61.0" layoutY="23.0" onKeyReleased="#mascaraRGI" opacity="0.8" prefHeight="25.0" prefWidth="202.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -82,7 +82,7 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtLeituraAntData" layoutX="229.0" layoutY="259.0" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
+      <TextField fx:id="txtLeituraAntData" layoutX="229.0" layoutY="259.0" onKeyReleased="#mascaraDataAnt" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -90,7 +90,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualData" layoutX="227.0" layoutY="302.0" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
+      <TextField fx:id="txtLeituraAtualData" layoutX="227.0" layoutY="302.0" onKeyReleased="#mascaraDataAtual" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -106,7 +106,7 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtCEP" layoutX="118.0" layoutY="344.0" opacity="0.8" prefHeight="26.0" prefWidth="110.0">
+      <TextField fx:id="txtCEP" layoutX="118.0" layoutY="344.0" onKeyReleased="#mascaraCEP" opacity="0.8" prefHeight="26.0" prefWidth="110.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>

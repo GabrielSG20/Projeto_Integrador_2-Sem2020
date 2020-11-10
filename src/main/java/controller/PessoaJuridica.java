@@ -1,9 +1,10 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
-import util.TextFieldFormatter;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -13,7 +14,12 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
+import util.TextFieldFormatter;
 import application.Main;
+import classes.Cliente;
+import classes.Fornecedor;
+import dao.ClienteDAO;
+import dao.FornecedorDAO;
 
 public class PessoaJuridica implements Initializable {
     @FXML
@@ -29,7 +35,7 @@ public class PessoaJuridica implements Initializable {
     @FXML
     private TextField txtEmail;
     @FXML
-    private ComboBox ComboTipo;
+    private ComboBox comboTipo;
     @FXML
     private Button btnRetornarPJ;
     @FXML
@@ -40,8 +46,8 @@ public class PessoaJuridica implements Initializable {
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
 
-        ComboTipo.getItems().add("Água");
-        ComboTipo.getItems().add("Energia");
+        comboTipo.getItems().add("Água");
+        comboTipo.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
@@ -50,24 +56,58 @@ public class PessoaJuridica implements Initializable {
 
 
     public void changeScreenProsseguir(ActionEvent event) {
+        if(txtNomeFantasia.getText().equals("") || txtCNPJFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("") || comboTipo.getValue().equals("")) {
+            
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Campos Obrigatórios Vazios");
+            Alert.setHeaderText(null);
+            Alert.setContentText("PREENCHA OS CAMPOS COM *");
+            Alert.showAndWait(); 
+
+        }
+        else {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-        confirmacao.setTitle("Confirmação de Informações");
-        confirmacao.setHeaderText(null);
-        confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
 
-        Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){
-            Main.changeScreen("tipoconta");
-            txtNomeFantasia.setText("");
-            txtCNPJEmpresa.setText("");
-            txtEmail.setText("");
-            txtNomeFornecedor.setText("");
-            txtCNPJFornecedor.setText("");
-            txtTipoFornecedor.setText("");
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+                String CNPJCliente2 = CNPJCliente.replace(".","");
+                String CNPJClienteFinal = CNPJCliente2.replace("/","");
+                String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+                String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
+                String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
 
-            
-        } else {
-            
+                Cliente c = new Cliente();
+                ClienteDAO dao = new ClienteDAO();
+                c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
+                c.setCli_nome(txtNomeFantasia.getText());
+                c.setEmail(txtEmail.getText());
+
+                dao.create(c);
+
+                Fornecedor f = new Fornecedor();
+                FornecedorDAO daofor = new FornecedorDAO();
+                f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
+                f.setFor_nome(txtNomeFornecedor.getText());
+                f.setFor_tipo(String.valueOf(comboTipo.getValue()));
+
+                daofor.create(f);
+
+                Main.salvarIntalacaoCliente(CNPJClienteFinal, CNPJFornecedorFinal);
+
+                Main.changeScreen("tipoconta");
+
+                txtNomeFantasia.setText("");
+                txtCNPJEmpresa.setText("");
+                txtEmail.setText("");
+                txtNomeFornecedor.setText("");
+                txtCNPJFornecedor.setText("");
+                txtTipoFornecedor.setText("");
+            } else {
+            }    
         }
     }
   // Mascaras
