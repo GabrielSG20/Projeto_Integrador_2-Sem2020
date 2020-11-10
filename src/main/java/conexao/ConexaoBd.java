@@ -13,7 +13,7 @@ public class ConexaoBd {
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/cadastro_contas";
     private static final String USER = "root";
-    private static final String PASS = "";
+    private static final String PASS = "admin";
     
     // Metodo para fazer a conexao junto a base de dados mysql.
     public static Connection getConnection() {
