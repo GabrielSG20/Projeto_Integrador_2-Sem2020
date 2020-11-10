@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Label fx:id="lblRGI" layoutX="18.0" layoutY="25.0" prefHeight="21.0" prefWidth="64.0" text="RGI*" AnchorPane.leftAnchor="15.0">
@@ -106,7 +106,7 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtCEP" layoutX="118.0" layoutY="344.0" opacity="0.8" prefHeight="26.0" prefWidth="110.0">
+      <TextField fx:id="txtCEP" layoutX="118.0" layoutY="344.0" onKeyReleased="#mascaraCEP" opacity="0.8" prefHeight="26.0" prefWidth="110.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
