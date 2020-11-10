@@ -31,8 +31,6 @@ public class PessoaJuridica implements Initializable {
     @FXML
     private TextField txtCNPJFornecedor;
     @FXML
-    private TextField txtTipoFornecedor;
-    @FXML
     private TextField txtEmail;
     @FXML
     private ComboBox comboTipo;
@@ -105,7 +103,6 @@ public class PessoaJuridica implements Initializable {
                 txtEmail.setText("");
                 txtNomeFornecedor.setText("");
                 txtCNPJFornecedor.setText("");
-                txtTipoFornecedor.setText("");
             } else {
             }    
         }
@@ -127,5 +124,5 @@ public class PessoaJuridica implements Initializable {
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtCNPJFornecedor);
         tff.formatter();
-    }
+    }   
 }

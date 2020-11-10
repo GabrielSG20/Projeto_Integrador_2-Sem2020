@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Text layoutX="232.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de cliente">
@@ -33,16 +33,16 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/PessoaFisica.png" />
+                  <Image url="/image/PessoaFisica.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btn_FJ" ellipsisString="" layoutX="168.0" layoutY="554.0" mnemonicParsing="false" onAction="#changeScreenPJ" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="300.0">
+      <Button fx:id="btn_PJ" ellipsisString="" layoutX="168.0" layoutY="554.0" mnemonicParsing="false" onAction="#changeScreenPJ" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="300.0">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/PessoaJuridica.png" />
+                  <Image url="/image/PessoaJuridica.png" />
                </image>
             </ImageView>
          </graphic>

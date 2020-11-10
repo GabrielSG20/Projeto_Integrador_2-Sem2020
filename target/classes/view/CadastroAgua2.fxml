@@ -46,7 +46,7 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="lbl21a30" layoutX="15.0" layoutY="168.0" text="21 A 30" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="168.0">
+      <Label fx:id="lbl21a31" layoutX="15.0" layoutY="168.0" text="21 A 30" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="168.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
@@ -90,7 +90,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifaAgua21a30" layoutX="350.0" layoutY="197.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="165.0">
+      <TextField fx:id="txtTarifaAgua21a31" layoutX="350.0" layoutY="197.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="165.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -98,7 +98,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifaAguaAcima50" layoutX="350.0" layoutY="271.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="237.0">
+      <TextField fx:id="txtTarifaAcima50" layoutX="350.0" layoutY="271.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="237.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>

@@ -18,7 +18,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <TextField fx:id="txtMesReferenciaEnergia" layoutX="194.0" layoutY="25.0" prefHeight="30.0" prefWidth="106.0">
@@ -96,7 +96,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField layoutX="439.0" layoutY="441.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
+      <TextField fx:id="txtRoteiroLeitura" layoutX="439.0" layoutY="441.0" prefHeight="30.0" prefWidth="118.0" AnchorPane.leftAnchor="439.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -156,7 +156,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnVoltarTelaIncial" layoutX="521.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="30.0" prefWidth="257.0" text="Salvar e voltar á tela inicial" textFill="#4a8af2">
+      <Button fx:id="btnVoltarTelaInicial" layoutX="521.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="30.0" prefWidth="257.0" text="Salvar e voltar á tela inicial" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
@@ -181,7 +181,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <ComboBox fx:id="BandeirasTarifarias" layoutX="538.0" layoutY="115.0" prefHeight="30.0" prefWidth="161.0" />
+      <ComboBox fx:id="comboBandeirasTarifarias" layoutX="538.0" layoutY="115.0" prefHeight="30.0" prefWidth="161.0" />
       <Label layoutX="294.0" layoutY="200.0" text="Cliente/Endereço de entrega">
          <font>
             <Font name="Arial Bold" size="18.0" />

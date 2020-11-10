@@ -1,6 +1,7 @@
 package controller;
 
 import java.net.URL;
+import javafx.scene.control.ComboBox;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import util.TextFieldFormatter;
@@ -50,9 +51,11 @@ public class CadastroEnergiaSemEnd implements Initializable {
     @FXML 
     private TextField txtRoteiroLeitura;
     @FXML
+    private ComboBox comboBandeirasTarifarias;
+    @FXML
     private Button btnRetornarEnergia;
     @FXML
-    private Button btnVoltarTelaIncial;
+    private Button btnVoltarTelaInicial;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
