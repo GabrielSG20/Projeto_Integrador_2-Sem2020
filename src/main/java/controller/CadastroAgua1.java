@@ -65,7 +65,7 @@ public class CadastroAgua1 implements Initializable {
         Main.changeScreen("tipoconta");
     }
 
-     public void changeScreenProsseguir(ActionEvent event) {
+    public void changeScreenProsseguir(ActionEvent event) {
         if(txtRGI.getText().equals("") || txtGR.getText().equals("") || txtCodigoCliente.getText().equals("") || txtUf.getText().equals("") || txtNumero.getText().equals("") || txtNumeroConta.getText().equals("") || txtMesReferencia.getText().equals("") || txtLeituraAntData.getText().equals("") || txtLeituraAntNumero.getText().equals("") || txtLeituraAtualData.getText().equals("") || txtLeituraAtualNumero.getText().equals("") || txtCidade.getText().equals("") || txtCEP.getText().equals("") || txtEndereco.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
@@ -75,7 +75,9 @@ public class CadastroAgua1 implements Initializable {
             Alert.showAndWait(); 
 
         }
+
         else {
+            
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
             confirmacao.setTitle("Confirmação de Informações");
             confirmacao.setHeaderText(null);
@@ -104,10 +106,9 @@ public class CadastroAgua1 implements Initializable {
                 txtComplemento.setText("");
 
                 Main.changeScreen("agua2");
-            } else {
-            
+            } 
+            else {
+            }
         }
-        
     }
-}
-}
+}       

@@ -55,7 +55,7 @@ public class CadastroEnergia2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        if(txtContaMes.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtDataVencimento.getText().equals("") || txtTotalPagar.getText().equals("") || txtConstMulti.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("")) {
+        if(txtContaMes.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtDataVencimento.getText().equals("") || txtTotalPagar.getText().equals("") || txtConstMulti.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");

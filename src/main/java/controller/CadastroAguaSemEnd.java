@@ -52,6 +52,34 @@ public class CadastroAguaSemEnd implements Initializable {
     }
 
     public void changeScreenContinuar(ActionEvent event) {
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        confirmacao.setTitle("Confirmação de Informações");
+        confirmacao.setHeaderText(null);
+        confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
+
+        Optional<ButtonType> result = confirmacao.showAndWait();
+        if (result.get() == ButtonType.OK){
+
+            txtGR.setText("");
+            txtMesReferencia.setText("");
+            txtConsumo.setText("");
+            txtCodigoCliente.setText("");
+            txtNumeroConta.setText("");
+            txtLeituraAnteriorData.setText("");
+            txtLeituraAtualData.setText("");
+            txtLeituraAnteriorLeitura.setText("");
+            txtLeituraAtualLeitura.setText("");
+            txtHidrometro.setText("");
+            txtTipoLigacao.setText("");
+
+            Main.changeScreen("agua2");
+        } else {
+            
+        }
+    }
+    
+        
+        public void changeScreenProsseguir(ActionEvent event) {
         if(txtCodigoCliente.getText().equals("") || txtGR.getText().equals("") || txtMesReferencia.getText().equals("") || txtNumeroConta.getText().equals("") || txtLeituraAnteriorData.getText().equals("") || txtLeituraAnteriorLeitura.getText().equals("") || txtLeituraAtualData.getText().equals("") || txtLeituraAtualLeitura.getText().equals("") || txtConsumo.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
@@ -62,30 +90,11 @@ public class CadastroAguaSemEnd implements Initializable {
 
         }
         else {
-            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-            confirmacao.setTitle("Confirmação de Informações");
-            confirmacao.setHeaderText(null);
-            confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
 
-            Optional<ButtonType> result = confirmacao.showAndWait();
-            if (result.get() == ButtonType.OK){
-
-                txtGR.setText("");
-                txtMesReferencia.setText("");
-                txtConsumo.setText("");
-                txtCodigoCliente.setText("");
-                txtNumeroConta.setText("");
-                txtLeituraAnteriorData.setText("");
-                txtLeituraAtualData.setText("");
-                txtLeituraAnteriorLeitura.setText("");
-                txtLeituraAtualLeitura.setText("");
-                txtHidrometro.setText("");
-                txtTipoLigacao.setText("");
-
-                Main.changeScreen("agua2");
-            } else {
-            
-            }
         }
     }
 }
+
+
+
+    

@@ -67,7 +67,7 @@ public class EnergiaSemEnd implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        if(txtContaMes.getText().equals("") || txtDataVencimento.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtTotalPagar.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || comboBandeirasTarifaria.getValue().equals("")) {
+        if(txtContaMes.getText().equals("") || txtDataVencimento.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtTotalPagar.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");

@@ -88,9 +88,9 @@ public class CadastroEnergia1 implements Initializable {
                 txtTarifaria.setText("");
                 txtRoteiroLeitura.setText("");
                 txtTensaoNominal.setText("");
-                } else {
-            
-                }
+            } else {
+                
+            }
         }
     }
 }
