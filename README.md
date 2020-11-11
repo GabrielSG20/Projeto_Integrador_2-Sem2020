@@ -31,7 +31,7 @@ Eu como digitador desejo um recurso para selecionar a categoria de conta a ser p
 #### 3. Prevenção de erros de registro.<br/>
 Eu como digitador desejo ser alertado quando cometer erros de registros. A exemplo do envio de campos em branco e/ou falta de caracteres necessários. Para evitar possíveis erros no cadastro de contas.
 #### 4. Automatização na obtenção de dados (Cliente/Fornecedor).<br/>
-Eu como digitador espero obter informações de clientes já registrados, de forma automática, preenchendo os campos do formulário de cadastro de cliente, por meio da busca do CPF ou CNPJ. O mesmo ocorre com os dados do fornecedor, uma vez que exista um fornecedor de água e um de energia por cliente. Com intuito de agilizar o processo de digitação.
+Eu como digitador espero obter informações de clientes e fornecedores já registrados, de forma automática, por meio da busca do Número de Instalação ou RGI. Sendo apenas necessário o preenchimento da telas de cadastro (água/energia). Com intuito de agilizar o processo de digitação.
 #### 5. Gerador de relatórios de consumo e custos.<br/>
 Eu como analista de água ou energia desejo obter acesso aos relatórios de consumo e custo de energia e água, agrupados por cliente, disponibilizados em PDF. Para análise dos dados, proporcionando ao cliente uma avaliação sobre gastos e consumos no mês vigente.
 
