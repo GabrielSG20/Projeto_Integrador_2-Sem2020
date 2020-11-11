@@ -10,7 +10,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioEnergia">
    <children>
       <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" />
-      <TableView fx:id="TableAgua" layoutX="150.0" layoutY="87.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
+      <TableView fx:id="TableEnergia" layoutX="150.0" layoutY="87.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
         <columns>
           <TableColumn fx:id="ClnNumInstalacao" prefWidth="135.0" text="Número de instalação" />
           <TableColumn fx:id="ClnMesReferencia" prefWidth="114.0" text="Mês referência" />

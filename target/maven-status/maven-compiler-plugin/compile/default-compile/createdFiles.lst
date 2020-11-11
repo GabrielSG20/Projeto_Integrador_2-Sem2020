@@ -10,8 +10,8 @@ classes/Cliente.class
 dao/AguaDAO.class
 controller/EnergiaSemEnd.class
 classes/Fornecedor.class
-classes/Instalacao.class
 controller/CadastroAguaSemEnd.class
+classes/Instalacao.class
 dao/ContaDAO.class
 controller/CadastroAgua1.class
 controller/PessoaJuridica.class
