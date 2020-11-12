@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../Faculdade/Banco/Projeto%20integrador/test.png" />
          </image></ImageView>
       <Text layoutX="252.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="RGI:" textAlignment="CENTER">
          <font>
@@ -36,25 +36,25 @@
       </TextField>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="73.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/RGIAgua.png" />
+            <Image url="@RGIAgua.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="73.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/InstalacaoLuz.png" />
+            <Image url="@InstalacaoLuz.png" />
          </image>
       </ImageView>
-      <Button fx:id="txtBotaoBuscarRGI" layoutX="626.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" text="Buscar">
+      <Button fx:id="txtBotaoBuscarRGI" layoutX="626.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="txtBotaoBuscarNumInstalacao" layoutX="626.0" layoutY="129.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" text="Buscar">
+      <Button fx:id="txtBotaoBuscarNumInstalacao" layoutX="626.0" layoutY="129.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="txtBotaoRetornar" layoutX="27.0" layoutY="487.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="37.0" prefWidth="180.0" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0">
+      <Button fx:id="txtBotaoRetornar" layoutX="27.0" layoutY="487.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="37.0" prefWidth="180.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

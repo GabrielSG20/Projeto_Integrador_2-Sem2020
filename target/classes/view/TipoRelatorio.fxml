@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
       <Text layoutX="203.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de Relatório">
@@ -23,7 +23,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/Energia.jpeg" />
+                  <Image url="@../Imagens/Energia.jpeg" />
                </image>
             </ImageView>
          </graphic>
@@ -42,12 +42,12 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/Agua.jpeg" />
+                  <Image url="@../Imagens/Agua.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnRetornarTipoR" layoutX="20.0" layoutY="480.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="164.0" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0">
+      <Button fx:id="btnRetornarTipoR" layoutX="20.0" layoutY="480.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="164.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

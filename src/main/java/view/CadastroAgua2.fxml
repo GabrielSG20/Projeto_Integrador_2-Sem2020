@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <image>
-            <Image url="image/TECSUS.png"/>
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
       <Label layoutX="201.0" layoutY="14.0" text="Cálculo do valor da conta por economia">
@@ -46,7 +46,7 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <Label fx:id="lbl21a30" layoutX="15.0" layoutY="168.0" text="21 A 30" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="168.0">
+      <Label fx:id="lbl21a31" layoutX="15.0" layoutY="168.0" text="21 A 30" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="168.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
@@ -90,7 +90,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifaAgua21a30" layoutX="350.0" layoutY="197.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="165.0">
+      <TextField fx:id="txtTarifaAgua21a31" layoutX="350.0" layoutY="197.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="165.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -98,7 +98,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtTarifaAguaAcima50" layoutX="350.0" layoutY="271.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="237.0">
+      <TextField fx:id="txtTarifaAcima50" layoutX="350.0" layoutY="271.0" opacity="0.8" prefHeight="25.0" prefWidth="80.0" AnchorPane.topAnchor="237.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -130,11 +130,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-<<<<<<< HEAD
-      <TextField fx:id="txtVencimento" layoutX="151.0" layoutY="290.0" opacity="0.8" prefHeight="25.0" prefWidth="96.0">
-=======
       <TextField fx:id="txtVencimento" layoutX="151.0" layoutY="290.0" onKeyReleased="#mascaraVencimento" opacity="0.8" prefHeight="25.0" prefWidth="96.0">
->>>>>>> ad8d77ccd0d9a88f6533dd0638debbb8875562ac
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -155,11 +151,11 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="btnSalvarVoltarTelaInicial" layoutX="525.0" layoutY="492.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="30.0" prefWidth="240.0" text=" Salvar e voltar à tela inicial" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="25.0">
+      <Button fx:id="btnSalvarVoltarTelaInicial" layoutX="525.0" layoutY="492.0" mnemonicParsing="false" onAction="#changeScreenVoltarTelaInicial" prefHeight="30.0" prefWidth="240.0" style="-fx-background-radius: 5em;" text=" Salvar e voltar à tela inicial" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.rightAnchor="25.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></Button>
-      <Button fx:id="btnRetornarAgua2" layoutX="15.0" layoutY="492.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="184.0" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0">
+      <Button fx:id="btnRetornarAgua2" layoutX="15.0" layoutY="492.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="184.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial" size="16.0" />
          </font></Button>

@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
       <Text layoutX="157.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0">
@@ -23,7 +23,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/Energia.jpeg" />
+                  <Image url="@../Imagens/Energia.jpeg" />
                </image>
             </ImageView>
          </graphic>
@@ -42,12 +42,12 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/Agua.jpeg" />
+                  <Image url="@../Imagens/Agua.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnRetornarTipoConta" layoutX="34.0" layoutY="479.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="37.0" prefWidth="157.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarTipoConta" layoutX="34.0" layoutY="479.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="37.0" prefWidth="157.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

@@ -12,14 +12,14 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
       <Button fx:id="btnInstalacaoCadastrada" ellipsisString="" layoutX="207.0" layoutY="101.0" mnemonicParsing="false" onAction="#changeScreenInstalacaoCadastrada" prefHeight="43.0" prefWidth="52.0">
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/VelhaInst.jpeg" />
+                  <Image url="@../Imagens/VelhaInst.jpeg" />
                </image>
             </ImageView>
          </graphic>
@@ -28,7 +28,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/NovaInst.jpeg" />
+                  <Image url="@../Imagens/NovaInst.jpeg" />
                </image>
             </ImageView>
          </graphic>
@@ -37,7 +37,7 @@
          <graphic>
             <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/Relatorios.jpeg" />
+                  <Image url="@../Imagens/Relatorios.jpeg" />
                </image>
             </ImageView>
          </graphic>

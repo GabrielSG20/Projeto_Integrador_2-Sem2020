@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" layoutY="1.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
          </image>
       </ImageView>
       <Label layoutX="64.0" layoutY="14.0" prefHeight="62.0" prefWidth="266.0" text="Informações Pessoais:" AnchorPane.leftAnchor="15.0">
@@ -28,7 +28,7 @@
             <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCPF" layoutX="302.0" layoutY="123.0" prefHeight="30.0" prefWidth="375.0">
+      <TextField fx:id="txtCPF" layoutX="302.0" layoutY="123.0" onKeyReleased="#mascaraCPF" prefHeight="30.0" prefWidth="375.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
@@ -48,18 +48,18 @@
             <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCNPJFornecedor" layoutX="302.0" layoutY="352.0" prefHeight="30.0" prefWidth="375.0">
+      <TextField fx:id="txtCNPJFornecedor" layoutX="302.0" layoutY="352.0" onKeyReleased="#mascaraCNPJ" prefHeight="30.0" prefWidth="375.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <ComboBox fx:id="comboTipo" layoutX="302.0" layoutY="408.0" onAction="#changeScreenTipoFornecedor" prefHeight="30.0" prefWidth="202.0" promptText="Escolha o tipo de fornecedor" />
-      <Button fx:id="btnProsseguirPF" layoutX="516.0" layoutY="488.0" mnemonicParsing="false" onAction="#changeScreenProsseguir" prefHeight="37.0" prefWidth="211.0" text="Salvar e prosseguir" textFill="#4a8af2">
+      <ComboBox fx:id="comboTipo" layoutX="302.0" layoutY="408.0" prefHeight="30.0" prefWidth="202.0" promptText="Escolha o tipo de fornecedor" style="-fx-background-radius: 5em;" />
+      <Button fx:id="btnProsseguirPF" layoutX="516.0" layoutY="488.0" mnemonicParsing="false" onAction="#changeScreenProsseguir" prefHeight="37.0" prefWidth="211.0" style="-fx-background-radius: 5em;" text="Salvar e prosseguir" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnRetornarPF" layoutX="14.0" layoutY="488.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="37.0" prefWidth="141.0" text="Retornar" textFill="#4a8af2" AnchorPane.leftAnchor="15.0">
+      <Button fx:id="btnRetornarPF" layoutX="14.0" layoutY="488.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="37.0" prefWidth="141.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

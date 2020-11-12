@@ -82,19 +82,19 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <TextField fx:id="txtLeituraAntData" layoutX="229.0" layoutY="259.0" onKeyReleased="#mascaraDataAnt" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
+      <TextField fx:id="txtLeituraAntData" layoutX="227.0" layoutY="258.0" onKeyReleased="#mascaraDataAnt" opacity="0.8" prefHeight="25.0" prefWidth="100.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAntNumero" layoutX="353.0" layoutY="259.0" opacity="0.8" prefHeight="26.0" prefWidth="89.0">
+      <TextField fx:id="txtLeituraAntNumero" layoutX="353.0" layoutY="259.0" opacity="0.8" prefHeight="25.0" prefWidth="100.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualData" layoutX="227.0" layoutY="302.0" onKeyReleased="#mascaraDataAtual" opacity="0.8" prefHeight="26.0" prefWidth="91.0">
+      <TextField fx:id="txtLeituraAtualData" layoutX="227.0" layoutY="302.0" onKeyReleased="#mascaraDataAtual" opacity="0.8" prefHeight="25.0" prefWidth="100.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtLeituraAtualNumero" layoutX="353.0" layoutY="300.0" opacity="0.8" prefHeight="26.0" prefWidth="87.0">
+      <TextField fx:id="txtLeituraAtualNumero" layoutX="353.0" layoutY="300.0" opacity="0.8" prefHeight="25.0" prefWidth="100.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
@@ -123,10 +123,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtComplemento" layoutX="173.0" layoutY="460.0" prefHeight="25.0" prefWidth="212.0" promptText="Casa/Apartamento">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font></TextField>
+      <TextField fx:id="txtComplemento" layoutX="173.0" layoutY="460.0" prefHeight="25.0" prefWidth="212.0" />
       <Label fx:id="lblCidade" layoutX="14.0" layoutY="386.0" text="Cidade*" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
@@ -155,17 +152,17 @@
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font></Label>
-      <Button fx:id="btnSalvarContinuar" layoutX="565.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenContinuar" prefHeight="30.0" prefWidth="222.0" text="Salvar e continuar" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="565.0" AnchorPane.rightAnchor="19.0">
+      <Button fx:id="btnSalvarContinuar" layoutX="565.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenContinuar" prefHeight="30.0" prefWidth="222.0" style="-fx-background-radius: 5em;" text="Salvar e continuar" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="565.0" AnchorPane.rightAnchor="19.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnRetornarAgua1" layoutX="11.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="188.0" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="11.0">
+      <Button fx:id="btnRetornarAgua1" layoutX="11.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="188.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="11.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Label fx:id="lblCidade1" layoutX="556.0" layoutY="426.0" text="N°*">
+      <Label fx:id="lblCidade1" layoutX="556.0" layoutY="426.0" text="N°">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
@@ -175,11 +172,11 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label layoutX="570.0" layoutY="465.0" text="Campos com * são obrigatórios">
+      <ComboBox fx:id="comboUF" layoutX="530.0" layoutY="384.0" prefHeight="25.0" prefWidth="89.0" />
+      <Label layoutX="550.0" layoutY="470.0" text="Campos com * são obrigatórios">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font>
       </Label>
-      <ComboBox fx:id="comboUF" layoutX="530.0" layoutY="384.0" prefHeight="25.0" prefWidth="89.0" />
    </children>
 </AnchorPane>
