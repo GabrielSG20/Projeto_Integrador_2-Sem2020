@@ -124,7 +124,7 @@ public class CadastroEnergia1 implements Initializable {
                 Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
                 txtCEPEnergia.setText("");
-                txtComplementoEnergia.setText("");
+                txtComplemento.setText("");
                 txtCidadeEnergia.setText("");
                 txtCodigoFiscalEnergia.setText("");
                 txtEnderecoEnergia.setText("");
