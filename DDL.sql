@@ -1,5 +1,9 @@
 create database cadastro_contas;
 
+create user 'digitador'@'localhost' identified by 'admin';
+
+grant select, insert, delete, update on cadastro_contas.* to digitador@'localhost';
+
 use cadastro_contas;
 
 create table cli_cliente (

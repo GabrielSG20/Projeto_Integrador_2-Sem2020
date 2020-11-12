@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="image/TECSUS.png" />
          </image>
       </ImageView>
       <Label layoutX="56.0" layoutY="21.0" prefHeight="58.0" prefWidth="253.0" text="Informações Pessoais:" AnchorPane.leftAnchor="15.0">

@@ -50,6 +50,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
             stage = primaryStage;
+
             Parent fxmlInstalacaoCadastrada = FXMLLoader.load(getClass().getResource("/view/InstalacaoCadastrada.fxml"));
             instalacaoCadastradaScene = new Scene(fxmlInstalacaoCadastrada);
 
@@ -89,11 +90,11 @@ public class Main extends Application {
             Parent fxmlTipoRelatorio = FXMLLoader.load(getClass().getResource("/view/TipoRelatorio.fxml"));
             tiporelatorioScene = new Scene(fxmlTipoRelatorio);
 
-            Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
-            relatorioaguaScene = new Scene(fxmlRelatorioAgua);
+            //Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
+            //relatorioaguaScene = new Scene(fxmlRelatorioAgua);
 
-            Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
-            relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
+            //Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
+            //relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
 
            
 
@@ -146,12 +147,12 @@ public class Main extends Application {
         if (tela == "tiporelatorio"){
             stage.setScene(tiporelatorioScene);
         }
-        if (tela == "relatorioagua"){
-            stage.setScene(relatorioaguaScene);
-        }
-        if (tela == "relatorioenergia"){
-            stage.setScene(relatorioenergiaScene);
-        }
+        //if (tela == "relatorioagua"){
+           // stage.setScene(relatorioaguaScene);
+        //}
+        //if (tela == "relatorioenergia"){
+            //stage.setScene(relatorioenergiaScene);
+        //}
     }
 
      // Métodos Conta

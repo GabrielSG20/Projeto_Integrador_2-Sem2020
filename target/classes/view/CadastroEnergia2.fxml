@@ -17,7 +17,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" layoutY="-1.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="image/TECSUS.png" />
          </image>
       </ImageView>
       <TextField fx:id="txtMesReferenciaEnergia" layoutX="200.0" layoutY="32.0" prefHeight="25.0" prefWidth="167.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="32.0">

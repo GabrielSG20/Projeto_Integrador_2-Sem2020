@@ -24,11 +24,11 @@ public class TipoRelatorio implements Initializable {
 	}
 	
 	public void changeScreenRelatorioAgua(ActionEvent event){
-        Main.changeScreen("relatorioagua");
+        //Main.changeScreen("relatorioagua");
     }
     
     public void changeScreenRelatorioLuz(ActionEvent event){
-        Main.changeScreen("relatorioenergia");
+        //Main.changeScreen("relatorioenergia");
     }
     
     public void changeScreenRetornar(ActionEvent event){
