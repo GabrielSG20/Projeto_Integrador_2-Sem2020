@@ -31,8 +31,6 @@ public class PessoaFisica implements Initializable {
     @FXML
     private TextField txtCNPJFornecedor;
     @FXML
-    private TextField txtTipoFornecedor;
-    @FXML
     private TextField txtEmail;
     @FXML
     private ComboBox comboTipo;
@@ -101,7 +99,6 @@ public class PessoaFisica implements Initializable {
                 txtCPF.setText("");
                 txtNomeFornecedor.setText("");
                 txtCNPJFornecedor.setText("");
-                txtTipoFornecedor.setText("");
                 txtEmail.setText("");
             } else {
             }    
