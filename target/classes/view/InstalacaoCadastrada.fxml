@@ -12,7 +12,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="@../../../Faculdade/Banco/Projeto%20integrador/test.png" />
          </image></ImageView>
       <Text layoutX="252.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="RGI:" textAlignment="CENTER">
          <font>
