@@ -16,9 +16,8 @@ import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
 import classes.Cliente;
-import classes.Fornecedor;
 import dao.ClienteDAO;
-import dao.FornecedorDAO;
+
 
 public class CadastroPessoaFisica implements Initializable {
     @FXML
@@ -60,11 +59,27 @@ public class CadastroPessoaFisica implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+            String CPF0 = txtCPF.getText().replace("-","");
+            String CPF1 = CPF0.replace(".","");
 
-                txtNomeCompleto.setText("");
-                txtCPF.setText("");
-                txtEmail.setText("");
+            Cliente c = new Cliente();
+            ClienteDAO dao = new ClienteDAO();
+            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF1)));
+            c.setCli_nome(txtNomeCompleto.getText());
+            c.setEmail(txtEmail.getText());
+
+            dao.create(c);
+
+            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+            cadastro.setTitle("Cadastro efetuado com sucesso !");
+            cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
+            cadastro.showAndWait();
+
+            txtNomeCompleto.setText("");
+            txtCPF.setText("");
+            txtEmail.setText("");
             } else {
+
             }    
         }
     }
