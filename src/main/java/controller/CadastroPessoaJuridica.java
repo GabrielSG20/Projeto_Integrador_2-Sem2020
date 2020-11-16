@@ -17,9 +17,8 @@ import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
 import classes.Cliente;
-import classes.Fornecedor;
 import dao.ClienteDAO;
-import dao.FornecedorDAO;
+
 
 public class CadastroPessoaJuridica implements Initializable {
     @FXML
@@ -60,12 +59,28 @@ public class CadastroPessoaJuridica implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+            String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+            String CNPJCliente2 = CNPJCliente.replace(".","");
+            String CNPJClienteFinal = CNPJCliente2.replace("/","");
 
+            Cliente c = new Cliente();
+            ClienteDAO dao = new ClienteDAO();
+            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
+            c.setCli_nome(txtNomeFantasia.getText());
+            c.setEmail(txtEmail.getText());
 
-                txtNomeFantasia.setText("");
-                txtCNPJEmpresa.setText("");
-                txtEmail.setText("");
+            dao.create(c);
+
+            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+            cadastro.setTitle("Cadastro efetuado com sucesso !");
+            cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
+            cadastro.showAndWait();
+
+            txtNomeFantasia.setText("");
+            txtCNPJEmpresa.setText("");
+            txtEmail.setText("");
             } else {
+                
             }    
         }
     }
