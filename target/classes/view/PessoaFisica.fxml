@@ -123,12 +123,12 @@
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="btnFornecedor" layoutX="395.0" layoutY="18.0" mnemonicParsing="false" onAction="#changeScreenFornecedor" style="-fx-background-radius: 3em;" text="Cadastrar fornecedor" textFill="#4a8af2" AnchorPane.leftAnchor="400.0">
+      <Button fx:id="btnFornecedor" layoutX="395.0" layoutY="18.0" mnemonicParsing="false" onAction="#changeScreencadastrarfornecedor" style="-fx-background-radius: 3em;" text="Cadastrar fornecedor" textFill="#4a8af2" AnchorPane.leftAnchor="400.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnPessoaFIsica" layoutX="574.0" layoutY="18.0" mnemonicParsing="false" onAction="#changeScreenPessoaFisica" style="-fx-background-radius: 3em;" text="Cadastrar pessoa física" textFill="#4a8af2" AnchorPane.leftAnchor="574.0" AnchorPane.topAnchor="18.0">
+      <Button fx:id="btnPessoaFIsica" layoutX="574.0" layoutY="18.0" mnemonicParsing="false" onAction="#changeScreencadastrarpessoafisica" style="-fx-background-radius: 3em;" text="Cadastrar pessoa física" textFill="#4a8af2" AnchorPane.leftAnchor="574.0" AnchorPane.topAnchor="18.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

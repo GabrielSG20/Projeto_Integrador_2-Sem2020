@@ -24,6 +24,9 @@ public class Main extends Application {
     private static Stage stage;
     private static Scene mainScene;
     private static Scene tipoclienteScene;
+    private static Scene cadastrarpessoafisicaScene;
+    private static Scene cadastrarpessoajuridicaScene;
+    private static Scene cadastrarfornecedorScene;
     private static Scene PJScene;
     private static Scene PFScene;
     private static Scene tipocontaScene;
@@ -90,6 +93,15 @@ public class Main extends Application {
             Parent fxmlTipoRelatorio = FXMLLoader.load(getClass().getResource("/view/TipoRelatorio.fxml"));
             tiporelatorioScene = new Scene(fxmlTipoRelatorio);
 
+            Parent fxmlCadastrarPessoaFisica = FXMLLoader.load(getClass().getResource("/view/CadastrarPessoaFisica.fxml"));
+            cadastrarpessoafisicaScene = new Scene(fxmlCadastrarPessoaFisica);
+
+            Parent fxmlCadastrarPessoaJuridica = FXMLLoader.load(getClass().getResource("/view/CadastrarPessoaJuridica.fxml"));
+            cadastrarpessoajuridicaScene = new Scene(fxmlCadastrarPessoaJuridica);
+            
+            Parent fxmlCadastrarFornecedor = FXMLLoader.load(getClass().getResource("/view/CadastrarFornecedor.fxml"));
+            cadastrarfornecedorScene = new Scene(fxmlCadastrarFornecedor);
+
             //Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
             //relatorioaguaScene = new Scene(fxmlRelatorioAgua);
 
@@ -147,6 +159,16 @@ public class Main extends Application {
         if (tela == "tiporelatorio"){
             stage.setScene(tiporelatorioScene);
         }
+        if(tela == "cadastrarpessoafisica"){
+            stage.setScene(cadastrarpessoafisicaScene);
+        }
+        if(tela == "cadastrarpessoajuridica"){
+            stage.setScene(cadastrarpessoajuridicaScene);
+        }
+        if(tela == "cadastrarfornecedor"){
+            stage.setScene(cadastrarfornecedorScene);
+        }
+
         //if (tela == "relatorioagua"){
            // stage.setScene(relatorioaguaScene);
         //}

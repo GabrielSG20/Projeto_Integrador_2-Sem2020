@@ -35,9 +35,18 @@ public class PessoaFisica implements Initializable {
     @FXML
     private ComboBox comboTipo;
     @FXML
-    private Button btnRetornarPF;
+    private Button btnbuscarCPF;
+    @FXML
+    private Button btnBuscarCNPJ;
     @FXML
     private Button btnProsseguirPF;
+    @FXML
+    private Button btnRetornarPF;
+    @FXML
+    private Button btnFornecedor;
+    @FXML
+    private Button btnPessoaFIsica;
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
