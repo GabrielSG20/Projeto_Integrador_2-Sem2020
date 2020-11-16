@@ -26,7 +26,8 @@ public class Main extends Application {
     private static Scene tipoclienteScene;
     private static Scene cadastrarpessoafisicaScene;
     private static Scene cadastrarpessoajuridicaScene;
-    private static Scene cadastrarfornecedorScene;
+    private static Scene cadastrarfornecedorpfScene;
+    private static Scene cadastrarfornecedorpjScene;
     private static Scene PJScene;
     private static Scene PFScene;
     private static Scene tipocontaScene;
@@ -99,8 +100,11 @@ public class Main extends Application {
             Parent fxmlCadastrarPessoaJuridica = FXMLLoader.load(getClass().getResource("/view/CadastrarPessoaJuridica.fxml"));
             cadastrarpessoajuridicaScene = new Scene(fxmlCadastrarPessoaJuridica);
             
-            Parent fxmlCadastrarFornecedor = FXMLLoader.load(getClass().getResource("/view/CadastrarFornecedor.fxml"));
-            cadastrarfornecedorScene = new Scene(fxmlCadastrarFornecedor);
+            Parent fxmlCadastrarFornecedorPF = FXMLLoader.load(getClass().getResource("/view/CadastrarFornecedorPF.fxml"));
+            cadastrarfornecedorpfScene = new Scene(fxmlCadastrarFornecedorPF);
+
+            Parent fxmlCadastrarFornecedorPJ = FXMLLoader.load(getClass().getResource("/view/CadastrarFornecedorPJ.fxml"));
+            cadastrarfornecedorpjScene = new Scene(fxmlCadastrarFornecedorPJ);
 
             //Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
             //relatorioaguaScene = new Scene(fxmlRelatorioAgua);
@@ -108,11 +112,9 @@ public class Main extends Application {
             //Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
             //relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
 
-           
-
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
-			primaryStage.show();
+            primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
@@ -165,10 +167,12 @@ public class Main extends Application {
         if(tela == "cadastrarpessoajuridica"){
             stage.setScene(cadastrarpessoajuridicaScene);
         }
-        if(tela == "cadastrarfornecedor"){
-            stage.setScene(cadastrarfornecedorScene);
+        if(tela == "cadastrarfornecedorpf"){
+            stage.setScene(cadastrarfornecedorpfScene);
         }
-
+        if(tela == "cadastrarfornecedorpj"){
+            stage.setScene(cadastrarfornecedorpjScene);
+        }
         //if (tela == "relatorioagua"){
            // stage.setScene(relatorioaguaScene);
         //}

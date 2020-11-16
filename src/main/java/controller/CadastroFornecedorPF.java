@@ -11,6 +11,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
@@ -20,30 +21,32 @@ import classes.Fornecedor;
 import dao.ClienteDAO;
 import dao.FornecedorDAO;
 
-public class CadastroPessoaFisica implements Initializable {
+public class CadastroFornecedorPF implements Initializable {
     @FXML
-    private TextField txtCPF;
+    private TextField txtCNPJFornecedor;
     @FXML
-    private TextField txtNomeCompleto;
+    private TextField txtNomeFornecedor;
     @FXML
-    private TextField txtEmail;
+    private ComboBox comboTipo;
     @FXML
-    private Button btnCadastrarPF;
+    private Button btnRetornar;
     @FXML
-    private Button btnRetornarPF;
+    private Button btnCadastrarFornecedor;
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
+        comboTipo.getItems().add("Água");
+        comboTipo.getItems().add("Energia");
     }
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("pf");
     }
 
-
     public void changeScreenCadastrar(ActionEvent event) {
-        if(txtCPF.getText().equals("") || txtNomeCompleto.getText().equals("")) {
+        if(txtNomeFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("") || comboTipo.getValue().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
@@ -57,24 +60,25 @@ public class CadastroPessoaFisica implements Initializable {
             confirmacao.setTitle("Confirmação de Informações");
             confirmacao.setHeaderText(null);
             confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
-
+            
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
 
-                txtNomeCompleto.setText("");
-                txtCPF.setText("");
-                txtEmail.setText("");
+
+                txtNomeFornecedor.setText("");
+                txtCNPJFornecedor.setText("");
             } else {
             }    
         }
     }
-  // Mascaras
+
+// Mascaras
     @FXML
-    private void mascaraCPF(){
+    private void mascaraCNPJ(){
         TextFieldFormatter tff = new TextFieldFormatter();
-        tff.setMask("###.###.###-##");
+        tff.setMask("##.###.###/####-##");
         tff.setCaracteresValidos("0123456789");
-        tff.setTf(txtCPF);
+        tff.setTf(txtCNPJFornecedor);
         tff.formatter();
     }
 }
