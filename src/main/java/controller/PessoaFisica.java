@@ -58,6 +58,12 @@ public class PessoaFisica implements Initializable {
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
     }
+    public void changeScreenCadastrarPessoaFisica(ActionEvent event) {
+        Main.changeScreen("cadastrarpessoafisica");
+    }
+    public void changeScreenCadastrarFornecedor(ActionEvent event) {
+        Main.changeScreen("cadastrarfornecedor");
+    }
 
     public void changeScreenProsseguir(ActionEvent event) {
         if(txtNomeCompleto.getText().equals("") || txtNomeFornecedor.getText().equals("") || txtCNPJFornecedor.getText().equals("") || txtCPF.getText().equals("") || comboTipo.getValue().equals("")) {
