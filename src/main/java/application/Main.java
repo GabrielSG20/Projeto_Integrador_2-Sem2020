@@ -203,17 +203,31 @@ public class Main extends Application {
     }
 
     public static void salvarEnergia2(TextField txtContaMes, TextField txtNumeroInstalacao, TextField txtConsumo, TextField txtTotalPagar, TextField txtConstMulti, TextField txtNRmedidor, TextField txtLeituraAnterior, TextField txtLeituraAtual ,TextField txtDataLeituraAnterior, TextField txtDataLeituraAtual, ComboBox comboBandeirasTarifarias ){
-            n.setCta_mes_referencia(txtContaMes.getText());
-            n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
-            n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
-            n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
-            n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(txtConstMulti.getText())));
-            n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
-            n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
-            n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
-            n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
-            n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
-            n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+            if(txtConstMulti.equals("")){
+                n.setCta_mes_referencia(txtContaMes.getText());
+                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
+                n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+                n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
+                n.setEne_const_multi(null);
+                n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
+                n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
+                n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
+                n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
+                n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
+                n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+            } else {
+                n.setCta_mes_referencia(txtContaMes.getText());
+                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
+                n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+                n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
+                n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(txtConstMulti.getText())));
+                n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
+                n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
+                n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
+                n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
+                n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
+                n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+            }
 
             dao_ene.create(n);
     }

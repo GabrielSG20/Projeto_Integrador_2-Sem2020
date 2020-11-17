@@ -84,6 +84,7 @@ public class CadastroAgua2 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){   
+
                 Main.salvarConta2(txtVencimento);
                 Main.salvarAgua2(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a30, txtTarifaAgua31a50, txtTarifaAcima50, 
                 txtValorAguaAte10, txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20, txtTarifaEsgoto21a30, txtTarifaEsgoto31a50, 
@@ -98,25 +99,25 @@ public class CadastroAgua2 implements Initializable {
                 Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
                 Alert.showAndWait();
 
-                txtTarifaAguaAte10.setText("");
-                txtTarifaAgua11a20.setText("");
-                txtTarifaAgua21a30.setText("");
-                txtTarifaAgua31a50.setText("");
-                txtTarifaAcima50.setText("");
-                txtValorAguaAte10.setText("");
-                txtValorAgua11a20.setText("");
-                txtTarifaEsgotoAte10.setText("");
-                txtTarifaEsgoto11a20.setText("");
-                txtTarifaEsgoto21a30.setText("");
-                txtTarifaEsgoto31a50.setText("");
-                txtTarifaEsgotoAcima50.setText("");
-                txtValorEsgotoAte10.setText("");
-                txtValorEsgoto11a20.setText("");
                 txtVencimento.setText("");
-                txtVIAgua.setText("");
-                txtVIEsgoto.setText("");
-                txtTaxaRegulacao.setText("");
-                txtMulta.setText("");
+                txtTarifaAguaAte10.setText("0");
+                txtTarifaAgua11a20.setText("0");
+                txtTarifaAgua21a30.setText("0");
+                txtTarifaAgua31a50.setText("0");
+                txtTarifaAcima50.setText("0");
+                txtValorAguaAte10.setText("0");
+                txtValorAgua11a20.setText("0");
+                txtTarifaEsgotoAte10.setText("0");
+                txtTarifaEsgoto11a20.setText("0");
+                txtTarifaEsgoto21a30.setText("0");
+                txtTarifaEsgoto31a50.setText("0");
+                txtTarifaEsgotoAcima50.setText("0");
+                txtValorEsgotoAte10.setText("0");
+                txtValorEsgoto11a20.setText("0");
+                txtVIAgua.setText("0");
+                txtVIEsgoto.setText("0");
+                txtTaxaRegulacao.setText("0");
+                txtMulta.setText("0");
             } else {
             }    
         }
