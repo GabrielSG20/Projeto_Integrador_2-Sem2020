@@ -18,6 +18,7 @@ import util.TextFieldFormatter;
 import application.Main;
 import classes.Fornecedor;
 import dao.ClienteDAO;
+import dao.FornecedorDAO;
 
 public class CadastroFornecedorPJ implements Initializable {
     @FXML
