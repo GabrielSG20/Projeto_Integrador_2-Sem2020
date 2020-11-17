@@ -58,9 +58,6 @@ public class Main extends Application {
             Parent fxmlInstalacaoCadastrada = FXMLLoader.load(getClass().getResource("/view/InstalacaoCadastrada.fxml"));
             instalacaoCadastradaScene = new Scene(fxmlInstalacaoCadastrada);
 
-            Parent fxmlCadastroAgua1semEnd = FXMLLoader.load(getClass().getResource("/view/CadastroAgua1semEnd.fxml"));
-            aguasemendScene = new Scene(fxmlCadastroAgua1semEnd);
-
             Parent fxmlCadastroEnergia1 = FXMLLoader.load(getClass().getResource("/view/CadastroEnergia1.fxml"));
             energia1Scene = new Scene(fxmlCadastroEnergia1);
 
@@ -126,10 +123,6 @@ public class Main extends Application {
         }
         if (tela == "instalacaoCadastradaScene"){
             stage.setScene(instalacaoCadastradaScene);
-        }
-        
-        if (tela == "aguasemend"){
-            stage.setScene(aguasemendScene);
         }
         if (tela == "energia1Scene"){
             stage.setScene(energia1Scene);

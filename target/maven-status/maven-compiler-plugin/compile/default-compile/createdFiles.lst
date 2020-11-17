@@ -1,3 +1,10 @@
+controller/CadastroPessoaJuridica.class
+dao/ClienteDAO.class
+classes/Cliente.class
+classes/Instalacao.class
+controller/CadastroPessoaFisica.class
+dao/ContaDAO.class
+controller/CadastroAgua1semEnd.class
 controller/CadastroAgua1.class
 controller/CadastroEnergia2.class
 classes/Conta.class
@@ -5,10 +12,6 @@ classes/Endereco.class
 dao/EnderecoDAO.class
 controller/InstalacaoCadastrada.class
 classes/Agua.class
-dao/ClienteDAO.class
 classes/Energia.class
 dao/InstalacaoDAO.class
-classes/Cliente.class
-classes/Instalacao.class
-dao/ContaDAO.class
 dao/EnergiaDAO.class
