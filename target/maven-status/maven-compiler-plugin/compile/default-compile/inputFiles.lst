@@ -1,6 +1,6 @@
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroEnergia2.java
-/workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/EnergiaDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/ClienteDAO.java
+/workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/EnergiaDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/InstalacaoCadastrada.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Agua.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroAgua1.java
@@ -20,8 +20,8 @@
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/PessoaFisica.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/TipoRelatorio.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Endereco.java
-/workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/TipoConta.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroEnergiaSemEnd.java
+/workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/TipoConta.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroEnergia1.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/conexao/ConexaoBd.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/RelatorioEnergia.java

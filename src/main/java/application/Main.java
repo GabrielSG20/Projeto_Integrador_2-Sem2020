@@ -91,6 +91,9 @@ public class Main extends Application {
             Parent fxmlTipoRelatorio = FXMLLoader.load(getClass().getResource("/view/TipoRelatorio.fxml"));
             tiporelatorioScene = new Scene(fxmlTipoRelatorio);
 
+            Parent fxmlCadastrarAgua1semEnd = FXMLLoader.load(getClass().getResource("/view/CadastrarAgua1semEnd.fxml"));
+            aguasemendScene = new Scene(fxmlCadastrarAgua1semEnd);
+    
             Parent fxmlCadastrarPessoaFisica = FXMLLoader.load(getClass().getResource("/view/CadastrarPessoaFisica.fxml"));
             cadastrarpessoafisicaScene = new Scene(fxmlCadastrarPessoaFisica);
 
@@ -129,6 +132,9 @@ public class Main extends Application {
         }
         if (tela == "energia2Scene"){
             stage.setScene(energia2Scene);
+        }
+        if(tela == "cadastraragua1semend"){
+            stage.setScene(aguasemendScene);
         }
         if (tela == "energiaSemend"){
             stage.setScene(energiaSemendScene);
