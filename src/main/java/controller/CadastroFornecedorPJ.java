@@ -63,10 +63,25 @@ public class CadastroFornecedorPJ implements Initializable {
             
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+            String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+            String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
+            String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
 
+            Fornecedor f = new Fornecedor();
+            FornecedorDAO daofor = new FornecedorDAO();
+            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
+            f.setFor_nome(txtNomeFornecedor.getText());
+            f.setFor_tipo(String.valueOf(comboTipo.getValue()));
 
-                txtNomeFornecedor.setText("");
-                txtCNPJFornecedor.setText("");
+            daofor.create(f);
+
+            Alert cadastro1 = new Alert(Alert.AlertType.INFORMATION);
+            cadastro1.setTitle("Cadastro efetuado com sucesso !");
+            cadastro1.setHeaderText("Seu fornecedor foi cadastrado com sucesso!");
+            cadastro1.showAndWait();
+
+            txtNomeFornecedor.setText("");
+            txtCNPJFornecedor.setText("");
             } else {
             }    
         }
