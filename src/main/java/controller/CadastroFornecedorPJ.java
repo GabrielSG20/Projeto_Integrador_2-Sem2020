@@ -17,7 +17,6 @@ import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
 import classes.Fornecedor;
-import dao.ClienteDAO;
 import dao.FornecedorDAO;
 
 public class CadastroFornecedorPJ implements Initializable {
@@ -65,25 +64,28 @@ public class CadastroFornecedorPJ implements Initializable {
                 String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
                 String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
                 String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
-                
+
                 Fornecedor f = new Fornecedor();
                 FornecedorDAO daofor = new FornecedorDAO();
                 f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
                 f.setFor_nome(txtNomeFornecedor.getText());
                 f.setFor_tipo(String.valueOf(comboTipo.getValue()));
 
+
                 daofor.create(f);
-                
+
                 Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
                 cadastro.setTitle("Cadastro efetuado com sucesso !");
                 cadastro.setHeaderText("Seu fornecedor foi cadastrado com sucesso!");
-                cadastro.setContentText("");
+                cadastro.setContentText(null);
                 cadastro.showAndWait();
 
                 txtNomeFornecedor.setText("");
                 txtCNPJFornecedor.setText("");
-            } else {
-            }    
+                
+            }else{
+                
+            }   
         }
     }
 
