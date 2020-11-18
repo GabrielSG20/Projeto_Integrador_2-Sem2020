@@ -20,7 +20,7 @@ public class EnderecoDAO {
         PreparedStatement stmt = null;
         //Inserindo dados na tabela atraves do metodo INSERT
         try {
-            stmt = con.prepareStatement("INSERT INTO end_endereco (cep_cep,end_numero,end_complemento) VALUES(?,?,?)");
+            stmt = con.prepareStatement("INSERT INTO end_endereco(cep_cep,end_numero,end_complemento) VALUES(?,?,?)");
             stmt.setObject(1, e.getCep_cep());
             stmt.setObject(2, e.getEnd_numero());;
             stmt.setString(3, e.getEnd_complemento());

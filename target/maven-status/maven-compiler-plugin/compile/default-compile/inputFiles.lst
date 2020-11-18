@@ -10,6 +10,7 @@
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/ContaDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Conta.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Fornecedor.java
+/workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/CepDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroPessoaJuridica.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroFornecedorPF.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/AguaDAO.java
@@ -26,6 +27,7 @@
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/conexao/ConexaoBd.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/RelatorioEnergia.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Energia.java
+/workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Cep.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Cliente.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/FornecedorDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/classes/Instalacao.java
