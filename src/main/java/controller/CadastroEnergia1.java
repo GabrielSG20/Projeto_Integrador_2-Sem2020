@@ -15,7 +15,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
+import classes.Cep;
 import classes.Endereco;
+import dao.CepDAO;
 import dao.EnderecoDAO;
 
 public class CadastroEnergia1 implements Initializable {
@@ -45,8 +47,6 @@ public class CadastroEnergia1 implements Initializable {
     private TextField txtRoteiroLeituraEnergia;
     @FXML
     private TextField txtTensaoNominalEnergia;
-    @FXML
-    private TextField txtComplemento;
     @FXML
     private Button btnVoltarTelaIncial;
     @FXML
@@ -107,24 +107,30 @@ public class CadastroEnergia1 implements Initializable {
         else {
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEPEnergia.getText().replace("-","");
+                
+                Cep c = new Cep();
+                CepDAO daocep = new CepDAO();
+                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
+                c.setCep_rua(txtEnderecoEnergia.getText());
+                c.setCep_estado(String.valueOf(comboUF.getValue()));
+                c.setCep_cidade(txtCidadeEnergia.getText());
+
+                daocep.create(c);
 
                 Endereco e = new Endereco();
-                EnderecoDAO dao = new EnderecoDAO();
-                e.setEnd_cep(BigInteger.valueOf(Long.parseLong(CEP)));
+                EnderecoDAO daoend = new EnderecoDAO();
+                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
                 e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumeroEnergia.getText())));
-                e.setEnd_rua(txtEnderecoEnergia.getText());
-                e.setEnd_estado(String.valueOf(comboUF.getValue()));
-                e.setEnd_cidade(txtCidadeEnergia.getText());
-                e.setEnd_complemento(txtComplemento.getText());
+                e.setEnd_complemento(txtComplementoEnergia.getText());
 
-                dao.create(e);
+                daoend.create(e);
 
                 Main.salvarEnergia1(txtCodigoFiscalEnergia, txtGrupoSubgrupoEnergia, txtClasseSubclasseEnergia, txtFornecimentoEnergia, txtMTarifaEnergia, txtRoteiroLeituraEnergia, txtTensaoNominalEnergia);
 
                 Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
                 txtCEPEnergia.setText("");
-                txtComplemento.setText("");
+                txtComplementoEnergia.setText("");
                 txtCidadeEnergia.setText("");
                 txtCodigoFiscalEnergia.setText("");
                 txtEnderecoEnergia.setText("");
@@ -141,7 +147,7 @@ public class CadastroEnergia1 implements Initializable {
             }    
         }
     }
- // Mascaras
+ //Mascaras
     @FXML
     private void mascaraCEP(){
         TextFieldFormatter tff = new TextFieldFormatter();
@@ -149,5 +155,5 @@ public class CadastroEnergia1 implements Initializable {
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtCEPEnergia);
         tff.formatter();
+        }
     }
-}

@@ -35,9 +35,18 @@ public class PessoaFisica implements Initializable {
     @FXML
     private ComboBox comboTipo;
     @FXML
-    private Button btnRetornarPF;
+    private Button btnBuscarCPF;
+    @FXML
+    private Button btnBuscarCNPJ;
     @FXML
     private Button btnProsseguirPF;
+    @FXML
+    private Button btnRetornarPF;
+    @FXML
+    private Button btnFornecedor;
+    @FXML
+    private Button btnPessoaFisica;
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -48,6 +57,20 @@ public class PessoaFisica implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
+    }
+    public void changeScreenCadastrarPessoaFisica(ActionEvent event) {
+        Main.changeScreen("cadastrarpessoafisica");
+    }
+
+    public void changeScreenCadastrarFornecedor(ActionEvent event) {
+        Main.changeScreen("cadastrarfornecedorpf");
+    }
+
+    public void changeScreenBuscarCPF(ActionEvent event) {
+        
+    }
+    public void changeScreenBuscarCNPJ(ActionEvent event) {
+        
     }
 
     public void changeScreenProsseguir(ActionEvent event) {

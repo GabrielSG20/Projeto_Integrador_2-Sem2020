@@ -15,7 +15,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
+import classes.Cep;
 import classes.Endereco;
+import dao.CepDAO;
 import dao.EnderecoDAO;
 
 public class CadastroAgua1 implements Initializable {
@@ -116,16 +118,22 @@ public class CadastroAgua1 implements Initializable {
                 String CEP = txtCEP.getText().replace("-","");
                 String RGI = txtRGI.getText().replace("/","");
 
+                Cep c = new Cep();
+                CepDAO daocep = new CepDAO();
+                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
+                c.setCep_rua(txtEndereco.getText());
+                c.setCep_estado(String.valueOf(comboUF.getValue()));
+                c.setCep_cidade(txtCidade.getText());
+
+                daocep.create(c);
+
                 Endereco e = new Endereco();
-                EnderecoDAO dao = new EnderecoDAO();
-                e.setEnd_cep(BigInteger.valueOf(Long.parseLong(CEP)));
+                EnderecoDAO daoend = new EnderecoDAO();
+                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
                 e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
-                e.setEnd_rua(txtEndereco.getText());
-                e.setEnd_estado(String.valueOf(comboUF.getValue()));
-                e.setEnd_cidade(txtCidade.getText());
                 e.setEnd_complemento(txtComplemento.getText());
 
-                dao.create(e);
+                daoend.create(e);
 
                 Main.salvarIntalacaoEndereco(CEP, txtNumero);
                 Main.salvarIntalacaoNumero(RGI);
@@ -191,3 +199,4 @@ public class CadastroAgua1 implements Initializable {
         tff.formatter();
     }
 }
+

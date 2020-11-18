@@ -18,7 +18,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <TextField fx:id="txtMesReferenciaEnergia" layoutX="194.0" layoutY="25.0" prefHeight="30.0" prefWidth="106.0">

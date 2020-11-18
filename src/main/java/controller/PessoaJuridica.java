@@ -38,6 +38,14 @@ public class PessoaJuridica implements Initializable {
     private Button btnRetornarPJ;
     @FXML
     private Button btnProsseguirPJ;
+    @FXML
+    private Button btnBuscarCNPJ;
+    @FXML
+    private Button btnBuscarCNPJFornecedor;
+    @FXML
+    private Button btnPessoaJuridica;
+    @FXML
+    private Button btnFornecedor;
    
 
     @Override
@@ -50,6 +58,20 @@ public class PessoaJuridica implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
+    }
+
+    public void changeScreenBuscarCNPJ(ActionEvent event) {
+        
+    }
+    public void changeScreenBuscarCNPJFornecedor(ActionEvent event) {
+        
+    }
+    public void changeScreenPessoaJuridica(ActionEvent event) {
+        Main.changeScreen("cadastrarpessoajuridica");
+    }
+
+    public void changeScreenFornecedor(ActionEvent event) {
+        Main.changeScreen("cadastrarfornecedorpj");
     }
 
 
