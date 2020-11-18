@@ -127,14 +127,13 @@ public class CadastroAgua1 implements Initializable {
 
                 daocep.create(c);
 
-                String CEP2 = txtCEP.getText().replace("-","");
                 Endereco e = new Endereco();
-                EnderecoDAO dao = new EnderecoDAO();
-                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP2)));
+                EnderecoDAO daoend = new EnderecoDAO();
+                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
                 e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
                 e.setEnd_complemento(txtComplemento.getText());
 
-                dao.create(e);
+                daoend.create(e);
 
                 Main.salvarIntalacaoEndereco(CEP, txtNumero);
                 Main.salvarIntalacaoNumero(RGI);

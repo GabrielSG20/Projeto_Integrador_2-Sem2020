@@ -48,8 +48,6 @@ public class CadastroEnergia1 implements Initializable {
     @FXML
     private TextField txtTensaoNominalEnergia;
     @FXML
-    private TextField txtComplemento;
-    @FXML
     private Button btnVoltarTelaIncial;
     @FXML
     private Button btnRetornarEnergia;
@@ -119,22 +117,20 @@ public class CadastroEnergia1 implements Initializable {
 
                 daocep.create(c);
 
-                String CEP2 = txtCEPEnergia.getText().replace("-","");
-
                 Endereco e = new Endereco();
-                EnderecoDAO dao = new EnderecoDAO();
-                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP2)));
+                EnderecoDAO daoend = new EnderecoDAO();
+                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
                 e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumeroEnergia.getText())));
-                e.setEnd_complemento(txtComplemento.getText());
+                e.setEnd_complemento(txtComplementoEnergia.getText());
 
-                dao.create(e);
+                daoend.create(e);
 
                 Main.salvarEnergia1(txtCodigoFiscalEnergia, txtGrupoSubgrupoEnergia, txtClasseSubclasseEnergia, txtFornecimentoEnergia, txtMTarifaEnergia, txtRoteiroLeituraEnergia, txtTensaoNominalEnergia);
 
                 Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
                 txtCEPEnergia.setText("");
-                txtComplemento.setText("");
+                txtComplementoEnergia.setText("");
                 txtCidadeEnergia.setText("");
                 txtCodigoFiscalEnergia.setText("");
                 txtEnderecoEnergia.setText("");
