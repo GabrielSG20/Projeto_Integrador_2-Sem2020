@@ -74,14 +74,13 @@ public class CadastroPessoaJuridica implements Initializable {
             Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
             cadastro.setTitle("Cadastro efetuado com sucesso !");
             cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
-            cadastro.setContentText("");
             cadastro.showAndWait();
 
             txtNomeFantasia.setText("");
             txtCNPJEmpresa.setText("");
             txtEmail.setText("");
             } else {
-
+                
             }    
         }
     }

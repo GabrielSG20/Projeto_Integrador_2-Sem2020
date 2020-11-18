@@ -58,6 +58,9 @@ public class Main extends Application {
             Parent fxmlInstalacaoCadastrada = FXMLLoader.load(getClass().getResource("/view/InstalacaoCadastrada.fxml"));
             instalacaoCadastradaScene = new Scene(fxmlInstalacaoCadastrada);
 
+            Parent fxmlCadastroAgua1semEnd = FXMLLoader.load(getClass().getResource("/view/CadastroAgua1semEnd.fxml"));
+            aguasemendScene = new Scene(fxmlCadastroAgua1semEnd);
+
             Parent fxmlCadastroEnergia1 = FXMLLoader.load(getClass().getResource("/view/CadastroEnergia1.fxml"));
             energia1Scene = new Scene(fxmlCadastroEnergia1);
 
@@ -91,9 +94,6 @@ public class Main extends Application {
             Parent fxmlTipoRelatorio = FXMLLoader.load(getClass().getResource("/view/TipoRelatorio.fxml"));
             tiporelatorioScene = new Scene(fxmlTipoRelatorio);
 
-            Parent fxmlCadastrarAgua1semEnd = FXMLLoader.load(getClass().getResource("/view/CadastrarAgua1semEnd.fxml"));
-            aguasemendScene = new Scene(fxmlCadastrarAgua1semEnd);
-    
             Parent fxmlCadastrarPessoaFisica = FXMLLoader.load(getClass().getResource("/view/CadastrarPessoaFisica.fxml"));
             cadastrarpessoafisicaScene = new Scene(fxmlCadastrarPessoaFisica);
 
@@ -127,14 +127,15 @@ public class Main extends Application {
         if (tela == "instalacaoCadastradaScene"){
             stage.setScene(instalacaoCadastradaScene);
         }
+        
+        if (tela == "aguasemend"){
+            stage.setScene(aguasemendScene);
+        }
         if (tela == "energia1Scene"){
             stage.setScene(energia1Scene);
         }
         if (tela == "energia2Scene"){
             stage.setScene(energia2Scene);
-        }
-        if(tela == "cadastraragua1semend"){
-            stage.setScene(aguasemendScene);
         }
         if (tela == "energiaSemend"){
             stage.setScene(energiaSemendScene);

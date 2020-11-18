@@ -16,7 +16,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
+import classes.Cliente;
 import classes.Fornecedor;
+import dao.ClienteDAO;
 import dao.FornecedorDAO;
 
 public class CadastroFornecedorPF implements Initializable {
@@ -61,7 +63,7 @@ public class CadastroFornecedorPF implements Initializable {
             
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-
+            
             String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
             String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
             String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
@@ -81,7 +83,6 @@ public class CadastroFornecedorPF implements Initializable {
 
             txtNomeFornecedor.setText("");
             txtCNPJFornecedor.setText("");
-
             } else {
             }    
         }
