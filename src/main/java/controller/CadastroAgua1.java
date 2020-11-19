@@ -61,6 +61,10 @@ public class CadastroAgua1 implements Initializable {
     private Button btnRetornarAgua1;
     @FXML
     private Button btnSalvarContinuar;
+    @FXML
+    private Button btnBuscarCEP;
+    @FXML
+    private Button btnCadastrarEndereco;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -94,6 +98,12 @@ public class CadastroAgua1 implements Initializable {
         comboUF.getItems().add("DF");
     }
 
+    public void changeScreenBuscarCEP(ActionEvent event){
+        Main.changeScreen("tipoconta");
+    }
+    public void btnCadastrarEndereco(ActionEvent event){
+        Main.changeScreen("");
+    }
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
     }

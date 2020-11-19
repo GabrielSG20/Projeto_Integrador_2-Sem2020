@@ -51,6 +51,10 @@ public class CadastroEnergia1 implements Initializable {
     private Button btnVoltarTelaIncial;
     @FXML
     private Button btnRetornarEnergia;
+    @FXML
+    private Button btnBuscarCEP;
+    @FXML
+    private Button btnCadastrarEndereco;
 
 
      @Override
@@ -88,7 +92,13 @@ public class CadastroEnergia1 implements Initializable {
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
     }
-
+    public void changeScreenCadastrarEndereco(ActionEvent event){
+        Main.changeScreen("");
+    }
+    public void changeScreenBuscarCEP(ActionEvent event){
+        Main.changeScreen("");
+    }
+    
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Cadastro");
