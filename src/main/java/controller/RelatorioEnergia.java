@@ -16,7 +16,7 @@ import classes.Energia;
 
 public class RelatorioEnergia implements Initializable {
     @FXML
-    private TableView <Energia> TableEnergia;
+    private TableView <Energia> TableAgua;
     @FXML
     private TableColumn <Energia, BigInteger> ClnNumInstalacao;
     @FXML
@@ -31,7 +31,6 @@ public class RelatorioEnergia implements Initializable {
     private TableColumn <Energia, String> ClnTensaoNominal;
     @FXML
     private TableColumn <Energia, BigDecimal> ClnValorTotal;
-
 
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
@@ -54,7 +53,7 @@ public class RelatorioEnergia implements Initializable {
 
         listEnergia =  EnergiaDAO.read();
         observableListEnergia = FXCollections.observableArrayList(listEnergia);
-        TableEnergia.setItems(observableListEnergia);
+        TableAgua.setItems(observableListEnergia);
     }
 
 }
