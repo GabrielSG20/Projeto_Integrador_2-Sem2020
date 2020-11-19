@@ -1,9 +1,13 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ResourceBundle;
 import util.TextFieldFormatter;
 import application.Main;
+import dao.ContaDAO;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -26,9 +30,43 @@ public class InstalacaoCadastrada implements Initializable{
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
     }
-    public void changeScreenBuscar(ActionEvent event){
-        
+
+    public void changeScreenBuscarEnergia(ActionEvent event){       
+        if (ContaDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())))){
+            Main.salvarContaInst1(txtNumeroInstalacao.getText());
+            Main.salvarEnergiaInst1(txtNumeroInstalacao.getText());
+            Main.changeScreen("energiasemend");
+            txtNumeroInstalacao.setText("");
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Numero de Instalacao não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("DIGITE UM NUMERO VÁLIDO");
+            Alert.showAndWait();
+
+            txtNumeroInstalacao.setText("");
+        }
     }
+
+    public void changeScreenBuscarAgua(ActionEvent event){
+        String RGI = txtRGI.getText().replace("/","");
+
+        
+        if (ContaDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(RGI)))){
+            
+            Main.changeScreen("aguasemend");
+            txtRGI.setText("");
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Numero de Instalacao não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("DIGITE UM NUMERO VÁLIDO");
+            Alert.showAndWait();
+
+            txtRGI.setText("");
+        }
+    }
+
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
     }

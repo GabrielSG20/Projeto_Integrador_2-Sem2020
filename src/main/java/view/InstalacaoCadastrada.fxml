@@ -44,12 +44,12 @@
             <Image url="/image/InstalacaoLuz.png" />
          </image>
       </ImageView>
-      <Button fx:id="txtBotaoBuscarRGI" layoutX="626.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
+      <Button fx:id="txtBotaoBuscarRGI" layoutX="626.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeScreenBuscarAgua" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="txtBotaoBuscarNumInstalacao" layoutX="626.0" layoutY="129.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
+      <Button fx:id="txtBotaoBuscarNumInstalacao" layoutX="626.0" layoutY="129.0" mnemonicParsing="false" onAction="#changeScreenBuscarEnergia" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
          <font>
             <Font name="Arial" size="20.0" />
          </font>

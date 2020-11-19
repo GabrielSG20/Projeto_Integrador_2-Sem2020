@@ -137,7 +137,7 @@ public class Main extends Application {
         if (tela == "energia2Scene"){
             stage.setScene(energia2Scene);
         }
-        if (tela == "energiaSemend"){
+        if (tela == "energiasemend"){
             stage.setScene(energiaSemendScene);
         }
          if (tela == "tipocliente"){
@@ -195,6 +195,20 @@ public class Main extends Application {
             conta_dao.create(cta);
     }
 
+    // Métodos Instalação já cadastrada
+    public static void salvarContaInst1(String RGI) {
+            cta = new Conta();
+            conta_dao = new ContaDAO();
+            cta.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
+    }
+
+    public static void salvarContaInst2(TextField txtVencimento, TextField txtMesReferencia) {
+            cta.setCta_vencimento(txtVencimento.getText());
+            cta.setCta_mes_referencia(txtMesReferencia.getText());
+
+            conta_dao.create(cta);
+    }
+
     // Métodos Instalacao
     public static void salvarIntalacaoCliente(String txtDocumento, String txtCNPJFornecedor) {
             i = new Instalacao();
@@ -213,6 +227,58 @@ public class Main extends Application {
             instalacao_dao.create(i);
     }
 
+    public static void salvarEnergiaInst1(String txtNumeroInstalacao) {
+            n = new Energia();
+            dao_ene = new EnergiaDAO();
+            n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao)));
+    }
+
+    public static void salvarEnergiaInst2(TextField txtContaMes, TextField txtConsumo, 
+            TextField txtTotalPagar, TextField txtConstMulti, TextField txtNRmedidor, TextField txtLeituraAnterior, 
+            TextField txtLeituraAtual ,TextField txtDataLeituraAnterior, TextField txtDataLeituraAtual, ComboBox comboBandeirasTarifarias, 
+            TextField txtCodigoFiscal, TextField txtGrupoSubgrupo, TextField txtClasseSubclasse, TextField txtFornecimento, TextField txtTarifaria,
+            TextField txtRoteiroLeitura, TextField txtTensaoNominal){
+            if(txtConstMulti.getText().equals("")){
+                n.setCta_mes_referencia(txtContaMes.getText());
+                n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+                n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
+                n.setEne_const_multi(null);
+                n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
+                n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
+                n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
+                n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
+                n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
+                n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+                n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
+                n.setEne_grupo_subgrupo(txtGrupoSubgrupo.getText());
+                n.setEne_classe_subclasse(txtClasseSubclasse.getText());
+                n.setEne_tipo_fornecimento(txtFornecimento.getText());
+                n.setEne_modalidade_tarifaria(txtTarifaria.getText());
+                n.setEne_roteiro_leitura(txtRoteiroLeitura.getText());
+                n.setEne_tensao_nominal(txtTensaoNominal.getText());
+            } else {
+                n.setCta_mes_referencia(txtContaMes.getText());
+                n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+                n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
+                n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(txtConstMulti.getText())));
+                n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
+                n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
+                n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
+                n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
+                n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
+                n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+                n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
+                n.setEne_grupo_subgrupo(txtGrupoSubgrupo.getText());
+                n.setEne_classe_subclasse(txtClasseSubclasse.getText());
+                n.setEne_tipo_fornecimento(txtFornecimento.getText());
+                n.setEne_modalidade_tarifaria(txtTarifaria.getText());
+                n.setEne_roteiro_leitura(txtRoteiroLeitura.getText());
+                n.setEne_tensao_nominal(txtTensaoNominal.getText());
+            }
+
+            dao_ene.create(n);
+    }
+
     // Métodos Energia
     public static void salvarEnergia1(TextField txtCodigoFiscal, TextField txtGrupoSubgrupo,
             TextField txtClasseSubclasse, TextField txtFornecimento, TextField txtTarifaria,
@@ -228,10 +294,10 @@ public class Main extends Application {
             n.setEne_tensao_nominal(txtTensaoNominal.getText());
     }
 
-    public static void salvarEnergia2(TextField txtContaMes, TextField txtNumeroInstalacao, TextField txtConsumo, TextField txtTotalPagar, TextField txtConstMulti, TextField txtNRmedidor, TextField txtLeituraAnterior, TextField txtLeituraAtual ,TextField txtDataLeituraAnterior, TextField txtDataLeituraAtual, ComboBox comboBandeirasTarifarias ){
+    public static void salvarEnergia2(TextField txtContaMes, String txtNumeroInstalacao, TextField txtConsumo, TextField txtTotalPagar, TextField txtConstMulti, TextField txtNRmedidor, TextField txtLeituraAnterior, TextField txtLeituraAtual ,TextField txtDataLeituraAnterior, TextField txtDataLeituraAtual, ComboBox comboBandeirasTarifarias ){
             if(txtConstMulti.getText().equals("")){
                 n.setCta_mes_referencia(txtContaMes.getText());
-                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
+                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao)));
                 n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
                 n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
                 n.setEne_const_multi(null);
@@ -243,7 +309,7 @@ public class Main extends Application {
                 n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
             } else {
                 n.setCta_mes_referencia(txtContaMes.getText());
-                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
+                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao)));
                 n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
                 n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
                 n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(txtConstMulti.getText())));
