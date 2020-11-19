@@ -18,12 +18,12 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtNomeFornecedor" layoutX="174.0" layoutY="136.0" prefHeight="33.0" prefWidth="330.0" AnchorPane.leftAnchor="174.0">
+      <TextField fx:id="txtCNPJFornecedor" layoutX="174.0" layoutY="71.0" onKeyReleased="#mascaraCNPJFornecedor" prefHeight="33.0" prefWidth="330.0" AnchorPane.leftAnchor="174.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCNPJFornecedor" layoutX="174.0" layoutY="71.0" onKeyReleased="#mascaraCNPJFornecedor" prefHeight="33.0" prefWidth="330.0" AnchorPane.leftAnchor="174.0">
+      <TextField fx:id="txtNomeFornecedor" layoutX="174.0" layoutY="136.0" prefHeight="33.0" prefWidth="330.0" AnchorPane.leftAnchor="174.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>

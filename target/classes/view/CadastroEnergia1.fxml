@@ -155,7 +155,7 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="15.0" layoutY="187.0" text="Complemento*" AnchorPane.topAnchor="187.0">
+      <Label layoutX="15.0" layoutY="187.0" text="Complemento" AnchorPane.topAnchor="187.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>

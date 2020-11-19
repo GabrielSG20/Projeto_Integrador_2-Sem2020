@@ -67,10 +67,17 @@ public class PessoaFisica implements Initializable {
     }
 
     public void changeScreenBuscarCPF(ActionEvent event) {
-        
+        String CPF0 = txtCPF.getText().replace("-","");
+        String CPF1 = CPF0.replace(".","");
+
+        ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CPF1)), txtNomeCompleto, txtEmail);
     }
     public void changeScreenBuscarCNPJ(ActionEvent event) {
-        
+        String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+        String CNPJFornecedor2 = CNPJFornecedor.replace("/","");
+        String CNPJFornecedorFinal = CNPJFornecedor2.replace(".","");
+
+        FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)), txtNomeFornecedor, comboTipo);
     }
 
     public void changeScreenProsseguir(ActionEvent event) {
@@ -97,22 +104,6 @@ public class PessoaFisica implements Initializable {
                 String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
                 String CNPJFornecedor2 = CNPJFornecedor.replace("/","");
                 String CNPJFornecedorFinal = CNPJFornecedor2.replace(".","");
-
-                Cliente c = new Cliente();
-                ClienteDAO dao = new ClienteDAO();
-                c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF)));
-                c.setCli_nome(txtNomeCompleto.getText());
-                c.setEmail(txtEmail.getText());
-
-                dao.create(c);
-
-                Fornecedor f = new Fornecedor();
-                FornecedorDAO daofor = new FornecedorDAO();
-                f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
-                f.setFor_nome(txtNomeFornecedor.getText());
-                f.setFor_tipo(String.valueOf(comboTipo.getValue()));
-
-                daofor.create(f);
 
                 Main.salvarIntalacaoCliente(CPF, CNPJFornecedorFinal);
 

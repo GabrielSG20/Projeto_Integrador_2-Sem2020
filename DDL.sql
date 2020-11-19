@@ -105,10 +105,10 @@ create table agu_agua (
     constraint agu_agua_pk primary key (int_numero_instalacao,cta_mes_referencia)
 );
 
+alter table end_endereco add constraint end_endereco_cep_fk foreign key (cep_cep) references cep_cep(cep_cep);
 alter table cta_conta add constraint instalacao_conta_fk foreign key (int_numero_instalacao) references int_instalacao(int_numero_instalacao);
 alter table int_instalacao add constraint cliente_instalacao_fk foreign key (cli_documento) references cli_cliente(cli_documento);
 alter table int_instalacao add constraint fornecedor_instalacao_fk foreign key (for_cnpj) references for_fornecedor(for_cnpj);
 alter table int_instalacao add constraint endereco_instalacao_fk foreign key (cep_cep, end_numero) references end_endereco(cep_cep,end_numero);
 alter table ene_energia add constraint conta_conta_energia_fk foreign key (int_numero_instalacao, cta_mes_referencia) references cta_conta(int_numero_instalacao, cta_mes_referencia);
 alter table agu_agua add constraint conta_conta_agua_fk foreign key (int_numero_instalacao, cta_mes_referencia) references cta_conta(int_numero_instalacao, cta_mes_referencia);
-alter table end_endereco add constraint end_endereco_cep_fk foreign key (cep_cep) references cep_cep(cep_cep);

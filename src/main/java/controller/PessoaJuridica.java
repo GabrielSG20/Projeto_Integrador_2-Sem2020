@@ -61,10 +61,18 @@ public class PessoaJuridica implements Initializable {
     }
 
     public void changeScreenBuscarCNPJ(ActionEvent event) {
-        
+        String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+        String CNPJCliente2 = CNPJCliente.replace(".","");
+        String CNPJClienteFinal = CNPJCliente2.replace("/","");
+
+        ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)), txtNomeFantasia, txtEmail);
     }
     public void changeScreenBuscarCNPJFornecedor(ActionEvent event) {
-        
+        String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+        String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
+        String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
+
+        FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)), txtNomeFornecedor, comboTipo);
     }
     public void changeScreenPessoaJuridica(ActionEvent event) {
         Main.changeScreen("cadastrarpessoajuridica");
@@ -100,13 +108,6 @@ public class PessoaJuridica implements Initializable {
                 String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
                 String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
 
-                Cliente c = new Cliente();
-                ClienteDAO dao = new ClienteDAO();
-                c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
-                c.setCli_nome(txtNomeFantasia.getText());
-                c.setEmail(txtEmail.getText());
-
-                dao.create(c);
 
                 Fornecedor f = new Fornecedor();
                 FornecedorDAO daofor = new FornecedorDAO();

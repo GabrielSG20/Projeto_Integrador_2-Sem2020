@@ -22,7 +22,7 @@ public class InstalacaoDAO {
         PreparedStatement stmt = null;
         //Inserindo dados na tabela atraves do metodo INSERT
         try {
-            stmt = con.prepareStatement("INSERT INTO int_instalacao (int_numero_instalacao,cli_documento,for_cnpj,end_cep,end_numero) VALUES(?,?,?,?,?)");
+            stmt = con.prepareStatement("INSERT INTO int_instalacao (int_numero_instalacao,cli_documento,for_cnpj,cep_cep,end_numero) VALUES(?,?,?,?,?)");
             stmt.setObject(1, i.getInt_numero_instalacao());
             stmt.setObject(2, i.getCli_documento());
             stmt.setObject(3, i.getFor_cnpj());

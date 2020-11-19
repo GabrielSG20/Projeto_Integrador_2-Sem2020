@@ -26,7 +26,7 @@ public class CadastroEnergia1 implements Initializable {
     @FXML
     private ComboBox comboUF;
     @FXML
-    private TextField txtComplementoEnergia;
+    private TextField txtComplemento;
     @FXML
     private TextField txtCidadeEnergia;
     @FXML
@@ -121,7 +121,7 @@ public class CadastroEnergia1 implements Initializable {
                 EnderecoDAO daoend = new EnderecoDAO();
                 e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
                 e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumeroEnergia.getText())));
-                e.setEnd_complemento(txtComplementoEnergia.getText());
+                e.setEnd_complemento(txtComplemento.getText());
 
                 daoend.create(e);
 
@@ -130,7 +130,7 @@ public class CadastroEnergia1 implements Initializable {
                 Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
                 txtCEPEnergia.setText("");
-                txtComplementoEnergia.setText("");
+                txtComplemento.setText("");
                 txtCidadeEnergia.setText("");
                 txtCodigoFiscalEnergia.setText("");
                 txtEnderecoEnergia.setText("");

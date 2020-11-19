@@ -229,7 +229,7 @@ public class Main extends Application {
     }
 
     public static void salvarEnergia2(TextField txtContaMes, TextField txtNumeroInstalacao, TextField txtConsumo, TextField txtTotalPagar, TextField txtConstMulti, TextField txtNRmedidor, TextField txtLeituraAnterior, TextField txtLeituraAtual ,TextField txtDataLeituraAnterior, TextField txtDataLeituraAtual, ComboBox comboBandeirasTarifarias ){
-            if(txtConstMulti.equals("")){
+            if(txtConstMulti.getText().equals("")){
                 n.setCta_mes_referencia(txtContaMes.getText());
                 n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())));
                 n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
