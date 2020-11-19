@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioEnergia">
+   <children>
+      <ImageView fitHeight="900.0" fitWidth="1100.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" />
+      <TableView fx:id="TableEnergia" layoutX="150.0" layoutY="87.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="150.0">
+        <columns>
+          <TableColumn fx:id="ClnNumInstalacao" prefWidth="135.0" text="Número de instalação" />
+          <TableColumn fx:id="ClnMesReferencia" prefWidth="114.0" text="Mês referência" />
+            <TableColumn fx:id="ClnConsumo" prefWidth="76.0" text="Consumo" />
+            <TableColumn fx:id="ClnNMedidor" prefWidth="112.0" text="N° Medidor" />
+            <TableColumn fx:id="ClnCodigoFiscal" prefWidth="100.0" text="Código fiscal " />
+            <TableColumn fx:id="ClnBandeira" prefWidth="78.0" text="Bandeira" />
+            <TableColumn fx:id="ClnTensaoNominal" prefWidth="103.0" text="Tensão Nominal" />
+            <TableColumn fx:id="ClnValorTotal" text="Valor Total" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtBusca" layoutX="508.0" layoutY="45.0" prefHeight="30.0" prefWidth="300.0" />
+      <Button fx:id="btnBuscar" layoutX="850.0" layoutY="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" text="Buscar" >
+
+     </Button>
+      <Button fx:id="btnVoltar" layoutX="30.0" layoutY="845.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="150.0" text="Voltar" >
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="708.0" layoutY="845.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Editar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDeletar" layoutX="893.0" layoutY="845.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="150.0" text="Deletar">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="150.0" layoutY="108.0" text="Relatório contas de energia">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

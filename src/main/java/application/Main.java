@@ -106,11 +106,11 @@ public class Main extends Application {
             Parent fxmlCadastrarFornecedorPJ = FXMLLoader.load(getClass().getResource("/view/CadastrarFornecedorPJ.fxml"));
             cadastrarfornecedorpjScene = new Scene(fxmlCadastrarFornecedorPJ);
 
-            //Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
-            //relatorioaguaScene = new Scene(fxmlRelatorioAgua);
+            Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
+            relatorioaguaScene = new Scene(fxmlRelatorioAgua);
 
-            //Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
-            //relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
+            Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
+            relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
 
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
@@ -173,12 +173,12 @@ public class Main extends Application {
         if(tela == "cadastrarfornecedorpj"){
             stage.setScene(cadastrarfornecedorpjScene);
         }
-        //if (tela == "relatorioagua"){
-           // stage.setScene(relatorioaguaScene);
-        //}
-        //if (tela == "relatorioenergia"){
-            //stage.setScene(relatorioenergiaScene);
-        //}
+        if (tela == "relatorioagua"){
+            stage.setScene(relatorioaguaScene);
+        }
+        if (tela == "relatorioenergia"){
+            stage.setScene(relatorioenergiaScene);
+        }
     }
 
      // Métodos Conta
