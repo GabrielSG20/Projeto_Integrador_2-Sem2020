@@ -126,6 +126,7 @@ public class PessoaJuridica implements Initializable {
                 txtEmail.setText("");
                 txtNomeFornecedor.setText("");
                 txtCNPJFornecedor.setText("");
+                comboTipo.setValue("");
             } else {
             }    
         }

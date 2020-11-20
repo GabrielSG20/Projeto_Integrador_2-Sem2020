@@ -15,7 +15,7 @@ import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
 
-public class CadastroAgua2 implements Initializable {
+public class CadastroAgua2semEnd implements Initializable {
     @FXML
     private TextField txtTarifaAguaAte10;
     @FXML 
@@ -65,7 +65,7 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("agua1");
+        Main.changeScreen("aguasemend");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
@@ -84,12 +84,11 @@ public class CadastroAgua2 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){   
-
-                Main.salvarConta2(txtVencimento);
-                Main.salvarAgua2(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a31, txtTarifaAgua31a50, txtTarifaAcima50, 
-                txtValorAguaAte10, txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20, txtTarifaEsgoto21a30, txtTarifaEsgoto31a50, 
-                txtTarifaEsgotoAcima50, txtValorEsgotoAte10, txtValorEsgoto11a20, txtVIAgua, txtVIEsgoto, txtTaxaRegulacao, 
-                txtMulta);
+                Main.salvarContaInst3(txtVencimento);
+                Main.salvarAguaInst3(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a31, txtTarifaAgua31a50, 
+                txtTarifaAcima50,txtValorAguaAte10, txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20, 
+                txtTarifaEsgoto21a30, txtTarifaEsgoto31a50, txtTarifaEsgotoAcima50, txtValorEsgotoAte10, 
+                txtValorEsgoto11a20, txtVIAgua, txtVIEsgoto, txtTaxaRegulacao, txtMulta);
                 
                 Main.changeScreen("main");
                 

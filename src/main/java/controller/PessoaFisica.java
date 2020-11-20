@@ -114,6 +114,7 @@ public class PessoaFisica implements Initializable {
                 txtNomeFornecedor.setText("");
                 txtCNPJFornecedor.setText("");
                 txtEmail.setText("");
+                comboTipo.setValue("");
             } else {
             }    
         }

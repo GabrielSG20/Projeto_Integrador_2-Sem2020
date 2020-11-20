@@ -38,33 +38,4 @@ public class ContaDAO {
         }
 
     }
-
-    public static boolean buscarInstalacao(BigInteger i) {
-        
-        Connection con = ConexaoBd.getConnection();
-        ResultSet rs = null;
-        PreparedStatement stmt = null;
-        boolean check = false;
-        //Inserindo dados na tabela atraves do metodo INSERT
-        try {
-            stmt = con.prepareStatement("SELECT * FROM int_instalacao where int_numero_instalacao = ?");
-            stmt.setObject(1, i);
-
-            rs = stmt.executeQuery();
-
-            if (rs.next()) {
-
-                check = true;
-
-            }
-        } catch (SQLException ex) {
-           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
-
-        // Finally usado para fechar a conexao e statement se der ou não erro
-        } finally {
-            ConexaoBd.closeConnection(con, stmt);
-        }
-
-        return check;
-    }
 }

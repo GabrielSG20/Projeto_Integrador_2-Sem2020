@@ -160,6 +160,7 @@ public class CadastroAgua1 implements Initializable {
                 txtHidrometro.setText("");
                 txtTipoLigacao.setText("");
                 txtCidade.setText("");
+                comboUF.setValue("");
             } else {
             }    
         }

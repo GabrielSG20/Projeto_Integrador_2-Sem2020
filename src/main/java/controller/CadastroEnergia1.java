@@ -141,6 +141,7 @@ public class CadastroEnergia1 implements Initializable {
                 txtMTarifaEnergia.setText("");
                 txtRoteiroLeituraEnergia.setText("");
                 txtTensaoNominalEnergia.setText("");
+                comboUF.setValue("");
 
                 Main.changeScreen("energia2Scene");
             } else {

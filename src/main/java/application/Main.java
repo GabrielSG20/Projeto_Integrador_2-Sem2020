@@ -37,6 +37,7 @@ public class Main extends Application {
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
     private static Scene aguasemendScene;
+    private static Scene aguasemend2Scene;
     private static Scene energia1Scene;
     private static Scene energia2Scene;
     private static Scene energiaSemendScene;
@@ -60,6 +61,9 @@ public class Main extends Application {
 
             Parent fxmlCadastroAgua1semEnd = FXMLLoader.load(getClass().getResource("/view/CadastroAgua1semEnd.fxml"));
             aguasemendScene = new Scene(fxmlCadastroAgua1semEnd);
+
+            Parent fxmlCadastroAgua2semEnd = FXMLLoader.load(getClass().getResource("/view/CadastroAgua2semEnd.fxml"));
+            aguasemend2Scene = new Scene(fxmlCadastroAgua2semEnd);
 
             Parent fxmlCadastroEnergia1 = FXMLLoader.load(getClass().getResource("/view/CadastroEnergia1.fxml"));
             energia1Scene = new Scene(fxmlCadastroEnergia1);
@@ -130,6 +134,9 @@ public class Main extends Application {
         
         if (tela == "aguasemend"){
             stage.setScene(aguasemendScene);
+        }
+        if (tela == "aguasemend2"){
+            stage.setScene(aguasemend2Scene);
         }
         if (tela == "energia1Scene"){
             stage.setScene(energia1Scene);
@@ -202,9 +209,12 @@ public class Main extends Application {
             cta.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
     }
 
-    public static void salvarContaInst2(TextField txtVencimento, TextField txtMesReferencia) {
-            cta.setCta_vencimento(txtVencimento.getText());
+    public static void salvarContaInst2(TextField txtMesReferencia) {
             cta.setCta_mes_referencia(txtMesReferencia.getText());
+    }
+
+    public static void salvarContaInst3(TextField txtVencimento) {
+            cta.setCta_vencimento(txtVencimento.getText());
 
             conta_dao.create(cta);
     }
@@ -277,6 +287,55 @@ public class Main extends Application {
             }
 
             dao_ene.create(n);
+    }
+
+    public static void salvarAguaInst1(String RGI) {
+            a = new Agua();
+            agua_dao = new AguaDAO();
+            a.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
+    }
+
+    public static void salvarAguaInst2(TextField txtGR, TextField txtMesReferencia, TextField txtConsumo,
+    TextField txtCodigoCliente,TextField txtNumeroConta, TextField txtLeituraAntData, TextField txtLeituraAtualData, 
+    TextField txtLeituraAntNumero, TextField txtLeituraAtualNumero, TextField txtHidrometro, TextField txtTipoLigacao){
+            a.setAgu_gr(BigInteger.valueOf(Long.parseLong(txtGR.getText())));
+            a.setCta_mes_referencia(txtMesReferencia.getText());
+            a.setAgu_consumo(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+            a.setAgu_codigo_cliente(BigInteger.valueOf(Long.parseLong(txtCodigoCliente.getText())));
+            a.setAgu_numero_conta(BigInteger.valueOf(Long.parseLong(txtNumeroConta.getText())));
+            a.setAgu_data_leitura_anterior(txtLeituraAntData.getText());
+            a.setAgu_data_leitura_atual(txtLeituraAtualData.getText());
+            a.setAgu_leitura_anterior(BigInteger.valueOf(Long.parseLong(txtLeituraAntNumero.getText())));
+            a.setAgu_leitura_atual(BigInteger.valueOf(Long.parseLong(txtLeituraAtualNumero.getText())));
+            a.setAgu_hidrometro(txtHidrometro.getText());
+            a.setAgu_tipo_ligacao(txtTipoLigacao.getText());
+    }
+
+    public static void salvarAguaInst3(TextField txtTarifa10agua, TextField txtTarifa20agua, TextField txtTarifa30agua,
+    TextField txtTarifa50agua, TextField txtTarifaMais50agua,TextField txtValorAgua1, TextField txtValorAgua2, 
+    TextField txtTarifa10esgoto, TextField txtTarifa20esgoto, TextField txtTarifa30esgoto, TextField txtTarifa50esgoto, 
+    TextField txtTarifaMais50esgoto, TextField txtValorEsgoto1, TextField txtValorEsgoto2,TextField txtTotalAgua,
+    TextField txtTotalEsgoto, TextField txtTaxaRegulacao, TextField txtMulta){
+            a.setAgu_tarifa_ate10_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa10agua.getText())));
+            a.setAgu_tarifa_ate20_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa20agua.getText())));
+            a.setAgu_tarifa_ate30_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa30agua.getText())));
+            a.setAgu_tarifa_ate50_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifa50agua.getText())));
+            a.setAgu_tarifa_acima50_agua(BigDecimal.valueOf(Double.parseDouble(txtTarifaMais50agua.getText())));
+            a.setAgu_valor_agua1(BigDecimal.valueOf(Double.parseDouble(txtValorAgua1.getText())));
+            a.setAgu_valor_agua2(BigDecimal.valueOf(Double.parseDouble(txtValorAgua2.getText())));
+            a.setAgu_tarifa_ate10_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa10esgoto.getText())));
+            a.setAgu_tarifa_ate20_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa20esgoto.getText())));
+            a.setAgu_tarifa_ate30_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa30esgoto.getText())));
+            a.setAgu_tarifa_ate50_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifa50esgoto.getText())));
+            a.setAgu_tarifa_acima50_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTarifaMais50esgoto.getText())));
+            a.setAgu_valor_esgoto1(BigDecimal.valueOf(Double.parseDouble(txtValorEsgoto1.getText())));
+            a.setAgu_valor_esgoto2(BigDecimal.valueOf(Double.parseDouble(txtValorEsgoto2.getText())));
+            a.setAgu_valor_agua(BigDecimal.valueOf(Double.parseDouble(txtTotalAgua.getText())));
+            a.setAgu_valor_esgoto(BigDecimal.valueOf(Double.parseDouble(txtTotalEsgoto.getText())));
+            a.setAgu_taxa_regulamentacao(BigDecimal.valueOf(Double.parseDouble(txtTaxaRegulacao.getText())));
+            a.setAgu_multa(BigDecimal.valueOf(Double.parseDouble(txtMulta.getText())));
+            
+            agua_dao.create(a);
     }
 
     // Métodos Energia

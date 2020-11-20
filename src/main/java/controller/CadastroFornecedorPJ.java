@@ -83,6 +83,7 @@ public class CadastroFornecedorPJ implements Initializable {
 
             txtNomeFornecedor.setText("");
             txtCNPJFornecedor.setText("");
+            comboTipo.setValue("");
             } else {
             }    
         }

@@ -92,7 +92,8 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-                Main.salvarContaInst2(txtDataVencimento, txtMesReferenciaEnergia);
+                Main.salvarContaInst2(txtMesReferenciaEnergia);
+                Main.salvarContaInst3(txtDataVencimento);
                 Main.salvarEnergiaInst2(txtMesReferenciaEnergia, txtContaKwH, 
                 txtValorTotalAPagar, txtConstMulti, txtNRdoMedidor, txtLeituraAnterior, 
                 txtLeituraAtual , txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias, 

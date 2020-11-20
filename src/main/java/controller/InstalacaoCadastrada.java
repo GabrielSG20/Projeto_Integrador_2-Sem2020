@@ -5,7 +5,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import util.TextFieldFormatter;
 import application.Main;
-import dao.ContaDAO;
+import dao.InstalacaoDAO;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.event.ActionEvent;
@@ -32,7 +32,7 @@ public class InstalacaoCadastrada implements Initializable{
     }
 
     public void changeScreenBuscarEnergia(ActionEvent event){       
-        if (ContaDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())))){
+        if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())))){
             Main.salvarContaInst1(txtNumeroInstalacao.getText());
             Main.salvarEnergiaInst1(txtNumeroInstalacao.getText());
             Main.changeScreen("energiasemend");
@@ -52,8 +52,9 @@ public class InstalacaoCadastrada implements Initializable{
         String RGI = txtRGI.getText().replace("/","");
 
         
-        if (ContaDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(RGI)))){
-            
+        if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(RGI)))){
+            Main.salvarContaInst1(RGI);
+            Main.salvarAguaInst1(RGI);
             Main.changeScreen("aguasemend");
             txtRGI.setText("");
         } else {

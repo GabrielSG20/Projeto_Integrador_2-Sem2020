@@ -48,17 +48,24 @@ public class CadastroAgua1semEnd implements Initializable  {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("tipoconta");
+        Main.changeScreen("instalacaoCadastradaScene");
     }
 
     public void changeScreenContinuar(ActionEvent event) {
-            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Informações");
         confirmacao.setHeaderText(null);
         confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
 
         Optional<ButtonType> result = confirmacao.showAndWait();
-        if (result.get() == ButtonType.OK){          
+        if (result.get() == ButtonType.OK){
+            Main.salvarContaInst2(txtMesReferencia);
+            Main.salvarAguaInst2(txtGR, txtMesReferencia, txtConsumo,txtCodigoCliente, txtNumeroConta, 
+            txtLeituraAntData, txtLeituraAtualData, txtLeituraAntNumero, txtLeituraAtualNumero, txtHidrometro, 
+            txtTipoLigacao);
+
+            Main.changeScreen("aguasemend2");
+
             txtGR.setText("");
             txtMesReferencia.setText("");
             txtConsumo.setText("");
@@ -70,7 +77,6 @@ public class CadastroAgua1semEnd implements Initializable  {
             txtLeituraAtualNumero.setText("");
             txtHidrometro.setText("");
             txtTipoLigacao.setText("");
-            Main.changeScreen("agua2");
         } else {
             
         }
