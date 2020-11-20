@@ -58,8 +58,8 @@ public class CepDAO {
                 Cep cep = new Cep();
 
                 cep.setCep_cidade(rs.getString("cep_cidade"));
-                cep.setCep_estado("cep_estado");
-                cep.setCep_rua("cep_rua");
+                cep.setCep_estado(rs.getString("cep_estado"));
+                cep.setCep_rua(rs.getString("cep_rua"));
 
                 a.setText(cep.getCep_cidade());
                 b.setText(cep.getCep_rua());
