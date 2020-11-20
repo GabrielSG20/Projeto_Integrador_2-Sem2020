@@ -46,7 +46,6 @@ public class ClienteDAO {
         Connection con = ConexaoBd.getConnection();
         ResultSet rs = null;
         PreparedStatement stmt = null;
-        //Inserindo dados na tabela atraves do metodo INSERT
         try {
             stmt = con.prepareStatement("SELECT * FROM cli_cliente where cli_documento = ?");
             stmt.setObject(1, c);

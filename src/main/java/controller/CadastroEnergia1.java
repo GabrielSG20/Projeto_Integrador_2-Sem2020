@@ -51,9 +51,12 @@ public class CadastroEnergia1 implements Initializable {
     private Button btnVoltarTelaIncial;
     @FXML
     private Button btnRetornarEnergia;
+    @FXML
+    private Button btnBuscarCEP;
+    @FXML
+    private Button btnCadastrarEndereco;
 
-
-     @Override
+    @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
         comboUF.getItems().add("AC");
@@ -89,6 +92,16 @@ public class CadastroEnergia1 implements Initializable {
         Main.changeScreen("tipoconta");
     }
 
+    public void cadastrarNovoEndereco(ActionEvent event){
+        Main.changeScreen("cadastrarenderecoenergia");
+    }
+
+    public void buscarCEP(ActionEvent event){
+        String CEP = txtCEPEnergia.getText().replace("-","");
+
+        CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidadeEnergia, txtEnderecoEnergia, comboUF);
+    }
+
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Cadastro");
@@ -107,15 +120,6 @@ public class CadastroEnergia1 implements Initializable {
         else {
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEPEnergia.getText().replace("-","");
-                
-                Cep c = new Cep();
-                CepDAO daocep = new CepDAO();
-                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
-                c.setCep_rua(txtEnderecoEnergia.getText());
-                c.setCep_estado(String.valueOf(comboUF.getValue()));
-                c.setCep_cidade(txtCidadeEnergia.getText());
-
-                daocep.create(c);
 
                 Endereco e = new Endereco();
                 EnderecoDAO daoend = new EnderecoDAO();

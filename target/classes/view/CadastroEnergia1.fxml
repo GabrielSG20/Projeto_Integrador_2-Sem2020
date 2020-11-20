@@ -20,11 +20,16 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtCEPEnergia" layoutX="133.0" layoutY="52.0" onKeyReleased="#mascaraCEP" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="52.0">
+      <TextField fx:id="txtCEPEnergia" layoutX="133.0" layoutY="52.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="52.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
+      <Button fx:id="btnBuscarCEP" layoutX="353.0" layoutY="52.0" mnemonicParsing="false" onAction="#changeScreenBuscarCEP" prefHeight="30.0" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
       <Label layoutX="61.0" layoutY="100.0" text="Cidade*" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
@@ -35,17 +40,17 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCidadeEnergia" layoutX="133.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="95.0">
+      <TextField fx:id="txtCidadeEnergia" disable="true" layoutX="133.0" layoutY="95.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="95.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtEnderecoEnergia" layoutX="133.0" layoutY="140.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="140.0">
+      <TextField fx:id="txtEnderecoEnergia" disable="true" layoutX="133.0" layoutY="140.0" prefHeight="30.0" prefWidth="200.0" AnchorPane.topAnchor="140.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtNumeroEnergia" layoutX="383.0" layoutY="140.0" prefHeight="30.0" prefWidth="200.0">
+      <TextField fx:id="txtNumeroEnergia" layoutX="383.0" layoutY="140.0" prefHeight="30.0" prefWidth="60.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -155,16 +160,21 @@
             <Font name="System Bold" size="22.0" />
          </font>
       </Label>
-      <Label layoutX="15.0" layoutY="187.0" text="Complemento" AnchorPane.topAnchor="187.0">
+      <Label layoutX="15.0" layoutY="187.0" text="Complemento*" AnchorPane.topAnchor="187.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <ComboBox fx:id="comboUF" layoutX="383.0" layoutY="98.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-radius: 5em;" />
+      <ComboBox fx:id="comboUF" disable="true" layoutX="383.0" layoutY="98.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-radius: 5em;" />
       <Label layoutX="534.0" layoutY="475.0" text="Campos com * são obrigatórios">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font>
       </Label>
+      <Button fx:id="btnCadastrarEndereco" layoutX="429.0" layoutY="52.0" mnemonicParsing="false" onAction="#changeScreenCadastrarEndereco" prefHeight="30.0" style="-fx-background-radius: 5em;" text="Cadastrar novo endereço" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

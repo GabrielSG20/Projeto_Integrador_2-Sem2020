@@ -7,6 +7,7 @@ import classes.Agua;
 import classes.Conta;
 import classes.Energia;
 import classes.Instalacao;
+import controller.CadastrarEnderecoAgua;
 import dao.AguaDAO;
 import dao.ContaDAO;
 import dao.EnergiaDAO;
@@ -42,6 +43,8 @@ public class Main extends Application {
     private static Scene energia2Scene;
     private static Scene energiaSemendScene;
     private static Scene instalacaoCadastradaScene;
+    private static Scene cadastrarEnderecoAguaScene;
+    private static Scene cadastrarEnderecoEnergiaScene;
     private static Energia n;
     private static EnergiaDAO dao_ene;
     private static Conta cta;
@@ -109,6 +112,12 @@ public class Main extends Application {
 
             Parent fxmlCadastrarFornecedorPJ = FXMLLoader.load(getClass().getResource("/view/CadastrarFornecedorPJ.fxml"));
             cadastrarfornecedorpjScene = new Scene(fxmlCadastrarFornecedorPJ);
+
+            Parent fxmlCadastrarEnderecoAgua = FXMLLoader.load(getClass().getResource("/view/CadastrarEnderecoAgua.fxml"));
+            cadastrarEnderecoAguaScene = new Scene(fxmlCadastrarEnderecoAgua);
+
+            Parent fxmlCadastrarEnderecoEnergia = FXMLLoader.load(getClass().getResource("/view/CadastrarEnderecoEnergia.fxml"));
+            cadastrarEnderecoEnergiaScene = new Scene(fxmlCadastrarEnderecoEnergia);
 
             //Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
             //relatorioaguaScene = new Scene(fxmlRelatorioAgua);
@@ -179,6 +188,12 @@ public class Main extends Application {
         }
         if(tela == "cadastrarfornecedorpj"){
             stage.setScene(cadastrarfornecedorpjScene);
+        }
+        if(tela == "cadastrarenderecoagua"){
+            stage.setScene(cadastrarEnderecoAguaScene);
+        }
+        if(tela == "cadastrarenderecoenergia"){
+            stage.setScene(cadastrarEnderecoEnergiaScene);
         }
         //if (tela == "relatorioagua"){
            // stage.setScene(relatorioaguaScene);

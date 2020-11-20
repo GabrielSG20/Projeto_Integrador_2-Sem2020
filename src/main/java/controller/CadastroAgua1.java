@@ -61,6 +61,10 @@ public class CadastroAgua1 implements Initializable {
     private Button btnRetornarAgua1;
     @FXML
     private Button btnSalvarContinuar;
+    @FXML
+    private Button btnBuscarCEP;
+    @FXML
+    private Button btnCadastrarEndereco;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -98,6 +102,16 @@ public class CadastroAgua1 implements Initializable {
         Main.changeScreen("tipoconta");
     }
 
+    public void cadastrarNovoEndereco(ActionEvent event){
+        Main.changeScreen("cadastrarenderecoagua");
+    }
+
+    public void buscarCEP(ActionEvent event){
+        String CEP = txtCEP.getText().replace("-","");
+
+        CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidade, txtEndereco, comboUF);
+    }
+
     public void changeScreenContinuar(ActionEvent event) {
         if(txtRGI.getText().equals("") || txtGR.getText().equals("") || txtCodigoCliente.getText().equals("") || comboUF.getValue().equals("") || txtNumero.getText().equals("") || txtNumeroConta.getText().equals("") || txtMesReferencia.getText().equals("") || txtLeituraAntData.getText().equals("") || txtLeituraAntNumero.getText().equals("") || txtLeituraAtualData.getText().equals("") || txtLeituraAtualNumero.getText().equals("") || txtCidade.getText().equals("") || txtCEP.getText().equals("") || txtEndereco.getText().equals("")) {
             
@@ -117,15 +131,6 @@ public class CadastroAgua1 implements Initializable {
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEP.getText().replace("-","");
                 String RGI = txtRGI.getText().replace("/","");
-
-                Cep c = new Cep();
-                CepDAO daocep = new CepDAO();
-                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
-                c.setCep_rua(txtEndereco.getText());
-                c.setCep_estado(String.valueOf(comboUF.getValue()));
-                c.setCep_cidade(txtCidade.getText());
-
-                daocep.create(c);
 
                 Endereco e = new Endereco();
                 EnderecoDAO daoend = new EnderecoDAO();
