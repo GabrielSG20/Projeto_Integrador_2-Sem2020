@@ -18,7 +18,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblCidade1" layoutX="490.0" layoutY="424.0" text="N°">
+      <Label fx:id="lblCidade1" layoutX="490.0" layoutY="424.0" text="N°*">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
@@ -123,12 +123,12 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="btnBuscarCEP" layoutX="260.0" layoutY="341.0" mnemonicParsing="false" onAction="#changeScreenBuscarCEP" prefHeight="25.0" prefWidth="70.0" style="-fx-background-radius: 53m;" text="Buscar" textFill="#4a8af2">
+      <Button fx:id="btnBuscarCEP" layoutX="260.0" layoutY="341.0" mnemonicParsing="false" onAction="#buscarCEP" prefHeight="25.0" prefWidth="70.0" style="-fx-background-radius: 53m;" text="Buscar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnCadastrarEndereco" layoutX="366.0" layoutY="341.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" text="Cadastrar novo endereço" textFill="#4a8af2">
+      <Button fx:id="btnCadastrarEndereco" layoutX="366.0" layoutY="341.0" mnemonicParsing="false" onAction="#cadastrarNovoEndereco" style="-fx-background-radius: 5em;" text="Cadastrar novo endereço" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
