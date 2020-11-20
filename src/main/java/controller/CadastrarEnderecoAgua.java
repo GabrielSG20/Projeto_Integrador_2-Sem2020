@@ -20,7 +20,7 @@ import classes.Endereco;
 import dao.CepDAO;
 import dao.EnderecoDAO;
 
-public class CadastroEnderecoEnergia implements Initializable {
+public class CadastrarEnderecoAgua implements Initializable {
     @FXML
     private TextField txtEndereco;
     @FXML
@@ -97,6 +97,11 @@ public class CadastroEnderecoEnergia implements Initializable {
                 c.setCep_cidade(txtCidade.getText());
 
                 daocep.create(c);
+
+                Alert cadastro1 = new Alert(Alert.AlertType.INFORMATION);
+                cadastro1.setTitle("Cadastro efetuado com sucesso !");
+                cadastro1.setHeaderText("Seu endereço foi cadastrado com sucesso!");
+                cadastro1.showAndWait();
                 
                 txtEndereco.setText("");
                 txtCEP.setText("");

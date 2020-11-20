@@ -2,6 +2,8 @@ package dao;
 
 import conexao.ConexaoBd;
 import classes.Cep;
+
+import java.math.BigInteger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.control.TextField;
+import javafx.scene.control.ComboBox;
 
 public class CepDAO {
      //Metodo para inserir dados na tabela Cliente
@@ -36,5 +40,38 @@ public class CepDAO {
             ConexaoBd.closeConnection(con, stmt);
         }
     
+    }
+
+    public static void buscar(BigInteger c, TextField a, TextField b, ComboBox combo) {
+        
+        Connection con = ConexaoBd.getConnection();
+        ResultSet rs = null;
+        PreparedStatement stmt = null;
+        try {
+            stmt = con.prepareStatement("SELECT * FROM cep_cep where cep_cep = ?");
+            stmt.setObject(1, c);
+
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                Cep cep = new Cep();
+
+                cep.setCep_cidade(rs.getString("cep_cidade"));
+                cep.setCep_estado(rs.getString("cep_estado"));
+                cep.setCep_rua(rs.getString("cep_rua"));
+
+                a.setText(cep.getCep_cidade());
+                b.setText(cep.getCep_rua());
+                combo.setValue(cep.getCep_estado());
+            }
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+
     }
 }

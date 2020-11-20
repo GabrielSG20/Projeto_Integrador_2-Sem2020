@@ -98,14 +98,18 @@ public class CadastroAgua1 implements Initializable {
         comboUF.getItems().add("DF");
     }
 
-    public void changeScreenBuscarCEP(ActionEvent event){
-        Main.changeScreen("tipoconta");
-    }
-   // public void btnCadastrarEndereco(ActionEvent event){
-     //   Main.changeScreen("");
-   // }
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
+    }
+
+    public void cadastrarNovoEndereco(ActionEvent event){
+        Main.changeScreen("cadastrarenderecoagua");
+    }
+
+    public void buscarCEP(ActionEvent event){
+        String CEP = txtCEP.getText().replace("-","");
+
+        CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidade, txtEndereco, comboUF);
     }
 
     public void changeScreenContinuar(ActionEvent event) {
@@ -161,6 +165,7 @@ public class CadastroAgua1 implements Initializable {
                 txtHidrometro.setText("");
                 txtTipoLigacao.setText("");
                 txtCidade.setText("");
+                comboUF.setValue("");
             } else {
             }    
         }

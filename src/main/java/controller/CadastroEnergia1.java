@@ -56,8 +56,7 @@ public class CadastroEnergia1 implements Initializable {
     @FXML
     private Button btnCadastrarEndereco;
 
-
-     @Override
+    @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
         comboUF.getItems().add("AC");
@@ -92,13 +91,17 @@ public class CadastroEnergia1 implements Initializable {
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
     }
-    public void changeScreenCadastrarEndereco(ActionEvent event){
-        Main.changeScreen("");
+
+    public void cadastrarNovoEndereco(ActionEvent event){
+        Main.changeScreen("cadastrarenderecoenergia");
     }
-    public void changeScreenBuscarCEP(ActionEvent event){
-        Main.changeScreen("");
+
+    public void buscarCEP(ActionEvent event){
+        String CEP = txtCEPEnergia.getText().replace("-","");
+
+        CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidadeEnergia, txtEnderecoEnergia, comboUF);
     }
-    
+
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
         confirmacao.setTitle("Confirmação de Cadastro");
@@ -117,15 +120,6 @@ public class CadastroEnergia1 implements Initializable {
         else {
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEPEnergia.getText().replace("-","");
-                
-                Cep c = new Cep();
-                CepDAO daocep = new CepDAO();
-                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
-                c.setCep_rua(txtEnderecoEnergia.getText());
-                c.setCep_estado(String.valueOf(comboUF.getValue()));
-                c.setCep_cidade(txtCidadeEnergia.getText());
-
-                daocep.create(c);
 
                 Endereco e = new Endereco();
                 EnderecoDAO daoend = new EnderecoDAO();
@@ -151,6 +145,7 @@ public class CadastroEnergia1 implements Initializable {
                 txtMTarifaEnergia.setText("");
                 txtRoteiroLeituraEnergia.setText("");
                 txtTensaoNominalEnergia.setText("");
+                comboUF.setValue("");
 
                 Main.changeScreen("energia2Scene");
             } else {
