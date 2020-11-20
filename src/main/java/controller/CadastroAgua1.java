@@ -101,9 +101,9 @@ public class CadastroAgua1 implements Initializable {
     public void changeScreenBuscarCEP(ActionEvent event){
         Main.changeScreen("tipoconta");
     }
-    public void btnCadastrarEndereco(ActionEvent event){
-        Main.changeScreen("");
-    }
+   // public void btnCadastrarEndereco(ActionEvent event){
+     //   Main.changeScreen("");
+   // }
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
     }
