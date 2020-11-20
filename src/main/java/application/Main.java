@@ -37,6 +37,8 @@ public class Main extends Application {
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
     private static Scene relatorioclienteScene;
+    private static Scene cadastrarenderecoaguaScene;
+    private static Scene cadastrarenderecoenergiaScene;
     private static Scene aguasemendScene;
     private static Scene energia1Scene;
     private static Scene energia2Scene;
@@ -116,6 +118,12 @@ public class Main extends Application {
             Parent fxmlRelatorioCliente = FXMLLoader.load(getClass().getResource("/view/RelatorioCliente.fxml"));
             relatorioclienteScene = new Scene(fxmlRelatorioCliente);
 
+            Parent fxmlCadastrarenderecoagua = FXMLLoader.load(getClass().getResource("/view/CadastrarEnderecoAgua.fxml"));
+            cadastrarenderecoaguaScene = new Scene(fxmlCadastrarenderecoagua);
+
+             Parent fxmlCadastrarenderecoenergia = FXMLLoader.load(getClass().getResource("/view/CadastrarEnderecoEnergia.fxml"));
+            cadastrarenderecoenergiaScene = new Scene(fxmlCadastrarenderecoenergia);
+
 
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
@@ -184,8 +192,14 @@ public class Main extends Application {
         if (tela == "relatorioenergia"){
             stage.setScene(relatorioenergiaScene);
         }
-         if (tela == "relatoriocliente"){
+        if (tela == "relatoriocliente"){
             stage.setScene(relatorioclienteScene);
+        }
+        if (tela == "cadastrarenderecoagua"){
+            stage.setScene(cadastrarenderecoaguaScene);
+        }
+        if (tela == "cadastrarenderecoenergia"){
+            stage.setScene(cadastrarenderecoenergiaScene);
         }
     }
 
