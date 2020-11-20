@@ -128,15 +128,6 @@ public class CadastroAgua1 implements Initializable {
                 String CEP = txtCEP.getText().replace("-","");
                 String RGI = txtRGI.getText().replace("/","");
 
-                Cep c = new Cep();
-                CepDAO daocep = new CepDAO();
-                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
-                c.setCep_rua(txtEndereco.getText());
-                c.setCep_estado(String.valueOf(comboUF.getValue()));
-                c.setCep_cidade(txtCidade.getText());
-
-                daocep.create(c);
-
                 Endereco e = new Endereco();
                 EnderecoDAO daoend = new EnderecoDAO();
                 e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
