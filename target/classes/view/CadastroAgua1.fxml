@@ -128,7 +128,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnCadastrarEndereco" layoutX="366.0" layoutY="341.0" mnemonicParsing="false" onAction="#changeScreenCadastrarEndereco" style="-fx-background-radius: 5em;" text="Cadastrar novo endereço" textFill="#4a8af2">
+      <Button fx:id="btnCadastrarEndereco" layoutX="366.0" layoutY="341.0" mnemonicParsing="false"  style="-fx-background-radius: 5em;" text="Cadastrar novo endereço" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

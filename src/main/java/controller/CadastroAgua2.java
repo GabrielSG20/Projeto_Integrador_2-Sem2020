@@ -21,7 +21,7 @@ public class CadastroAgua2 implements Initializable {
     @FXML 
     private TextField txtTarifaAgua11a20;
     @FXML
-    private TextField txtTarifaAgua21a30;
+    private TextField txtTarifaAgua21a31;
     @FXML
     private TextField txtTarifaAgua31a50;
     @FXML
@@ -86,7 +86,7 @@ public class CadastroAgua2 implements Initializable {
             if (result.get() == ButtonType.OK){   
 
                 Main.salvarConta2(txtVencimento);
-                Main.salvarAgua2(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a30, txtTarifaAgua31a50, txtTarifaAcima50, 
+                Main.salvarAgua2(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a31, txtTarifaAgua31a50, txtTarifaAcima50, 
                 txtValorAguaAte10, txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20, txtTarifaEsgoto21a30, txtTarifaEsgoto31a50, 
                 txtTarifaEsgotoAcima50, txtValorEsgotoAte10, txtValorEsgoto11a20, txtVIAgua, txtVIEsgoto, txtTaxaRegulacao, 
                 txtMulta);
@@ -102,7 +102,7 @@ public class CadastroAgua2 implements Initializable {
                 txtVencimento.setText("");
                 txtTarifaAguaAte10.setText("0");
                 txtTarifaAgua11a20.setText("0");
-                txtTarifaAgua21a30.setText("0");
+                txtTarifaAgua21a31.setText("0");
                 txtTarifaAgua31a50.setText("0");
                 txtTarifaAcima50.setText("0");
                 txtValorAguaAte10.setText("0");

@@ -101,9 +101,9 @@ public class CadastroAgua1 implements Initializable {
     public void changeScreenBuscarCEP(ActionEvent event){
         Main.changeScreen("tipoconta");
     }
-    public void btnCadastrarEndereco(ActionEvent event){
-        Main.changeScreen("");
-    }
+   // public void btnCadastrarEndereco(ActionEvent event){
+     //   Main.changeScreen("");
+   // }
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
     }
@@ -127,15 +127,6 @@ public class CadastroAgua1 implements Initializable {
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEP.getText().replace("-","");
                 String RGI = txtRGI.getText().replace("/","");
-
-                Cep c = new Cep();
-                CepDAO daocep = new CepDAO();
-                c.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
-                c.setCep_rua(txtEndereco.getText());
-                c.setCep_estado(String.valueOf(comboUF.getValue()));
-                c.setCep_cidade(txtCidade.getText());
-
-                daocep.create(c);
 
                 Endereco e = new Endereco();
                 EnderecoDAO daoend = new EnderecoDAO();
