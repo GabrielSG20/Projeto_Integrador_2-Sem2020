@@ -27,12 +27,12 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnEditar" layoutX="519.0" layoutY="490.0" mnemonicParsing="false" onAction="#changeScreenEditar" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Editar" textFill="#4a8af2">
+      <Button fx:id="btnEditar" layoutX="519.0" layoutY="490.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Editar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnDeletar" layoutX="675.0" layoutY="490.0" mnemonicParsing="false" onAction="#changeScreenDeletar" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Deletar" textFill="#4a8af2" AnchorPane.rightAnchor="15.0">
+      <Button fx:id="btnDeletar" layoutX="675.0" layoutY="490.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Deletar" textFill="#4a8af2" AnchorPane.rightAnchor="15.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
@@ -47,7 +47,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="btnBuscar" layoutX="680.0" layoutY="23.0" mnemonicParsing="false" onAction="#changeScreenBuscar" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
+      <Button fx:id="btnBuscar" layoutX="680.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
