@@ -20,6 +20,3 @@ import classes.Endereco;
 import dao.CepDAO;
 import dao.EnderecoDAO;
 
-public class CadastroEndereco implements Initializable{
-    
-}
