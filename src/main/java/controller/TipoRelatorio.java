@@ -16,7 +16,10 @@ public class TipoRelatorio implements Initializable {
 	   @FXML
        private Button btnRelatorioAgua;
        @FXML
-	   private Button btnRetornarTipoR;
+       private Button btnRetornarTipoR;
+       @FXML
+       private Button btnRelatorioCliente;
+       
 	   
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -30,6 +33,9 @@ public class TipoRelatorio implements Initializable {
     public void changeScreenRelatorioLuz(ActionEvent event){
         Main.changeScreen("relatorioenergia");
     }
+    public void changeScreenRelatorioCliente(ActionEvent event){
+        Main.changeScreen("relatoriocliente");
+	}
     
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
