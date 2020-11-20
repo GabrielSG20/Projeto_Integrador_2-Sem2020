@@ -165,7 +165,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <ComboBox fx:id="comboUF" disable="true" layoutX="383.0" layoutY="98.0" prefHeight="25.0" prefWidth="60.0" style="-fx-background-radius: 5em;" />
+      <ComboBox fx:id="comboUF" disable="true" layoutX="383.0" layoutY="98.0" prefHeight="25.0" prefWidth="64.0" style="-fx-background-radius: 5em;" />
       <Label layoutX="534.0" layoutY="475.0" text="Campos com * são obrigatórios">
          <font>
             <Font name="Arial Bold" size="12.0" />
