@@ -15,7 +15,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" layoutY="1.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Desktop/Faculdade/Banco/Projeto%20integrador/test.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <Label layoutX="14.0" layoutY="14.0" prefHeight="33.0" prefWidth="305.0" text="Cadastrar novo endereço" AnchorPane.leftAnchor="14.0">

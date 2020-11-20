@@ -11,38 +11,38 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/image/TECSUS.png" />
+            <Image url="image/TECSUS.png" />
          </image>
       </ImageView>
-      <Text layoutX="203.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de Relatório">
+      <Text layoutX="207.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de Relatório">
          <font>
             <Font name="Arial" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="btnRelatorioLuz" ellipsisString="" layoutX="147.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenRelatorioLuz" prefHeight="150.0" prefWidth="150.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="150.0">
+      <Button fx:id="btnRelatorioLuz" ellipsisString="" layoutX="125.0" layoutY="81.0" mnemonicParsing="false" onAction="#changeScreenRelatorioLuz" prefHeight="110.0" prefWidth="96.0" AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="81.0">
          <graphic>
-            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="96.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/image/Energia.jpeg" />
+                  <Image url="image/Energia.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Text layoutX="492.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água">
+      <Text layoutX="270.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água" AnchorPane.leftAnchor="270.0">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="120.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de luz">
+      <Text layoutX="279.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de luz" AnchorPane.leftAnchor="270.0">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="btnRelatorioAgua" ellipsisString="" layoutX="630.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenRelatorioAgua" prefHeight="150.0" prefWidth="150.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="150.0">
+      <Button fx:id="btnRelatorioAgua" ellipsisString="" layoutX="125.0" layoutY="213.0" mnemonicParsing="false" onAction="#changeScreenRelatorioAgua" prefHeight="110.0" prefWidth="100.0" AnchorPane.leftAnchor="125.0" AnchorPane.rightAnchor="577.0" AnchorPane.topAnchor="213.0">
          <graphic>
-            <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="/image/Agua.jpeg" />
+                  <Image url="image/Agua.jpeg" />
                </image>
             </ImageView>
          </graphic>
@@ -52,5 +52,19 @@
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
+      <Button fx:id="btnRelatorioCliente" ellipsisString="" layoutX="123.0" layoutY="347.0" mnemonicParsing="false" onAction="#changeScreenRelatorioCliente" prefHeight="110.0" prefWidth="100.0" AnchorPane.leftAnchor="123.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image/Agua.jpeg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="267.0" layoutY="389.0" text="Relatório de cliente" AnchorPane.leftAnchor="270.0">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
