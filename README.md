@@ -40,6 +40,8 @@ Eu como analista de água ou energia desejo obter acesso aos relatórios de cons
 2. Na segunda sprint, a equipe realizou o desenvolvimento das telas para o fluxo de cadastro de contas de uma nova instalação, com JavaFX para parte visual (front-end) e Java para lógica entre as telas (back-end). Além de elaborar a modelagem do Banco de Dados que será implementado em futuras sprints.<br/> Duração: 28/09/2020 até 18/10/2020.
 3. Na terceira sprint, a equipe desenvolveu os Users Stories 2 e 3 do Product Backlog, implementou o banco de dados em MySQL, realizou ajustes necessários nas telas de cadastro, além de dar inicio ao desenvolvimento da documentação (Aplicativo executável e especificações mínimas necessárias da máquina) do projeto.<br/>
 Duração: 19/10/2020 até 08/11/2020.
+4. Na quarta sprint, a equipe realizou o Users Stories 4 e 5 do product Backlog, finalizou a documentação e  adicionou um novo fluxo para instalações já cadastradas. Atribuindo as funcionalidades de busca por CPF, CNPJ e CEP de cliente, além de entregar o relatório (água, energia e cliente) e o executável do projeto em suas formas finais.<br/>
+Duração: 09/11/2020 até 29/11/2020
 
 ### :dart: Entregas
 1. Apresentação da Equipe Trinity e da problemática do trabalho. Além da demonstração dos Wireframes (representação das telas do software) e Product Backlog (funcionalidades do sistema). Disponíveis nos seguintes links:
