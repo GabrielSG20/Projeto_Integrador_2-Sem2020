@@ -226,7 +226,7 @@ public class Main extends Application {
     }
 
     public static void salvarIntalacaoEndereco(String txtCEP, TextField txtNumero) {
-            i.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP)));
+            i.setCep_cep(BigInteger.valueOf(Long.parseLong(txtCEP)));
             i.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
     }
     

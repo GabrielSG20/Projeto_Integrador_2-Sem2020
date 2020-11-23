@@ -56,7 +56,16 @@ public class InstalacaoDAO {
 
                 Instalacao instalacao = new Instalacao();
 
+                instalacao.setInt_numero_instalacao(BigInteger.valueOf(rs.getLong("int_numero_instalacao")));
+                instalacao.setCli_nome(rs.getString("cli_cliente"));
+                instalacao.setCli_documento(BigInteger.valueOf(rs.getLong("cli_documento")));
+                instalacao.setFor_nome(rs.getString("for_nome"));
+                instalacao.setFor_cnpj(BigInteger.valueOf(rs.getLong("for_cnpj")));
+                instalacao.setCep_cep(BigInteger.valueOf(rs.getLong("cep_cep")));
+                instalacao.setCep_rua(rs.getString("cep_rua"));
+                instalacao.setEnd_numero(BigInteger.valueOf(rs.getLong("end_numero")));
 
+                instalacoes.add(instalacao);
             }
 
         } catch (SQLException ex) {

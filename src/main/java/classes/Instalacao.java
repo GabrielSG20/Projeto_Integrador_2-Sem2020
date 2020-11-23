@@ -10,7 +10,7 @@ public class Instalacao {
 	private String for_nome;
 	private BigInteger for_cnpj;
 	private BigInteger cep_cep;
-	private BigInteger cep_rua;
+	private String cep_rua;
     private BigInteger end_numero;
     
 	public BigInteger getInt_numero_instalacao() {
@@ -49,10 +49,10 @@ public class Instalacao {
 	public void setCep_cep(BigInteger cep_cep) {
 		this.cep_cep = cep_cep;
 	}
-	public BigInteger getCep_rua() {
+	public String getCep_rua() {
 		return cep_rua;
 	}
-	public void setCep_rua(BigInteger cep_rua) {
+	public void setCep_rua(String cep_rua) {
 		this.cep_rua = cep_rua;
 	}
 	public BigInteger getEnd_numero() {
