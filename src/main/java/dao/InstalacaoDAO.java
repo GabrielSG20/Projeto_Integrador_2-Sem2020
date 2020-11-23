@@ -49,13 +49,13 @@ public class InstalacaoDAO {
         List<Instalacao> instalacoes = new ArrayList<>();
 
         try {
-            stmt = con.prepareStatement("SELECT int_numero_instalacao,cli_nome,cli_cliente.cli_documento,for_nome,for_fornecedor.for_cnpj,int_instalacao.cep_cep,cep_cep.cep_rua,int_instalacao.end_numero FROM cli_cliente,int_instalacao,for_fornecedor,cep_cep,end_endereco WHERE cli_cliente.cli_documento = int_instalacao.cli_documento and for_fornecedor.for_cnpj = int_instalacao.for_cnpj and int_instalacao.cep_cep = cep_cep.cep_cep and int_instalacao.end_numero = end_endereco.end_numero");
-
+            stmt = con.prepareStatement("SELECT int_numero_instalacao,cli_nome,cli_cliente.cli_documento,for_nome,for_fornecedor.for_cnpj,int_instalacao.cep_cep,cep_cep.cep_rua,int_instalacao.end_numero FROM cli_cliente,int_instalacao,for_fornecedor,end_endereco,cep_cep WHERE cli_cliente.cli_documento = int_instalacao.cli_documento and for_fornecedor.for_cnpj = int_instalacao.for_cnpj and int_instalacao.cep_cep = end_endereco.cep_cep and int_instalacao.end_numero = end_endereco.end_numero and end_endereco.cep_cep = cep_cep.cep_cep");
             rs = stmt.executeQuery();
 
             while (rs.next()) {
 
-    
+                Instalacao instalacao = new Instalacao();
+
 
             }
 
