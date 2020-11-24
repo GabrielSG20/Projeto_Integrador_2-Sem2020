@@ -45,7 +45,7 @@ public class RelatorioCliente implements Initializable {
 
     public void carregarTableViewInstalacao(){
         ClNumeroInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
-        ClNomeCliente.setCellValueFactory(new PropertyValueFactory<>("cli_cliente"));
+        ClNomeCliente.setCellValueFactory(new PropertyValueFactory<>("cli_nome"));
         ClDocumentoCliente.setCellValueFactory(new PropertyValueFactory<>("cli_documento"));
         ClNomeFornecedor.setCellValueFactory(new PropertyValueFactory<>("for_nome"));
         ClCNPJ.setCellValueFactory(new PropertyValueFactory<>("for_cnpj"));

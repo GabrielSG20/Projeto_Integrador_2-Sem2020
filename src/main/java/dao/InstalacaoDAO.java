@@ -57,7 +57,7 @@ public class InstalacaoDAO {
                 Instalacao instalacao = new Instalacao();
 
                 instalacao.setInt_numero_instalacao(BigInteger.valueOf(rs.getLong("int_numero_instalacao")));
-                instalacao.setCli_nome(rs.getString("cli_cliente"));
+                instalacao.setCli_nome(rs.getString("cli_nome"));
                 instalacao.setCli_documento(BigInteger.valueOf(rs.getLong("cli_documento")));
                 instalacao.setFor_nome(rs.getString("for_nome"));
                 instalacao.setFor_cnpj(BigInteger.valueOf(rs.getLong("for_cnpj")));
