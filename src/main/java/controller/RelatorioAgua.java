@@ -14,8 +14,6 @@ import java.util.List;
 import java.util.ResourceBundle;
 import classes.Agua;
 
-
-
 public class RelatorioAgua implements Initializable {
     @FXML
     private TableView <Agua> TableAgua;
@@ -40,8 +38,7 @@ public class RelatorioAgua implements Initializable {
   
     private List<Agua> listAgua;
     private ObservableList<Agua> observableListAgua;
-   
-    
+       
     @Override
     public void initialize(URL url, ResourceBundle resources) {
         

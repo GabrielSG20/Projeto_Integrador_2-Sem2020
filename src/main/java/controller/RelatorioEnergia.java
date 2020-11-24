@@ -1,5 +1,4 @@
 package controller;
-
 import dao.EnergiaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -33,7 +32,6 @@ public class RelatorioEnergia implements Initializable {
     @FXML
     private TableColumn <Energia, BigDecimal> ClnValorTotal;
 
-
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
    
@@ -57,4 +55,5 @@ public class RelatorioEnergia implements Initializable {
         observableListEnergia = FXCollections.observableArrayList(listEnergia);
         TableAgua.setItems(observableListEnergia);
     }
+
 }

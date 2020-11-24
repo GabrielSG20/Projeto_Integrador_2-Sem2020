@@ -37,6 +37,9 @@ public class Main extends Application {
     private static Scene tiporelatorioScene;
     private static Scene relatorioaguaScene;
     private static Scene relatorioenergiaScene;
+    private static Scene relatorioclienteScene;
+    private static Scene cadastrarenderecoaguaScene;
+    private static Scene cadastrarenderecoenergiaScene;
     private static Scene aguasemendScene;
     private static Scene aguasemend2Scene;
     private static Scene energia1Scene;
@@ -119,11 +122,14 @@ public class Main extends Application {
             Parent fxmlCadastrarEnderecoEnergia = FXMLLoader.load(getClass().getResource("/view/CadastrarEnderecoEnergia.fxml"));
             cadastrarEnderecoEnergiaScene = new Scene(fxmlCadastrarEnderecoEnergia);
 
-            //Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
-            //relatorioaguaScene = new Scene(fxmlRelatorioAgua);
+            Parent fxmlRelatorioAgua = FXMLLoader.load(getClass().getResource("/view/RelatorioAgua.fxml"));
+            relatorioaguaScene = new Scene(fxmlRelatorioAgua);
 
-            //Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
-            //relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
+            Parent fxmlRelatorioEnergia = FXMLLoader.load(getClass().getResource("/view/RelatorioEnergia.fxml"));
+            relatorioenergiaScene = new Scene(fxmlRelatorioEnergia);
+
+            Parent fxmlRelatorioCliente = FXMLLoader.load(getClass().getResource("/view/RelatorioCliente.fxml"));
+            relatorioclienteScene = new Scene(fxmlRelatorioCliente);
 
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
@@ -195,12 +201,15 @@ public class Main extends Application {
         if(tela == "cadastrarenderecoenergia"){
             stage.setScene(cadastrarEnderecoEnergiaScene);
         }
-        //if (tela == "relatorioagua"){
-           // stage.setScene(relatorioaguaScene);
-        //}
-        //if (tela == "relatorioenergia"){
-            //stage.setScene(relatorioenergiaScene);
-        //}
+        if (tela == "relatorioagua"){
+            stage.setScene(relatorioaguaScene);
+        }
+        if (tela == "relatorioenergia"){
+            stage.setScene(relatorioenergiaScene);
+        }
+        if (tela == "relatoriocliente"){
+            stage.setScene(relatorioclienteScene);
+        }
     }
 
      // Métodos Conta
@@ -243,7 +252,7 @@ public class Main extends Application {
     }
 
     public static void salvarIntalacaoEndereco(String txtCEP, TextField txtNumero) {
-            i.setEnd_cep(BigInteger.valueOf(Long.parseLong(txtCEP)));
+            i.setCep_cep(BigInteger.valueOf(Long.parseLong(txtCEP)));
             i.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
     }
     

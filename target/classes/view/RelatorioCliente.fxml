@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioCliente">
+   <children>
+      <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" />
+      <TableView fx:id="TableInstalacao" layoutX="62.0" layoutY="61.0" prefHeight="448.0" prefWidth="687.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+        <columns>
+          <TableColumn fx:id="ClNumeroInstalacao" prefWidth="131.0" text="Numero de instalação" />
+          <TableColumn fx:id="ClNomeCliente" prefWidth="82.0" text="Nome cliente" />
+            <TableColumn fx:id="ClDocumentoCliente" prefWidth="111.0" text="Documento cliente" />
+            <TableColumn fx:id="ClNomeFornecedor" prefWidth="104.0" text="Nome fornecedor" />
+            <TableColumn fx:id="ClCNPJ" prefWidth="102.0" text="CNPJ fornecedor" />
+            <TableColumn fx:id="ClCEP" prefWidth="67.0" text="CEP" />
+            <TableColumn fx:id="ClRua" prefWidth="104.0" text="Rua" />
+            <TableColumn fx:id="ClNumero" prefWidth="57.0" text="N°" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnRetornar" layoutX="14.0" layoutY="489.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="519.0" layoutY="490.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Editar" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDeletar" layoutX="675.0" layoutY="490.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Deletar" textFill="#4a8af2" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="15.0" layoutY="28.0" text="Relatórios cliente">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBuscaNumero" layoutX="382.0" layoutY="25.0" prefHeight="30.0" prefWidth="283.0" promptText="Numero de instalação">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </TextField>
+      <Button fx:id="btnBuscar" layoutX="680.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
