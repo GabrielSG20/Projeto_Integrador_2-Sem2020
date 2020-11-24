@@ -90,6 +90,20 @@ public class CadastroEnergia1 implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
+
+        txtCEPEnergia.setText("");
+        txtComplemento.setText("");
+        txtCidadeEnergia.setText("");
+        txtCodigoFiscalEnergia.setText("");
+        txtEnderecoEnergia.setText("");
+        txtNumeroEnergia.setText("");
+        txtGrupoSubgrupoEnergia.setText("");
+        txtClasseSubclasseEnergia.setText("");
+        txtFornecimentoEnergia.setText("");
+        txtMTarifaEnergia.setText("");
+        txtRoteiroLeituraEnergia.setText("");
+        txtTensaoNominalEnergia.setText("");
+        comboUF.setValue("");
     }
 
     public void cadastrarNovoEndereco(ActionEvent event){
@@ -98,8 +112,18 @@ public class CadastroEnergia1 implements Initializable {
 
     public void buscarCEP(ActionEvent event){
         String CEP = txtCEPEnergia.getText().replace("-","");
+        if (CepDAO.validacaoCEP(BigInteger.valueOf(Long.parseLong(CEP)))){
 
-        CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidadeEnergia, txtEnderecoEnergia, comboUF);
+            CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidadeEnergia, txtEnderecoEnergia, comboUF);
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("CEP não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("Digite um CEP válido!");
+            Alert.showAndWait();
+
+            txtCEPEnergia.setText("");
+        }
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {

@@ -68,6 +68,24 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("instalacaoCadastradaScene");
+
+        txtMesReferenciaEnergia.setText("");
+        txtContaKwH.setText("");
+        txtDataVencimento.setText("");
+        txtDataLeituraAnterior.setText("");
+        txtDataLeituraAtual.setText("");
+        txtNRdoMedidor.setText("");
+        txtConstMulti.setText("");
+        txtValorTotalAPagar.setText("");
+        txtLeituraAnterior.setText("");
+        txtLeituraAtual.setText("");
+        txtCodigoFiscal.setText("");
+        txtGrupoSubgrupo.setText("");
+        txtFornecimento.setText("");
+        txtClasseSubclasse.setText("");
+        txtTensaoNominal.setText("");
+        txtMTarifaria.setText("");
+        txtRoteiroLeitura.setText("");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {

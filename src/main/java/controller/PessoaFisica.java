@@ -57,6 +57,13 @@ public class PessoaFisica implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
+
+        txtNomeCompleto.setText("");
+        txtCPF.setText("");
+        txtNomeFornecedor.setText("");
+        txtCNPJFornecedor.setText("");
+        txtEmail.setText("");
+        comboTipo.setValue("");
     }
     public void changeScreenCadastrarPessoaFisica(ActionEvent event) {
         Main.changeScreen("cadastrarpessoafisica");
@@ -69,15 +76,33 @@ public class PessoaFisica implements Initializable {
     public void changeScreenBuscarCPF(ActionEvent event) {
         String CPF0 = txtCPF.getText().replace("-","");
         String CPF1 = CPF0.replace(".","");
+        if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(CPF1)))){
 
-        ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CPF1)), txtNomeCompleto, txtEmail);
+            ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CPF1)), txtNomeCompleto, txtEmail);
+        } else {
+            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+            cadastro.setTitle("CPF não encontrado");
+            cadastro.setHeaderText("Digite um CPF válido!");
+            cadastro.showAndWait();
+
+            txtCPF.setText("");
+        }
     }
     public void changeScreenBuscarCNPJ(ActionEvent event) {
         String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
         String CNPJFornecedor2 = CNPJFornecedor.replace("/","");
         String CNPJFornecedorFinal = CNPJFornecedor2.replace(".","");
+        if (FornecedorDAO.validacaoFornecedor(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)))){
 
-        FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)), txtNomeFornecedor, comboTipo);
+            FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)), txtNomeFornecedor, comboTipo);
+        } else {
+            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+            cadastro.setTitle("CNPJ não encontrado");
+            cadastro.setHeaderText("Digite um CNPJ válido!");
+            cadastro.showAndWait();
+            
+            txtCNPJFornecedor.setText("");
+        }
     }
 
     public void changeScreenProsseguir(ActionEvent event) {

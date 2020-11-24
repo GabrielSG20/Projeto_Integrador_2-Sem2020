@@ -38,6 +38,10 @@ public class CadastroPessoaFisica implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("pf");
+
+        txtNomeCompleto.setText("");
+        txtCPF.setText("");
+        txtEmail.setText("");
     }
 
 
@@ -59,25 +63,38 @@ public class CadastroPessoaFisica implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-            String CPF0 = txtCPF.getText().replace("-","");
-            String CPF1 = CPF0.replace(".","");
+                String CPF0 = txtCPF.getText().replace("-","");
+                String CPF1 = CPF0.replace(".","");
+                if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(CPF1)))){
 
-            Cliente c = new Cliente();
-            ClienteDAO dao = new ClienteDAO();
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF1)));
-            c.setCli_nome(txtNomeCompleto.getText());
-            c.setEmail(txtEmail.getText());
+                    Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+                    cadastro.setTitle("CPF já cadastrado");
+                    cadastro.setHeaderText("CPF do cliente já existe!");
+                    cadastro.showAndWait();
 
-            dao.create(c);
+                    txtNomeCompleto.setText("");
+                    txtCPF.setText("");
+                    txtEmail.setText("");
 
-            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
-            cadastro.setTitle("Cadastro efetuado com sucesso !");
-            cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
-            cadastro.showAndWait();
+                } else {
+                    Cliente c = new Cliente();
+                    ClienteDAO dao = new ClienteDAO();
+                    c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF1)));
+                    c.setCli_nome(txtNomeCompleto.getText());
+                    c.setEmail(txtEmail.getText());
 
-            txtNomeCompleto.setText("");
-            txtCPF.setText("");
-            txtEmail.setText("");
+                    dao.create(c);
+
+                    Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+                    cadastro.setTitle("Cadastro efetuado com sucesso !");
+                    cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
+                    cadastro.showAndWait();
+
+                    txtNomeCompleto.setText("");
+                    txtCPF.setText("");
+                    txtEmail.setText("");
+                }
+
             } else {
 
             }    

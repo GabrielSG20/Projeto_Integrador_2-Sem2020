@@ -68,6 +68,11 @@ public class CadastrarEnderecoEnergia implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("agua1");
+
+        txtEndereco.setText("");
+        txtCEP.setText("");
+        txtCidade.setText("");
+        comboUF.setValue("");
     }
 
     public void changeScreenCadastrar(ActionEvent event) {
@@ -77,7 +82,7 @@ public class CadastrarEnderecoEnergia implements Initializable {
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
             Alert.setContentText("PREENCHA OS CAMPOS COM *");
-            Alert.showAndWait();
+            Alert.showAndWait(); 
         }
         else {
             Alert confirmacao = new Alert(AlertType.CONFIRMATION);
@@ -88,6 +93,19 @@ public class CadastrarEnderecoEnergia implements Initializable {
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEP.getText().replace("-","");
+                if (CepDAO.validacaoCEP(BigInteger.valueOf(Long.parseLong(CEP)))){
+
+                    Alert Alert = new Alert(AlertType.INFORMATION);
+                    Alert.setTitle("CEP já cadastrado");
+                    Alert.setHeaderText(null);
+                    Alert.setContentText("Digite um CEP válido!");
+                    Alert.showAndWait();
+
+                    txtEndereco.setText("");
+                    txtCEP.setText("");
+                    txtCidade.setText("");
+                    comboUF.setValue("");
+                } else {
 
                 Cep c = new Cep();
                 CepDAO daocep = new CepDAO();
@@ -107,6 +125,7 @@ public class CadastrarEnderecoEnergia implements Initializable {
                 txtCEP.setText("");
                 txtCidade.setText("");
                 comboUF.setValue("");
+                }
             } else {
             }    
         }

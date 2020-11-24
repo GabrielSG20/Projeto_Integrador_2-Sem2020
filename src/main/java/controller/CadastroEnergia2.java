@@ -19,6 +19,7 @@ import util.TextFieldFormatter;
 import application.Main;
 import classes.Energia;
 import dao.EnergiaDAO;
+import dao.InstalacaoDAO;
 
 public class CadastroEnergia2 implements Initializable {
     @FXML
@@ -81,32 +82,40 @@ public class CadastroEnergia2 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-                String NumeroInstalacao = txtNumeroInstalacao.getText();        
+                if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())))){
+                    Alert Alert = new Alert(AlertType.INFORMATION);
+                    Alert.setTitle("Número de Instalação já Existente");
+                    Alert.setHeaderText(null);
+                    Alert.setContentText("Digite um Número de Instalação válido!");
+                    Alert.showAndWait();
+                } else {
+                    String NumeroInstalacao = txtNumeroInstalacao.getText();        
 
-                Main.salvarIntalacaoNumero(NumeroInstalacao);
-                Main.salvarConta1(NumeroInstalacao, txtMesReferenciaEnergia);
-                Main.salvarConta2(txtDataVencimento);
-                Main.salvarEnergia2(txtMesReferenciaEnergia, txtNumeroInstalacao.getText(), txtConsumodoMesKWH, txtValorTotal, txtConstMulti, txtNRdoMedidor, txtLeituraAnteriorEnergia, txtLeituraAtualEnergia, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
-                
-                Main.changeScreen("main");
-                
-                txtMesReferenciaEnergia.setText("");
-                txtNumeroInstalacao.setText("");
-                txtConsumodoMesKWH.setText("");
-                txtDataVencimento.setText("");
-                txtValorTotal.setText("");
-                txtConstMulti.setText("");
-                txtNRdoMedidor.setText("");
-                txtLeituraAnteriorEnergia.setText("");
-                txtLeituraAtualEnergia.setText("");
-                txtDataLeituraAnterior.setText("");
-                txtDataLeituraAtual.setText("");
-                
-                Alert Alert = new Alert(AlertType.INFORMATION);
-                Alert.setTitle("Confirmação de Cadastro");
-                Alert.setHeaderText(null);
-                Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
-                Alert.showAndWait();
+                    Main.salvarIntalacaoNumero(NumeroInstalacao);
+                    Main.salvarConta1(NumeroInstalacao, txtMesReferenciaEnergia);
+                    Main.salvarConta2(txtDataVencimento);
+                    Main.salvarEnergia2(txtMesReferenciaEnergia, txtNumeroInstalacao.getText(), txtConsumodoMesKWH, txtValorTotal, txtConstMulti, txtNRdoMedidor, txtLeituraAnteriorEnergia, txtLeituraAtualEnergia, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
+                    
+                    Main.changeScreen("main");
+                    
+                    txtMesReferenciaEnergia.setText("");
+                    txtNumeroInstalacao.setText("");
+                    txtConsumodoMesKWH.setText("");
+                    txtDataVencimento.setText("");
+                    txtValorTotal.setText("");
+                    txtConstMulti.setText("");
+                    txtNRdoMedidor.setText("");
+                    txtLeituraAnteriorEnergia.setText("");
+                    txtLeituraAtualEnergia.setText("");
+                    txtDataLeituraAnterior.setText("");
+                    txtDataLeituraAtual.setText("");
+                    
+                    Alert Alert = new Alert(AlertType.INFORMATION);
+                    Alert.setTitle("Confirmação de Cadastro");
+                    Alert.setHeaderText(null);
+                    Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
+                    Alert.showAndWait();
+                }
             } else {
             }    
         }
@@ -137,4 +146,12 @@ public class CadastroEnergia2 implements Initializable {
         tff.setTf(txtDataLeituraAtual);
         tff.formatter();
     }
-}
+    @FXML
+    private void mascaraMesReferencia(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtMesReferenciaEnergia);
+        tff.formatter();
+        }
+    }

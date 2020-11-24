@@ -74,4 +74,33 @@ public class CepDAO {
         }
 
     }
+
+    public static boolean validacaoCEP(BigInteger c) {
+        
+        Connection con = ConexaoBd.getConnection();
+        ResultSet rs = null;
+        PreparedStatement stmt = null;
+        boolean check = false;
+        
+        try {
+            stmt = con.prepareStatement("SELECT * FROM cep_cep where cep_cep = ?");
+            stmt.setObject(1, c);
+
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+
+                check = true;
+
+            }
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+
+        return check;
+    }
 }

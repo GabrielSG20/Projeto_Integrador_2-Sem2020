@@ -70,6 +70,9 @@ public class InstalacaoCadastrada implements Initializable{
 
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
+
+        txtRGI.setText("");
+        txtNumeroInstalacao.setText("");
     }
 
 // Mascaras

@@ -58,21 +58,46 @@ public class PessoaJuridica implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("main");
+
+        txtNomeFantasia.setText("");
+        txtCNPJEmpresa.setText("");
+        txtEmail.setText("");
+        txtNomeFornecedor.setText("");
+        txtCNPJFornecedor.setText("");
+        comboTipo.setValue("");
     }
 
     public void changeScreenBuscarCNPJ(ActionEvent event) {
         String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
         String CNPJCliente2 = CNPJCliente.replace(".","");
         String CNPJClienteFinal = CNPJCliente2.replace("/","");
+        if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)))){
 
-        ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)), txtNomeFantasia, txtEmail);
+            ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)), txtNomeFantasia, txtEmail);
+        } else {
+            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+            cadastro.setTitle("CNPJ não encontrado");
+            cadastro.setHeaderText("Digite um CNPJ válido!");
+            cadastro.showAndWait();
+
+            txtCNPJEmpresa.setText("");
+        }
     }
     public void changeScreenBuscarCNPJFornecedor(ActionEvent event) {
         String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
         String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
         String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
+        if (FornecedorDAO.validacaoFornecedor(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)))){
 
-        FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)), txtNomeFornecedor, comboTipo);
+            FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)), txtNomeFornecedor, comboTipo);
+        } else {
+            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+            cadastro.setTitle("CNPJ não encontrado");
+            cadastro.setHeaderText("Digite um CNPJ válido!");
+            cadastro.showAndWait();
+
+            txtCNPJFornecedor.setText("");
+        }
     }
     public void changeScreenPessoaJuridica(ActionEvent event) {
         Main.changeScreen("cadastrarpessoajuridica");

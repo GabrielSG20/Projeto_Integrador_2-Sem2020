@@ -39,6 +39,9 @@ public class CadastroPessoaJuridica implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("pj");
+        txtNomeFantasia.setText("");
+        txtCNPJEmpresa.setText("");
+        txtEmail.setText("");
     }
 
     public void changeScreenCadastrar(ActionEvent event) {
@@ -59,26 +62,39 @@ public class CadastroPessoaJuridica implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-            String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
-            String CNPJCliente2 = CNPJCliente.replace(".","");
-            String CNPJClienteFinal = CNPJCliente2.replace("/","");
+                String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+                String CNPJCliente2 = CNPJCliente.replace(".","");
+                String CNPJClienteFinal = CNPJCliente2.replace("/","");
+                if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)))){
 
-            Cliente c = new Cliente();
-            ClienteDAO dao = new ClienteDAO();
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
-            c.setCli_nome(txtNomeFantasia.getText());
-            c.setEmail(txtEmail.getText());
+                    Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+                    cadastro.setTitle("CNPJ já cadastrado");
+                    cadastro.setHeaderText("CNPJ do cliente já existe!");
+                    cadastro.showAndWait();
 
-            dao.create(c);
+                    txtNomeFantasia.setText("");
+                    txtCNPJEmpresa.setText("");
+                    txtEmail.setText("");
 
-            Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
-            cadastro.setTitle("Cadastro efetuado com sucesso !");
-            cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
-            cadastro.showAndWait();
+                } else {
 
-            txtNomeFantasia.setText("");
-            txtCNPJEmpresa.setText("");
-            txtEmail.setText("");
+                    Cliente c = new Cliente();
+                    ClienteDAO dao = new ClienteDAO();
+                    c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
+                    c.setCli_nome(txtNomeFantasia.getText());
+                    c.setEmail(txtEmail.getText());
+
+                    dao.create(c);
+
+                    Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+                    cadastro.setTitle("Cadastro efetuado com sucesso !");
+                    cadastro.setHeaderText("Seu cliente foi cadastrado com sucesso!");
+                    cadastro.showAndWait();
+
+                    txtNomeFantasia.setText("");
+                    txtCNPJEmpresa.setText("");
+                    txtEmail.setText("");
+                }
             } else {
                 
             }    

@@ -33,7 +33,7 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Label fx:id="lblTipoDe" layoutX="436.0" layoutY="84.0" text="TIipo de ligação">
+      <Label fx:id="lblTipoDe" layoutX="436.0" layoutY="84.0" text="Tipo de ligação">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>
@@ -78,7 +78,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtMesReferencia" layoutX="186.0" layoutY="161.0" opacity="0.8" prefHeight="26.0" prefWidth="91.0" promptText="Mês/Ano">
+      <TextField fx:id="txtMesReferencia" layoutX="186.0" layoutY="161.0" onKeyReleased="#mascaraMesReferencia" opacity="0.8" prefHeight="26.0" prefWidth="91.0" promptText="Mês/Ano">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

@@ -43,6 +43,10 @@ public class CadastroFornecedorPJ implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("pj");
+
+        txtNomeFornecedor.setText("");
+        txtCNPJFornecedor.setText("");
+        comboTipo.setValue("");
     }
 
     public void changeScreenCadastrar(ActionEvent event) {
@@ -63,27 +67,38 @@ public class CadastroFornecedorPJ implements Initializable {
             
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
+                String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
+                String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
+                if (FornecedorDAO.validacaoFornecedor(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)))){
             
-            String CNPJFornecedor = txtCNPJFornecedor.getText().replace("-","");
-            String CNPJFornecedor2 = CNPJFornecedor.replace(".","");
-            String CNPJFornecedorFinal = CNPJFornecedor2.replace("/","");
+                    Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
+                    cadastro.setTitle("CNPJ já cadastrado");
+                    cadastro.setHeaderText("CNPJ do fornecedor já existe!");
+                    cadastro.showAndWait();
 
-            Fornecedor f = new Fornecedor();
-            FornecedorDAO daofor = new FornecedorDAO();
-            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
-            f.setFor_nome(txtNomeFornecedor.getText());
-            f.setFor_tipo(String.valueOf(comboTipo.getValue()));
+                    txtNomeFornecedor.setText("");
+                    txtCNPJFornecedor.setText("");
+                    comboTipo.setValue("");
 
-            daofor.create(f);
+                } else {
+                    Fornecedor f = new Fornecedor();
+                    FornecedorDAO daofor = new FornecedorDAO();
+                    f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
+                    f.setFor_nome(txtNomeFornecedor.getText());
+                    f.setFor_tipo(String.valueOf(comboTipo.getValue()));
 
-            Alert cadastro1 = new Alert(Alert.AlertType.INFORMATION);
-            cadastro1.setTitle("Cadastro efetuado com sucesso !");
-            cadastro1.setHeaderText("Seu fornecedor foi cadastrado com sucesso!");
-            cadastro1.showAndWait();
+                    daofor.create(f);
 
-            txtNomeFornecedor.setText("");
-            txtCNPJFornecedor.setText("");
-            comboTipo.setValue("");
+                    Alert cadastro1 = new Alert(Alert.AlertType.INFORMATION);
+                    cadastro1.setTitle("Cadastro efetuado com sucesso !");
+                    cadastro1.setHeaderText("Seu fornecedor foi cadastrado com sucesso!");
+                    cadastro1.showAndWait();
+
+                    txtNomeFornecedor.setText("");
+                    txtCNPJFornecedor.setText("");
+                    comboTipo.setValue("");
+                }
             } else {
             }    
         }

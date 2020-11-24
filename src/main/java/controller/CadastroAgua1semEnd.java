@@ -49,6 +49,18 @@ public class CadastroAgua1semEnd implements Initializable  {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("instalacaoCadastradaScene");
+
+        txtGR.setText("");
+        txtMesReferencia.setText("");
+        txtConsumo.setText("");
+        txtCodigoCliente.setText("");
+        txtNumeroConta.setText("");
+        txtLeituraAntData.setText("");
+        txtLeituraAntNumero.setText("");
+        txtLeituraAtualData.setText("");
+        txtLeituraAtualNumero.setText("");
+        txtHidrometro.setText("");
+        txtTipoLigacao.setText("");
     }
 
     public void changeScreenContinuar(ActionEvent event) {
