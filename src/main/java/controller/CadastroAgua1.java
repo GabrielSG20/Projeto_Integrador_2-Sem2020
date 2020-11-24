@@ -158,7 +158,8 @@ public class CadastroAgua1 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-                if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtRGI.getText())))){
+                String RGI = txtRGI.getText().replace("/","");
+                if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(RGI)))){
                     Alert Alert = new Alert(AlertType.INFORMATION);
                     Alert.setTitle("RGI já Existente");
                     Alert.setHeaderText(null);
@@ -166,7 +167,6 @@ public class CadastroAgua1 implements Initializable {
                     Alert.showAndWait();
                 } else {
                     String CEP = txtCEP.getText().replace("-","");
-                    String RGI = txtRGI.getText().replace("/","");
 
                     Endereco e = new Endereco();
                     EnderecoDAO daoend = new EnderecoDAO();

@@ -109,6 +109,7 @@ public class CadastroEnergia2 implements Initializable {
                     txtLeituraAtualEnergia.setText("");
                     txtDataLeituraAnterior.setText("");
                     txtDataLeituraAtual.setText("");
+                    comboBandeirasTarifarias.setValue("");
                     
                     Alert Alert = new Alert(AlertType.INFORMATION);
                     Alert.setTitle("Confirmação de Cadastro");
