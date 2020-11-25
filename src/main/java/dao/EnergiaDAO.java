@@ -48,6 +48,7 @@ public class EnergiaDAO {
             stmt.setString(16, n.getEne_data_leitura_atual());
             stmt.setString(17, n.getEne_tipo_bandeira());
             stmt.setObject(18, n.getEne_valor_total());
+            
             stmt.executeUpdate();
 
         } catch (SQLException ex) {
@@ -187,5 +188,45 @@ public class EnergiaDAO {
         }
 
         return check;
+    }
+    public void update(Energia n) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE ene_energia SET (ene_consumo_conta_mes = ? ,ene_codigo_fiscal  = ?,ene_grupo_subgrupo  = ?,ene_tipo_fornecimento  = ?,ene_classe_subclasse  = ?,ene_roteiro_leitura  = ?," +
+            "ene_modalidade_tarifaria  = ?,ene_tensao_nominal  = ?,ene_numero_medidor  = ?,ene_const_multi  = ?,ene_leitura_anterior_cod =  = ?,ene_leitura_atual_cod =  = ?," +
+            "ene_data_leitura_anterior = ?,ene_data_leitura_atual = ?,ene_tipo_bandeira = ? ,ene_valor_total  = ?) WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
+           
+            stmt.setObject(1, n.getEne_consumo_conta_mes());
+            stmt.setObject(2, n.getEne_codigo_fiscal());
+            stmt.setString(3, n.getEne_grupo_subgrupo());
+            stmt.setString(4, n.getEne_tipo_fornecimento());
+            stmt.setString(5, n.getEne_classe_subclasse());
+            stmt.setString(6, n.getEne_roteiro_leitura());
+            stmt.setString(7, n.getEne_modalidade_tarifaria());
+            stmt.setString(8, n.getEne_tensao_nominal());
+            stmt.setObject(9, n.getEne_numero_medidor());
+            stmt.setObject(10, n.getEne_const_multi());
+            stmt.setObject(11, n.getEne_leitura_anterior_cod());
+            stmt.setObject(12, n.getEne_leitura_atual_cod());
+            stmt.setString(13, n.getEne_data_leitura_anterior());
+            stmt.setString(14, n.getEne_data_leitura_atual());
+            stmt.setString(15, n.getEne_tipo_bandeira());
+            stmt.setObject(16, n.getEne_valor_total());
+            stmt.setObject(17, n.getInt_numero_instalacao());
+            stmt.setObject(18, n.getCta_mes_referencia());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
     }
 }
