@@ -45,7 +45,7 @@
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <TextField fx:id="txtMesReferencia" layoutX="176.0" layoutY="151.0" opacity="0.8" prefHeight="26.0" prefWidth="91.0" promptText="Mês/Ano">
+      <TextField fx:id="txtMesReferencia" layoutX="176.0" layoutY="151.0" onKeyReleased="#mascaraMesReferencia" opacity="0.8" prefHeight="26.0" prefWidth="91.0" promptText="Mês/Ano">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>

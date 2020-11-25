@@ -112,4 +112,13 @@ public class CadastroAgua1semEnd implements Initializable  {
         tff.setTf( txtLeituraAtualData);
         tff.formatter();
     }
+
+    @FXML
+    private void mascaraMesReferencia(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtMesReferencia);
+        tff.formatter();
+    }
 }
