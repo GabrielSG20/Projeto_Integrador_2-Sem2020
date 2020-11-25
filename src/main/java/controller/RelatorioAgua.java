@@ -9,6 +9,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javafx.scene.control.TextField;
 import java.net.URL;
 import javafx.scene.control.Button;
 import java.util.List;
@@ -39,7 +40,13 @@ public class RelatorioAgua implements Initializable {
     @FXML
     private TableColumn <Agua, BigDecimal> ClnMulta;
     @FXML
-    private Button btnVoltar;  
+    private Button btnVoltar;
+    @FXML
+    private Button btnBuscar;
+    @FXML
+    private Button btnDeletar;
+    @FXML
+    private TextField txtBusca;    
 
     private List<Agua> listAgua;
     private ObservableList<Agua> observableListAgua;
@@ -52,6 +59,14 @@ public class RelatorioAgua implements Initializable {
     public void changeScreenRetornar() {
         
         Main.changeScreen("main");
+    }
+
+    public void changeScreenBuscar() {
+        
+    }
+
+    public void changeScreenDeletar() {
+        
     }
 
     public void carregarTableViewAgua(){

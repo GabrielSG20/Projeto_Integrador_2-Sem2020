@@ -10,6 +10,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.List;
@@ -37,6 +38,12 @@ public class RelatorioEnergia implements Initializable {
     private TableColumn <Energia, BigDecimal> ClnValorTotal;
     @FXML
     private Button btnVoltar;
+    @FXML
+    private Button btnDeletar;
+    @FXML
+    private Button btnBuscar;
+    @FXML
+    private TextField txtBusca; 
 
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
@@ -50,6 +57,12 @@ public class RelatorioEnergia implements Initializable {
     public void changeScreenRetornar() {
         
         Main.changeScreen("main");
+    }
+    public void changeScreenDeletar() {
+        
+    }
+    public void changeScreenBuscar() {
+        
     }
 
 

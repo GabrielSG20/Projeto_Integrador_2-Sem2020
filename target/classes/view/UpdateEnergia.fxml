@@ -18,7 +18,7 @@
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="image/TECSUS.png" />
+            <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
       <TextField fx:id="txtNumInstalacao" layoutX="290.0" layoutY="18.0" prefHeight="25.0" prefWidth="106.0" promptText="N° instalação">
@@ -26,7 +26,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtMesReferenciaEnergia" layoutX="423.0" layoutY="17.0" prefHeight="25.0" prefWidth="106.0" promptText="Conta do mês">
+      <TextField fx:id="txtMesReferenciaEnergia" layoutX="423.0" layoutY="17.0" onKeyReleased="#mascaraMesReferencia" prefHeight="25.0" prefWidth="106.0" promptText="Conta do mês">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -41,7 +41,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataVencimento" layoutX="211.0" layoutY="97.0"  prefHeight="25.0" prefWidth="106.0">
+      <TextField fx:id="txtDataVencimento" layoutX="211.0" layoutY="97.0" onKeyReleased="#mascaraVencimento" prefHeight="25.0" prefWidth="106.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -51,12 +51,12 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAnterior" layoutX="597.0" layoutY="97.0" prefHeight="25.0" prefWidth="96.0">
+      <TextField fx:id="txtDataLeituraAnterior" layoutX="597.0" layoutY="97.0" onKeyReleased="#mascaraDataAnt" prefHeight="25.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtDataLeituraAtual" layoutX="597.0" layoutY="137.0"  prefHeight="25.0" prefWidth="96.0">
+      <TextField fx:id="txtDataLeituraAtual" layoutX="597.0" layoutY="137.0" onKeyReleased="#mascaraDataAtual" prefHeight="25.0" prefWidth="96.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -162,12 +162,12 @@
             <Font name="Arial Bold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="btnRetornarEnergia" layoutX="11.0" layoutY="491.0" onAction="#changeScreenRetornarRelatorio" mnemonicParsing="false" opacity="0.96" prefHeight="30.0" prefWidth="257.0" style="-fx-background-radius: 5em;" text="Retornar para Relatório" textFill="#4a8af2">
+      <Button fx:id="btnRetornarEnergia" layoutX="11.0" layoutY="491.0" mnemonicParsing="false" onAction="#changeScreenRetornarRelatorio" opacity="0.96" prefHeight="30.0" prefWidth="257.0" style="-fx-background-radius: 5em;" text="Retornar para Relatório" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnEditar" layoutX="521.0" layoutY="491.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="257.0" style="-fx-background-radius: 5em;" text="Editar" textFill="#4a8af2">
+      <Button fx:id="btnEditar" layoutX="521.0" layoutY="491.0" mnemonicParsing="false" onAction="#editarCampos" prefHeight="30.0" prefWidth="257.0" style="-fx-background-radius: 5em;" text="Editar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="18.0" />
          </font>

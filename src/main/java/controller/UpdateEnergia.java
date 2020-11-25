@@ -110,8 +110,41 @@ public class UpdateEnergia implements Initializable {
 
         }
     }
-    
+
+    public void editarCampos(ActionEvent event) {
+        
+    }
+
+    @FXML
+    private void mascaraVencimento(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/##");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataVencimento);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAnt(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAnterior);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraDataAtual(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtDataLeituraAtual);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraMesReferencia(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtMesReferenciaEnergia);
+        tff.formatter();
+    }
 }
-
-
-   
