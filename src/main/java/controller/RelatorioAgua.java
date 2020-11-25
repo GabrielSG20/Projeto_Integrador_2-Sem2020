@@ -44,7 +44,7 @@ public class RelatorioAgua implements Initializable {
     @FXML
     private Button btnBuscar;
     @FXML
-    private Button btnDeletar;
+    private Button btnEditar;
     @FXML
     private TextField txtBusca;    
 
@@ -65,7 +65,7 @@ public class RelatorioAgua implements Initializable {
         
     }
 
-    public void changeScreenDeletar() {
+    public void changeScreenEditar() {
         
     }
 

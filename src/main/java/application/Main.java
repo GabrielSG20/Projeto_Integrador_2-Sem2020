@@ -48,6 +48,7 @@ public class Main extends Application {
     private static Scene instalacaoCadastradaScene;
     private static Scene cadastrarEnderecoAguaScene;
     private static Scene cadastrarEnderecoEnergiaScene;
+    private static Scene updateEnergiaScene;
     private static Energia n;
     private static EnergiaDAO dao_ene;
     private static Conta cta;
@@ -131,6 +132,9 @@ public class Main extends Application {
             Parent fxmlRelatorioCliente = FXMLLoader.load(getClass().getResource("/view/RelatorioCliente.fxml"));
             relatorioclienteScene = new Scene(fxmlRelatorioCliente);
 
+            Parent fxmlUpdateEnergia = FXMLLoader.load(getClass().getResource("/view/UpdateEnergia.fxml"));
+            updateEnergiaScene = new Scene(fxmlUpdateEnergia);
+
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
             primaryStage.show();
@@ -209,6 +213,9 @@ public class Main extends Application {
         }
         if (tela == "relatoriocliente"){
             stage.setScene(relatorioclienteScene);
+        }
+        if (tela == "updateenergia"){
+            stage.setScene(updateEnergiaScene);
         }
     }
 

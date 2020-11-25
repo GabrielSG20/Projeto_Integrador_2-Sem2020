@@ -39,7 +39,7 @@ public class RelatorioEnergia implements Initializable {
     @FXML
     private Button btnVoltar;
     @FXML
-    private Button btnDeletar;
+    private Button btnEditar;
     @FXML
     private Button btnBuscar;
     @FXML
@@ -58,8 +58,8 @@ public class RelatorioEnergia implements Initializable {
         
         Main.changeScreen("main");
     }
-    public void changeScreenDeletar() {
-        
+    public void changeScreenEditar() {
+        Main.changeScreen("updateenergia");
     }
     public void changeScreenBuscar() {
         
