@@ -390,7 +390,7 @@ public class Main extends Application {
                 n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao)));
                 n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
                 n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
-                n.setEne_const_multi(null);
+                n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble("0")));
                 n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
                 n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
                 n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
