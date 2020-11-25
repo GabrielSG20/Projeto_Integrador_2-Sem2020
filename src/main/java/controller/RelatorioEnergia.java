@@ -1,4 +1,5 @@
 package controller;
+
 import dao.EnergiaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,9 +10,12 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import application.Main;
 import classes.Energia;
 
 public class RelatorioEnergia implements Initializable {
@@ -31,6 +35,8 @@ public class RelatorioEnergia implements Initializable {
     private TableColumn <Energia, String> ClnTensaoNominal;
     @FXML
     private TableColumn <Energia, BigDecimal> ClnValorTotal;
+    @FXML
+    private Button btnVoltar;
 
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
@@ -41,6 +47,11 @@ public class RelatorioEnergia implements Initializable {
         
         carregarTableViewEnergia();
     }
+    public void changeScreenRetornar() {
+        
+        Main.changeScreen("main");
+    }
+
 
     public void carregarTableViewEnergia(){
         ClnNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));

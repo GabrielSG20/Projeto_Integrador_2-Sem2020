@@ -9,6 +9,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -91,5 +95,97 @@ public class EnergiaDAO {
     
         return contas_energia;
 
+    }
+
+     public static void buscar(BigInteger n, String m, TextField txtContaKwH,TextField txtValorTotalAPagar,TextField txtDataLeituraAnterior,TextField txtDataLeituraAtual,ComboBox comboBandeirasTarifarias,TextField txtConstMulti,TextField txtNRdoMedidor,TextField txtLeituraAnterior,TextField txtLeituraAtual,TextField txtCodigoFiscal,TextField txtGrupoSubgrupo,TextField txtClasseSubclasse,TextField txtRoteiroLeitura,TextField txtMTarifaria,TextField txtTensaoNominal,TextField txtFornecimento) {
+        
+        Connection con = ConexaoBd.getConnection();
+        ResultSet rs = null;
+        PreparedStatement stmt = null;
+        
+        try {
+
+            stmt = con.prepareStatement("SELECT * FROM ene_energia where int_numero_instalacao = ? and cta_mes_referencia = ?");
+            stmt.setObject(1, n);
+            stmt.setObject(2, m);
+
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                Energia ene = new Energia();
+                ene.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(rs.getString("ene_consumo_conta_mes"))));
+                ene.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(rs.getString("ene_valor_total"))));
+                ene.setEne_data_leitura_anterior(rs.getString("ene_data_leitura_anterior"));
+                ene.setEne_data_leitura_atual(rs.getString("ene_data_leitura_atual"));
+                ene.setEne_tipo_bandeira(rs.getString("ene_tipo_bandeira"));
+                ene.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(rs.getString("ene_const_multi"))));
+                ene.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(rs.getString("ene_numero_medidor"))));
+                ene.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(rs.getString("ene_leitura_anterior_cod"))));
+                ene.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(rs.getString("ene_leitura_atual_cod"))));
+                ene.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(rs.getString("ene_codigo_fiscal"))));
+                ene.setEne_grupo_subgrupo(rs.getString("ene_grupo_subgrupo"));
+                ene.setEne_classe_subclasse(rs.getString("ene_classe_subclasse"));
+                ene.setEne_roteiro_leitura(rs.getString("ene_roteiro_leitura"));
+                ene.setEne_modalidade_tarifaria(rs.getString("ene_modalidade_tarifaria"));
+                ene.setEne_tensao_nominal(rs.getString("ene_tensao_nominal"));
+                ene.setEne_tipo_fornecimento(rs.getString("ene_tipo_fornecimento"));
+
+                txtContaKwH.setText(String.valueOf(ene.getEne_consumo_conta_mes()));
+                //txtDataVencimento.setText("");
+                txtValorTotalAPagar.setText(String.valueOf(ene.getEne_valor_total()));
+                txtDataLeituraAnterior.setText(ene.getEne_data_leitura_anterior());
+                txtDataLeituraAtual.setText(ene.getEne_data_leitura_atual());
+                comboBandeirasTarifarias.setValue(ene.getEne_tipo_bandeira());
+                txtConstMulti.setText(String.valueOf(ene.getEne_const_multi()));
+                txtNRdoMedidor.setText(String.valueOf(ene.getEne_numero_medidor()));
+                txtLeituraAnterior.setText(String.valueOf(ene.getEne_leitura_anterior_cod()));
+                txtLeituraAtual.setText(String.valueOf(ene.getEne_leitura_atual_cod()));
+                txtCodigoFiscal.setText(String.valueOf(ene.getEne_codigo_fiscal()));
+                txtGrupoSubgrupo.setText(ene.getEne_grupo_subgrupo());
+                txtClasseSubclasse.setText(ene.getEne_classe_subclasse());
+                txtRoteiroLeitura.setText(ene.getEne_roteiro_leitura());
+                txtMTarifaria.setText(ene.getEne_modalidade_tarifaria());
+                txtTensaoNominal.setText(ene.getEne_tensao_nominal());
+                txtFornecimento.setText(ene.getEne_tipo_fornecimento());
+            }
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+
+    }
+
+    public static boolean validacaoConta(BigInteger n, String d) {
+        
+        Connection con = ConexaoBd.getConnection();
+        ResultSet rs = null;
+        PreparedStatement stmt = null;
+        boolean check = false;
+        
+        try {
+            stmt = con.prepareStatement("SELECT * FROM ene_energia where int_numero_instalacao = ? and cta_mes_referencia = ?");
+            stmt.setObject(1, n);
+            stmt.setString(2, d);
+
+            rs = stmt.executeQuery();
+
+            if (rs.next()) {
+
+                check = true;
+
+            }
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+
+        return check;
     }
 }
