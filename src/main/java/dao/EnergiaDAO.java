@@ -133,7 +133,6 @@ public class EnergiaDAO {
                 ene.setEne_tipo_fornecimento(rs.getString("ene_tipo_fornecimento"));
 
                 txtContaKwH.setText(String.valueOf(ene.getEne_consumo_conta_mes()));
-                //txtDataVencimento.setText("");
                 txtValorTotalAPagar.setText(String.valueOf(ene.getEne_valor_total()));
                 txtDataLeituraAnterior.setText(ene.getEne_data_leitura_anterior());
                 txtDataLeituraAtual.setText(ene.getEne_data_leitura_atual());
@@ -159,6 +158,8 @@ public class EnergiaDAO {
         }
 
     }
+
+    
 
     public static boolean validacaoConta(BigInteger n, String d) {
         
@@ -189,6 +190,7 @@ public class EnergiaDAO {
 
         return check;
     }
+    
     public void update(Energia n) {
         
         Connection con = ConexaoBd.getConnection();
@@ -196,9 +198,9 @@ public class EnergiaDAO {
         PreparedStatement stmt = null;
 
         try {
-            stmt = con.prepareStatement("UPDATE ene_energia SET (ene_consumo_conta_mes = ? ,ene_codigo_fiscal  = ?,ene_grupo_subgrupo  = ?,ene_tipo_fornecimento  = ?,ene_classe_subclasse  = ?,ene_roteiro_leitura  = ?," +
-            "ene_modalidade_tarifaria  = ?,ene_tensao_nominal  = ?,ene_numero_medidor  = ?,ene_const_multi  = ?,ene_leitura_anterior_cod =  = ?,ene_leitura_atual_cod =  = ?," +
-            "ene_data_leitura_anterior = ?,ene_data_leitura_atual = ?,ene_tipo_bandeira = ? ,ene_valor_total  = ?) WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
+            stmt = con.prepareStatement("UPDATE ene_energia SET ene_consumo_conta_mes = ? ,ene_codigo_fiscal  = ?,ene_grupo_subgrupo  = ?,ene_tipo_fornecimento  = ?,ene_classe_subclasse  = ?,ene_roteiro_leitura  = ?," +
+            "ene_modalidade_tarifaria  = ?,ene_tensao_nominal  = ?,ene_numero_medidor  = ?,ene_const_multi  = ?,ene_leitura_anterior_cod = ?,ene_leitura_atual_cod = ?," +
+            "ene_data_leitura_anterior = ?,ene_data_leitura_atual = ?,ene_tipo_bandeira = ? ,ene_valor_total  = ? WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
            
             stmt.setObject(1, n.getEne_consumo_conta_mes());
             stmt.setObject(2, n.getEne_codigo_fiscal());
@@ -217,7 +219,7 @@ public class EnergiaDAO {
             stmt.setString(15, n.getEne_tipo_bandeira());
             stmt.setObject(16, n.getEne_valor_total());
             stmt.setObject(17, n.getInt_numero_instalacao());
-            stmt.setObject(18, n.getCta_mes_referencia());
+            stmt.setString(18, n.getCta_mes_referencia());
             
             stmt.executeUpdate();
 

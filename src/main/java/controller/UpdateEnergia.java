@@ -1,5 +1,6 @@
 package controller;
 
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.net.URL;
 import javafx.scene.control.ComboBox;
@@ -13,9 +14,13 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import application.Main;
+import classes.Conta;
+import classes.Energia;
+import dao.ContaDAO;
 import dao.EnergiaDAO;
 
 public class UpdateEnergia implements Initializable {
@@ -98,7 +103,8 @@ public class UpdateEnergia implements Initializable {
     public void buscarNumeroInstalacao(ActionEvent event) {
          if (EnergiaDAO.validacaoConta(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText())){
 
-                EnergiaDAO.buscar(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText(),txtContaKwH,txtValorTotalAPagar,txtDataLeituraAnterior,txtDataLeituraAtual,comboBandeirasTarifarias,txtConstMulti,txtNRdoMedidor,txtLeituraAnterior,txtLeituraAtual,txtCodigoFiscal,txtGrupoSubgrupo,txtClasseSubclasse,txtRoteiroLeitura,txtMTarifaria,txtTensaoNominal,txtFornecimento);       
+            EnergiaDAO.buscar(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText(),txtContaKwH,txtValorTotalAPagar,txtDataLeituraAnterior,txtDataLeituraAtual,comboBandeirasTarifarias,txtConstMulti,txtNRdoMedidor,txtLeituraAnterior,txtLeituraAtual,txtCodigoFiscal,txtGrupoSubgrupo,txtClasseSubclasse,txtRoteiroLeitura,txtMTarifaria,txtTensaoNominal,txtFornecimento);     
+            ContaDAO.buscarconta(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText(),txtDataVencimento);  
         } else {
             Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
             cadastro.setTitle("Numero de instalação e/ou mês de referência não encontrado");
@@ -112,8 +118,72 @@ public class UpdateEnergia implements Initializable {
     }
 
     public void editarCampos(ActionEvent event) {
-        
-    }
+            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA ATUALIZAR O CADASTRO?");
+
+            Optional<ButtonType> result = confirmacao.showAndWait();
+            if (result.get() == ButtonType.OK){
+                Energia n = new Energia();
+                EnergiaDAO daoene = new EnergiaDAO();
+
+                n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtContaKwH.getText())));
+                n.setEne_codigo_fiscal(BigInteger.valueOf(Long.parseLong(txtCodigoFiscal.getText())));
+                n.setEne_grupo_subgrupo(txtGrupoSubgrupo.getText());
+                n.setEne_tipo_fornecimento(txtFornecimento.getText());
+                n.setEne_classe_subclasse(txtClasseSubclasse.getText());
+                n.setEne_roteiro_leitura(txtRoteiroLeitura.getText());
+                n.setEne_modalidade_tarifaria(txtMTarifaria.getText());
+                n.setEne_tensao_nominal(txtTensaoNominal.getText());
+                n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRdoMedidor.getText())));
+                n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble(txtConstMulti.getText())));
+                n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
+                n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));
+                n.setEne_data_leitura_anterior(txtDataLeituraAnterior.getText());
+                n.setEne_data_leitura_atual(txtDataLeituraAtual.getText());
+                n.setEne_tipo_bandeira(String.valueOf(comboBandeirasTarifarias.getValue()));
+                n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtValorTotalAPagar.getText())));
+                n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
+                n.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
+
+                daoene.update(n);
+                Conta c = new Conta();
+                ContaDAO daoconta = new ContaDAO();
+                c.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
+                c.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
+                c.setCta_vencimento(txtDataVencimento.getText());
+                
+                daoconta.updateconta(c);
+                
+                Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
+                cadastrado.setTitle("Dados atualizado com sucesso");
+                cadastrado.setHeaderText("Os dados foram atualizados com sucesso");
+                cadastrado.showAndWait();
+
+                txtNumInstalacao.setText("");
+                txtDataVencimento.setText("");
+                txtMesReferenciaEnergia.setText("");
+                txtContaKwH.setText("");
+                txtValorTotalAPagar.setText("");
+                txtDataLeituraAnterior.setText("");
+                txtDataLeituraAtual.setText("");
+                comboBandeirasTarifarias.setValue("");
+                txtConstMulti.setText("");
+                txtNRdoMedidor.setText("");
+                txtLeituraAnterior.setText("");
+                txtLeituraAtual.setText("");
+                txtCodigoFiscal.setText("");
+                txtGrupoSubgrupo.setText("");
+                txtClasseSubclasse.setText("");
+                txtRoteiroLeitura.setText("");
+                txtMTarifaria.setText("");
+                txtTensaoNominal.setText("");
+                txtFornecimento.setText("");
+         }else{
+
+         }
+    }   
 
     @FXML
     private void mascaraVencimento(){

@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
+import javafx.scene.control.TextField;
 import java.util.logging.Logger;
 
 public class ContaDAO {
@@ -37,5 +38,58 @@ public class ContaDAO {
             ConexaoBd.closeConnection(con, stmt);
         }
 
+    }
+       public static void buscarconta(BigInteger n, String m, TextField txtDataVencimento) {
+        
+        Connection con = ConexaoBd.getConnection();
+        ResultSet rs = null;
+        PreparedStatement stmt = null;
+        
+        try {
+
+            stmt = con.prepareStatement("SELECT cta_vencimento FROM cta_conta where int_numero_instalacao = ? and cta_mes_referencia = ?");
+            stmt.setObject(1, n);
+            stmt.setObject(2, m);
+
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                Conta cta = new Conta();
+                cta.setCta_vencimento(rs.getString("cta_vencimento"));
+                txtDataVencimento.setText(cta.getCta_vencimento());
+            }
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+
+    }
+    
+    public void updateconta(Conta c) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE cta_conta SET cta_vencimento = ? WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
+           
+            stmt.setString(1, c.getCta_vencimento());
+            stmt.setObject(2, c.getInt_numero_instalacao());
+            stmt.setString(3, c.getCta_mes_referencia());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
     }
 }
