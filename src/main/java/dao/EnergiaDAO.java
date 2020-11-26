@@ -159,8 +159,6 @@ public class EnergiaDAO {
 
     }
 
-    
-
     public static boolean validacaoConta(BigInteger n, String d) {
         
         Connection con = ConexaoBd.getConnection();
@@ -178,7 +176,6 @@ public class EnergiaDAO {
             if (rs.next()) {
 
                 check = true;
-
             }
         } catch (SQLException ex) {
            Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
@@ -231,4 +228,27 @@ public class EnergiaDAO {
             ConexaoBd.closeConnection(con, stmt);
         }
     }
+    public void delete(Energia n) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("DELETE FROM ene_energia WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
+        
+            stmt.setObject(1, n.getInt_numero_instalacao());
+            stmt.setString(2, n.getCta_mes_referencia());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
+
 }

@@ -92,4 +92,26 @@ public class ContaDAO {
             ConexaoBd.closeConnection(con, stmt);
         }
     }
+    public void delete(Conta c) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("DELETE FROM cta_conta WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
+        
+            stmt.setObject(1, c.getInt_numero_instalacao());
+            stmt.setString(2, c.getCta_mes_referencia());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
 }

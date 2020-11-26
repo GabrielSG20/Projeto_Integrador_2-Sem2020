@@ -69,6 +69,8 @@ public class UpdateEnergia implements Initializable {
     private Button btnRetornarEnergia;
     @FXML
     private Button btnEditar;
+    @FXML
+    private Button btnDeletar;
 
     @Override
         public void initialize(URL arg0, ResourceBundle arg1) {
@@ -185,6 +187,62 @@ public class UpdateEnergia implements Initializable {
          }
     }   
 
+    public void deletarConta(ActionEvent event) {
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
+
+        Optional<ButtonType> result = confirmacao.showAndWait();
+         if (result.get() == ButtonType.OK){
+            Energia n = new Energia();
+            EnergiaDAO daoene = new EnergiaDAO();
+
+            n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
+            n.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
+            
+            daoene.delete(n);
+
+            Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
+                cadastrado.setTitle("Dados deletados com sucesso");
+                cadastrado.setHeaderText("Os dados foram deletados com sucesso");
+                cadastrado.showAndWait();
+
+                txtNumInstalacao.setText("");
+                txtDataVencimento.setText("");
+                txtMesReferenciaEnergia.setText("");
+                txtContaKwH.setText("");
+                txtValorTotalAPagar.setText("");
+                txtDataLeituraAnterior.setText("");
+                txtDataLeituraAtual.setText("");
+                comboBandeirasTarifarias.setValue("");
+                txtConstMulti.setText("");
+                txtNRdoMedidor.setText("");
+                txtLeituraAnterior.setText("");
+                txtLeituraAtual.setText("");
+                txtCodigoFiscal.setText("");
+                txtGrupoSubgrupo.setText("");
+                txtClasseSubclasse.setText("");
+                txtRoteiroLeitura.setText("");
+                txtMTarifaria.setText("");
+                txtTensaoNominal.setText("");
+                txtFornecimento.setText("");
+
+            Conta c = new Conta();
+            ContaDAO daocta = new ContaDAO()
+
+            c.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
+            c.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
+
+            daocta.delete(c);
+        
+        }else{
+
+        }
+
+        }
+   
+    
     @FXML
     private void mascaraVencimento(){
         TextFieldFormatter tff = new TextFieldFormatter();

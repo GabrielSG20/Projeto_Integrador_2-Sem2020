@@ -101,4 +101,48 @@ public class ClienteDAO {
 
         return check;
     }
+    public void update(Cliente c) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE cli_cliente SET cli_nome  = ?,cli_email  = ? WHERE cli_documento = ?");
+           
+            stmt.setString(1, c.getCli_nome());
+            stmt.setString(2, c.getCli_email());
+            stmt.setObject(3, c.getCli_documento());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
+    public void delete(Cliente c) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("DELETE FROM cli_cliente WHERE cli_documento = ?");
+        
+            stmt.setObject(1, c.getCli_documento());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
 }
