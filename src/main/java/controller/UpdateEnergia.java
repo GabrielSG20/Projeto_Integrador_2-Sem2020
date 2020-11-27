@@ -203,6 +203,15 @@ public class UpdateEnergia implements Initializable {
             
             daoene.delete(n);
 
+            Conta c = new Conta();
+            ContaDAO daocta = new ContaDAO();
+
+            c.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
+            c.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
+
+            daocta.delete(c);
+        
+
             Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
                 cadastrado.setTitle("Dados deletados com sucesso");
                 cadastrado.setHeaderText("Os dados foram deletados com sucesso");
@@ -227,15 +236,6 @@ public class UpdateEnergia implements Initializable {
                 txtMTarifaria.setText("");
                 txtTensaoNominal.setText("");
                 txtFornecimento.setText("");
-
-            Conta c = new Conta();
-            ContaDAO daocta = new ContaDAO()
-
-            c.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
-            c.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
-
-            daocta.delete(c);
-        
         }else{
 
         }
