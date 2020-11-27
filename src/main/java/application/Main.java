@@ -38,6 +38,9 @@ public class Main extends Application {
     private static Scene relatorioenergiaScene;
     private static Scene relatorioclienteScene;
     private static Scene cadastrarenderecoaguaScene;
+    private static Scene updatepessoafisicaScene;
+    private static Scene updatepessoajuridicaScene;
+    private static Scene updatefornecedorScene;
     private static Scene cadastrarenderecoenergiaScene;
     private static Scene aguasemendScene;
     private static Scene aguasemend2Scene;
@@ -134,6 +137,15 @@ public class Main extends Application {
             Parent fxmlUpdateEnergia = FXMLLoader.load(getClass().getResource("/view/UpdateEnergia.fxml"));
             updateEnergiaScene = new Scene(fxmlUpdateEnergia);
 
+            Parent fxmlUpdatePessoaFisica = FXMLLoader.load(getClass().getResource("/view/UpdatePessoaFisica.fxml"));
+            updatepessoafisicaScene = new Scene(fxmlUpdatePessoaFisica);
+
+            Parent fxmlUpdatePessoaJurica = FXMLLoader.load(getClass().getResource("/view/UpdatePessoaJuridica.fxml"));
+            updatepessoajuridicaScene = new Scene(fxmlUpdatePessoaJurica);
+
+            Parent fxmlUpdateFornecedor = FXMLLoader.load(getClass().getResource("/view/UpdateFornecedor.fxml"));
+            updatefornecedorScene = new Scene(fxmlUpdateFornecedor);
+
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
             primaryStage.show();
@@ -215,6 +227,15 @@ public class Main extends Application {
         }
         if (tela == "updateenergia"){
             stage.setScene(updateEnergiaScene);
+        }
+        if (tela == "updatepessoafisica"){
+            stage.setScene(updatepessoafisicaScene);
+        }
+        if (tela == "updatepessoajuridica"){
+            stage.setScene(updatepessoajuridicaScene);
+        }
+        if (tela == "updatefornecedor"){
+            stage.setScene(updatefornecedorScene);
         }
     }
 

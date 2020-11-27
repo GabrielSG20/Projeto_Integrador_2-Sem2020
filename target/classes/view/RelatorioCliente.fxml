@@ -6,11 +6,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RelatorioCliente">
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true" />
-      <TableView fx:id="TableInstalacao" layoutX="62.0" layoutY="61.0" prefHeight="448.0" prefWidth="687.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="75.0">
+      <TableView fx:id="TableInstalacao" layoutX="62.0" layoutY="61.0" prefHeight="448.0" prefWidth="687.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
         <columns>
           <TableColumn fx:id="ClNumeroInstalacao" prefWidth="131.0" text="Numero de instalação" />
           <TableColumn fx:id="ClNomeCliente" prefWidth="82.0" text="Nome cliente" />
@@ -22,19 +21,14 @@
             <TableColumn fx:id="ClNumero" prefWidth="57.0" text="N°" />
         </columns>
       </TableView>
-      <Button fx:id="btnRetornar" layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
+      <Button fx:id="btnRetornar" layoutX="14.0" layoutY="489.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="btnEditar" layoutX="519.0" layoutY="490.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Editar" textFill="#4a8af2">
+      <Button fx:id="btnEditarPF" layoutX="303.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenPF" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar pessoa física" textFill="#525049" AnchorPane.rightAnchor="347.0">
          <font>
-            <Font name="Arial" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnDeletar" layoutX="675.0" layoutY="490.0" mnemonicParsing="false" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Deletar" textFill="#4a8af2" AnchorPane.rightAnchor="15.0">
-         <font>
-            <Font name="Arial" size="18.0" />
+            <Font name="Arial" size="12.0" />
          </font>
       </Button>
       <Label layoutX="15.0" layoutY="28.0" text="Relatórios cliente">
@@ -50,6 +44,16 @@
       <Button fx:id="btnBuscar" layoutX="680.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditarPJ" layoutX="437.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenPJ" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar pessoa juridica" textFill="#525049" AnchorPane.rightAnchor="180.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditarFornecedor" layoutX="595.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenEditarFornecedor" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar fornencedor" textFill="#525049" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial" size="12.0" />
          </font>
       </Button>
    </children>

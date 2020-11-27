@@ -39,6 +39,14 @@ public class RelatorioCliente implements Initializable {
     private TableColumn <Instalacao, BigInteger> ClNumero;
     @FXML
     private Button btnRetornar;
+    @FXML
+    private Button btnEditarPF;
+    @FXML
+    private Button btnEditarPJ;
+    @FXML
+    private Button btnEditarFornecedor;
+    @FXML
+    private Button btnBuscar;
    
     private List<Instalacao> listInstalacao;
     private ObservableList<Instalacao> observableListInstalacao;
@@ -52,6 +60,21 @@ public class RelatorioCliente implements Initializable {
     public void changeScreenRetornar() {
         
         Main.changeScreen("main");
+    }
+
+    public void changeScreenPF() {
+        
+        Main.changeScreen("updatepessoafisica");
+    }
+
+    public void changeScreenPJ() {
+        
+        Main.changeScreen("updatepessoajuridica");
+    }
+
+    public void changeScreenEditarFornecedor() {
+        
+        Main.changeScreen("updatefornecedor");
     }
 
     public void carregarTableViewInstalacao(){
