@@ -66,7 +66,7 @@ public class RelatorioAgua implements Initializable {
     }
 
     public void changeScreenEditar() {
-        
+        Main.changeScreen("updateagua1");
     }
 
     public void carregarTableViewAgua(){

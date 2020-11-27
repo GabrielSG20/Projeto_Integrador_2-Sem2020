@@ -51,6 +51,8 @@ public class Main extends Application {
     private static Scene cadastrarEnderecoAguaScene;
     private static Scene cadastrarEnderecoEnergiaScene;
     private static Scene updateEnergiaScene;
+    private static Scene updateagua1Scene;
+    private static Scene updateagua2Scene;
     private static Energia n;
     private static EnergiaDAO dao_ene;
     private static Conta cta;
@@ -146,6 +148,12 @@ public class Main extends Application {
             Parent fxmlUpdateFornecedor = FXMLLoader.load(getClass().getResource("/view/UpdateFornecedor.fxml"));
             updatefornecedorScene = new Scene(fxmlUpdateFornecedor);
 
+            Parent fxmlUpdateAgua1 = FXMLLoader.load(getClass().getResource("/view/UpdateAgua1.fxml"));
+            updateagua1Scene = new Scene(fxmlUpdateAgua1);
+
+            Parent fxmlUpdateAgua2 = FXMLLoader.load(getClass().getResource("/view/UpdateAgua2.fxml"));
+            updateagua2Scene = new Scene(fxmlUpdateAgua2);
+
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
             primaryStage.show();
@@ -236,6 +244,12 @@ public class Main extends Application {
         }
         if (tela == "updatefornecedor"){
             stage.setScene(updatefornecedorScene);
+        }
+        if (tela == "updateagua1"){
+            stage.setScene(updateagua1Scene);
+        }
+        if (tela == "updateagua2"){
+            stage.setScene(updateagua2Scene);
         }
     }
 
