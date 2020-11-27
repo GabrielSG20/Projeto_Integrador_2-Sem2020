@@ -248,5 +248,5 @@ public class CadastroAgua1 implements Initializable {
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtMesReferencia);
         tff.formatter();
-        }
     }
+}
