@@ -137,7 +137,7 @@ public class UpdateAgua2 implements Initializable {
                 agu.setAgu_valor_esgoto1(BigDecimal.valueOf(Double.parseDouble(txtValorEsgotoAte10.getText())));
                 agu.setAgu_valor_esgoto2(BigDecimal.valueOf(Double.parseDouble(txtValorEsgoto11a20.getText())));
 
-                aguadao.update1(agu);
+                aguadao.update2(agu);
 
                 Main.changeScreen("relatoriocliente");
                 
