@@ -53,9 +53,12 @@ public class UpdatePessoaJuridica implements Initializable {
         
     }
     public void buscarCNPJ(ActionEvent event) {
-         if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(txtCNPJEmpresa.getText())))){
+        String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+        String CNPJCliente2 = CNPJCliente.replace(".","");
+        String CNPJClienteFinal = CNPJCliente2.replace("/","");
+         if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)))){
 
-            ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(txtCNPJEmpresa.getText())),txtNomeFantasia,txtEmail);     
+            ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)),txtNomeFantasia,txtEmail);     
 
         } else {
             Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
@@ -76,12 +79,15 @@ public class UpdatePessoaJuridica implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+                String CNPJCliente2 = CNPJCliente.replace(".","");
+                String CNPJClienteFinal = CNPJCliente2.replace("/",""); 
                 Cliente c = new Cliente();
                 ClienteDAO daocli = new ClienteDAO();
 
                 c.setCli_nome(txtNomeFantasia.getText());
                 c.setEmail(txtEmail.getText());
-                c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCNPJEmpresa.getText())));
+                c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
                
                 daocli.update(c);
                 
@@ -107,10 +113,14 @@ public class UpdatePessoaJuridica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
          if (result.get() == ButtonType.OK){
+             String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
+             String CNPJCliente2 = CNPJCliente.replace(".","");
+             String CNPJClienteFinal = CNPJCliente2.replace("/",""); 
+             
             Cliente c = new Cliente();
             ClienteDAO daocli = new ClienteDAO();
 
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCNPJEmpresa.getText())));
+            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
            
             daocli.delete(c);
         
@@ -120,7 +130,7 @@ public class UpdatePessoaJuridica implements Initializable {
                 cadastrado.showAndWait();
 
                 txtCNPJEmpresa.setText("");
-                txtCNPJEmpresa.setText("");
+                txtNomeFantasia.setText("");
                 txtEmail.setText("");
             
         }else{

@@ -53,9 +53,11 @@ public class UpdatePessoaFisica implements Initializable {
         
     }
     public void buscarCPF(ActionEvent event) {
-         if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(txtCPF.getText())))){
+            String CPF0 = txtCPF.getText().replace("-","");
+            String CPF1 = CPF0.replace(".","");
+         if (ClienteDAO.validacaoCliente(BigInteger.valueOf(Long.parseLong(CPF1)))){
 
-            ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(txtCPF.getText())),txtNomeCompleto,txtEmail);     
+            ClienteDAO.buscar(BigInteger.valueOf(Long.parseLong(CPF1)),txtNomeCompleto,txtEmail);     
 
         } else {
             Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
@@ -76,12 +78,14 @@ public class UpdatePessoaFisica implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                String CPF0 = txtCPF.getText().replace("-","");
+                String CPF1 = CPF0.replace(".","");
                 Cliente c = new Cliente();
                 ClienteDAO daocli = new ClienteDAO();
 
                 c.setCli_nome(txtNomeCompleto.getText());
                 c.setEmail(txtEmail.getText());
-                c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCPF.getText())));
+                c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF1)));
                
                 daocli.update(c);
                 
@@ -107,10 +111,12 @@ public class UpdatePessoaFisica implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
          if (result.get() == ButtonType.OK){
+            String CPF0 = txtCPF.getText().replace("-","");
+            String CPF1 = CPF0.replace(".","");
             Cliente c = new Cliente();
             ClienteDAO daocli = new ClienteDAO();
 
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(txtCPF.getText())));
+            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF1)));
            
             daocli.delete(c);
         

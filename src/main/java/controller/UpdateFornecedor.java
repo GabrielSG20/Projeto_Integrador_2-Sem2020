@@ -54,9 +54,12 @@ public class UpdateFornecedor implements Initializable {
         
     }
     public void buscarCNPJ(ActionEvent event) {
-         if (FornecedorDAO.validacaoFornecedor(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())))){
+         String CNPJCliente = txtCNPJFornecedor.getText().replace("-","");
+         String CNPJCliente2 = CNPJCliente.replace(".","");
+         String CNPJFornecedorFinal = CNPJCliente2.replace("/",""); 
+         if (FornecedorDAO.validacaoFornecedor(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)))){
 
-            FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())),txtNomeFornecedor,comboTipo);     
+            FornecedorDAO.buscar(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)),txtNomeFornecedor,comboTipo);     
 
         } else {
             Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
@@ -76,12 +79,16 @@ public class UpdateFornecedor implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                String CNPJCliente = txtCNPJFornecedor.getText().replace("-","");
+                String CNPJCliente2 = CNPJCliente.replace(".","");
+                String CNPJFornecedorFinal = CNPJCliente2.replace("/",""); 
+                
                 Fornecedor f = new Fornecedor();
                 FornecedorDAO daofor = new FornecedorDAO();
 
                 f.setFor_nome(txtNomeFornecedor.getText());
                 f.setFor_tipo(String.valueOf(comboTipo.getValue()));
-                f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
+                f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
                
                 daofor.update(f);
                 
@@ -107,10 +114,13 @@ public class UpdateFornecedor implements Initializable {
 
         Optional<ButtonType> result = confirmacao.showAndWait();
          if (result.get() == ButtonType.OK){
+            String CNPJCliente = txtCNPJFornecedor.getText().replace("-","");
+            String CNPJCliente2 = CNPJCliente.replace(".","");
+            String CNPJFornecedorFinal = CNPJCliente2.replace("/",""); 
             Fornecedor f = new Fornecedor();
             FornecedorDAO daofor = new FornecedorDAO();
 
-            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(txtCNPJFornecedor.getText())));
+            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
            
             daofor.delete(f);
         
