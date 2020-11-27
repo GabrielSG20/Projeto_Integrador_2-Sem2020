@@ -9,9 +9,13 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javafx.scene.control.TextField;
 import java.net.URL;
+import javafx.scene.control.Button;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import application.Main;
 import classes.Agua;
 
 public class RelatorioAgua implements Initializable {
@@ -35,7 +39,15 @@ public class RelatorioAgua implements Initializable {
     private TableColumn <Agua, BigDecimal> ClnTaxaRegulamentacao;
     @FXML
     private TableColumn <Agua, BigDecimal> ClnMulta;
-  
+    @FXML
+    private Button btnVoltar;
+    @FXML
+    private Button btnBuscar;
+    @FXML
+    private Button btnEditar;
+    @FXML
+    private TextField txtBusca;    
+
     private List<Agua> listAgua;
     private ObservableList<Agua> observableListAgua;
        
@@ -43,6 +55,18 @@ public class RelatorioAgua implements Initializable {
     public void initialize(URL url, ResourceBundle resources) {
         
         carregarTableViewAgua();
+    }
+    public void changeScreenRetornar() {
+        
+        Main.changeScreen("main");
+    }
+
+    public void changeScreenBuscar() {
+        
+    }
+
+    public void changeScreenEditar() {
+        Main.changeScreen("updateagua1");
     }
 
     public void carregarTableViewAgua(){

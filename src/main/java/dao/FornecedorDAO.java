@@ -101,4 +101,48 @@ public class FornecedorDAO {
 
         return check;
     }
+    public void update(Fornecedor f) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE for_fornecedor SET for_nome  = ?,for_tipo  = ? WHERE for_cnpj = ?");
+           
+            stmt.setString(1, f.getFor_nome());
+            stmt.setString(2, f.getFor_tipo());
+            stmt.setObject(3, f.getFor_cnpj());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
+    public void delete(Fornecedor f) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("DELETE FROM for_fornecedor WHERE for_cnpj = ?");
+        
+            stmt.setObject(1, f.getFor_cnpj());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
 }

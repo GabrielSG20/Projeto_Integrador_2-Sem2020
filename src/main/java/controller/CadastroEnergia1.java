@@ -113,7 +113,7 @@ public class CadastroEnergia1 implements Initializable {
     public void buscarCEP(ActionEvent event){
         String CEP = txtCEPEnergia.getText().replace("-","");
         if (CepDAO.validacaoCEP(BigInteger.valueOf(Long.parseLong(CEP)))){
-
+            
             CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidadeEnergia, txtEnderecoEnergia, comboUF);
         } else {
             Alert Alert = new Alert(AlertType.INFORMATION);

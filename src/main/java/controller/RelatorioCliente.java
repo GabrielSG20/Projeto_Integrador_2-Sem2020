@@ -1,4 +1,5 @@
 package controller;
+
 import dao.InstalacaoDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,10 +9,13 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
+import javafx.scene.control.Button;
 import java.math.BigInteger;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import application.Main;
 import classes.Instalacao;
 
 public class RelatorioCliente implements Initializable {
@@ -33,6 +37,16 @@ public class RelatorioCliente implements Initializable {
     private TableColumn <Instalacao, String> ClRua;
     @FXML
     private TableColumn <Instalacao, BigInteger> ClNumero;
+    @FXML
+    private Button btnRetornar;
+    @FXML
+    private Button btnEditarPF;
+    @FXML
+    private Button btnEditarPJ;
+    @FXML
+    private Button btnEditarFornecedor;
+    @FXML
+    private Button btnBuscar;
    
     private List<Instalacao> listInstalacao;
     private ObservableList<Instalacao> observableListInstalacao;
@@ -41,6 +55,26 @@ public class RelatorioCliente implements Initializable {
     public void initialize(URL url, ResourceBundle resources) {
         
         carregarTableViewInstalacao();
+    }
+    
+    public void changeScreenRetornar() {
+        
+        Main.changeScreen("main");
+    }
+
+    public void changeScreenPF() {
+        
+        Main.changeScreen("updatepessoafisica");
+    }
+
+    public void changeScreenPJ() {
+        
+        Main.changeScreen("updatepessoajuridica");
+    }
+
+    public void changeScreenEditarFornecedor() {
+        
+        Main.changeScreen("updatefornecedor");
     }
 
     public void carregarTableViewInstalacao(){

@@ -21,7 +21,7 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtMesReferenciaEnergia" layoutX="194.0" layoutY="25.0" prefHeight="30.0" prefWidth="106.0">
+      <TextField fx:id="txtMesReferenciaEnergia" layoutX="194.0" layoutY="25.0" onKeyReleased="#mascaraMesReferencia" prefHeight="30.0" prefWidth="106.0" promptText="Mês/Ano">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

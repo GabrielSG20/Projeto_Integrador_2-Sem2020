@@ -68,17 +68,27 @@ public class UpdateAgua2 implements Initializable {
     private Button btnDeletar;
     @FXML
     private Button btnRetornarAgua2;
+    @FXML
+    private Button btnBuscar;
 
     @Override
         public void initialize(URL arg0, ResourceBundle arg1) {
             // TODO Auto-generated method stub
-            AguaDAO.buscar2(txtValorTotal,txtTarifaAguaAte10,txtTarifaAgua11a20,
+            
+        }
+
+    public void buscarCampos(ActionEvent event) {
+        AguaDAO.buscar2(txtTarifaAguaAte10,txtTarifaAgua11a20,
             txtTarifaAgua21a31,txtTarifaAgua31a50,txtTarifaAcima50, txtValorAguaAte10,
             txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20,
             txtTarifaEsgoto21a30,txtTarifaEsgoto31a50,txtTarifaEsgotoAcima50,
             txtValorEsgotoAte10,txtValorEsgoto11a20, txtVIAgua,
             txtVIEsgoto, txtTaxaRegulacao, txtMulta);
-        }
+
+        txtValorTotal.setText(String.valueOf(Double.parseDouble(txtTaxaRegulacao.getText()) + 
+        Double.parseDouble(txtMulta.getText()) + Double.parseDouble(txtVIEsgoto.getText()) + 
+        Double.parseDouble(txtVIAgua.getText())));
+    }
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("updateagua1");
@@ -139,7 +149,7 @@ public class UpdateAgua2 implements Initializable {
 
                 aguadao.update2(agu);
 
-                Main.changeScreen("relatoriocliente");
+                Main.changeScreen("relatorioagua");
                 
                 Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
                 cadastrado.setTitle("Dados atualizado com sucesso");

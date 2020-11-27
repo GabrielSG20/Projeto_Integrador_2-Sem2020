@@ -2,7 +2,6 @@ package application;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
 import classes.Agua;
 import classes.Conta;
 import classes.Energia;
@@ -39,6 +38,9 @@ public class Main extends Application {
     private static Scene relatorioenergiaScene;
     private static Scene relatorioclienteScene;
     private static Scene cadastrarenderecoaguaScene;
+    private static Scene updatepessoafisicaScene;
+    private static Scene updatepessoajuridicaScene;
+    private static Scene updatefornecedorScene;
     private static Scene cadastrarenderecoenergiaScene;
     private static Scene aguasemendScene;
     private static Scene aguasemend2Scene;
@@ -48,6 +50,9 @@ public class Main extends Application {
     private static Scene instalacaoCadastradaScene;
     private static Scene cadastrarEnderecoAguaScene;
     private static Scene cadastrarEnderecoEnergiaScene;
+    private static Scene updateEnergiaScene;
+    private static Scene updateagua1Scene;
+    private static Scene updateagua2Scene;
     private static Energia n;
     private static EnergiaDAO dao_ene;
     private static Conta cta;
@@ -131,6 +136,24 @@ public class Main extends Application {
             Parent fxmlRelatorioCliente = FXMLLoader.load(getClass().getResource("/view/RelatorioCliente.fxml"));
             relatorioclienteScene = new Scene(fxmlRelatorioCliente);
 
+            Parent fxmlUpdateEnergia = FXMLLoader.load(getClass().getResource("/view/UpdateEnergia.fxml"));
+            updateEnergiaScene = new Scene(fxmlUpdateEnergia);
+
+            Parent fxmlUpdatePessoaFisica = FXMLLoader.load(getClass().getResource("/view/UpdatePessoaFisica.fxml"));
+            updatepessoafisicaScene = new Scene(fxmlUpdatePessoaFisica);
+
+            Parent fxmlUpdatePessoaJurica = FXMLLoader.load(getClass().getResource("/view/UpdatePessoaJuridica.fxml"));
+            updatepessoajuridicaScene = new Scene(fxmlUpdatePessoaJurica);
+
+            Parent fxmlUpdateFornecedor = FXMLLoader.load(getClass().getResource("/view/UpdateFornecedor.fxml"));
+            updatefornecedorScene = new Scene(fxmlUpdateFornecedor);
+
+            Parent fxmlUpdateAgua1 = FXMLLoader.load(getClass().getResource("/view/UpdateAgua1.fxml"));
+            updateagua1Scene = new Scene(fxmlUpdateAgua1);
+
+            Parent fxmlUpdateAgua2 = FXMLLoader.load(getClass().getResource("/view/UpdateAgua2.fxml"));
+            updateagua2Scene = new Scene(fxmlUpdateAgua2);
+
 			primaryStage.setTitle("Cadastro de Contas");
 			primaryStage.setScene(mainScene);
             primaryStage.show();
@@ -209,6 +232,24 @@ public class Main extends Application {
         }
         if (tela == "relatoriocliente"){
             stage.setScene(relatorioclienteScene);
+        }
+        if (tela == "updateenergia"){
+            stage.setScene(updateEnergiaScene);
+        }
+        if (tela == "updatepessoafisica"){
+            stage.setScene(updatepessoafisicaScene);
+        }
+        if (tela == "updatepessoajuridica"){
+            stage.setScene(updatepessoajuridicaScene);
+        }
+        if (tela == "updatefornecedor"){
+            stage.setScene(updatefornecedorScene);
+        }
+        if (tela == "updateagua1"){
+            stage.setScene(updateagua1Scene);
+        }
+        if (tela == "updateagua2"){
+            stage.setScene(updateagua2Scene);
         }
     }
 
@@ -383,7 +424,7 @@ public class Main extends Application {
                 n.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao)));
                 n.setEne_consumo_conta_mes(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
                 n.setEne_valor_total(BigDecimal.valueOf(Double.parseDouble(txtTotalPagar.getText())));
-                n.setEne_const_multi(null);
+                n.setEne_const_multi(BigDecimal.valueOf(Double.parseDouble("0")));
                 n.setEne_numero_medidor(BigInteger.valueOf(Long.parseLong(txtNRmedidor.getText())));
                 n.setEne_leitura_anterior_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAnterior.getText())));
                 n.setEne_leitura_atual_cod(BigInteger.valueOf(Long.parseLong(txtLeituraAtual.getText())));

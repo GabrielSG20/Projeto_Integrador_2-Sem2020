@@ -67,7 +67,7 @@ public class CadastrarEnderecoEnergia implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event){
-        Main.changeScreen("agua1");
+        Main.changeScreen("energia1Scene");
 
         txtEndereco.setText("");
         txtCEP.setText("");

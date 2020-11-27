@@ -106,6 +106,7 @@ public class UpdateAgua1 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
+                String RGI = txtRGI.getText().replaceAll("/", "");
                 Agua agu = new Agua();
                 AguaDAO aguadao = new AguaDAO();
 
@@ -119,6 +120,8 @@ public class UpdateAgua1 implements Initializable {
                 agu.setAgu_leitura_anterior(BigInteger.valueOf(Long.parseLong(txtLeituraAntNumero.getText())));
                 agu.setAgu_leitura_atual(BigInteger.valueOf(Long.parseLong(txtLeituraAtualNumero.getText())));
                 agu.setAgu_consumo(BigInteger.valueOf(Long.parseLong(txtConsumo.getText())));
+                agu.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(RGI)));
+                agu.setCta_mes_referencia(txtMesReferencia.getText());
 
                 aguadao.update1(agu);
                 

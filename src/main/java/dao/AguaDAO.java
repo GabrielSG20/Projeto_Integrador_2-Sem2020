@@ -199,7 +199,7 @@ public class AguaDAO {
 
     }
 
-    public static void buscar2(TextField txtValorTotal,TextField txtTarifaAguaAte10,TextField txtTarifaAgua11a20,
+    public static void buscar2(TextField txtTarifaAguaAte10,TextField txtTarifaAgua11a20,
     TextField txtTarifaAgua21a31,TextField txtTarifaAgua31a50,TextField txtTarifaAcima50,TextField txtValorAguaAte10,
     TextField txtValorAgua11a20,TextField txtTarifaEsgotoAte10,TextField txtTarifaEsgoto11a20,
     TextField txtTarifaEsgoto21a30,TextField txtTarifaEsgoto31a50,TextField txtTarifaEsgotoAcima50,
@@ -258,10 +258,6 @@ public class AguaDAO {
                 txtVIEsgoto.setText(String.valueOf(agu.getAgu_valor_esgoto()));
                 txtTaxaRegulacao.setText(String.valueOf(agu.getAgu_taxa_regulamentacao()));
                 txtMulta.setText(String.valueOf(agu.getAgu_multa()));
-                txtValorTotal.setText(String.valueOf(Long.parseLong(String.valueOf(agu.getAgu_valor_agua()))) + 
-                Long.parseLong(String.valueOf(agu.getAgu_valor_esgoto())) + 
-                Long.parseLong(String.valueOf(agu.getAgu_taxa_regulamentacao())) + 
-                Long.parseLong(String.valueOf(agu.getAgu_multa())));
             }
         } catch (SQLException ex) {
            Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
@@ -293,6 +289,8 @@ public class AguaDAO {
             stmt.setObject(8, agu.getAgu_leitura_anterior());
             stmt.setObject(9, agu.getAgu_leitura_atual());
             stmt.setObject(10, agu.getAgu_consumo());
+            stmt.setObject(11, agu.getInt_numero_instalacao());
+            stmt.setObject(12, agu.getCta_mes_referencia());
             
             stmt.executeUpdate();
 
@@ -326,14 +324,16 @@ public class AguaDAO {
             stmt.setObject(8, agu.getAgu_tarifa_ate50_agua());
             stmt.setObject(9, agu.getAgu_tarifa_acima50_agua());
             stmt.setObject(10, agu.getAgu_tarifa_ate10_esgoto());
-            stmt.setObject(12, agu.getAgu_tarifa_ate20_esgoto());
-            stmt.setObject(13, agu.getAgu_tarifa_ate30_esgoto());
-            stmt.setObject(14, agu.getAgu_tarifa_ate50_esgoto());
-            stmt.setObject(15, agu.getAgu_tarifa_acima50_esgoto());
-            stmt.setObject(16, agu.getAgu_valor_agua1());
-            stmt.setObject(17, agu.getAgu_valor_agua2());
-            stmt.setObject(18, agu.getAgu_valor_esgoto1());
-            stmt.setObject(19, agu.getAgu_valor_esgoto2());
+            stmt.setObject(11, agu.getAgu_tarifa_ate20_esgoto());
+            stmt.setObject(12, agu.getAgu_tarifa_ate30_esgoto());
+            stmt.setObject(13, agu.getAgu_tarifa_ate50_esgoto());
+            stmt.setObject(14, agu.getAgu_tarifa_acima50_esgoto());
+            stmt.setObject(15, agu.getAgu_valor_agua1());
+            stmt.setObject(16, agu.getAgu_valor_agua2());
+            stmt.setObject(17, agu.getAgu_valor_esgoto1());
+            stmt.setObject(18, agu.getAgu_valor_esgoto2());
+            stmt.setObject(19, a.getInt_numero_instalacao());
+            stmt.setObject(20, a.getCta_mes_referencia());
             
             stmt.executeUpdate();
 

@@ -56,7 +56,7 @@
          <graphic>
             <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="image/Agua.jpeg" />
+                  <Image url="image/PessoaJuridica.png" />
                </image>
             </ImageView>
          </graphic>
