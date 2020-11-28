@@ -41,7 +41,7 @@
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
-      <Button fx:id="btnEditarFornecedor" layoutX="595.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenEditarFornecedor" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar fornencedor" textFill="#525049" AnchorPane.rightAnchor="15.0">
+      <Button fx:id="btnEditarFornecedor" layoutX="595.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenEditarFornecedor" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar fornecedor" textFill="#525049" AnchorPane.rightAnchor="15.0">
          <font>
             <Font name="Arial" size="12.0" />
          </font>

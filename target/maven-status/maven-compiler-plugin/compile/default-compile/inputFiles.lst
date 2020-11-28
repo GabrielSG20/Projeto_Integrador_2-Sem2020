@@ -27,6 +27,7 @@
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/EnergiaDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/ClienteDAO.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/InstalacaoCadastrada.java
+/workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/GeradorPDF.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/UpdateEnergia.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/controller/CadastroAgua1.java
 /workspace/Projeto_Integrador_2-Sem2020/src/main/java/dao/EnderecoDAO.java
