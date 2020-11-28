@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextField;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -19,6 +20,10 @@ public class TipoRelatorio implements Initializable {
        private Button btnRetornarTipoR;
        @FXML
        private Button btnRelatorioCliente;
+       @FXML
+       private Button btnGerarPDF;
+       @FXML
+        private TextField txtBuscarInstalacao;
        
 	   
 	@Override
@@ -39,6 +44,10 @@ public class TipoRelatorio implements Initializable {
     
     public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
-	}
+    }
+    
+    public void gerarRelatorio(ActionEvent event){
+
+    }
 
 }
