@@ -54,6 +54,9 @@ Duração: 09/11/2020 até 29/11/2020
    
 3. Apresentação do desenvolvimento realizado durante a terceira sprint, elaboração do Banco de Dados e da Documentação do Projeto. Disponível no seguinte link:
    * [Video(YouTube)](https://www.youtube.com/watch?v=HR_M4Nk9Ujk&feature=youtu.be)
+ 
+4. Apresentação do desenvolvimento realizado durante a quarta sprint, elaboração do fluxo de Instalação já cadastrada e finalização da documentação, relatórios e executável. Disponível no seguinte link:
+   * [Video(YouTube)](https://www.youtube.com/watch?v=eWoUZBkDxxY&feature=youtu.be)
 
 ### :paperclip: Funcionamento do projeto
 #### A tela inicial apresenta três botões: Nova Instalação, Instalação já cadastrada e Relatórios. 
