@@ -17,43 +17,45 @@ import application.Main;
 
 public class CadastroAgua2 implements Initializable {
     @FXML
-    private TextField txtTarifa10agua;
+    private TextField txtTarifaAguaAte10;
+    @FXML 
+    private TextField txtTarifaAgua11a20;
     @FXML
-    private TextField txtTarifa20agua;
+    private TextField txtTarifaAgua21a31;
     @FXML
-    private TextField txtTarifa30agua;
+    private TextField txtTarifaAgua31a50;
     @FXML
-    private TextField txtTarifa50agua;
+    private TextField txtTarifaAcima50;
     @FXML
-    private TextField txtTarifaMais50agua;
+    private TextField txtValorAguaAte10;
     @FXML
-    private TextField txtValorAgua1;
+    private TextField txtValorAgua11a20;
     @FXML
-    private TextField txtValorAgua2;
+    private TextField txtTarifaEsgotoAte10;
     @FXML
-    private TextField txtTarifa10esgoto;
+    private TextField txtTarifaEsgoto11a20;
     @FXML
-    private TextField txtTarifa20esgoto;
+    private TextField txtTarifaEsgoto21a30;
     @FXML
-    private TextField txtTarifa30esgoto;
+    private TextField txtTarifaEsgoto31a50;
     @FXML
-    private TextField txtTarifa50esgoto;
+    private TextField txtTarifaEsgotoAcima50;
     @FXML
-    private TextField txtTarifaMais50esgoto;
+    private TextField txtValorEsgotoAte10;
     @FXML
-    private TextField txtValorEsgoto1;
-    @FXML
-    private TextField txtValorEsgoto2;
+    private TextField txtValorEsgoto11a20;
     @FXML
     private TextField txtVencimento;
     @FXML
-    private TextField txtTotalAgua;
+    private TextField txtVIAgua;
     @FXML
-    private TextField txtTotalEsgoto;
+    private TextField txtVIEsgoto;
     @FXML
     private TextField txtTaxaRegulacao;
     @FXML
     private TextField txtMulta;
+    @FXML
+    private TextField txtUsuario;
     @FXML
     private Button btnSalvarVoltarTelaInicial;
     @FXML
@@ -69,7 +71,7 @@ public class CadastroAgua2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        if(txtVencimento.getText().equals("")) {
+        if(txtVencimento.getText().equals("") || txtUsuario.getText().equals("")) {
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
@@ -83,46 +85,48 @@ public class CadastroAgua2 implements Initializable {
             confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
 
             Optional<ButtonType> result = confirmacao.showAndWait();
-            if (result.get() == ButtonType.OK){
-                Main.salvarConta2(txtVencimento);
-                Main.salvarAgua2(txtTarifa10agua, txtTarifa20agua, txtTarifa30agua, txtTarifa50agua, txtTarifaMais50agua, 
-                txtValorAgua1, txtValorAgua2, txtTarifa10esgoto, txtTarifa20esgoto, txtTarifa30esgoto, txtTarifa50esgoto, 
-                txtTarifaMais50esgoto, txtValorEsgoto1, txtValorEsgoto2, txtTotalAgua, txtTotalEsgoto, txtTaxaRegulacao, 
+            if (result.get() == ButtonType.OK){   
+
+                Main.salvarConta2(txtVencimento, txtUsuario);
+                Main.salvarAgua2(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a31, txtTarifaAgua31a50, txtTarifaAcima50, 
+                txtValorAguaAte10, txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20, txtTarifaEsgoto21a30, txtTarifaEsgoto31a50, 
+                txtTarifaEsgotoAcima50, txtValorEsgotoAte10, txtValorEsgoto11a20, txtVIAgua, txtVIEsgoto, txtTaxaRegulacao, 
                 txtMulta);
-
+                
                 Main.changeScreen("main");
-
-                txtTarifa10agua.setText("");
-                txtTarifa20agua.setText("");
-                txtTarifa30agua.setText("");
-                txtTarifa50agua.setText("");
-                txtTarifaMais50agua.setText("");
-                txtValorAgua1.setText("");
-                txtValorAgua2.setText("");
-                txtTarifa10esgoto.setText("");
-                txtTarifa20esgoto.setText("");
-                txtTarifa30esgoto.setText("");
-                txtTarifa50esgoto.setText("");
-                txtTarifaMais50esgoto.setText("");
-                txtValorEsgoto1.setText("");
-                txtValorEsgoto2.setText("");
-                txtVencimento.setText("");
-                txtTotalAgua.setText("");
-                txtTotalEsgoto.setText("");
-                txtTaxaRegulacao.setText("");
-                txtMulta.setText("");
-
+                
                 Alert Alert = new Alert(AlertType.INFORMATION);
                 Alert.setTitle("Confirmação de Cadastro");
                 Alert.setHeaderText(null);
                 Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
                 Alert.showAndWait();
+
+                txtVencimento.setText("");
+                txtTarifaAguaAte10.setText("0");
+                txtTarifaAgua11a20.setText("0");
+                txtTarifaAgua21a31.setText("0");
+                txtTarifaAgua31a50.setText("0");
+                txtTarifaAcima50.setText("0");
+                txtValorAguaAte10.setText("0");
+                txtValorAgua11a20.setText("0");
+                txtTarifaEsgotoAte10.setText("0");
+                txtTarifaEsgoto11a20.setText("0");
+                txtTarifaEsgoto21a30.setText("0");
+                txtTarifaEsgoto31a50.setText("0");
+                txtTarifaEsgotoAcima50.setText("0");
+                txtValorEsgotoAte10.setText("0");
+                txtValorEsgoto11a20.setText("0");
+                txtVIAgua.setText("0");
+                txtVIEsgoto.setText("0");
+                txtTaxaRegulacao.setText("0");
+                txtMulta.setText("0");
+                txtUsuario.setText("");
             } else {
-                
-        }   }
+            }    
+        }
     }
 
-    // Mascaras
+ // Mascaras
     @FXML
     private void mascaraVencimento(){
         TextFieldFormatter tff = new TextFieldFormatter();

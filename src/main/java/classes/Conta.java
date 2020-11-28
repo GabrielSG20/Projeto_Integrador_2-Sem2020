@@ -6,7 +6,8 @@ public class Conta {
 
 	private BigInteger int_numero_instalacao;
 	private String cta_mes_referencia;
-	private String cta_vencimento;
+    private String cta_vencimento;
+    private String cta_usuario;
 	
 	public BigInteger getInt_numero_instalacao() {
 		return int_numero_instalacao;
@@ -26,7 +27,10 @@ public class Conta {
 	public void setCta_vencimento(String cta_vencimento) {
 		this.cta_vencimento = cta_vencimento;
 	}
-	
-	
-	
+	public String getCta_usuario() {
+		return cta_usuario;
+	}
+	public void setCta_usuario(String cta_usuario) {
+		this.cta_usuario = cta_usuario;
+	}
 }

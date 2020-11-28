@@ -15,8 +15,11 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
+import classes.Cep;
 import classes.Endereco;
+import dao.CepDAO;
 import dao.EnderecoDAO;
+import dao.InstalacaoDAO;
 
 public class CadastroAgua1 implements Initializable {
     @FXML
@@ -59,11 +62,14 @@ public class CadastroAgua1 implements Initializable {
     private Button btnRetornarAgua1;
     @FXML
     private Button btnSalvarContinuar;
+    @FXML
+    private Button btnBuscarCEP;
+    @FXML
+    private Button btnCadastrarEndereco;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
-
         comboUF.getItems().add("AC");
         comboUF.getItems().add("AL");
         comboUF.getItems().add("AP");
@@ -95,6 +101,44 @@ public class CadastroAgua1 implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
+
+        txtRGI.setText("");
+        txtGR.setText("");
+        txtMesReferencia.setText("");
+        txtEndereco.setText("");
+        txtCEP.setText("");
+        txtConsumo.setText("");
+        txtNumero.setText("");
+        txtCodigoCliente.setText("");
+        txtNumeroConta.setText("");
+        txtLeituraAntData.setText("");
+        txtLeituraAntNumero.setText("");
+        txtLeituraAtualData.setText("");
+        txtLeituraAtualNumero.setText("");
+        txtHidrometro.setText("");
+        txtTipoLigacao.setText("");
+        txtCidade.setText("");
+        comboUF.setValue("");
+    }
+
+    public void cadastrarNovoEndereco(ActionEvent event){
+        Main.changeScreen("cadastrarenderecoagua");
+    }
+
+    public void buscarCEP(ActionEvent event){
+        String CEP = txtCEP.getText().replace("-","");
+        if (CepDAO.validacaoCEP(BigInteger.valueOf(Long.parseLong(CEP)))){
+            
+            CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidade, txtEndereco, comboUF);
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("CEP não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("Digite um CEP válido!");
+            Alert.showAndWait();
+
+            txtCEP.setText("");
+        }
     }
 
     public void changeScreenContinuar(ActionEvent event) {
@@ -114,52 +158,57 @@ public class CadastroAgua1 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-                String CEP = txtCEP.getText().replace("-","");
                 String RGI = txtRGI.getText().replace("/","");
+                if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(RGI)))){
+                    Alert Alert = new Alert(AlertType.INFORMATION);
+                    Alert.setTitle("RGI já Existente");
+                    Alert.setHeaderText(null);
+                    Alert.setContentText("Digite um RGI válido!");
+                    Alert.showAndWait();
+                } else {
+                    String CEP = txtCEP.getText().replace("-","");
 
-                Endereco e = new Endereco();
-                EnderecoDAO dao = new EnderecoDAO();
-                e.setEnd_cep(BigInteger.valueOf(Long.parseLong(CEP)));
-                e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
-                e.setEnd_rua(txtEndereco.getText());
-                e.setEnd_estado(String.valueOf(comboUF.getValue()));
-                e.setEnd_cidade(txtCidade.getText());
-                e.setEnd_complemento(txtComplemento.getText());
+                    Endereco e = new Endereco();
+                    EnderecoDAO daoend = new EnderecoDAO();
+                    e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
+                    e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumero.getText())));
+                    e.setEnd_complemento(txtComplemento.getText());
 
-                dao.create(e);
+                    daoend.create(e);
 
-                Main.salvarIntalacaoEndereco(CEP, txtNumero);
-                Main.salvarIntalacaoNumero(RGI);
-                Main.salvarConta1(RGI, txtMesReferencia);
-                Main.salvarAgua1(RGI, txtGR, txtMesReferencia, txtConsumo, txtCodigoCliente, txtNumeroConta, 
-                txtLeituraAntData, txtLeituraAtualData, txtLeituraAntNumero, txtLeituraAtualNumero, txtHidrometro, 
-                txtTipoLigacao);
+                    Main.salvarIntalacaoEndereco(CEP, txtNumero);
+                    Main.salvarIntalacaoNumero(RGI);
+                    Main.salvarConta1(RGI, txtMesReferencia);
+                    Main.salvarAgua1(RGI, txtGR, txtMesReferencia, txtConsumo, txtCodigoCliente, txtNumeroConta, 
+                    txtLeituraAntData, txtLeituraAtualData, txtLeituraAntNumero, txtLeituraAtualNumero, txtHidrometro, 
+                    txtTipoLigacao);
 
-                txtRGI.setText("");
-                txtGR.setText("");
-                txtMesReferencia.setText("");
-                txtEndereco.setText("");
-                txtCEP.setText("");
-                txtConsumo.setText("");
-                txtNumero.setText("");
-                txtCodigoCliente.setText("");
-                txtNumeroConta.setText("");
-                txtLeituraAntData.setText("");
-                txtLeituraAntNumero.setText("");
-                txtLeituraAtualData.setText("");
-                txtLeituraAtualNumero.setText("");
-                txtHidrometro.setText("");
-                txtTipoLigacao.setText("");
-                txtCidade.setText("");
-                txtComplemento.setText("");
-
-                Main.changeScreen("agua2");
+                    Main.changeScreen("agua2");
+                    
+                    txtRGI.setText("");
+                    txtGR.setText("");
+                    txtMesReferencia.setText("");
+                    txtEndereco.setText("");
+                    txtCEP.setText("");
+                    txtConsumo.setText("");
+                    txtNumero.setText("");
+                    txtCodigoCliente.setText("");
+                    txtNumeroConta.setText("");
+                    txtLeituraAntData.setText("");
+                    txtLeituraAntNumero.setText("");
+                    txtLeituraAtualData.setText("");
+                    txtLeituraAtualNumero.setText("");
+                    txtHidrometro.setText("");
+                    txtTipoLigacao.setText("");
+                    txtCidade.setText("");
+                    comboUF.setValue("");
+                }
             } else {
-                
-        }   }
+            }    
+        }
     }
 
-    // Mascaras
+// Mascaras
     @FXML
     private void mascaraRGI(){
         TextFieldFormatter tff = new TextFieldFormatter();
@@ -190,6 +239,14 @@ public class CadastroAgua1 implements Initializable {
         tff.setMask("#####-###");
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtCEP);
+        tff.formatter();
+    }
+    @FXML
+    private void mascaraMesReferencia(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtMesReferencia);
         tff.formatter();
     }
 }

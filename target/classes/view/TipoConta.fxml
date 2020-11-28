@@ -7,49 +7,49 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TipoConta">
+<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TipoConta">
    <children>
-      <Text layoutX="162.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro">
-         <font>
-            <Font size="40.0" />
-         </font>
-      </Text>
-      <ImageView fitHeight="900.0" fitWidth="1100.0" layoutX="116.0" layoutY="-6.0" opacity="0.1" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <Button fx:id="Btn_CDL" ellipsisString="" layoutX="147.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenContaLuz" prefHeight="178.0" prefWidth="174.0">
+      <Text layoutX="157.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Selecione o tipo de conta para cadastro" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0">
+         <font>
+            <Font name="Arial" size="30.0" />
+         </font>
+      </Text>
+      <Button fx:id="Btn_CDL" ellipsisString="" layoutX="147.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenContaLuz" prefHeight="108.0" prefWidth="116.0" AnchorPane.leftAnchor="174.0" AnchorPane.topAnchor="150.0">
          <graphic>
-            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/image/Energia.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Text layoutX="655.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de água">
+      <Text layoutX="479.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de água">
          <font>
-            <Font size="36.0" />
+            <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Text layoutX="190.0" layoutY="608.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de luz">
+      <Text layoutX="165.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Conta de luz">
          <font>
-            <Font size="36.0" />
+            <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="Btn_CDA" ellipsisString="" layoutX="630.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenContaAgua">
+      <Button fx:id="Btn_CDA" ellipsisString="" layoutX="630.0" layoutY="219.0" mnemonicParsing="false" onAction="#changeScreenContaAgua" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="174.0" AnchorPane.topAnchor="150.0">
          <graphic>
-            <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="/image/Agua.jpeg" />
                </image>
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="btnRetornarTipoConta" layoutX="70.0" layoutY="776.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="51.0" prefWidth="164.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="btnRetornarTipoConta" layoutX="34.0" layoutY="479.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="37.0" prefWidth="157.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2">
          <font>
-            <Font size="24.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
    </children>

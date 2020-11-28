@@ -15,45 +15,50 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import util.TextFieldFormatter;
 import application.Main;
+import classes.Cep;
 import classes.Endereco;
+import dao.CepDAO;
 import dao.EnderecoDAO;
 
 public class CadastroEnergia1 implements Initializable {
-    @FXML
-    private TextField txtCidade;
     @FXML
     private TextField txtCEPEnergia;
     @FXML
     private ComboBox comboUF;
     @FXML
+    private TextField txtComplemento;
+    @FXML
+    private TextField txtCidadeEnergia;
+    @FXML
+    private TextField txtCodigoFiscalEnergia;
+    @FXML
     private TextField txtEnderecoEnergia;
     @FXML
     private TextField txtNumeroEnergia;
     @FXML
-    private TextField txtComplemento;
+    private TextField txtGrupoSubgrupoEnergia;
     @FXML
-    private TextField txtCodigoFiscal;
+    private TextField txtClasseSubclasseEnergia;
     @FXML
-    private TextField txtGrupoSubgrupo;
+    private TextField txtFornecimentoEnergia;
     @FXML
-    private TextField txtClasseSubclasse;
+    private TextField txtMTarifaEnergia;
     @FXML
-    private TextField txtFornecimento;
+    private TextField txtRoteiroLeituraEnergia;
     @FXML
-    private TextField txtTarifaria;
+    private TextField txtTensaoNominalEnergia;
     @FXML
-    private TextField txtRoteiroLeitura;
-    @FXML
-    private TextField txtTensaoNominal;
-    @FXML
-    private Button btnSalvarContinuar;
+    private Button btnVoltarTelaIncial;
     @FXML
     private Button btnRetornarEnergia;
+    @FXML
+    private Button btnBuscarCEP;
+    @FXML
+    private Button btnCadastrarEndereco;
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
         // TODO Auto-generated method stub
-
         comboUF.getItems().add("AC");
         comboUF.getItems().add("AL");
         comboUF.getItems().add("AP");
@@ -85,63 +90,93 @@ public class CadastroEnergia1 implements Initializable {
 
     public void changeScreenRetornar(ActionEvent event) {
         Main.changeScreen("tipoconta");
+
+        txtCEPEnergia.setText("");
+        txtComplemento.setText("");
+        txtCidadeEnergia.setText("");
+        txtCodigoFiscalEnergia.setText("");
+        txtEnderecoEnergia.setText("");
+        txtNumeroEnergia.setText("");
+        txtGrupoSubgrupoEnergia.setText("");
+        txtClasseSubclasseEnergia.setText("");
+        txtFornecimentoEnergia.setText("");
+        txtMTarifaEnergia.setText("");
+        txtRoteiroLeituraEnergia.setText("");
+        txtTensaoNominalEnergia.setText("");
+        comboUF.setValue("");
     }
 
-    public void changeScreenSalvarContinuar(ActionEvent event) {
-        if(comboUF.getValue().equals("") || txtNumeroEnergia.getText().equals("") || txtTarifaria.getText().equals("") || txtClasseSubclasse.getText().equals("") || txtGrupoSubgrupo.getText().equals("") || txtCodigoFiscal.getText().equals("") || txtCidade.getText().equals("") || txtCEPEnergia.getText().equals("") || txtEnderecoEnergia.getText().equals("")) {
+    public void cadastrarNovoEndereco(ActionEvent event){
+        Main.changeScreen("cadastrarenderecoenergia");
+    }
+
+    public void buscarCEP(ActionEvent event){
+        String CEP = txtCEPEnergia.getText().replace("-","");
+        if (CepDAO.validacaoCEP(BigInteger.valueOf(Long.parseLong(CEP)))){
+            
+            CepDAO.buscar(BigInteger.valueOf(Long.parseLong(CEP)), txtCidadeEnergia, txtEnderecoEnergia, comboUF);
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("CEP não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("Digite um CEP válido!");
+            Alert.showAndWait();
+
+            txtCEPEnergia.setText("");
+        }
+    }
+
+    public void changeScreenVoltarTelaInicial(ActionEvent event) {
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+        confirmacao.setTitle("Confirmação de Cadastro");
+        confirmacao.setHeaderText(null);
+        confirmacao.setContentText("DESEJA ADICIONAR UM CADASTRO?");
+
+        Optional<ButtonType> result = confirmacao.showAndWait();
+        if(comboUF.getValue().equals("") || txtNumeroEnergia.getText().equals("") || txtMTarifaEnergia.getText().equals("") || txtClasseSubclasseEnergia.getText().equals("") || txtGrupoSubgrupoEnergia.getText().equals("") || txtCodigoFiscalEnergia.getText().equals("") || txtCidadeEnergia.getText().equals("") || txtCEPEnergia.getText().equals("") || txtEnderecoEnergia.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
             Alert.setContentText("PREENCHA OS CAMPOS COM *");
             Alert.showAndWait(); 
-
         }
         else {
-            Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-            confirmacao.setTitle("Confirmação de Informações");
-            confirmacao.setHeaderText(null);
-            confirmacao.setContentText("CONFIRMA ESSAS INFORMAÇÕES?");
-
-            Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
                 String CEP = txtCEPEnergia.getText().replace("-","");
 
                 Endereco e = new Endereco();
-                EnderecoDAO dao = new EnderecoDAO();
-                e.setEnd_cep(BigInteger.valueOf(Long.parseLong(CEP)));
+                EnderecoDAO daoend = new EnderecoDAO();
+                e.setCep_cep(BigInteger.valueOf(Long.parseLong(CEP)));
                 e.setEnd_numero(BigInteger.valueOf(Long.parseLong(txtNumeroEnergia.getText())));
-                e.setEnd_rua(txtEnderecoEnergia.getText());
-                e.setEnd_estado(String.valueOf(comboUF.getValue()));
-                e.setEnd_cidade(txtCidade.getText());
                 e.setEnd_complemento(txtComplemento.getText());
 
-                dao.create(e);
+                daoend.create(e);
 
-                Main.salvarEnergia1(txtCodigoFiscal, txtGrupoSubgrupo, txtClasseSubclasse, txtFornecimento, txtTarifaria, txtRoteiroLeitura, txtTensaoNominal);
+                Main.salvarEnergia1(txtCodigoFiscalEnergia, txtGrupoSubgrupoEnergia, txtClasseSubclasseEnergia, txtFornecimentoEnergia, txtMTarifaEnergia, txtRoteiroLeituraEnergia, txtTensaoNominalEnergia);
 
                 Main.salvarIntalacaoEndereco(CEP, txtNumeroEnergia);
 
-                Main.changeScreen("energia2");
-                
-                txtCidade.setText("");
                 txtCEPEnergia.setText("");
+                txtComplemento.setText("");
+                txtCidadeEnergia.setText("");
+                txtCodigoFiscalEnergia.setText("");
                 txtEnderecoEnergia.setText("");
                 txtNumeroEnergia.setText("");
-                txtComplemento.setText("");
-                txtCodigoFiscal.setText("");
-                txtGrupoSubgrupo.setText("");
-                txtClasseSubclasse.setText("");
-                txtFornecimento.setText("");
-                txtTarifaria.setText("");
-                txtRoteiroLeitura.setText("");
-                txtTensaoNominal.setText("");
+                txtGrupoSubgrupoEnergia.setText("");
+                txtClasseSubclasseEnergia.setText("");
+                txtFornecimentoEnergia.setText("");
+                txtMTarifaEnergia.setText("");
+                txtRoteiroLeituraEnergia.setText("");
+                txtTensaoNominalEnergia.setText("");
+                comboUF.setValue("");
+
+                Main.changeScreen("energia2Scene");
             } else {
             }    
         }
     }
-
-    // Mascaras
+ //Mascaras
     @FXML
     private void mascaraCEP(){
         TextFieldFormatter tff = new TextFieldFormatter();
@@ -149,5 +184,5 @@ public class CadastroEnergia1 implements Initializable {
         tff.setCaracteresValidos("0123456789");
         tff.setTf(txtCEPEnergia);
         tff.formatter();
+        }
     }
-}

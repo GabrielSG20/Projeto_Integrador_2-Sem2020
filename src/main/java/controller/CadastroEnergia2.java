@@ -19,36 +19,40 @@ import util.TextFieldFormatter;
 import application.Main;
 import classes.Energia;
 import dao.EnergiaDAO;
+import dao.InstalacaoDAO;
 
 public class CadastroEnergia2 implements Initializable {
     @FXML
-    private TextField txtContaMes;
-    @FXML
+    private TextField txtMesReferenciaEnergia;
+    @FXML 
     private TextField txtNumeroInstalacao;
     @FXML
-    private TextField txtConsumo;
+    private TextField txtConsumodoMesKWH;
     @FXML
     private TextField txtDataVencimento;
     @FXML
-    private TextField txtTotalPagar;
+    private TextField txtValorTotal;
     @FXML
     private TextField txtConstMulti;
     @FXML
-    private TextField txtNRmedidor;
+    private TextField txtNRdoMedidor;
     @FXML
-    private TextField txtLeituraAnterior;
-    @FXML
-    private TextField txtLeituraAtual;
-    @FXML
+    private TextField txtLeituraAnteriorEnergia;
+    @FXML 
+    private TextField txtLeituraAtualEnergia;
+    @FXML 
     private TextField txtDataLeituraAnterior;
     @FXML
     private TextField txtDataLeituraAtual;
     @FXML
+    private TextField txtUsuario;
+    @FXML
     private ComboBox comboBandeirasTarifarias;
     @FXML
-    private Button btnRetornarEnergia;
+    private Button btnVoltarTelaInical;
     @FXML
-    private Button btnVoltarTelaIncial;
+    private Button btnRetornarEnergia;
+
 
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
@@ -60,11 +64,11 @@ public class CadastroEnergia2 implements Initializable {
     }
 
     public void changeScreenRetornar(ActionEvent event) {
-        Main.changeScreen("energia1");
+        Main.changeScreen("energia1Scene");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-         if(txtContaMes.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtDataVencimento.getText().equals("") || txtTotalPagar.getText().equals("") || txtConstMulti.getText().equals("") || txtNRmedidor.getText().equals("") || txtLeituraAnterior.getText().equals("") || txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("")) {
+        if(txtConsumodoMesKWH.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtMesReferenciaEnergia.getText().equals("") || txtDataVencimento.getText().equals("") || txtValorTotal.getText().equals("") || txtNRdoMedidor.getText().equals("") || txtLeituraAnteriorEnergia.getText().equals("") || txtLeituraAtualEnergia.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("") || txtUsuario.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
@@ -80,39 +84,48 @@ public class CadastroEnergia2 implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
-                String NumeroInstalacao = txtNumeroInstalacao.getText();
+                if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())))){
+                    Alert Alert = new Alert(AlertType.INFORMATION);
+                    Alert.setTitle("Número de Instalação já Existente");
+                    Alert.setHeaderText(null);
+                    Alert.setContentText("Digite um Número de Instalação válido!");
+                    Alert.showAndWait();
+                } else {
+                    String NumeroInstalacao = txtNumeroInstalacao.getText();        
 
-                Main.salvarIntalacaoNumero(NumeroInstalacao);
-                Main.salvarConta1(NumeroInstalacao, txtContaMes);
-                Main.salvarConta2(txtDataVencimento);
-                Main.salvarEnergia2(txtContaMes, txtNumeroInstalacao, txtConsumo, txtTotalPagar, txtConstMulti, txtNRmedidor, txtLeituraAnterior, txtLeituraAtual, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
-
-                
-                
-                txtContaMes.setText("");
-                txtNumeroInstalacao.setText("");
-                txtConsumo.setText("");
-                txtDataVencimento.setText("");
-                txtTotalPagar.setText("");
-                txtConstMulti.setText("");
-                txtNRmedidor.setText("");
-                txtLeituraAnterior.setText("");
-                txtLeituraAtual.setText("");
-                txtDataLeituraAnterior.setText("");
-                txtDataLeituraAtual.setText("");
-
-                Alert Alert = new Alert(AlertType.INFORMATION);
-                Alert.setTitle("Confirmação de Cadastro");
-                Alert.setHeaderText(null);
-                Main.changeScreen("main");
-                Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
-                Alert.showAndWait();
+                    Main.salvarIntalacaoNumero(NumeroInstalacao);
+                    Main.salvarConta1(NumeroInstalacao, txtMesReferenciaEnergia);
+                    Main.salvarConta2(txtDataVencimento, txtUsuario);
+                    Main.salvarEnergia2(txtMesReferenciaEnergia, txtNumeroInstalacao.getText(), txtConsumodoMesKWH, txtValorTotal, txtConstMulti, txtNRdoMedidor, txtLeituraAnteriorEnergia, txtLeituraAtualEnergia, txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias);
+                    
+                    Main.changeScreen("main");
+                    
+                    txtMesReferenciaEnergia.setText("");
+                    txtNumeroInstalacao.setText("");
+                    txtConsumodoMesKWH.setText("");
+                    txtDataVencimento.setText("");
+                    txtValorTotal.setText("");
+                    txtConstMulti.setText("");
+                    txtNRdoMedidor.setText("");
+                    txtLeituraAnteriorEnergia.setText("");
+                    txtLeituraAtualEnergia.setText("");
+                    txtDataLeituraAnterior.setText("");
+                    txtDataLeituraAtual.setText("");
+                    comboBandeirasTarifarias.setValue("");
+                    txtUsuario.setText("");
+                    
+                    Alert Alert = new Alert(AlertType.INFORMATION);
+                    Alert.setTitle("Confirmação de Cadastro");
+                    Alert.setHeaderText(null);
+                    Alert.setContentText("CADASTRO EFETUADO COM SUCESSO!");
+                    Alert.showAndWait();
+                }
             } else {
             }    
         }
     }
 
-    // Mascaras
+// Mascaras
     @FXML
     private void mascaraVencimento(){
         TextFieldFormatter tff = new TextFieldFormatter();
@@ -137,4 +150,12 @@ public class CadastroEnergia2 implements Initializable {
         tff.setTf(txtDataLeituraAtual);
         tff.formatter();
     }
-}
+    @FXML
+    private void mascaraMesReferencia(){
+        TextFieldFormatter tff = new TextFieldFormatter();
+        tff.setMask("##/####");
+        tff.setCaracteresValidos("0123456789");
+        tff.setTf(txtMesReferenciaEnergia);
+        tff.formatter();
+        }
+    }

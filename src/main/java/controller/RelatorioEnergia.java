@@ -1,4 +1,5 @@
 package controller;
+
 import dao.EnergiaDAO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,14 +10,18 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import javafx.scene.control.TextField;
+import javafx.scene.control.Button;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import application.Main;
 import classes.Energia;
 
 public class RelatorioEnergia implements Initializable {
     @FXML
-    private TableView <Energia> TableEnergia;
+    private TableView <Energia> TableAgua;
     @FXML
     private TableColumn <Energia, BigInteger> ClnNumInstalacao;
     @FXML
@@ -31,8 +36,11 @@ public class RelatorioEnergia implements Initializable {
     private TableColumn <Energia, String> ClnTensaoNominal;
     @FXML
     private TableColumn <Energia, BigDecimal> ClnValorTotal;
-
-
+    @FXML
+    private Button btnVoltar;
+    @FXML
+    private Button btnEditar;
+  
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
    
@@ -42,7 +50,14 @@ public class RelatorioEnergia implements Initializable {
         
         carregarTableViewEnergia();
     }
-
+    public void changeScreenRetornar() {
+        
+        Main.changeScreen("main");
+    }
+    public void changeScreenEditar() {
+        Main.changeScreen("updateenergia");
+    }
+    
     public void carregarTableViewEnergia(){
         ClnNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
         ClnMesReferencia.setCellValueFactory(new PropertyValueFactory<>("cta_mes_referencia"));
@@ -54,7 +69,7 @@ public class RelatorioEnergia implements Initializable {
 
         listEnergia =  EnergiaDAO.read();
         observableListEnergia = FXCollections.observableArrayList(listEnergia);
-        TableEnergia.setItems(observableListEnergia);
+        TableAgua.setItems(observableListEnergia);
     }
 
 }

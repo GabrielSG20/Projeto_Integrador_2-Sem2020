@@ -12,9 +12,9 @@ import application.Main;
 
 public class InicialController implements Initializable {
 	   @FXML
-	   private Button btnVelhaInst;
+	   private Button btnNovaInst;
 	   @FXML
-	   private Button btnNovaIns;
+	   private Button btnInstalacaoCadastrada;
 	   @FXML
 	   private Button btnRelatorios;
 	   
@@ -27,8 +27,8 @@ public class InicialController implements Initializable {
         Main.changeScreen("tipocliente");
     }
     
-    public void changeScreenVelhaInst(ActionEvent event){
-        Main.changeScreen("instalacaocadastrada");
+    public void changeScreenInstalacaoCadastrada(ActionEvent event){
+        Main.changeScreen("instalacaoCadastradaScene");
     }
     
     public void changeScreenTipoRelatorio(ActionEvent event){

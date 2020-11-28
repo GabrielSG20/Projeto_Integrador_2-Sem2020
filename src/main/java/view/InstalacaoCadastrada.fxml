@@ -8,56 +8,55 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="900.0" prefWidth="1100.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InstalacaoCadastrada">
+<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InstalacaoCadastrada">
    <children>
-      <ImageView fitHeight="900.0" fitWidth="1100.0" layoutX="153.0" layoutY="45.0" opacity="0.1" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="/image/TECSUS.png" />
-         </image>
-      </ImageView>
-      <Text layoutX="430.0" layoutY="516.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="RGI:" textAlignment="CENTER">
+         </image></ImageView>
+      <Text layoutX="252.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="RGI:" textAlignment="CENTER">
          <font>
-            <Font size="30.0" />
+            <Font name="Arial" size="26.0" />
          </font>
       </Text>
-      <Text layoutX="430.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Número de Instalação:" textAlignment="CENTER">
+      <Text layoutX="252.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Número de Instalação:" textAlignment="CENTER">
          <font>
-            <Font size="30.0" />
+            <Font name="Arial" size="26.0" />
          </font>
       </Text>
-      <TextField fx:id="txtNumeroInstalacao" layoutX="430.0" layoutY="350.0" prefHeight="20.0" prefWidth="350.0">
+      <TextField fx:id="txtNumeroInstalacao" layoutX="252.0" layoutY="129.0" prefHeight="20.0" prefWidth="350.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtRGI" layoutX="430.0" layoutY="550.0" onKeyReleased="#mascaraRGI" prefHeight="20.0" prefWidth="350.0">
+      <TextField fx:id="txtRGI" layoutX="252.0" layoutY="346.0" onKeyReleased="#mascaraRGI" prefHeight="20.0" prefWidth="350.0">
          <font>
-            <Font size="20.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </TextField>
-      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="243.0" layoutY="479.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="73.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@RGIAgua.png" />
+            <Image url="/image/RGIAgua.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="248.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="120.0" fitWidth="120.0" layoutX="73.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@InstalacaoLuz.png" />
+            <Image url="/image/InstalacaoLuz.png" />
          </image>
       </ImageView>
-      <Button fx:id="btnBuscarAgua" layoutX="826.0" layoutY="548.0" mnemonicParsing="false" onAction="#buscarAgua" prefHeight="50.0" prefWidth="120.0" text="Buscar">
+      <Button fx:id="txtBotaoBuscarRGI" layoutX="626.0" layoutY="346.0" mnemonicParsing="false" onAction="#changeScreenBuscarAgua" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
          <font>
-            <Font size="24.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnBuscarEnergia" layoutX="826.0" layoutY="348.0" mnemonicParsing="false" onAction="#buscarEnergia" prefHeight="50.0" prefWidth="120.0" text="Buscar">
+      <Button fx:id="txtBotaoBuscarNumInstalacao" layoutX="626.0" layoutY="129.0" mnemonicParsing="false" onAction="#changeScreenBuscarEnergia" prefHeight="20.0" prefWidth="120.0" style="-fx-background-radius: 5em;" text="Buscar">
          <font>
-            <Font size="24.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnRetornarInicial" layoutX="43.0" layoutY="815.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="51.0" prefWidth="150.0" text="Retornar" textFill="#4a8af2">
+      <Button fx:id="txtBotaoRetornar" layoutX="27.0" layoutY="487.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="37.0" prefWidth="180.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="15.0">
          <font>
-            <Font size="24.0" />
+            <Font name="Arial" size="20.0" />
          </font>
       </Button>
    </children>

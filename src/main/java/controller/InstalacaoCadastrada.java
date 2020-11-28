@@ -1,64 +1,81 @@
 package controller;
 
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import util.TextFieldFormatter;
+import application.Main;
+import dao.InstalacaoDAO;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
-import util.TextFieldFormatter;
-import application.Main;
 
-public class InstalacaoCadastrada implements Initializable {
+public class InstalacaoCadastrada implements Initializable{
     @FXML
     private TextField txtNumeroInstalacao;
-    @FXML
+    @FXML 
     private TextField txtRGI;
     @FXML
-    private Button btnBuscarEnergia;
-    @FXML
-    private Button btnBuscarAgua;
-    @FXML
-    private Button btnRetornarInicial;
-
+	private Button txtBotaoBuscarNumInstalacao;
+	@FXML
+	private Button txtBotaoBuscarRGI;
+	@FXML
+    private Button txtBotaoRetornar;
+    
     @Override
-    public void initialize(URL arg0, ResourceBundle arg1) {
-        // TODO Auto-generated method stub
+	public void initialize(URL arg0, ResourceBundle arg1) {
+		// TODO Auto-generated method stub
     }
 
-    public void changeScreenRetornar(ActionEvent event) {
+    public void changeScreenBuscarEnergia(ActionEvent event){       
+        if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(txtNumeroInstalacao.getText())))){
+            Main.salvarContaInst1(txtNumeroInstalacao.getText());
+            Main.salvarEnergiaInst1(txtNumeroInstalacao.getText());
+            Main.changeScreen("energiasemend");
+            txtNumeroInstalacao.setText("");
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Numero de Instalacao não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("DIGITE UM NUMERO VÁLIDO");
+            Alert.showAndWait();
+
+            txtNumeroInstalacao.setText("");
+        }
+    }
+
+    public void changeScreenBuscarAgua(ActionEvent event){
+        String RGI = txtRGI.getText().replace("/","");
+
+        
+        if (InstalacaoDAO.buscarInstalacao(BigInteger.valueOf(Long.parseLong(RGI)))){
+            Main.salvarContaInst1(RGI);
+            Main.salvarAguaInst1(RGI);
+            Main.changeScreen("aguasemend");
+            txtRGI.setText("");
+        } else {
+            Alert Alert = new Alert(AlertType.INFORMATION);
+            Alert.setTitle("Numero de Instalacao não encontrado");
+            Alert.setHeaderText(null);
+            Alert.setContentText("DIGITE UM NUMERO VÁLIDO");
+            Alert.showAndWait();
+
+            txtRGI.setText("");
+        }
+    }
+
+    public void changeScreenRetornar(ActionEvent event){
         Main.changeScreen("main");
+
+        txtRGI.setText("");
+        txtNumeroInstalacao.setText("");
     }
 
-    public void buscarEnergia(ActionEvent event) {
-        Alert Alert = new Alert(AlertType.INFORMATION);
-        Alert.setTitle("Confirmação de Instalação");
-        Alert.setHeaderText(null);
-        Alert.setContentText("INSTALAÇÃO ENCONTRADA COM SUCESSO!");
-        Alert.showAndWait();
-        
-        // Colocar opção de erro
-
-        Main.changeScreen("energiasemend");
-    }
-
-    public void buscarAgua(ActionEvent event) {
-        Alert Alert = new Alert(AlertType.INFORMATION);
-        Alert.setTitle("Confirmação de Instalação");
-        Alert.setHeaderText(null);
-        Alert.setContentText("INSTALAÇÃO ENCONTRADA COM SUCESSO!");
-        Alert.showAndWait();
-        
-        // Colocar opção de erro
-
-        Main.changeScreen("aguasemend");
-    }
-
-    // Mascaras
+// Mascaras
     @FXML
     private void mascaraRGI(){
         TextFieldFormatter tff = new TextFieldFormatter();

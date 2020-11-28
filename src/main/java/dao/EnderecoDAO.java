@@ -20,13 +20,10 @@ public class EnderecoDAO {
         PreparedStatement stmt = null;
         //Inserindo dados na tabela atraves do metodo INSERT
         try {
-            stmt = con.prepareStatement("INSERT INTO end_endereco (end_cep,end_numero,end_rua,end_estado,end_cidade,end_complemento) VALUES(?,?,?,?,?,?)");
-            stmt.setObject(1, e.getEnd_cep());
-            stmt.setObject(2, e.getEnd_numero());
-            stmt.setString(3, e.getEnd_rua());
-            stmt.setObject(4, e.getEnd_estado());
-            stmt.setString(5, e.getEnd_cidade());
-            stmt.setString(6, e.getEnd_complemento());
+            stmt = con.prepareStatement("INSERT INTO end_endereco(cep_cep,end_numero,end_complemento) VALUES(?,?,?)");
+            stmt.setObject(1, e.getCep_cep());
+            stmt.setObject(2, e.getEnd_numero());;
+            stmt.setString(3, e.getEnd_complemento());
             stmt.executeUpdate();
 
         } catch (SQLException ex) {
@@ -36,7 +33,7 @@ public class EnderecoDAO {
         } finally {
             ConexaoBd.closeConnection(con, stmt);
         }
-
-    }
     
+    }
 }
+    
