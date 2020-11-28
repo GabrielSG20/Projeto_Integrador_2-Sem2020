@@ -19,7 +19,6 @@
             <Font name="Arial" size="30.0" />
          </font>
       </Text>
-      <Button fx:id="btnRelatorioLuz" ellipsisString="" layoutX="59.0" layoutY="81.0" mnemonicParsing="false" onAction="#changeScreenRelatorioLuz" prefHeight="110.0" prefWidth="96.0" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="81.0" />
       <Text layoutX="198.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-family: Arial;" text="Relatório de água" AnchorPane.leftAnchor="198.0">
          <font>
             <Font name="Arial" size="24.0" />
@@ -30,13 +29,35 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Text>
-      <Button fx:id="btnRelatorioAgua" ellipsisString="" layoutX="64.0" layoutY="214.0" mnemonicParsing="false" onAction="#changeScreenRelatorioAgua" prefHeight="110.0" prefWidth="100.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="638.0" AnchorPane.topAnchor="214.0" />
+      <Button fx:id="btnRelatorioLuz" ellipsisString="" layoutX="59.0" layoutY="81.0" mnemonicParsing="false" onAction="#changeScreenRelatorioLuz" prefHeight="110.0" prefWidth="96.0" AnchorPane.leftAnchor="59.0" AnchorPane.topAnchor="81.0">
+         <graphic>
+            <ImageView fitHeight="96.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image/Energia.jpeg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnRelatorioAgua" ellipsisString="" layoutX="64.0" layoutY="214.0" mnemonicParsing="false" onAction="#changeScreenRelatorioAgua" prefHeight="110.0" prefWidth="100.0" AnchorPane.leftAnchor="64.0" AnchorPane.rightAnchor="638.0" AnchorPane.topAnchor="214.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image/Agua.jpeg" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="btnRelatorioCliente" ellipsisString="" layoutX="57.0" layoutY="348.0" mnemonicParsing="false" onAction="#changeScreenRelatorioCliente" prefHeight="110.0" prefWidth="100.0" AnchorPane.leftAnchor="57.0">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="image/PessoaJuridica.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Button fx:id="btnRetornarTipoR" layoutX="20.0" layoutY="480.0" mnemonicParsing="false" onAction="#changeScreenRetornar" opacity="0.96" prefHeight="30.0" prefWidth="164.0" style="-fx-background-radius: 5em;" text="Retornar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="25.0">
          <font>
             <Font name="Arial" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnRelatorioCliente" ellipsisString="" layoutX="57.0" layoutY="348.0" mnemonicParsing="false" onAction="#changeScreenRelatorioCliente" prefHeight="110.0" prefWidth="100.0" AnchorPane.leftAnchor="57.0" />
       <Label layoutX="198.0" layoutY="390.0" text="Relatório de cliente" AnchorPane.leftAnchor="198.0">
          <font>
             <Font name="Arial" size="24.0" />
@@ -58,20 +79,5 @@
             <Font size="18.0" />
          </font>
       </Button>
-      <ImageView fitHeight="96.0" fitWidth="77.0" layoutX="69.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="image/Energia.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="80.0" layoutX="68.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="image/Agua.jpeg" />
-         </image>
-      </ImageView>
-      <ImageView fitHeight="100.0" fitWidth="80.0" layoutX="67.0" layoutY="354.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="image/PessoaJuridica.png" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>

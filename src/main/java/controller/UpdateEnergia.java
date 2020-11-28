@@ -107,6 +107,7 @@ public class UpdateEnergia implements Initializable {
         txtFornecimento.setText("");
         txtUsuario.setText("");
         txtNCadastros.setText("");
+        txtDataVencimento.setText("");
     }
     public void buscarNumeroInstalacao(ActionEvent event) {
          if (EnergiaDAO.validacaoConta(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText())){
