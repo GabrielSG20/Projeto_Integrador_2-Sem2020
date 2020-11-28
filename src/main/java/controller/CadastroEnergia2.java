@@ -45,6 +45,8 @@ public class CadastroEnergia2 implements Initializable {
     @FXML
     private TextField txtDataLeituraAtual;
     @FXML
+    private TextField txtUsuario;
+    @FXML
     private ComboBox comboBandeirasTarifarias;
     @FXML
     private Button btnVoltarTelaInical;
@@ -66,7 +68,7 @@ public class CadastroEnergia2 implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        if(txtConsumodoMesKWH.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtMesReferenciaEnergia.getText().equals("") || txtDataVencimento.getText().equals("") || txtValorTotal.getText().equals("") || txtNRdoMedidor.getText().equals("") || txtLeituraAnteriorEnergia.getText().equals("") || txtLeituraAtualEnergia.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("")) {
+        if(txtConsumodoMesKWH.getText().equals("") || txtNumeroInstalacao.getText().equals("") || txtMesReferenciaEnergia.getText().equals("") || txtDataVencimento.getText().equals("") || txtValorTotal.getText().equals("") || txtNRdoMedidor.getText().equals("") || txtLeituraAnteriorEnergia.getText().equals("") || txtLeituraAtualEnergia.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || txtDataLeituraAtual.getText().equals("") || comboBandeirasTarifarias.getValue().equals("") || txtUsuario.getText().equals("")) {
             
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");

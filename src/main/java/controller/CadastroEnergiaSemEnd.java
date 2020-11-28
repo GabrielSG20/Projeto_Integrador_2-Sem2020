@@ -52,6 +52,8 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
     @FXML 
     private TextField txtRoteiroLeitura;
     @FXML
+    private TextField txtUsuario;
+    @FXML
     private ComboBox comboBandeirasTarifarias;
     @FXML
     private Button btnRetornarEnergia;
@@ -95,7 +97,7 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
         txtLeituraAtual.getText().equals("") || txtDataLeituraAnterior.getText().equals("") || 
         txtDataLeituraAtual.getText().equals("") || txtCodigoFiscal.getText().equals("") || 
         txtGrupoSubgrupo.getText().equals("") || txtClasseSubclasse.getText().equals("") || 
-        txtMTarifaria.getText().equals("") || comboBandeirasTarifarias.getValue().equals("")){
+        txtMTarifaria.getText().equals("") || comboBandeirasTarifarias.getValue().equals("") || txtUsuario.getText().equals("")){
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
