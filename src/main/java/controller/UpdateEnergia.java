@@ -64,6 +64,10 @@ public class UpdateEnergia implements Initializable {
     @FXML
     private TextField txtFornecimento;
     @FXML
+    private TextField txtUsuario;
+    @FXML
+    private TextField txtNCadastros;
+    @FXML
     private Button btnBuscar;
     @FXML
     private Button btnRetornarEnergia;
@@ -101,12 +105,16 @@ public class UpdateEnergia implements Initializable {
         txtMTarifaria.setText("");
         txtTensaoNominal.setText("");
         txtFornecimento.setText("");
+        txtUsuario.setText("");
+        txtNCadastros.setText("");
     }
     public void buscarNumeroInstalacao(ActionEvent event) {
          if (EnergiaDAO.validacaoConta(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText())){
 
             EnergiaDAO.buscar(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText(),txtContaKwH,txtValorTotalAPagar,txtDataLeituraAnterior,txtDataLeituraAtual,comboBandeirasTarifarias,txtConstMulti,txtNRdoMedidor,txtLeituraAnterior,txtLeituraAtual,txtCodigoFiscal,txtGrupoSubgrupo,txtClasseSubclasse,txtRoteiroLeitura,txtMTarifaria,txtTensaoNominal,txtFornecimento);     
             ContaDAO.buscarconta(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())), txtMesReferenciaEnergia.getText(),txtDataVencimento);  
+            ContaDAO.buscarUsuario(txtUsuario);
+            ContaDAO.buscarContador(txtNCadastros);
         } else {
             Alert cadastro = new Alert(Alert.AlertType.INFORMATION);
             cadastro.setTitle("Numero de instalação e/ou mês de referência não encontrado");
@@ -182,6 +190,8 @@ public class UpdateEnergia implements Initializable {
                 txtMTarifaria.setText("");
                 txtTensaoNominal.setText("");
                 txtFornecimento.setText("");
+                txtUsuario.setText("");
+                txtNCadastros.setText("");
          }else{
 
          }
@@ -191,7 +201,7 @@ public class UpdateEnergia implements Initializable {
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
             confirmacao.setTitle("Confirmação de Informações");
             confirmacao.setHeaderText(null);
-            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
+            confirmacao.setContentText("DESEJA DELETAR ESSA CONTA DE ENERGIA?");
 
         Optional<ButtonType> result = confirmacao.showAndWait();
          if (result.get() == ButtonType.OK){
@@ -203,14 +213,8 @@ public class UpdateEnergia implements Initializable {
             
             daoene.delete(n);
 
-            Conta c = new Conta();
-            ContaDAO daocta = new ContaDAO();
-
-            c.setInt_numero_instalacao(BigInteger.valueOf(Long.parseLong(txtNumInstalacao.getText())));
-            c.setCta_mes_referencia(txtMesReferenciaEnergia.getText());
-
-            daocta.delete(c);
-        
+            ContaDAO daoconta = new ContaDAO();
+            daoconta.delete();
 
             Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
                 cadastrado.setTitle("Dados deletados com sucesso");
@@ -236,6 +240,8 @@ public class UpdateEnergia implements Initializable {
                 txtMTarifaria.setText("");
                 txtTensaoNominal.setText("");
                 txtFornecimento.setText("");
+                txtUsuario.setText("");
+                txtNCadastros.setText("");
         }else{
 
         }

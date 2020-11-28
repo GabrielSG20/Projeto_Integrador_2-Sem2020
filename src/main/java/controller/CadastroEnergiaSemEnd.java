@@ -88,6 +88,7 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
         txtTensaoNominal.setText("");
         txtMTarifaria.setText("");
         txtRoteiroLeitura.setText("");
+        txtUsuario.setText("");
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
@@ -113,7 +114,7 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){
                 Main.salvarContaInst2(txtMesReferenciaEnergia);
-                Main.salvarContaInst3(txtDataVencimento);
+                Main.salvarContaInst3(txtDataVencimento, txtUsuario);
                 Main.salvarEnergiaInst2(txtMesReferenciaEnergia, txtContaKwH, 
                 txtValorTotalAPagar, txtConstMulti, txtNRdoMedidor, txtLeituraAnterior, 
                 txtLeituraAtual , txtDataLeituraAnterior, txtDataLeituraAtual, comboBandeirasTarifarias, 
@@ -143,6 +144,8 @@ public class CadastroEnergiaSemEnd extends InstalacaoCadastrada implements Initi
                 txtTensaoNominal.setText("");
                 txtMTarifaria.setText("");
                 txtRoteiroLeitura.setText("");
+                txtUsuario.setText("");
+                
                 Main.changeScreen("main");
             } else {
                 

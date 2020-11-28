@@ -21,17 +21,17 @@
             <Image url="image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtNumInstalacao" layoutX="290.0" layoutY="18.0" prefHeight="25.0" prefWidth="106.0" promptText="N° instalação">
+      <TextField fx:id="txtNumInstalacao" layoutX="290.0" layoutY="18.0" prefHeight="26.0" prefWidth="133.0" promptText="N° instalação">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtMesReferenciaEnergia" layoutX="423.0" layoutY="17.0" onKeyReleased="#mascaraMesReferencia" prefHeight="25.0" prefWidth="106.0" promptText="Conta do mês">
+      <TextField fx:id="txtMesReferenciaEnergia" layoutX="450.0" layoutY="18.0" onKeyReleased="#mascaraMesReferencia" prefHeight="26.0" prefWidth="133.0" promptText="Conta do mês">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <Button fx:id="btnBuscar" layoutX="546.0" layoutY="17.0" mnemonicParsing="false" onAction="#buscarNumeroInstalacao" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
+      <Button fx:id="btnBuscar" layoutX="600.0" layoutY="17.0" mnemonicParsing="false" onAction="#buscarNumeroInstalacao" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
@@ -242,5 +242,17 @@
             <Font name="Arial" size="18.0" />
          </font>
       </Button>
+      <Label layoutX="11.0" layoutY="451.0" text="Quem cadastrou*">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField id="txtUsuario" fx:id="txtUsuario" disable="true" layoutX="161.0" layoutY="449.0" />
+      <Label layoutX="362.0" layoutY="452.0" text="N° Cadastros">
+         <font>
+            <Font name="Arial Bold" size="16.0" />
+         </font>
+      </Label>
+      <TextField id="txtUsuario" fx:id="txtNCadastros" disable="true" layoutX="472.0" layoutY="449.0" prefHeight="25.0" prefWidth="96.0" />
    </children>
 </AnchorPane>

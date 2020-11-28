@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroEnergiaSemEnd">
+<AnchorPane prefHeight="538.0" prefWidth="790.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastroEnergiaSemEnd">
    <children>
       <ImageView fitHeight="538.0" fitWidth="790.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -101,7 +106,7 @@
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField id="txtUsuario" layoutX="350.0" layoutY="496.0" />
+      <TextField id="txtUsuario" fx:id="txtUsuario" layoutX="327.0" layoutY="497.0" />
       <Label layoutX="13.0" layoutY="70.0" text="Consumo do mês/Kwh*" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial Bold" size="16.0" />
@@ -223,7 +228,7 @@
             <Font name="Arial Bold" size="12.0" />
          </font>
       </Label>
-      <Label layoutX="213.0" layoutY="498.0" text="Quem cadastrou*">
+      <Label layoutX="181.0" layoutY="499.0" text="Quem cadastrou*">
          <font>
             <Font name="Arial Bold" size="16.0" />
          </font>

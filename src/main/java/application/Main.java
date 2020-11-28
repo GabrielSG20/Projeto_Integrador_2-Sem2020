@@ -268,8 +268,9 @@ public class Main extends Application {
             cta.setCta_mes_referencia(txtMesReferencia.getText());
     }
 
-    public static void salvarConta2(TextField txtVencimento) {
+    public static void salvarConta2(TextField txtVencimento, TextField txtUsuario) {
             cta.setCta_vencimento(txtVencimento.getText());
+            cta.setCta_usuario(txtUsuario.getText());
 
             conta_dao.create(cta);
     }
@@ -285,13 +286,13 @@ public class Main extends Application {
             cta.setCta_mes_referencia(txtMesReferencia.getText());
     }
 
-    public static void salvarContaInst3(TextField txtVencimento) {
+    public static void salvarContaInst3(TextField txtVencimento, TextField txtUsuario) {
             cta.setCta_vencimento(txtVencimento.getText());
+            cta.setCta_usuario(txtUsuario.getText());
 
             conta_dao.create(cta);
     }
 
-    // Métodos Instalacao
     public static void salvarIntalacaoCliente(String txtDocumento, String txtCNPJFornecedor) {
             i = new Instalacao();
             instalacao_dao = new InstalacaoDAO();

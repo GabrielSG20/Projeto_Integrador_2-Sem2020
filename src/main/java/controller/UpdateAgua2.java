@@ -63,6 +63,10 @@ public class UpdateAgua2 implements Initializable {
     @FXML
     private TextField txtMulta;
     @FXML
+    private TextField txtUsuario;
+    @FXML
+    private TextField txtNCadastros;
+    @FXML
     private Button btnEditarVoltarTelaInicial;
     @FXML
     private Button btnDeletar;
@@ -84,6 +88,8 @@ public class UpdateAgua2 implements Initializable {
             txtTarifaEsgoto21a30,txtTarifaEsgoto31a50,txtTarifaEsgotoAcima50,
             txtValorEsgotoAte10,txtValorEsgoto11a20, txtVIAgua,
             txtVIEsgoto, txtTaxaRegulacao, txtMulta);
+        ContaDAO.buscarUsuario(txtUsuario);
+        ContaDAO.buscarContador(txtNCadastros);
 
         txtValorTotal.setText(String.valueOf(Double.parseDouble(txtTaxaRegulacao.getText()) + 
         Double.parseDouble(txtMulta.getText()) + Double.parseDouble(txtVIEsgoto.getText()) + 
@@ -112,22 +118,26 @@ public class UpdateAgua2 implements Initializable {
         txtTaxaRegulacao.setText("");
         txtMulta.setText("");
         txtValorTotal.setText("");
+        txtUsuario.setText("");
+        txtNCadastros.setText("");
     }
     public void deletarConta(ActionEvent event) {
         Alert confirmacao = new Alert(AlertType.CONFIRMATION);
             confirmacao.setTitle("Confirmação de Informações");
             confirmacao.setHeaderText(null);
-            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
+            confirmacao.setContentText("DESEJA DELETAR ESSA CONTA DE ÁGUA?");
 
         Optional<ButtonType> result = confirmacao.showAndWait();
          if (result.get() == ButtonType.OK){
             AguaDAO daoagu = new AguaDAO();
+            ContaDAO daoconta = new ContaDAO();
             
             daoagu.delete();
-        
+            daoconta.delete();
+
             Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
                 cadastrado.setTitle("Dados deletados com sucesso");
-                cadastrado.setHeaderText("Os dados foram deletados com sucesso");
+                cadastrado.setHeaderText("Os dados foram deletados com sucesso.");
                 cadastrado.showAndWait();
 
                 txtTarifaAguaAte10.setText("");
@@ -149,6 +159,8 @@ public class UpdateAgua2 implements Initializable {
                 txtTaxaRegulacao.setText("");
                 txtMulta.setText("");
                 txtValorTotal.setText("");
+                txtUsuario.setText("");
+                txtNCadastros.setText("");
         }else{
 
         }
@@ -213,6 +225,8 @@ public class UpdateAgua2 implements Initializable {
                 txtTaxaRegulacao.setText("");
                 txtMulta.setText("");
                 txtValorTotal.setText("");
+                txtUsuario.setText("");
+                txtNCadastros.setText("");
          }else{
 
          }

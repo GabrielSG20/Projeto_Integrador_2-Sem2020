@@ -17,16 +17,16 @@
             <Image url="/image/TECSUS.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtRGI" layoutX="190.0" layoutY="27.0" onKeyReleased="#mascaraRGI" opacity="0.8" prefHeight="25.0" prefWidth="91.0" promptText="RGI" AnchorPane.leftAnchor="190.0">
+      <TextField fx:id="txtRGI" layoutX="190.0" layoutY="27.0" onKeyReleased="#mascaraRGI" opacity="0.8" prefHeight="25.0" prefWidth="133.0" promptText="RGI" AnchorPane.leftAnchor="190.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtMesReferencia" layoutX="297.0" layoutY="27.0" onKeyReleased="#mascaraMesReferencia" opacity="0.8" prefHeight="26.0" prefWidth="91.0" promptText="Mês/Ano" AnchorPane.leftAnchor="297.0">
+      <TextField fx:id="txtMesReferencia" layoutX="357.0" layoutY="27.0" onKeyReleased="#mascaraMesReferencia" opacity="0.8" prefHeight="26.0" prefWidth="133.0" promptText="Mês/Ano" AnchorPane.leftAnchor="357.0">
          <font>
             <Font name="Arial" size="14.0" />
          </font></TextField>
-      <Button fx:id="btnBuscar" layoutX="403.0" layoutY="27.0" mnemonicParsing="false" onAction="#buscarNumeroInstalacao" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
+      <Button fx:id="btnBuscar" layoutX="508.0" layoutY="27.0" mnemonicParsing="false" onAction="#buscarNumeroInstalacao" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
          <font>
             <Font name="Arial" size="14.0" />
          </font>

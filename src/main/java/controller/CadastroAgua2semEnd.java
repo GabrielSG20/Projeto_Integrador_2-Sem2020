@@ -86,7 +86,7 @@ public class CadastroAgua2semEnd implements Initializable {
 
             Optional<ButtonType> result = confirmacao.showAndWait();
             if (result.get() == ButtonType.OK){   
-                Main.salvarContaInst3(txtVencimento);
+                Main.salvarContaInst3(txtVencimento, txtUsuario);
                 Main.salvarAguaInst3(txtTarifaAguaAte10, txtTarifaAgua11a20, txtTarifaAgua21a31, txtTarifaAgua31a50, 
                 txtTarifaAcima50,txtValorAguaAte10, txtValorAgua11a20, txtTarifaEsgotoAte10, txtTarifaEsgoto11a20, 
                 txtTarifaEsgoto21a30, txtTarifaEsgoto31a50, txtTarifaEsgotoAcima50, txtValorEsgotoAte10, 
@@ -101,6 +101,7 @@ public class CadastroAgua2semEnd implements Initializable {
                 Alert.showAndWait();
 
                 txtVencimento.setText("");
+                txtUsuario.setText("");
                 txtTarifaAguaAte10.setText("0");
                 txtTarifaAgua11a20.setText("0");
                 txtTarifaAgua21a31.setText("0");

@@ -46,6 +46,7 @@ create table cta_conta (
     int_numero_instalacao bigint,
     cta_mes_referencia varchar(50),
     cta_vencimento varchar(50) not null,
+    cta_usuario varchar(150) not null,
     constraint cta_conta_pk primary key (int_numero_instalacao,cta_mes_referencia)
 );
 
