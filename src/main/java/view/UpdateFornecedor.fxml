@@ -69,10 +69,5 @@
             <Font name="Arial" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btnDeletarFornecedor" layoutX="363.0" layoutY="487.0" mnemonicParsing="false" onAction="#deletarFornecedor" prefHeight="33.0" prefWidth="150.0" style="-fx-background-radius: 5em;" text="Deletar" textFill="#4a8af2">
-         <font>
-            <Font name="Arial" size="20.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

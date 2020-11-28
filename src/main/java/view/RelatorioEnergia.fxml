@@ -20,14 +20,6 @@
             <TableColumn fx:id="ClnValorTotal" prefWidth="112.0" text="Valor Total" />
         </columns>
       </TableView>
-      <TextField fx:id="txtBusca" layoutX="340.0" layoutY="27.0" prefHeight="30.0" prefWidth="290.0" promptText="Número de instalação" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="27.0">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font></TextField>
-      <Button fx:id="btnBuscar" layoutX="675.0" layoutY="20.0" mnemonicParsing="false" onAction="#changeScreenBuscar" prefHeight="33.0" prefWidth="91.0" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="25.0">
-         <font>
-            <Font name="Arial" size="18.0" />
-         </font></Button>
       <Button fx:id="btnVoltar" layoutX="19.0" layoutY="485.0" mnemonicParsing="false" onAction="#changeScreenRetornar" prefHeight="30.0" prefWidth="110.0" style="-fx-background-radius: 5em;" text="Voltar" textFill="#4a8af2" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0">
          <font>
             <Font name="Arial" size="18.0" />

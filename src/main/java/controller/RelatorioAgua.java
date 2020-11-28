@@ -42,12 +42,8 @@ public class RelatorioAgua implements Initializable {
     @FXML
     private Button btnVoltar;
     @FXML
-    private Button btnBuscar;
-    @FXML
     private Button btnEditar;
-    @FXML
-    private TextField txtBusca;    
-
+  
     private List<Agua> listAgua;
     private ObservableList<Agua> observableListAgua;
        
@@ -60,11 +56,6 @@ public class RelatorioAgua implements Initializable {
         
         Main.changeScreen("main");
     }
-
-    public void changeScreenBuscar() {
-        
-    }
-
     public void changeScreenEditar() {
         Main.changeScreen("updateagua1");
     }

@@ -103,4 +103,29 @@ public class CepDAO {
 
         return check;
     }
+
+    public void update(Cep c) {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("UPDATE cep_cep SET cep_rua  = ?,cep_estado  = ?,cep_cidade = ? WHERE cep_cep = ?");
+           
+            stmt.setString(1, c.getCep_rua());
+            stmt.setString(2, c.getCep_estado());
+            stmt.setString(3, c.getCep_cidade());
+            stmt.setObject(4, c.getCep_cep());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
 }

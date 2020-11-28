@@ -36,8 +36,7 @@ public class UpdatePessoaJuridica implements Initializable {
     private Button btnRetornarPJ;
     @FXML
     private Button btnBuscarCNPJ;
-    @FXML
-    private Button btnDeletar;
+ 
 
     @Override
         public void initialize(URL arg0, ResourceBundle arg1) {
@@ -104,40 +103,6 @@ public class UpdatePessoaJuridica implements Initializable {
 
          }
     }   
-
-    public void deletarCNPJCliente(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-            confirmacao.setTitle("Confirmação de Informações");
-            confirmacao.setHeaderText(null);
-            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-         if (result.get() == ButtonType.OK){
-             String CNPJCliente = txtCNPJEmpresa.getText().replace("-","");
-             String CNPJCliente2 = CNPJCliente.replace(".","");
-             String CNPJClienteFinal = CNPJCliente2.replace("/",""); 
-             
-            Cliente c = new Cliente();
-            ClienteDAO daocli = new ClienteDAO();
-
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CNPJClienteFinal)));
-           
-            daocli.delete(c);
-        
-            Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
-                cadastrado.setTitle("Dados deletados com sucesso");
-                cadastrado.setHeaderText("Os dados foram deletados com sucesso");
-                cadastrado.showAndWait();
-
-                txtCNPJEmpresa.setText("");
-                txtNomeFantasia.setText("");
-                txtEmail.setText("");
-            
-        }else{
-
-        }
-
-  }
     @FXML
     private void mascaraCNPJCliente(){
         TextFieldFormatter tff = new TextFieldFormatter();

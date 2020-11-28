@@ -40,11 +40,7 @@ public class RelatorioEnergia implements Initializable {
     private Button btnVoltar;
     @FXML
     private Button btnEditar;
-    @FXML
-    private Button btnBuscar;
-    @FXML
-    private TextField txtBusca; 
-
+  
     private List<Energia> listEnergia;
     private ObservableList<Energia> observableListEnergia;
    
@@ -61,11 +57,7 @@ public class RelatorioEnergia implements Initializable {
     public void changeScreenEditar() {
         Main.changeScreen("updateenergia");
     }
-    public void changeScreenBuscar() {
-        
-    }
-
-
+    
     public void carregarTableViewEnergia(){
         ClnNumInstalacao.setCellValueFactory(new PropertyValueFactory<>("int_numero_instalacao"));
         ClnMesReferencia.setCellValueFactory(new PropertyValueFactory<>("cta_mes_referencia"));

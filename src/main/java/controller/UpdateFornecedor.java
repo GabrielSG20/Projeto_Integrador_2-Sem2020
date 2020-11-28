@@ -36,8 +36,7 @@ public class UpdateFornecedor implements Initializable {
     private Button btnRetornar;
     @FXML
     private Button btnBuscarCNPJ;
-    @FXML
-    private Button btnDeletarFornecedor;
+    
 
     @Override
         public void initialize(URL arg0, ResourceBundle arg1) {
@@ -105,39 +104,6 @@ public class UpdateFornecedor implements Initializable {
 
          }
     }   
-
-    public void deletarFornecedor(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-            confirmacao.setTitle("Confirmação de Informações");
-            confirmacao.setHeaderText(null);
-            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-         if (result.get() == ButtonType.OK){
-            String CNPJCliente = txtCNPJFornecedor.getText().replace("-","");
-            String CNPJCliente2 = CNPJCliente.replace(".","");
-            String CNPJFornecedorFinal = CNPJCliente2.replace("/",""); 
-            Fornecedor f = new Fornecedor();
-            FornecedorDAO daofor = new FornecedorDAO();
-
-            f.setFor_cnpj(BigInteger.valueOf(Long.parseLong(CNPJFornecedorFinal)));
-           
-            daofor.delete(f);
-        
-            Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
-                cadastrado.setTitle("Dados deletados com sucesso");
-                cadastrado.setHeaderText("Os dados foram deletados com sucesso");
-                cadastrado.showAndWait();
-
-                txtCNPJFornecedor.setText("");
-                txtNomeFornecedor.setText("");
-                comboTipo.setValue("");
-            
-        }else{
-
-        }
-
-  }
     @FXML
     private void mascaraCNPJ(){
         TextFieldFormatter tff = new TextFieldFormatter();

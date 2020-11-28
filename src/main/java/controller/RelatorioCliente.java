@@ -46,7 +46,7 @@ public class RelatorioCliente implements Initializable {
     @FXML
     private Button btnEditarFornecedor;
     @FXML
-    private Button btnBuscar;
+    private Button btnEditarEndereco;
    
     private List<Instalacao> listInstalacao;
     private ObservableList<Instalacao> observableListInstalacao;
@@ -75,6 +75,10 @@ public class RelatorioCliente implements Initializable {
     public void changeScreenEditarFornecedor() {
         
         Main.changeScreen("updatefornecedor");
+    }
+    public void changeScreenEditarEndereco() {
+        
+        Main.changeScreen("updateendereco");
     }
 
     public void carregarTableViewInstalacao(){

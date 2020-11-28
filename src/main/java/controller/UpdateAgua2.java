@@ -114,6 +114,44 @@ public class UpdateAgua2 implements Initializable {
         txtValorTotal.setText("");
     }
     public void deletarConta(ActionEvent event) {
+        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
+            confirmacao.setTitle("Confirmação de Informações");
+            confirmacao.setHeaderText(null);
+            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
+
+        Optional<ButtonType> result = confirmacao.showAndWait();
+         if (result.get() == ButtonType.OK){
+            AguaDAO daoagu = new AguaDAO();
+            
+            daoagu.delete();
+        
+            Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
+                cadastrado.setTitle("Dados deletados com sucesso");
+                cadastrado.setHeaderText("Os dados foram deletados com sucesso");
+                cadastrado.showAndWait();
+
+                txtTarifaAguaAte10.setText("");
+                txtTarifaAgua11a20.setText("");
+                txtTarifaAgua21a31.setText("");
+                txtTarifaAgua31a50.setText("");
+                txtTarifaAcima50.setText("");
+                txtValorAguaAte10.setText("");
+                txtValorAgua11a20.setText("");
+                txtTarifaEsgotoAte10.setText("");
+                txtTarifaEsgoto11a20.setText("");
+                txtTarifaEsgoto21a30.setText("");
+                txtTarifaEsgoto31a50.setText("");
+                txtTarifaEsgotoAcima50.setText("");
+                txtValorEsgotoAte10.setText("");
+                txtValorEsgoto11a20.setText("");
+                txtVIAgua.setText("");
+                txtVIEsgoto.setText("");
+                txtTaxaRegulacao.setText("");
+                txtMulta.setText("");
+                txtValorTotal.setText("");
+        }else{
+
+        }
 
     }
 

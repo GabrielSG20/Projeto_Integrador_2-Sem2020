@@ -36,8 +36,7 @@ public class UpdatePessoaFisica implements Initializable {
     private Button btnRetornarPF;
     @FXML
     private Button btnBuscarCPF;
-    @FXML
-    private Button btnDeletar;
+    
 
     @Override
         public void initialize(URL arg0, ResourceBundle arg1) {
@@ -102,38 +101,6 @@ public class UpdatePessoaFisica implements Initializable {
 
          }
     }   
-
-    public void deletarCliente(ActionEvent event) {
-        Alert confirmacao = new Alert(AlertType.CONFIRMATION);
-            confirmacao.setTitle("Confirmação de Informações");
-            confirmacao.setHeaderText(null);
-            confirmacao.setContentText("DESEJA DELETAR ESSES CAMPOS?");
-
-        Optional<ButtonType> result = confirmacao.showAndWait();
-         if (result.get() == ButtonType.OK){
-            String CPF0 = txtCPF.getText().replace("-","");
-            String CPF1 = CPF0.replace(".","");
-            Cliente c = new Cliente();
-            ClienteDAO daocli = new ClienteDAO();
-
-            c.setCli_documento(BigInteger.valueOf(Long.parseLong(CPF1)));
-           
-            daocli.delete(c);
-        
-            Alert cadastrado = new Alert(Alert.AlertType.INFORMATION);
-                cadastrado.setTitle("Dados deletados com sucesso");
-                cadastrado.setHeaderText("Os dados foram deletados com sucesso");
-                cadastrado.showAndWait();
-
-                txtCPF.setText("");
-                txtNomeCompleto.setText("");
-                txtEmail.setText("");
-            
-        }else{
-
-        }
-
-  }
     @FXML
     private void mascaraCPF(){
         TextFieldFormatter tff = new TextFieldFormatter();

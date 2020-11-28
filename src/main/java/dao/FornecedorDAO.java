@@ -124,25 +124,4 @@ public class FornecedorDAO {
             ConexaoBd.closeConnection(con, stmt);
         }
     }
-    public void delete(Fornecedor f) {
-        
-        Connection con = ConexaoBd.getConnection();
-    
-        PreparedStatement stmt = null;
-
-        try {
-            stmt = con.prepareStatement("DELETE FROM for_fornecedor WHERE for_cnpj = ?");
-        
-            stmt.setObject(1, f.getFor_cnpj());
-            
-            stmt.executeUpdate();
-
-        } catch (SQLException ex) {
-           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
-
-        // Finally usado para fechar a conexao e statement se der ou não erro
-        } finally {
-            ConexaoBd.closeConnection(con, stmt);
-        }
-    }
 }

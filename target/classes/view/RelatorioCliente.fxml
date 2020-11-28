@@ -36,22 +36,17 @@
             <Font name="Arial" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtBuscaNumero" layoutX="382.0" layoutY="25.0" prefHeight="30.0" prefWidth="283.0" promptText="Numero de instalação">
-         <font>
-            <Font name="Arial" size="14.0" />
-         </font>
-      </TextField>
-      <Button fx:id="btnBuscar" layoutX="680.0" layoutY="23.0" mnemonicParsing="false" style="-fx-background-radius: 5em;" text="Buscar" textFill="#4a8af2">
-         <font>
-            <Font name="Arial" size="18.0" />
-         </font>
-      </Button>
       <Button fx:id="btnEditarPJ" layoutX="437.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenPJ" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar pessoa juridica" textFill="#525049" AnchorPane.rightAnchor="180.0">
          <font>
             <Font name="Arial" size="12.0" />
          </font>
       </Button>
       <Button fx:id="btnEditarFornecedor" layoutX="595.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenEditarFornecedor" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar fornencedor" textFill="#525049" AnchorPane.rightAnchor="15.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditarEndereco" layoutX="137.0" layoutY="69.0" mnemonicParsing="false" onAction="#changeScreenEditarEndereco" prefHeight="25.0" prefWidth="140.0" style="-fx-background-radius: 5em;" text="Editar endereço" textFill="#525049">
          <font>
             <Font name="Arial" size="12.0" />
          </font>

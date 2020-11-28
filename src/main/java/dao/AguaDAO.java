@@ -345,4 +345,26 @@ public class AguaDAO {
             ConexaoBd.closeConnection(con, stmt);
         }
     }
+     public void delete() {
+        
+        Connection con = ConexaoBd.getConnection();
+    
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = con.prepareStatement("DELETE FROM agu_agua WHERE int_numero_instalacao = ? and cta_mes_referencia = ?");
+        
+            stmt.setObject(1, a.getInt_numero_instalacao());
+            stmt.setString(2, a.getCta_mes_referencia());
+            
+            stmt.executeUpdate();
+
+        } catch (SQLException ex) {
+           Logger.getLogger(ConexaoBd.class.getName()).log(Level.SEVERE, null, ex);
+
+        // Finally usado para fechar a conexao e statement se der ou não erro
+        } finally {
+            ConexaoBd.closeConnection(con, stmt);
+        }
+    }
 }
