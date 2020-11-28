@@ -55,6 +55,8 @@ public class CadastroAgua2semEnd implements Initializable {
     @FXML
     private TextField txtMulta;
     @FXML
+    private TextField txtUsuario;
+    @FXML
     private Button btnSalvarVoltarTelaInicial;
     @FXML
     private Button btnRetornarAgua2;
@@ -69,7 +71,7 @@ public class CadastroAgua2semEnd implements Initializable {
     }
 
     public void changeScreenVoltarTelaInicial(ActionEvent event) {
-        if(txtVencimento.getText().equals("")) {
+        if(txtVencimento.getText().equals("") || txtUsuario.getText().equals("")) {
             Alert Alert = new Alert(AlertType.INFORMATION);
             Alert.setTitle("Campos Obrigatórios Vazios");
             Alert.setHeaderText(null);
